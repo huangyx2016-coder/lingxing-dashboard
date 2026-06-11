@@ -1,4 +1,4 @@
-"""Build standalone Lingxing ERP dashboard page."""
+"""Build standalone daily orders visualization page."""
 import json, sys
 from datetime import datetime
 
@@ -19,8 +19,70 @@ def main():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>领星ERP仪表盘</title>
+<title>每日订单自动可视化</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+// Plugin: show values on all charts
+Chart.register({{id:'showValues', afterDatasetsDraw:function(chart){{
+  var ctx=chart.ctx, meta, x, y, val;
+  ctx.save();
+  ctx.font='bold 11px \"Microsoft YaHei\"';
+  ctx.textAlign='center';
+  ctx.textBaseline='bottom';
+  // Line chart: show values above points
+  chart.data.datasets.forEach(function(ds,di){{
+    meta=chart.getDatasetMeta(di);
+    if(!meta||!meta.data)return;
+    meta.data.forEach(function(pt,i){{
+      val=ds.data[i];
+      if(val===undefined||val===null)return;
+      x=pt.x; y=pt.y-6;
+      if(chart.options.indexAxis!=='y'){{
+        ctx.fillStyle='#333';
+        ctx.fillText(val.toLocaleString(),x,y);
+      }}
+    }});
+  }});
+  // Horizontal bar chart: show values at bar end
+  if(chart.options.indexAxis==='y'){{
+    chart.data.datasets.forEach(function(ds,di){{
+      meta=chart.getDatasetMeta(di);
+      if(!meta||!meta.data)return;
+      meta.data.forEach(function(bar,i){{
+        val=ds.data[i];
+        if(val===undefined||val===null||val===0)return;
+        x=bar.x; y=bar.y;
+        ctx.fillStyle='#333';
+        ctx.textAlign='left';
+        ctx.textBaseline='middle';
+        ctx.fillText(' '+val.toLocaleString(),x,y);
+      }});
+    }});
+  }}
+  ctx.restore();
+}}, afterDraw:function(chart){{
+  // Doughnut: show label + value on segments
+  if(chart.config.type!=='doughnut')return;
+  var ctx=chart.ctx, meta=chart.getDatasetMeta(0), total=0;
+  chart.data.datasets[0].data.forEach(function(v){{total+=v;}});
+  ctx.save();
+  meta.data.forEach(function(arc,i){{
+    var val=chart.data.datasets[0].data[i];
+    if(!val)return;
+    var pct=Math.round(val/total*100);
+    var angle=(arc.startAngle+arc.endAngle)/2;
+    var r=(arc.outerRadius+arc.innerRadius)/2;
+    var x=arc.x+Math.cos(angle)*r;
+    var y=arc.y+Math.sin(angle)*r;
+    ctx.fillStyle='#fff';
+    ctx.font='bold 10px \"Microsoft YaHei\"';
+    ctx.textAlign='center';
+    ctx.textBaseline='middle';
+    ctx.fillText(val.toLocaleString()+' ('+pct+'%)',x,y);
+  }});
+  ctx.restore();
+}}}});
+</script>
 <style>
 * {{ margin:0; padding:0; box-sizing:border-box; }}
 body {{ font-family: 'Microsoft YaHei', sans-serif; background:#f0f2f5; color:#333; padding:16px; }}
@@ -53,7 +115,7 @@ td:first-child {{ text-align:left; font-weight:500; }}
 </style>
 </head>
 <body>
-<div class="header"><h1>领星ERP 仪表盘</h1><p id="dateRange"></p></div>
+<div class="header"><h1>每日订单自动可视化</h1><p id="dateRange"></p></div>
 <div class="summary-bar" id="smLx"></div>
 
 <div class="grid">
@@ -72,7 +134,7 @@ td:first-child {{ text-align:left; font-weight:500; }}
   <div class="card full-width"><h2>手链项链订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat4"></div></div>
 </div>
 
-<div class="footer">数据拉取: {data_time} | 页面生成: {now}</div>
+<div class="footer">数据更新: {data_time} | 页面生成: {now}</div>
 
 <script>
 var LX = {lx_json};
