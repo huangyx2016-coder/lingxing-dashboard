@@ -121,7 +121,7 @@ td:first-child {{ text-align:left; font-weight:500; }}
 <div class="grid">
   <div class="card"><h2>每日订单趋势</h2><div class="chart-wrap"><canvas id="lxLine"></canvas></div></div>
   <div class="card"><h2>订单状态分布</h2><div class="chart-wrap"><canvas id="lxPie"></canvas></div></div>
-  <div class="card"><h2>Top 15 店铺 (按订单数)</h2><div class="chart-wrap tall"><canvas id="lxBar"></canvas></div></div>
+  <div class="card"><h2>Top 15 店铺 (按最近7天总订单数)</h2><div class="chart-wrap tall"><canvas id="lxBar"></canvas></div></div>
   <div class="card"><h2>FBA库存 - 按店铺 Top 20</h2><div class="table-wrap" id="tLxStockByStore"></div></div>
 </div>
 
