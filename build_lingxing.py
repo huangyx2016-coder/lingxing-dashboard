@@ -120,7 +120,7 @@ td:first-child {{ text-align:left; font-weight:500; }}
 
 <div class="grid">
   <div class="card"><h2>每日订单趋势</h2><div class="chart-wrap"><canvas id="lxLine"></canvas></div></div>
-  <div class="card"><h2>订单状态分布</h2><div class="chart-wrap"><canvas id="lxPie"></canvas></div></div>
+  <div class="card"><h2>各品类订单占比</h2><div class="chart-wrap"><canvas id="lxPie"></canvas></div></div>
   <div class="card"><h2>Top 15 店铺 (按最近7天总订单数)</h2><div class="chart-wrap tall"><canvas id="lxBar"></canvas></div></div>
   <div class="card"><h2>FBA库存 - 按店铺 Top 20</h2><div class="table-wrap" id="tLxStockByStore"></div></div>
 </div>
@@ -164,13 +164,27 @@ if (LX) {{
         scales:{{y:{{beginAtZero:true, grid:{{display:true}}}}}}}}}});
   }}
 
-  // Order status doughnut
-  if(typeof Chart!=='undefined' && LX.status){{
-    var sc = LX.status;
-    var slabels = Object.keys(sc), sdata = Object.values(sc);
-    var scols = ['#4472C4','#70AD47','#ED7D31','#FFC000','#A5A5A5'];
+  // Category doughnut: 耳环, 银饰, 手链项链
+  if(typeof Chart!=='undefined'){{
+    var norm = function(s){{ return s.toLowerCase().replace(/\\s+/g,''); }};
+    var catKw = [
+      ['耳环', ['GIORGIA GIBBS','SLMYUER','GIULIA LEONI','varger','KATIE OTTE','ELEBEST','AMELINE','Selroper','SHERRIE DOBBIE','SPLIM','vuiikhir','ALUUYANN','AIGAMIT','Fanglcy','DZCYAN','Degerde','Aidomiya','TONYAUTOPARTS','GLOSOLE','Verniflloga','HaoShuFu','SPACMAG','ENROSE','KFERAXSZ','SPOINT','JADE KOS','CHLOÉ LOVETT','SANDRA REDD','HOBATS','MOMELF','NEARLAND','USESMTLE','Kelli Myers','ongol','Chantel Yorke','COSSA','BANGALO','Kate','Eterbeau','Amoxos','Fureoai','TAKUGI','VESTACE','Fureylenx','BalaBelle','LISHUIHAOMI','Cendyess','worfey','Magifurni','Tuogzzdq','EXRSANCH','VSK','KKR','POHYEOL','CALLIOPE','ESSIE ODILA','YFdeSi','Maodeso','JOZZFEE','nuoxun','Daolianlo','Lageza','iewrsox','Yiidcii','Aolumio','kvvkii','Howe rai','Sincere-ljh','Yezhenhan','SPARSE FOREST','PWQIEE','DOXVO','FOCALLIVE','niratty','YAUVC','Raysam','UUBUUCD','VTEVER','BEAUSPA','gotoeewigs','Lamdesa','SREEOWER','TECYOW','Charmire','Eloqueen','TG544','香港諾迅','鹏宇贸易','TG411','TG400']],
+      ['银饰', ['LIEBLICH','ESSIE','Annamate','CHICLOVE','Billie Bijoux','Van Chloe','ANNIS MUNN','ANNIS','AmorAime','BlingGem','NinaMaid','WISHMISS']],
+      ['手链项链', ['MELELIFE','KYAYE','HIROM JOINS','Moonfox','Simlayton','STREYANT','LOKFAM','FEGER','CANNCI','CISSIEPERAL','ERIN MARIE','BENOITE','AOZELAN','OR OLD RUBIN','OLD RUBIN','PPRLIFE','Rewizoo','KROMPG','MONA MILANI','PESFIOLO','gcwen','WONRUN','CROCHETFUN','iSunat','CKUSCAPO','UHEPROKIT','LUXCUTY','EYUMOI','Naiswan','LEMKAY','BYBAIZ','YIYEPUTI','Qeces','TOBENO','Yzytdgzy','Rinponain','TUOIXPI','KHFGDS','ODIHUI','LOUISE VELLA','MISSZHI','koolfin','FENMI','GYUYCW','Zikonyou','SUNDINS','香港惠拓','SparkSphere']]
+    ];
+    var allStores = Object.entries(LX.orders);
+    var catTotals = [];
+    var assigned2 = {{}};
+    catKw.forEach(function(c){{ var t=0;
+      allStores.forEach(function(x){{ if(assigned2[x[0]])return;
+        c[1].forEach(function(k){{ if(norm(x[0]).indexOf(norm(k))!==-1){{ assigned2[x[0]]=true; t+=x[1].total; }} }});
+      }});
+      catTotals.push({{label:c[0], total:t}});
+    }});
+    var scols = ['#4472C4','#ED7D31','#70AD47'];
     new Chart(document.getElementById('lxPie'),{{type:'doughnut',
-      data:{{labels:slabels, datasets:[{{data:sdata, backgroundColor:scols.slice(0,slabels.length)}}]}},
+      data:{{labels:catTotals.map(function(x){{return x.label+'\\n'+x.total.toLocaleString()+'单'}}),
+            datasets:[{{data:catTotals.map(function(x){{return x.total}}), backgroundColor:scols}}]}},
       options:{{responsive:true, maintainAspectRatio:false, plugins:{{legend:{{position:'right', labels:{{font:{{size:10}}, padding:6}}}}}}}}}});
   }}
 
