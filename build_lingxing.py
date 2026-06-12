@@ -60,6 +60,27 @@ Chart.register({{id:'showValues', afterDatasetsDraw:function(chart){{
     }});
   }}
   ctx.restore();
+}}, afterDraw:function(chart){{
+  if(chart.config.type!=='pie')return;
+  var ctx=chart.ctx, meta=chart.getDatasetMeta(0), w=chart.width;
+  var total=chart.data.datasets[0].data.reduce(function(a,b){{return a+b;}},0);
+  ctx.save();
+  meta.data.forEach(function(arc,i){{
+    var val=chart.data.datasets[0].data[i];
+    if(!val)return;
+    var pct=Math.round(val/total*100);
+    if(pct<6)return;
+    var angle=(arc.startAngle+arc.endAngle)/2;
+    var r=arc.outerRadius*0.58;
+    var x=arc.x+Math.cos(angle)*r;
+    var y=arc.y+Math.sin(angle)*r;
+    ctx.fillStyle=w<400?'#333':(pct>25?'#fff':'#333');
+    ctx.font=w<400?'bold 9px sans-serif':'bold 12px sans-serif';
+    ctx.textAlign='center';
+    ctx.textBaseline='middle';
+    ctx.fillText(pct+'%',x,y);
+  }});
+  ctx.restore();
 }}}});
 </script>
 <style>
