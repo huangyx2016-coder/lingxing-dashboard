@@ -61,10 +61,11 @@ Chart.register({{id:'showValues', afterDatasetsDraw:function(chart){{
   }}
   ctx.restore();
 }}, afterDraw:function(chart){{
-  // Doughnut: show label + value on segments
+  // Doughnut: show value on segments, responsive
   if(chart.config.type!=='doughnut')return;
-  var ctx=chart.ctx, meta=chart.getDatasetMeta(0), total=0;
+  var ctx=chart.ctx, meta=chart.getDatasetMeta(0), total=0, w=chart.width;
   chart.data.datasets[0].data.forEach(function(v){{total+=v;}});
+  var isMobile=w<400;
   ctx.save();
   meta.data.forEach(function(arc,i){{
     var val=chart.data.datasets[0].data[i];
@@ -75,10 +76,11 @@ Chart.register({{id:'showValues', afterDatasetsDraw:function(chart){{
     var x=arc.x+Math.cos(angle)*r;
     var y=arc.y+Math.sin(angle)*r;
     ctx.fillStyle='#fff';
-    ctx.font='bold 10px \"Microsoft YaHei\"';
+    ctx.font=isMobile?'bold 8px \"Microsoft YaHei\"':'bold 10px \"Microsoft YaHei\"';
     ctx.textAlign='center';
     ctx.textBaseline='middle';
-    ctx.fillText(val.toLocaleString()+' ('+pct+'%)',x,y);
+    var txt=pct<8?pct+'%':(isMobile?val.toLocaleString():val.toLocaleString()+' ('+pct+'%)');
+    ctx.fillText(txt,x,y);
   }});
   ctx.restore();
 }}}});
@@ -111,7 +113,7 @@ td:first-child {{ text-align:left; font-weight:500; }}
 .summary-item .value {{ font-size:22px; font-weight:bold; color:#4472C4; }}
 .summary-item .label {{ font-size:10px; color:#888; margin-top:1px; }}
 .footer {{ text-align:right; color:#aaa; font-size:10px; margin-top:8px; }}
-@media (max-width:768px) {{ .grid {{ grid-template-columns:1fr; }} }}
+@media (max-width:768px) {{ .grid {{ grid-template-columns:1fr; }} .chart-wrap {{ height:340px; }} }}
 </style>
 </head>
 <body>
@@ -120,9 +122,7 @@ td:first-child {{ text-align:left; font-weight:500; }}
 
 <div class="grid">
   <div class="card"><h2>每日订单趋势</h2><div class="chart-wrap"><canvas id="lxLine"></canvas></div></div>
-  <div class="card"><h2>各品类订单占比</h2><div class="chart-wrap"><canvas id="lxPie"></canvas></div></div>
-  <div class="card"><h2>Top 15 店铺 (按最近7天总订单数)</h2><div class="chart-wrap tall"><canvas id="lxBar"></canvas></div></div>
-  <div class="card"><h2>FBA库存 - 按店铺 Top 20</h2><div class="table-wrap" id="tLxStockByStore"></div></div>
+  <div class="card"><h2>各品类订单（7天总单量）占比</h2><div class="chart-wrap"><canvas id="lxPie"></canvas></div></div>
 </div>
 
 <div class="grid">
@@ -132,6 +132,11 @@ td:first-child {{ text-align:left; font-weight:500; }}
 <div class="grid">
   <div class="card full-width"><h2>银饰店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat3"></div></div>
   <div class="card full-width"><h2>手链项链订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat4"></div></div>
+</div>
+
+<div class="grid">
+  <div class="card"><h2>Top 15 店铺 (按最近7天总订单数)</h2><div class="chart-wrap tall"><canvas id="lxBar"></canvas></div></div>
+  <div class="card"><h2>FBA库存 - 按店铺 Top 20</h2><div class="table-wrap" id="tLxStockByStore"></div></div>
 </div>
 
 <div class="footer">数据更新: {data_time} | 页面生成: {now}</div>
