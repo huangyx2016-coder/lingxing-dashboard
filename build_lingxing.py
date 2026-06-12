@@ -163,23 +163,23 @@ if (LX) {{
       catTotals.push({{label:c[0], total:t}});
     }});
     var scols = ['#4472C4','#ED7D31','#70AD47'];
-    var pieLabels=catTotals.map(function(x){{return x.label}});
-    var pieData=catTotals.map(function(x){{return x.total}});
-    var pieTotal=pieData.reduce(function(a,b){{return a+b}},0);
-    new Chart(document.getElementById('lxPie'),{{type:'pie',
-      data:{{labels:pieLabels, datasets:[{{data:pieData, backgroundColor:scols}}]}},
-      options:{{responsive:true, maintainAspectRatio:false, animation:false,
-        plugins:{{
-          legend:{{position:'right', labels:{{font:{{size:10}}, padding:8, generateLabels:function(chart){{
-            var ds=chart.data.datasets[0];
-            return chart.data.labels.map(function(l,i){{
-              var pct=Math.round(ds.data[i]/pieTotal*100);
-              return {{text:l+'  '+ds.data[i].toLocaleString()+'单 ('+pct+'%)', fillStyle:ds.backgroundColor[i], strokeStyle:ds.backgroundColor[i], index:i}};
-            }});
-          }}}},
-          tooltip:{{callbacks:{{label:function(c){{var pct=Math.round(c.raw/pieTotal*100); return c.label+': '+c.raw.toLocaleString()+'单 ('+pct+'%)';}}}}}}
-        }}
-      }}}});
+    var pieTotal = 0;
+    catTotals.forEach(function(x){{ pieTotal += x.total; }});
+    var pieLabels = catTotals.map(function(x){{
+      var pct = Math.round(x.total / pieTotal * 100);
+      return x.label + '  ' + x.total.toLocaleString() + '单 (' + pct + '%)';
+    }});
+    var pieData = catTotals.map(function(x){{ return x.total; }});
+    new Chart(document.getElementById('lxPie'),{{
+      type:'pie',
+      data:{{ labels:pieLabels, datasets:[{{ data:pieData, backgroundColor:scols }}] }},
+      options:{{
+        responsive:true,
+        maintainAspectRatio:false,
+        animation:false,
+        plugins:{{ legend:{{ position:'right', labels:{{ font:{{ size:10 }}, padding:6 }} }} }}
+      }}
+    }});
   }}
 
   // Top 15 stores by orders
