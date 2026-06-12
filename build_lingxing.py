@@ -181,7 +181,6 @@ if (LX) {{
         }}
       }}}});
   }}
-  }}
 
   // Top 15 stores by orders
   if(typeof Chart!=='undefined'){{
