@@ -73,7 +73,7 @@ Chart.register({{id:'showValues', afterDatasetsDraw:function(chart){{
     if(!val)return;
     var pct=Math.round(val/total*100);
     var angle=(arc.startAngle+arc.endAngle)/2;
-    var r=(arc.outerRadius+arc.innerRadius)/2;
+    var r=arc.outerRadius*0.62;
     var x=arc.x+Math.cos(angle)*r;
     var y=arc.y+Math.sin(angle)*r;
     var bgColor=chart.data.datasets[0].backgroundColor[i];
@@ -191,7 +191,7 @@ if (LX) {{
     new Chart(document.getElementById('lxPie'),{{type:'pie',
       data:{{labels:catTotals.map(function(x){{return x.label}}),
             datasets:[{{data:catTotals.map(function(x){{return x.total}}), backgroundColor:scols}}]}},
-      options:{{responsive:true, maintainAspectRatio:false, plugins:{{legend:{{position:'right', labels:{{font:{{size:10}}, padding:6}}}}}}}}}});
+      options:{{responsive:true, maintainAspectRatio:false, animation:false, plugins:{{legend:{{position:'right', labels:{{font:{{size:10}}, padding:6}}}}}}}}}});
   }}
 
   // Top 15 stores by orders
