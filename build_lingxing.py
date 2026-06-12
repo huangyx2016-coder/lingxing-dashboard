@@ -61,12 +61,13 @@ Chart.register({{id:'showValues', afterDatasetsDraw:function(chart){{
   }}
   ctx.restore();
 }}, afterDraw:function(chart){{
-  // Doughnut: show value on segments, responsive
+  // Doughnut: show value on segments, responsive, adaptive color
   if(chart.config.type!=='doughnut')return;
   var ctx=chart.ctx, meta=chart.getDatasetMeta(0), total=0, w=chart.width;
   chart.data.datasets[0].data.forEach(function(v){{total+=v;}});
   var isMobile=w<400;
   ctx.save();
+  var darkColors=['#4472C4','#ED7D31']; // blue & orange → white text
   meta.data.forEach(function(arc,i){{
     var val=chart.data.datasets[0].data[i];
     if(!val)return;
@@ -75,11 +76,12 @@ Chart.register({{id:'showValues', afterDatasetsDraw:function(chart){{
     var r=(arc.outerRadius+arc.innerRadius)/2;
     var x=arc.x+Math.cos(angle)*r;
     var y=arc.y+Math.sin(angle)*r;
-    ctx.fillStyle='#fff';
-    ctx.font=isMobile?'bold 8px \"Microsoft YaHei\"':'bold 10px \"Microsoft YaHei\"';
+    var bgColor=chart.data.datasets[0].backgroundColor[i];
+    ctx.fillStyle=darkColors.indexOf(bgColor)>=0?'#fff':'#333';
+    ctx.font=isMobile?'bold 9px \"Microsoft YaHei\"':'bold 11px \"Microsoft YaHei\"';
     ctx.textAlign='center';
     ctx.textBaseline='middle';
-    var txt=pct<8?pct+'%':(isMobile?val.toLocaleString():val.toLocaleString()+' ('+pct+'%)');
+    var txt=isMobile?pct+'%':val.toLocaleString()+'单 ('+pct+'%)';
     ctx.fillText(txt,x,y);
   }});
   ctx.restore();
@@ -187,7 +189,7 @@ if (LX) {{
     }});
     var scols = ['#4472C4','#ED7D31','#70AD47'];
     new Chart(document.getElementById('lxPie'),{{type:'doughnut',
-      data:{{labels:catTotals.map(function(x){{return x.label+'\\n'+x.total.toLocaleString()+'单'}}),
+      data:{{labels:catTotals.map(function(x){{return x.label}}),
             datasets:[{{data:catTotals.map(function(x){{return x.total}}), backgroundColor:scols}}]}},
       options:{{responsive:true, maintainAspectRatio:false, plugins:{{legend:{{position:'right', labels:{{font:{{size:10}}, padding:6}}}}}}}}}});
   }}
