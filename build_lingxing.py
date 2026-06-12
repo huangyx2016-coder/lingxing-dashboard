@@ -74,11 +74,16 @@ Chart.register({{id:'showValues', afterDatasetsDraw:function(chart){{
     var r=arc.outerRadius*0.58;
     var x=arc.x+Math.cos(angle)*r;
     var y=arc.y+Math.sin(angle)*r;
-    ctx.fillStyle=w<400?'#333':(pct>25?'#fff':'#333');
+    var dark=pct>25;
+    ctx.fillStyle=w<400?'#333':(dark?'#fff':'#333');
     ctx.font=w<400?'bold 9px sans-serif':'bold 12px sans-serif';
     ctx.textAlign='center';
-    ctx.textBaseline='middle';
-    ctx.fillText(pct+'%',x,y);
+    ctx.textBaseline='bottom';
+    ctx.fillText(pct+'%',x,y-2);
+    ctx.fillStyle=w<400?'#333':(dark?'rgba(255,255,255,0.85)':'#333');
+    ctx.font=w<400?'8px sans-serif':'10px sans-serif';
+    ctx.textBaseline='top';
+    ctx.fillText(val.toLocaleString()+'单',x,y+2);
   }});
   ctx.restore();
 }}}});
@@ -186,10 +191,7 @@ if (LX) {{
     var scols = ['#4472C4','#ED7D31','#70AD47'];
     var pieTotal = 0;
     catTotals.forEach(function(x){{ pieTotal += x.total; }});
-    var pieLabels = catTotals.map(function(x){{
-      var pct = Math.round(x.total / pieTotal * 100);
-      return x.label + '  ' + x.total.toLocaleString() + '单 (' + pct + '%)';
-    }});
+    var pieLabels = catTotals.map(function(x){{ return x.label; }});
     var pieData = catTotals.map(function(x){{ return x.total; }});
     new Chart(document.getElementById('lxPie'),{{
       type:'pie',
