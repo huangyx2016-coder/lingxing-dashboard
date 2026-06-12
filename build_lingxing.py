@@ -133,8 +133,11 @@ td:first-child {{ text-align:left; font-weight:500; }}
   <div class="card full-width"><h2>新耳环店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat2"></div></div>
 </div>
 <div class="grid">
-  <div class="card full-width"><h2>手链项链订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat4"></div></div>
+  <div class="card full-width"><h2>项链吊坠订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat4"></div></div>
   <div class="card full-width"><h2>银饰店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat3"></div></div>
+</div>
+<div class="grid">
+  <div class="card full-width"><h2>手链店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat5"></div></div>
 </div>
 
 <div class="grid">
@@ -250,15 +253,7 @@ if (LX) {{
     var allStores = Object.entries(LX.orders).sort(function(a,b){{return b[1].total-a[1].total;}});
     var assigned = {{}};
 
-    cats.forEach(function(cat){{
-      var stores = [];
-      allStores.forEach(function(x){{
-        if(assigned[x[0]]) return;
-        var match = false;
-        cat.kw.forEach(function(k){{ if(norm(x[0]).indexOf(norm(k)) !== -1) match = true; }});
-        if(match){{ assigned[x[0]] = true; stores.push(x); }}
-      }});
-
+    function renderTable(divId, stores){{
       var h = '<table><thead><tr><th>店铺</th>';
       LX.dates.forEach(function(d){{ h += '<th>'+d+'</th>'; }});
       h += '<th>合计</th></tr></thead><tbody>';
@@ -275,7 +270,33 @@ if (LX) {{
         h += '<td class="num">'+dt+'</td>';
       }});
       h += '<td class="num">'+total+'</td></tr></tbody></table>';
-      document.getElementById(cat.id).innerHTML = stores.length ? h : '<p style="color:#999;text-align:center;padding:20px">该分类暂无匹配店铺</p>';
+      document.getElementById(divId).innerHTML = stores.length ? h : '<p style="color:#999;text-align:center;padding:20px">暂无数据</p>';
+    }}
+
+    cats.forEach(function(cat){{
+      var stores = [];
+      allStores.forEach(function(x){{
+        if(assigned[x[0]]) return;
+        var match = false;
+        cat.kw.forEach(function(k){{ if(norm(x[0]).indexOf(norm(k)) !== -1) match = true; }});
+        if(match){{ assigned[x[0]] = true; stores.push(x); }}
+      }});
+
+      if(cat.id === 'tLxCat4'){{
+        var bracelet = [];
+        var pendant = [];
+        stores.forEach(function(x){{
+          if(x[0].indexOf('手链') !== -1 || norm(x[0]).indexOf(norm('香港惠拓')) !== -1){{
+            bracelet.push(x);
+          }} else {{
+            pendant.push(x);
+          }}
+        }});
+        renderTable('tLxCat4', pendant);
+        renderTable('tLxCat5', bracelet);
+      }} else {{
+        renderTable(cat.id, stores);
+      }}
     }});
   }})();
 }}
