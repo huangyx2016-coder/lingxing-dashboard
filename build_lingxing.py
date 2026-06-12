@@ -129,12 +129,12 @@ td:first-child {{ text-align:left; font-weight:500; }}
 </div>
 
 <div class="grid">
-  <div class="card full-width"><h2>新耳环店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat2"></div></div>
   <div class="card full-width"><h2>耳环订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat1"></div></div>
+  <div class="card full-width"><h2>新耳环店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat2"></div></div>
 </div>
 <div class="grid">
-  <div class="card full-width"><h2>银饰店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat3"></div></div>
   <div class="card full-width"><h2>手链项链订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat4"></div></div>
+  <div class="card full-width"><h2>银饰店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat3"></div></div>
 </div>
 
 <div class="grid">
