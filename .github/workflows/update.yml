@@ -1,7 +1,10 @@
 name: Update Lingxing Dashboard
 on:
+  push:
+    paths:
+      - 'lingxing_data.json'
   schedule:
-    - cron: '15 1,7 * * *'  # 9:15 & 15:15 UTC+8
+    - cron: '15 1,7 * * *'  # 9:15 & 15:15 backup
   workflow_dispatch:
 
 jobs:
