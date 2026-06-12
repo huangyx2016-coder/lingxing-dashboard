@@ -60,31 +60,6 @@ Chart.register({{id:'showValues', afterDatasetsDraw:function(chart){{
     }});
   }}
   ctx.restore();
-}}, afterDraw:function(chart){{
-  // Pie: show value on segments, responsive, adaptive color
-  if(chart.config.type!=='pie')return;
-  var ctx=chart.ctx, meta=chart.getDatasetMeta(0), total=0, w=chart.width;
-  chart.data.datasets[0].data.forEach(function(v){{total+=v;}});
-  var isMobile=w<400;
-  ctx.save();
-  var darkColors=['#4472C4','#ED7D31']; // blue & orange → white text
-  meta.data.forEach(function(arc,i){{
-    var val=chart.data.datasets[0].data[i];
-    if(!val)return;
-    var pct=Math.round(val/total*100);
-    var angle=(arc.startAngle+arc.endAngle)/2;
-    var r=arc.outerRadius*0.62;
-    var x=arc.x+Math.cos(angle)*r;
-    var y=arc.y+Math.sin(angle)*r;
-    var bgColor=chart.data.datasets[0].backgroundColor[i];
-    ctx.fillStyle=darkColors.indexOf(bgColor)>=0?'#fff':'#333';
-    ctx.font=isMobile?'bold 9px \"Microsoft YaHei\"':'bold 11px \"Microsoft YaHei\"';
-    ctx.textAlign='center';
-    ctx.textBaseline='middle';
-    var txt=isMobile?pct+'%':val.toLocaleString()+'单 ('+pct+'%)';
-    ctx.fillText(txt,x,y);
-  }});
-  ctx.restore();
 }}}});
 </script>
 <style>
@@ -188,10 +163,24 @@ if (LX) {{
       catTotals.push({{label:c[0], total:t}});
     }});
     var scols = ['#4472C4','#ED7D31','#70AD47'];
+    var pieLabels=catTotals.map(function(x){{return x.label}});
+    var pieData=catTotals.map(function(x){{return x.total}});
+    var pieTotal=pieData.reduce(function(a,b){{return a+b}},0);
     new Chart(document.getElementById('lxPie'),{{type:'pie',
-      data:{{labels:catTotals.map(function(x){{return x.label}}),
-            datasets:[{{data:catTotals.map(function(x){{return x.total}}), backgroundColor:scols}}]}},
-      options:{{responsive:true, maintainAspectRatio:false, animation:false, plugins:{{legend:{{position:'right', labels:{{font:{{size:10}}, padding:6}}}}}}}}}});
+      data:{{labels:pieLabels, datasets:[{{data:pieData, backgroundColor:scols}}]}},
+      options:{{responsive:true, maintainAspectRatio:false, animation:false,
+        plugins:{{
+          legend:{{position:'right', labels:{{font:{{size:10}}, padding:8, generateLabels:function(chart){{
+            var ds=chart.data.datasets[0];
+            return chart.data.labels.map(function(l,i){{
+              var pct=Math.round(ds.data[i]/pieTotal*100);
+              return {{text:l+'  '+ds.data[i].toLocaleString()+'单 ('+pct+'%)', fillStyle:ds.backgroundColor[i], strokeStyle:ds.backgroundColor[i], index:i}};
+            }});
+          }}}},
+          tooltip:{{callbacks:{{label:function(c){{var pct=Math.round(c.raw/pieTotal*100); return c.label+': '+c.raw.toLocaleString()+'单 ('+pct+'%)';}}}}}}
+        }}
+      }}}});
+  }}
   }}
 
   // Top 15 stores by orders
