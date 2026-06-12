@@ -129,8 +129,8 @@ td:first-child {{ text-align:left; font-weight:500; }}
 </div>
 
 <div class="grid">
-  <div class="card full-width"><h2>耳环订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat1"></div></div>
   <div class="card full-width"><h2>新耳环店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat2"></div></div>
+  <div class="card full-width"><h2>耳环订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat1"></div></div>
 </div>
 <div class="grid">
   <div class="card full-width"><h2>银饰店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat3"></div></div>
@@ -242,8 +242,8 @@ if (LX) {{
   (function(){{
     var norm = function(s){{ return s.toLowerCase().replace(/\\s+/g,''); }};
     var cats = [
+      {{id:'tLxCat2', kw:['Cendyess','worfey','Magifurni','Tuogzzdq','EXRSANCH','VSK','KKR','POHYEOL','CALLIOPE','ESSIE ODILA','YFdeSi','Maodeso','JOZZFEE','nuoxun','Daolianlo','Lageza','iewrsox','Yiidcii','Aolumio','kvvkii','Howe rai','Sincere-ljh','Yezhenhan','SPARSE FOREST','PWQIEE','DOXVO','FOCALLIVE','niratty','YAUVC','Raysam','UUBUUCD','VTEVER','BEAUSPA','gotoeewigs','Lamdesa','SREEOWER','TECYOW','Charmire','Eloqueen','TG544','香港諾迅','鹏宇贸易','TG411','TG400','TG407']}},
       {{id:'tLxCat1', kw:['GIORGIA GIBBS','SLMYUER','GIULIA LEONI','varger','KATIE OTTE','ELEBEST','AMELINE','Selroper','SHERRIE DOBBIE','SPLIM','vuiikhir','ALUUYANN','AIGAMIT','Fanglcy','DZCYAN','Degerde','Aidomiya','TONYAUTOPARTS','GLOSOLE','Verniflloga','HaoShuFu','SPACMAG','ENROSE','KFERAXSZ','SPOINT','JADE KOS','CHLOÉ LOVETT','SANDRA REDD','HOBATS','MOMELF','NEARLAND','USESMTLE','Kelli Myers','ongol','Chantel Yorke','COSSA','BANGALO','Kate','Eterbeau','Amoxos','Fureoai','TAKUGI','VESTACE','Fureylenx','BalaBelle','LISHUIHAOMI']}},
-      {{id:'tLxCat2', kw:['Cendyess','worfey','Magifurni','Tuogzzdq','EXRSANCH','VSK','KKR','POHYEOL','CALLIOPE','ESSIE ODILA','YFdeSi','Maodeso','JOZZFEE','nuoxun','Daolianlo','Lageza','iewrsox','Yiidcii','Aolumio','kvvkii','Howe rai','Sincere-ljh','Yezhenhan','SPARSE FOREST','PWQIEE','DOXVO','FOCALLIVE','niratty','YAUVC','Raysam','UUBUUCD','VTEVER','BEAUSPA','gotoeewigs','Lamdesa','SREEOWER','TECYOW','Charmire','Eloqueen','TG544','香港諾迅','鹏宇贸易','TG411','TG400']}},
       {{id:'tLxCat3', kw:['LIEBLICH','ESSIE','Annamate','CHICLOVE','Billie Bijoux','Van Chloe','ANNIS MUNN','ANNIS','AmorAime','BlingGem','NinaMaid','WISHMISS']}},
       {{id:'tLxCat4', kw:['MELELIFE','KYAYE','HIROM JOINS','Moonfox','Simlayton','STREYANT','LOKFAM','FEGER','CANNCI','CISSIEPERAL','ERIN MARIE','BENOITE','AOZELAN','OR OLD RUBIN','OLD RUBIN','PPRLIFE','Rewizoo','KROMPG','MONA MILANI','PESFIOLO','gcwen','WONRUN','CROCHETFUN','iSunat','CKUSCAPO','UHEPROKIT','LUXCUTY','EYUMOI','Naiswan','LEMKAY','BYBAIZ','YIYEPUTI','Qeces','TOBENO','Yzytdgzy','Rinponain','TUOIXPI','KHFGDS','ODIHUI','LOUISE VELLA','MISSZHI','koolfin','FENMI','GYUYCW','Zikonyou','SUNDINS','香港惠拓','SparkSphere']}}
     ];
