@@ -61,8 +61,8 @@ Chart.register({{id:'showValues', afterDatasetsDraw:function(chart){{
   }}
   ctx.restore();
 }}, afterDraw:function(chart){{
-  // Doughnut: show value on segments, responsive, adaptive color
-  if(chart.config.type!=='doughnut')return;
+  // Pie: show value on segments, responsive, adaptive color
+  if(chart.config.type!=='pie')return;
   var ctx=chart.ctx, meta=chart.getDatasetMeta(0), total=0, w=chart.width;
   chart.data.datasets[0].data.forEach(function(v){{total+=v;}});
   var isMobile=w<400;
@@ -170,7 +170,7 @@ if (LX) {{
         scales:{{y:{{beginAtZero:true, grid:{{display:true}}}}}}}}}});
   }}
 
-  // Category doughnut: 耳环, 银饰, 手链项链
+  // Category pie: 耳环, 银饰, 手链项链
   if(typeof Chart!=='undefined'){{
     var norm = function(s){{ return s.toLowerCase().replace(/\\s+/g,''); }};
     var catKw = [
@@ -188,7 +188,7 @@ if (LX) {{
       catTotals.push({{label:c[0], total:t}});
     }});
     var scols = ['#4472C4','#ED7D31','#70AD47'];
-    new Chart(document.getElementById('lxPie'),{{type:'doughnut',
+    new Chart(document.getElementById('lxPie'),{{type:'pie',
       data:{{labels:catTotals.map(function(x){{return x.label}}),
             datasets:[{{data:catTotals.map(function(x){{return x.total}}), backgroundColor:scols}}]}},
       options:{{responsive:true, maintainAspectRatio:false, plugins:{{legend:{{position:'right', labels:{{font:{{size:10}}, padding:6}}}}}}}}}});
