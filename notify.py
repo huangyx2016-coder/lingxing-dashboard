@@ -15,8 +15,8 @@ def main():
     now = datetime.now().strftime("%m-%d %H:%M")
     text = (
         f"每日订单自动可视化 - 数据已更新 ({now})\n"
-        f"总订单: {data.get('total_orders', 0):,} 单\n"
-        f"总金额: ${data.get('total_amount', 0):,.0f}\n"
+        f"近7天总订单: {data.get('total_orders', 0):,} 单\n"
+        f"近7天总金额: ${data.get('total_amount', 0):,.0f}\n"
         f"店铺数: {data.get('shops_count', 0)}\n"
         f"FBA可售: {data['stock_summary']['available']:,}\n"
         f"\n查看详情: {URL}"
