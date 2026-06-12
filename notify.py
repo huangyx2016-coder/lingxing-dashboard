@@ -1,5 +1,5 @@
-"""Send dashboard link to 邓子平 & Mark via Feishu."""
-import json, requests
+"""Send dashboard link to 邓子平 & Mark via Feishu, with deployment verification."""
+import json, requests, time
 from datetime import datetime
 
 APP_ID = "cli_aaaa6fd809795cd9"
@@ -9,11 +9,38 @@ RECIPIENTS = [
     ("Mark", "ou_44d1d3cbeb2e1829ddb5fa28351ecd89"),
 ]
 URL = "https://huangyx2016-coder.github.io/lingxing-dashboard/"
+DATA_URL = URL + "lingxing_data.json"
+
+
+def verify_deployed(expected_orders: int, retries: int = 15, delay: int = 20) -> bool:
+    """Wait until the deployed page shows the expected order count."""
+    for i in range(retries):
+        try:
+            resp = requests.get(DATA_URL, timeout=15)
+            if resp.status_code == 200:
+                deployed = resp.json()
+                actual = deployed.get("total_orders", 0)
+                if actual == expected_orders:
+                    print(f"  Verified: {actual} orders match (attempt {i+1})")
+                    return True
+                print(f"  Mismatch: local={expected_orders}, deployed={actual} (attempt {i+1})")
+            else:
+                print(f"  HTTP {resp.status_code} (attempt {i+1})")
+        except Exception as e:
+            print(f"  Error: {e} (attempt {i+1})")
+        if i < retries - 1:
+            time.sleep(delay)
+    return False
 
 
 def main():
     with open("lingxing_data.json", "r", encoding="utf-8") as f:
         data = json.load(f)
+
+    print("Verifying deployment...")
+    if not verify_deployed(data.get("total_orders", 0)):
+        print("FAILED: deployed page does not match local data after retries")
+        return
 
     now = datetime.now().strftime("%m-%d %H:%M")
     text = (
