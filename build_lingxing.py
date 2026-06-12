@@ -122,7 +122,7 @@ td:first-child {{ text-align:left; font-weight:500; }}
 
 <div class="grid">
   <div class="card"><h2>每日订单趋势</h2><div class="chart-wrap"><canvas id="lxLine"></canvas></div></div>
-  <div class="card"><h2>各品类订单（7天总单量）占比</h2><div class="chart-wrap"><canvas id="lxPie"></canvas></div></div>
+  <div class="card"><h2>最近7天各品类总订单占比</h2><div class="chart-wrap"><canvas id="lxPie"></canvas></div></div>
 </div>
 
 <div class="grid">
@@ -149,10 +149,9 @@ var colors = ['#4472C4','#ED7D31','#70AD47','#FFC000','#5B9BD5','#A5A5A5','#FF6B
 
 if (LX) {{
   document.getElementById('smLx').innerHTML =
-    '<div class="summary-item"><div class="value">'+LX.total_orders.toLocaleString()+'</div><div class="label">总订单 ('+LX.shops_count+'店铺)</div></div>'+
-    '<div class="summary-item"><div class="value">$'+LX.total_amount.toLocaleString()+'</div><div class="label">订单总额</div></div>'+
+    '<div class="summary-item"><div class="value">'+LX.total_orders.toLocaleString()+'</div><div class="label">最近7天总订单 ('+LX.shops_count+'店铺)</div></div>'+
+    '<div class="summary-item"><div class="value">$'+LX.total_amount.toLocaleString()+'</div><div class="label">最近7天订单总额</div></div>'+
     '<div class="summary-item"><div class="value">'+LX.stock_summary.available.toLocaleString()+'</div><div class="label">FBA可售库存</div></div>'+
-    '<div class="summary-item"><div class="value">'+LX.stock_summary.unsellable.toLocaleString()+'</div><div class="label">FBA不可售</div></div>'+
     '<div class="summary-item"><div class="value">'+LX.stock_summary.inbound.toLocaleString()+'</div><div class="label">在途</div></div>';
 
   // Daily order line chart
@@ -218,9 +217,9 @@ if (LX) {{
       storeStock[sname].skus += stock.skus;
     }});
     var top20 = Object.entries(storeStock).sort(function(a,b){{return b[1].available-a[1].available;}}).slice(0,20);
-    var h = '<table><thead><tr><th>店铺</th><th>可售</th><th>待发货</th><th>在途</th><th>不可售</th><th>SKU数</th></tr></thead><tbody>';
+    var h = '<table><thead><tr><th>店铺</th><th>可售</th><th>待发货</th><th>在途</th><th>SKU数</th></tr></thead><tbody>';
     top20.forEach(function(x){{
-      h += '<tr><td>'+x[0]+'</td><td class="num">'+x[1].available.toLocaleString()+'</td><td class="num">'+x[1].pending.toLocaleString()+'</td><td class="num">'+x[1].inbound.toLocaleString()+'</td><td class="num">'+x[1].unsellable.toLocaleString()+'</td><td class="num">'+x[1].skus+'</td></tr>';
+      h += '<tr><td>'+x[0]+'</td><td class="num">'+x[1].available.toLocaleString()+'</td><td class="num">'+x[1].pending.toLocaleString()+'</td><td class="num">'+x[1].inbound.toLocaleString()+'</td><td class="num">'+x[1].skus+'</td></tr>';
     }});
     h += '</tbody></table>';
     document.getElementById('tLxStockByStore').innerHTML = h;
