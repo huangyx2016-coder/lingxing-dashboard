@@ -1,19 +1,16 @@
-"""Send dashboard link to 邓子平 & Mark via Feishu, with deployment verification."""
-import json, os, requests, time
+"""Send dashboard link to 邓子平 (& Mark only on scheduled runs) via Feishu."""
+import json, os, requests, sys, time
 from datetime import datetime
 
 APP_ID = "cli_aaaa6fd809795cd9"
 APP_SECRET = "REDACTED_FEISHU_SECRET"
-RECIPIENTS = [
-    ("邓子平", "REDACTED_OPEN_ID"),
-    ("Mark", "REDACTED_OPEN_ID"),
-]
+DZP = ("邓子平", "REDACTED_OPEN_ID")
+MARK = ("Mark", "REDACTED_OPEN_ID")
 URL = "https://huangyx2016-coder.github.io/lingxing-dashboard/"
 DATA_URL = URL + "lingxing_data.json"
 
 
 def verify_deployed(expected_orders: int, retries: int = 15, delay: int = 20) -> bool:
-    """Wait until the deployed page shows the expected order count."""
     for i in range(retries):
         try:
             resp = requests.get(DATA_URL, timeout=15)
@@ -34,6 +31,8 @@ def verify_deployed(expected_orders: int, retries: int = 15, delay: int = 20) ->
 
 
 def main():
+    scheduled = "--scheduled" in sys.argv
+
     script_dir = os.path.dirname(os.path.abspath(__file__))
     data_path = os.path.join(script_dir, "lingxing_data.json")
     with open(data_path, "r", encoding="utf-8") as f:
@@ -59,7 +58,12 @@ def main():
         json={"app_id": APP_ID, "app_secret": APP_SECRET}, timeout=30
     ).json()["tenant_access_token"]
 
-    for name, open_id in RECIPIENTS:
+    # 邓子平 always receives; Mark only on scheduled runs
+    recipients = [DZP]
+    if scheduled:
+        recipients.append(MARK)
+
+    for name, open_id in recipients:
         resp = requests.post(
             "https://open.feishu.cn/open-apis/im/v1/messages?receive_id_type=open_id",
             headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
