@@ -1,5 +1,5 @@
 """Send dashboard link to 邓子平 & Mark via Feishu, with deployment verification."""
-import json, requests, time
+import json, os, requests, time
 from datetime import datetime
 
 APP_ID = "cli_aaaa6fd809795cd9"
@@ -34,7 +34,9 @@ def verify_deployed(expected_orders: int, retries: int = 15, delay: int = 20) ->
 
 
 def main():
-    with open("lingxing_data.json", "r", encoding="utf-8") as f:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_path = os.path.join(script_dir, "lingxing_data.json")
+    with open(data_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     print("Verifying deployment...")
