@@ -14,7 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python build_lingxing.py
-      - run: python build_silver.py
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
