@@ -15,15 +15,15 @@ body { font-family: 'Microsoft YaHei', sans-serif; background:#f0f2f5; color:#33
 .nav a { color:#4472C4; text-decoration:none; font-size:13px; padding:6px 14px; background:#fff; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
 .nav a:hover { background:#4472C4; color:#fff; }
 .card { background:#fff; border-radius:10px; padding:14px; box-shadow:0 2px 6px rgba(0,0,0,0.06); margin-bottom:14px; max-width:1100px; margin-left:auto; margin-right:auto; }
-.card h2 { font-size:14px; margin-bottom:8px; border-bottom:2px solid #4472C4; padding-bottom:5px; }
+.card h2 { font-size:14px; margin-bottom:8px; border-bottom:2px solid #70AD47; padding-bottom:5px; }
 .table-wrap { max-height:600px; overflow-y:auto; }
 table { width:100%; border-collapse:collapse; font-size:11px; }
-th { background:#4472C4; color:#fff; padding:5px 3px; position:sticky; top:0; z-index:1; text-align:center; white-space:nowrap; }
+th { background:#70AD47; color:#fff; padding:5px 3px; position:sticky; top:0; z-index:1; text-align:center; white-space:nowrap; }
 td { padding:3px; text-align:center; border-bottom:1px solid #eee; }
 tr:hover td { background:#f5f7fa; }
 td:first-child { text-align:left; font-weight:500; }
 .num { text-align:right; }
-.total-row td { font-weight:bold; background:#FFF2CC; border-top:2px solid #4472C4; }
+.total-row td { font-weight:bold; background:#FFF2CC; border-top:2px solid #70AD47; }
 .chart-wrap { position:relative; height:400px; margin-bottom:14px; max-width:1100px; margin-left:auto; margin-right:auto; }
 .summary-bar { display:flex; gap:14px; margin-bottom:14px; max-width:1100px; margin-left:auto; margin-right:auto; }
 .summary-item { flex:1; background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 6px rgba(0,0,0,0.06); text-align:center; }
@@ -34,73 +34,50 @@ td:first-child { text-align:left; font-weight:500; }
 </head>
 <body>
 <div class="header"><h1>银饰订单 - 店铺明细</h1><p id="dateRange"></p></div>
-
 <div class="nav">
   <a href="index.html">← 返回主仪表盘</a>
 </div>
-
 <div class="summary-bar" id="sm"></div>
 <div class="chart-wrap"><canvas id="silverBar"></canvas></div>
 <div class="card">
   <h2>全部银饰店铺</h2>
   <div class="table-wrap" id="tbl"></div>
 </div>
-<div class="footer" id="ft"></div>
+<div class="footer">数据更新:  | 页面生成: 2026-06-18 13:49</div>
 
 <script>
-var silverKw = ['LIEBLICH','ESSIE','Annamate','CHICLOVE','Billie Bijoux','Van Chloe','ANNIS MUNN','ANNIS','AmorAime','BlingGem','NinaMaid','WISHMISS'];
+var LX = {"pull_time": "", "dates": ["06/11", "06/12", "06/13", "06/14", "06/15", "06/16", "06/17"], "orders": {"李舒瑶-AMORAIME-东莞市韶辉朗贸易有限公司-US-银饰": {"daily": {"06/11": 29, "06/12": 33, "06/13": 27, "06/14": 30, "06/15": 25, "06/16": 34, "06/17": 26}, "amount": {"06/11": 1012.32, "06/12": 1302.11, "06/13": 979.15, "06/14": 1160.66, "06/15": 934.68, "06/16": 1198.13, "06/17": 1055.26}, "total": 204, "total_amount": 7642.31}, "熊燃-Annamate-深圳市伽例电子商务有限公司-US": {"daily": {"06/11": 11, "06/12": 16, "06/13": 15, "06/14": 16, "06/15": 27, "06/16": 27, "06/17": 26}, "amount": {"06/11": 423.05, "06/12": 642.19, "06/13": 641.42, "06/14": 720.53, "06/15": 1107.44, "06/16": 1038.9, "06/17": 1195.66}, "total": 138, "total_amount": 5769.19}, "ANNIS-US-US": {"daily": {"06/11": 29, "06/12": 16, "06/13": 16, "06/14": 16, "06/15": 24, "06/16": 21, "06/17": 13}, "amount": {"06/11": 1154.89, "06/12": 639.41, "06/13": 651.22, "06/14": 611.29, "06/15": 974.64, "06/16": 974.46, "06/17": 397.56}, "total": 135, "total_amount": 5403.47}, "NINAMAID-CA": {"daily": {"06/11": 16, "06/12": 11, "06/13": 13, "06/14": 19, "06/15": 21, "06/16": 20, "06/17": 26}, "amount": {"06/11": 908.48, "06/12": 672.29, "06/13": 550.07, "06/14": 1133.61, "06/15": 1124.04, "06/16": 996.98, "06/17": 1382.51}, "total": 126, "total_amount": 6767.98}, "NINAMAID-US": {"daily": {"06/11": 18, "06/12": 18, "06/13": 13, "06/14": 17, "06/15": 17, "06/16": 22, "06/17": 18}, "amount": {"06/11": 767.68, "06/12": 854.64, "06/13": 508.56, "06/14": 918.94, "06/15": 699.15, "06/16": 883.98, "06/17": 818.28}, "total": 123, "total_amount": 5451.23}, "LIEBLICH-US": {"daily": {"06/11": 18, "06/12": 17, "06/13": 17, "06/14": 15, "06/15": 16, "06/16": 10, "06/17": 13}, "amount": {"06/11": 276.32, "06/12": 180.8, "06/13": 176.67, "06/14": 144.2, "06/15": 162.06, "06/16": 93.48, "06/17": 143.61}, "total": 106, "total_amount": 1177.14}, "梁楚凝+谢晓花-BillieBijoux-US-银饰-东莞市邴昊沛工艺品有限公司": {"daily": {"06/11": 10, "06/12": 10, "06/13": 6, "06/14": 9, "06/15": 6, "06/16": 11, "06/17": 11}, "amount": {"06/11": 399.39, "06/12": 346.47, "06/13": 265.43, "06/14": 377.7, "06/15": 269.06, "06/16": 654.17, "06/17": 444.0}, "total": 63, "total_amount": 2756.22}, "ANNIS-CA-CA": {"daily": {"06/11": 6, "06/12": 5, "06/13": 3, "06/14": 6, "06/15": 10, "06/16": 7, "06/17": 6}, "amount": {"06/11": 283.17, "06/12": 198.78, "06/13": 147.87, "06/14": 276.82, "06/15": 526.76, "06/16": 347.5, "06/17": 290.22}, "total": 43, "total_amount": 2071.12}, "淑芬+晓花-VANCHLOE-CA-银饰-上海朵沫生物科技有限公司": {"daily": {"06/11": 5, "06/12": 4, "06/13": 7, "06/14": 6, "06/15": 3, "06/16": 2, "06/17": 3}, "amount": {"06/11": 263.25, "06/12": 232.43, "06/13": 237.76, "06/14": 292.47, "06/15": 138.56, "06/16": 45.14, "06/17": 157.59}, "total": 30, "total_amount": 1367.2}, "郑晓琪+谢晓花-BlingGem-US-银饰-娜缇沛媞": {"daily": {"06/11": 3, "06/12": 3, "06/13": 5, "06/14": 0, "06/15": 6, "06/16": 1, "06/17": 0}, "amount": {"06/11": 88.88, "06/12": 91.44, "06/13": 231.19, "06/14": 0, "06/15": 266.44, "06/16": 46.79, "06/17": 0}, "total": 18, "total_amount": 724.74}, "梁楚凝+谢晓花-BillieBijoux-CA-银饰-东莞市邴昊沛工艺品有限公司": {"daily": {"06/11": 4, "06/12": 1, "06/13": 2, "06/14": 4, "06/15": 2, "06/16": 3, "06/17": 1}, "amount": {"06/11": 243.64, "06/12": 61.58, "06/13": 103.94, "06/14": 235.0, "06/15": 112.47, "06/16": 219.36, "06/17": 55.36}, "total": 17, "total_amount": 1031.35}, "梁淑芬+谢晓花-VANCHLOE-US-银饰-上海朵沫生物科技有限公司": {"daily": {"06/11": 2, "06/12": 2, "06/13": 2, "06/14": 3, "06/15": 1, "06/16": 2, "06/17": 3}, "amount": {"06/11": 75.85, "06/12": 39.02, "06/13": 97.52, "06/14": 187.83, "06/15": 75.41, "06/16": 123.66, "06/17": 226.76}, "total": 15, "total_amount": 826.05}, "晓琪+晓花-BlingGem-娜缇沛媞CA": {"daily": {"06/11": 2, "06/12": 3, "06/13": 5, "06/14": 1, "06/15": 2, "06/16": 1, "06/17": 1}, "amount": {"06/11": 89.98, "06/12": 163.48, "06/13": 94.5, "06/14": 73.57, "06/15": 44.79, "06/16": 44.79, "06/17": 73.57}, "total": 15, "total_amount": 584.68}, "郑晓琪+谢晓花-ESSIE ODILA-US-耳环-深圳美啦文化传媒有限公司": {"daily": {"06/11": 1, "06/12": 0, "06/13": 1, "06/14": 1, "06/15": 4, "06/16": 1, "06/17": 2}, "amount": {"06/11": 0.0, "06/12": 0, "06/13": 51.93, "06/14": 64.67, "06/15": 176.01, "06/16": 53.28, "06/17": 102.94}, "total": 10, "total_amount": 448.83}, "熊燃-Chiclove-银饰-US": {"daily": {"06/11": 0, "06/12": 4, "06/13": 0, "06/14": 0, "06/15": 1, "06/16": 0, "06/17": 1}, "amount": {"06/11": 0, "06/12": 189.62, "06/13": 0, "06/14": 0, "06/15": 14.95, "06/16": 0, "06/17": 34.89}, "total": 6, "total_amount": 239.46}, "ANNIS-UK-UK": {"daily": {"06/11": 1, "06/12": 0, "06/13": 1, "06/14": 2, "06/15": 1, "06/16": 0, "06/17": 0}, "amount": {"06/11": 49.99, "06/12": 0, "06/13": 31.99, "06/14": 0.0, "06/15": 31.99, "06/16": 0, "06/17": 0}, "total": 5, "total_amount": 113.97}, "ANNIS-DE": {"daily": {"06/11": 2, "06/12": 2, "06/13": 0, "06/14": 1, "06/15": 0, "06/16": 0, "06/17": 0}, "amount": {"06/11": 69.98, "06/12": 73.98, "06/13": 0, "06/14": 35.28, "06/15": 0, "06/16": 0, "06/17": 0}, "total": 5, "total_amount": 179.24}, "熊燃-Chiclove-银饰-CA": {"daily": {"06/11": 0, "06/12": 1, "06/13": 1, "06/14": 0, "06/15": 1, "06/16": 1, "06/17": 0}, "amount": {"06/11": 0, "06/12": 45.14, "06/13": 41.95, "06/14": 0, "06/15": 44.74, "06/16": 45.93, "06/17": 0}, "total": 4, "total_amount": 177.76}, "WISHMISS-US": {"daily": {"06/11": 0, "06/12": 1, "06/13": 1, "06/14": 0, "06/15": 0, "06/16": 0, "06/17": 1}, "amount": {"06/11": 0, "06/12": 31.86, "06/13": 30.61, "06/14": 0, "06/15": 0, "06/16": 0, "06/17": 31.86}, "total": 3, "total_amount": 94.33}, "LIEBLICH-MX": {"daily": {"06/11": 1, "06/12": 0, "06/13": 0, "06/14": 0, "06/15": 0, "06/16": 0, "06/17": 0}, "amount": {"06/11": 256.11, "06/12": 0, "06/13": 0, "06/14": 0, "06/15": 0, "06/16": 0, "06/17": 0}, "total": 1, "total_amount": 256.11}, "AMORAIME-CA": {"daily": {"06/11": 0, "06/12": 0, "06/13": 0, "06/14": 0, "06/15": 0, "06/16": 1, "06/17": 0}, "amount": {"06/11": 0, "06/12": 0, "06/13": 0, "06/14": 0, "06/15": 0, "06/16": 37.79, "06/17": 0}, "total": 1, "total_amount": 37.79}}, "total_orders": 1068, "shops_count": 21};
 var colors = ['#4472C4','#ED7D31','#70AD47','#FFC000','#5B9BD5'];
 
-fetch('lingxing_data.json')
-  .then(function(r){ return r.json(); })
-  .then(function(LX){
-    var norm = function(s){ return s.toLowerCase().replace(/\s+/g,''); };
+document.getElementById('dateRange').textContent = LX.dates[0] + ' — ' + LX.dates[LX.dates.length-1] + ' | ' + LX.total_orders.toLocaleString() + ' 单 | ' + LX.shops_count + ' 店铺';
+document.getElementById('sm').innerHTML =
+  '<div class="summary-item"><div class="value">'+LX.total_orders.toLocaleString()+'</div><div class="label">银饰总订单</div></div>'+
+  '<div class="summary-item"><div class="value">'+LX.shops_count+'</div><div class="label">店铺数</div></div>';
 
-    function matchKw(name, kwList){
-      for(var i=0; i<kwList.length; i++){ if(norm(name).indexOf(norm(kwList[i]))!==-1) return true; }
-      return false;
-    }
+if(typeof Chart!=='undefined'){
+  var allStores = Object.entries(LX.orders).sort(function(a,b){return b[1].total-a[1].total;});
+  var top = allStores.slice(0,15);
+  new Chart(document.getElementById('silverBar'),{type:'bar',
+    data:{labels:top.map(function(x){return x[0].length>18?x[0].slice(0,17)+'...':x[0];}),
+          datasets:[{data:top.map(function(x){return x[1].total;}), backgroundColor:colors[2], borderRadius:3}]},
+    options:{responsive:true, maintainAspectRatio:false, indexAxis:'y', plugins:{legend:{display:false}}, scales:{x:{grid:{display:true}}}}});
+}
 
-    var allStores = Object.entries(LX.orders).sort(function(a,b){return b[1].total-a[1].total;});
-    var silverStores = allStores.filter(function(x){ return matchKw(x[0], silverKw); });
-    var silverTotal = silverStores.reduce(function(s,x){return s+x[1].total;},0);
-
-    document.getElementById('dateRange').textContent = LX.dates[0] + ' — ' + LX.dates[LX.dates.length-1] + ' | ' + silverTotal.toLocaleString() + ' 单 | ' + silverStores.length + ' 店铺';
-    document.getElementById('sm').innerHTML =
-      '<div class="summary-item"><div class="value">'+silverTotal.toLocaleString()+'</div><div class="label">银饰总订单</div></div>'+
-      '<div class="summary-item"><div class="value">'+silverStores.length+'</div><div class="label">店铺数</div></div>';
-
-    // Bar chart: top 15
-    if(typeof Chart!=='undefined'){
-      var top = silverStores.slice(0,15);
-      new Chart(document.getElementById('silverBar'),{type:'bar',
-        data:{labels:top.map(function(x){return x[0].length>18?x[0].slice(0,17)+'...':x[0];}),
-              datasets:[{data:top.map(function(x){return x[1].total;}), backgroundColor:colors[2], borderRadius:3}]},
-        options:{responsive:true, maintainAspectRatio:false, indexAxis:'y', plugins:{legend:{display:false}}, scales:{x:{grid:{display:true}}}}});
-    }
-
-    // Table
-    var h = '<table><thead><tr><th>店铺</th>';
-    LX.dates.forEach(function(d){ h += '<th>'+d+'</th>'; });
-    h += '<th>合计</th></tr></thead><tbody>';
-    silverStores.forEach(function(x){
-      h += '<tr><td>'+x[0]+'</td>';
-      LX.dates.forEach(function(d){ h += '<td class="num">'+(x[1].daily[d]||0)+'</td>'; });
-      h += '<td class="num" style="font-weight:bold">'+x[1].total+'</td></tr>';
-    });
-    h += '<tr class="total-row"><td>合计 ('+silverStores.length+'店铺)</td>';
-    LX.dates.forEach(function(d){
-      var dt = silverStores.reduce(function(s,x){return s+(x[1].daily[d]||0);},0);
-      h += '<td class="num">'+dt+'</td>';
-    });
-    h += '<td class="num">'+silverTotal+'</td></tr></tbody></table>';
-    document.getElementById('tbl').innerHTML = silverStores.length ? h : '<p style="color:#999;text-align:center;padding:20px">暂无数据</p>';
-
-    document.getElementById('ft').textContent = '数据更新: ' + (LX.pull_time || '') + ' | 数据来源: lingxing_data.json';
-  })
-  .catch(function(e){
-    document.getElementById('tbl').innerHTML = '<p style="color:red;text-align:center;padding:20px">数据加载失败: ' + e.message + '</p>';
-  });
+var h = '<table><thead><tr><th>店铺</th>';
+LX.dates.forEach(function(d){ h += '<th>'+d+'</th>'; });
+h += '<th>合计</th></tr></thead><tbody>';
+allStores.forEach(function(x){
+  h += '<tr><td>'+x[0]+'</td>';
+  LX.dates.forEach(function(d){ h += '<td class="num">'+(x[1].daily[d]||0)+'</td>'; });
+  h += '<td class="num" style="font-weight:bold">'+x[1].total+'</td></tr>';
+});
+h += '<tr class="total-row"><td>合计 ('+allStores.length+'店铺)</td>';
+LX.dates.forEach(function(d){
+  var dt = allStores.reduce(function(s,x){return s+(x[1].daily[d]||0);},0);
+  h += '<td class="num">'+dt+'</td>';
+});
+h += '<td class="num">'+LX.total_orders+'</td></tr></tbody></table>';
+document.getElementById('tbl').innerHTML = allStores.length ? h : '<p style="color:#999;text-align:center;padding:20px">暂无数据</p>';
 </script>
 </body>
 </html>
