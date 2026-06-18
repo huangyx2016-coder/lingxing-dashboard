@@ -124,8 +124,7 @@ td:first-child {{ text-align:left; font-weight:500; }}
 <div class="summary-bar" id="smLx"></div>
 
 <div class="grid">
-  <div class="card"><h2>每日订单趋势</h2><div class="chart-wrap"><canvas id="lxLine"></canvas></div></div>
-  <div class="card"><h2>最近7天各品类总订单占比</h2><div class="chart-wrap"><canvas id="lxPie"></canvas></div></div>
+  <div class="card full-width" style="max-width:500px;margin:0 auto;"><h2>最近7天各品类总订单占比</h2><div class="chart-wrap"><canvas id="lxPie"></canvas></div></div>
 </div>
 
 <div class="grid">
@@ -136,13 +135,8 @@ td:first-child {{ text-align:left; font-weight:500; }}
   <div class="card full-width"><h2>项链吊坠订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat4"></div></div>
   <div class="card full-width"><h2>手链店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat5"></div></div>
 </div>
-<div class="nav">
-  <a href="silver.html">银饰订单 →</a>
-</div>
-
 <div class="grid">
-  <div class="card"><h2>Top 15 店铺 (按最近7天总订单数)</h2><div class="chart-wrap tall"><canvas id="lxBar"></canvas></div></div>
-  <div class="card"><h2>FBA库存 - 按店铺 Top 20</h2><div class="table-wrap" id="tLxStockByStore"></div></div>
+  <div class="card full-width"><h2>FBA库存 - 按店铺 Top 20</h2><div class="table-wrap" id="tLxStockByStore"></div></div>
 </div>
 
 <div class="footer">数据更新: {data_time} | 页面生成: {now}</div>
@@ -160,25 +154,10 @@ if (LX) {{
     '<div class="summary-item"><div class="value">'+LX.stock_summary.available.toLocaleString()+'</div><div class="label">FBA可售库存</div></div>'+
     '<div class="summary-item"><div class="value">'+LX.stock_summary.inbound.toLocaleString()+'</div><div class="label">在途</div></div>';
 
-  // Daily order line chart
-  if(typeof Chart!=='undefined' && LX.dates.length){{
-    var dailyOrders = LX.dates.map(function(d){{
-      var total = 0;
-      Object.values(LX.orders).forEach(function(s){{ total += (s.daily[d]||0); }});
-      return total;
-    }});
-    new Chart(document.getElementById('lxLine'),{{type:'line',
-      data:{{labels:LX.dates, datasets:[{{data:dailyOrders, borderColor:'#4472C4', backgroundColor:'rgba(68,114,196,0.1)', fill:true, tension:0.3, pointRadius:5, pointBackgroundColor:'#4472C4'}}]}},
-      options:{{responsive:true, maintainAspectRatio:false,
-        plugins:{{legend:{{display:false}}, tooltip:{{callbacks:{{label:function(c){{return c.raw+' 单'}}}}}}}},
-        scales:{{y:{{beginAtZero:true, grid:{{display:true}}}}}}}}}});
-  }}
-
-  // Category pie: 耳环, 项链吊坠, 手链, 银饰
+  // Category pie: 耳环, 项链吊坠, 手链
   if(typeof Chart!=='undefined'){{
     var norm = function(s){{ return s.toLowerCase().replace(/\\s+/g,''); }};
     var earringKw = ['GIORGIA GIBBS','SLMYUER','GIULIA LEONI','varger','KATIE OTTE','ELEBEST','AMELINE','Selroper','SHERRIE DOBBIE','SPLIM','vuiikhir','ALUUYANN','AIGAMIT','Fanglcy','DZCYAN','Degerde','Aidomiya','TONYAUTOPARTS','GLOSOLE','Verniflloga','HaoShuFu','SPACMAG','ENROSE','KFERAXSZ','SPOINT','JADE KOS','CHLOÉ LOVETT','SANDRA REDD','HOBATS','MOMELF','NEARLAND','USESMTLE','Kelli Myers','ongol','Chantel Yorke','COSSA','BANGALO','Kate','Eterbeau','Amoxos','Fureoai','TAKUGI','VESTACE','Fureylenx','BalaBelle','LISHUIHAOMI','Cendyess','worfey','Magifurni','Tuogzzdq','EXRSANCH','VSK','KKR','POHYEOL','CALLIOPE','ESSIE ODILA','YFdeSi','Maodeso','JOZZFEE','nuoxun','Daolianlo','Lageza','iewrsox','Yiidcii','Aolumio','kvvkii','Howe rai','Sincere-ljh','Yezhenhan','SPARSE FOREST','PWQIEE','DOXVO','FOCALLIVE','niratty','YAUVC','Raysam','UUBUUCD','VTEVER','BEAUSPA','gotoeewigs','Lamdesa','SREEOWER','TECYOW','Charmire','Eloqueen','TG544','香港諾迅','鹏宇贸易','TG411','TG400'];
-    var silverKw = ['LIEBLICH','ESSIE','Annamate','CHICLOVE','Billie Bijoux','Van Chloe','ANNIS MUNN','ANNIS','AmorAime','BlingGem','NinaMaid','WISHMISS'];
     var braceletKw = ['MELELIFE','KYAYE','HIROM JOINS','Moonfox','Simlayton','STREYANT','LOKFAM','FEGER','CANNCI','CISSIEPERAL','ERIN MARIE','BENOITE','AOZELAN','OR OLD RUBIN','OLD RUBIN','PPRLIFE','Rewizoo','KROMPG','MONA MILANI','PESFIOLO','gcwen','WONRUN','CROCHETFUN','iSunat','CKUSCAPO','UHEPROKIT','LUXCUTY','EYUMOI','Naiswan','LEMKAY','BYBAIZ','YIYEPUTI','Qeces','TOBENO','Yzytdgzy','Rinponain','TUOIXPI','KHFGDS','ODIHUI','LOUISE VELLA','MISSZHI','koolfin','FENMI','GYUYCW','Zikonyou','SUNDINS','香港惠拓','SparkSphere'];
 
     function matchKw(name, kwList){{
@@ -187,7 +166,7 @@ if (LX) {{
     }}
 
     var allStores = Object.entries(LX.orders);
-    var assigned2 = {{}}, earringTotal=0, silverTotal=0, braceletTotal=0, pendantTotal=0;
+    var assigned2 = {{}}, earringTotal=0, braceletTotal=0, pendantTotal=0;
     allStores.forEach(function(x){{
       if(assigned2[x[0]]) return;
       if(matchKw(x[0], earringKw)){{ assigned2[x[0]]=true; earringTotal+=x[1].total; }}
@@ -199,10 +178,6 @@ if (LX) {{
         if(x[0].indexOf('手链')!==-1 || norm(x[0]).indexOf(norm('香港惠拓'))!==-1){{ braceletTotal+=x[1].total; }}
         else{{ pendantTotal+=x[1].total; }}
       }}
-    }});
-    allStores.forEach(function(x){{
-      if(assigned2[x[0]]) return;
-      if(matchKw(x[0], silverKw)){{ assigned2[x[0]]=true; silverTotal+=x[1].total; }}
     }});
     var catTotals = [
       {{label:'耳环', total:earringTotal}},
@@ -224,15 +199,6 @@ if (LX) {{
         plugins:{{ legend:{{ position:'right', labels:{{ font:{{ size:10 }}, padding:6 }} }} }}
       }}
     }});
-  }}
-
-  // Top 15 stores by orders
-  if(typeof Chart!=='undefined'){{
-    var topO = Object.entries(LX.orders).sort(function(a,b){{return b[1].total-a[1].total;}}).slice(0,15);
-    new Chart(document.getElementById('lxBar'),{{type:'bar',
-      data:{{labels:topO.map(function(x){{return x[0].length>18?x[0].slice(0,17)+'...':x[0];}}),
-            datasets:[{{data:topO.map(function(x){{return x[1].total;}}), backgroundColor:colors[0], borderRadius:3}}]}},
-      options:{{responsive:true, maintainAspectRatio:false, indexAxis:'y', plugins:{{legend:{{display:false}}}}, scales:{{x:{{grid:{{display:true}}}}}}}}}});
   }}
 
   // FBA stock grouped by store (top 20)
