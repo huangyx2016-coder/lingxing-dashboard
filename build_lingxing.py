@@ -136,8 +136,8 @@ td:first-child {{ text-align:left; font-weight:500; }}
   <div class="card full-width"><h2>项链吊坠订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat4"></div></div>
   <div class="card full-width"><h2>手链店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat5"></div></div>
 </div>
-<div class="grid">
-  <div class="card full-width"><h2>银饰店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat3"></div></div>
+<div class="nav">
+  <a href="silver.html">银饰订单 →</a>
 </div>
 
 <div class="grid">
@@ -207,10 +207,9 @@ if (LX) {{
     var catTotals = [
       {{label:'耳环', total:earringTotal}},
       {{label:'项链吊坠', total:pendantTotal}},
-      {{label:'手链', total:braceletTotal}},
-      {{label:'银饰', total:silverTotal}}
+      {{label:'手链', total:braceletTotal}}
     ];
-    var scols = ['#4472C4','#ED7D31','#FFC000','#70AD47'];
+    var scols = ['#4472C4','#ED7D31','#FFC000'];
     var pieTotal = 0;
     catTotals.forEach(function(x){{ pieTotal += x.total; }});
     var pieLabels = catTotals.map(function(x){{ return x.label; }});
@@ -266,7 +265,6 @@ if (LX) {{
     var cats = [
       {{id:'tLxCat2', kw:['Cendyess','worfey','Magifurni','Tuogzzdq','EXRSANCH','VSK','KKR','POHYEOL','CALLIOPE','ESSIE ODILA','YFdeSi','Maodeso','JOZZFEE','nuoxun','Daolianlo','Lageza','iewrsox','Yiidcii','Aolumio','kvvkii','Howe rai','Sincere-ljh','Yezhenhan','SPARSE FOREST','PWQIEE','DOXVO','FOCALLIVE','niratty','YAUVC','Raysam','UUBUUCD','VTEVER','BEAUSPA','gotoeewigs','Lamdesa','SREEOWER','TECYOW','Charmire','Eloqueen','TG544','香港諾迅','鹏宇贸易','TG411','TG400','TG407']}},
       {{id:'tLxCat1', kw:['GIORGIA GIBBS','SLMYUER','GIULIA LEONI','varger','KATIE OTTE','ELEBEST','AMELINE','Selroper','SHERRIE DOBBIE','SPLIM','vuiikhir','ALUUYANN','AIGAMIT','Fanglcy','DZCYAN','Degerde','Aidomiya','TONYAUTOPARTS','GLOSOLE','Verniflloga','HaoShuFu','SPACMAG','ENROSE','KFERAXSZ','SPOINT','JADE KOS','CHLOÉ LOVETT','SANDRA REDD','HOBATS','MOMELF','NEARLAND','USESMTLE','Kelli Myers','ongol','Chantel Yorke','COSSA','BANGALO','Kate','Eterbeau','Amoxos','Fureoai','TAKUGI','VESTACE','Fureylenx','BalaBelle','LISHUIHAOMI']}},
-      {{id:'tLxCat3', kw:['LIEBLICH','ESSIE','Annamate','CHICLOVE','Billie Bijoux','Van Chloe','ANNIS MUNN','ANNIS','AmorAime','BlingGem','NinaMaid','WISHMISS']}},
       {{id:'tLxCat4', kw:['MELELIFE','KYAYE','HIROM JOINS','Moonfox','Simlayton','STREYANT','LOKFAM','FEGER','CANNCI','CISSIEPERAL','ERIN MARIE','BENOITE','AOZELAN','OR OLD RUBIN','OLD RUBIN','PPRLIFE','Rewizoo','KROMPG','MONA MILANI','PESFIOLO','gcwen','WONRUN','CROCHETFUN','iSunat','CKUSCAPO','UHEPROKIT','LUXCUTY','EYUMOI','Naiswan','LEMKAY','BYBAIZ','YIYEPUTI','Qeces','TOBENO','Yzytdgzy','Rinponain','TUOIXPI','KHFGDS','ODIHUI','LOUISE VELLA','MISSZHI','koolfin','FENMI','GYUYCW','Zikonyou','SUNDINS','香港惠拓','SparkSphere']}}
     ];
     var allStores = Object.entries(LX.orders).sort(function(a,b){{return b[1].total-a[1].total;}});
