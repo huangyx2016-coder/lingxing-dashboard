@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>银饰订单 - 店铺明细</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Microsoft YaHei', sans-serif; background:#f0f2f5; color:#333; padding:16px; }
+.header { text-align:center; margin-bottom:16px; }
+.header h1 { font-size:22px; color:#1a1a2e; }
+.header p { color:#666; margin-top:2px; font-size:12px; }
+.nav { text-align:center; margin-bottom:16px; }
+.nav a { color:#4472C4; text-decoration:none; font-size:13px; padding:6px 14px; background:#fff; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.nav a:hover { background:#4472C4; color:#fff; }
+.card { background:#fff; border-radius:10px; padding:14px; box-shadow:0 2px 6px rgba(0,0,0,0.06); margin-bottom:14px; max-width:1100px; margin-left:auto; margin-right:auto; }
+.card h2 { font-size:14px; margin-bottom:8px; border-bottom:2px solid #4472C4; padding-bottom:5px; }
+.table-wrap { max-height:600px; overflow-y:auto; }
+table { width:100%; border-collapse:collapse; font-size:11px; }
+th { background:#4472C4; color:#fff; padding:5px 3px; position:sticky; top:0; z-index:1; text-align:center; white-space:nowrap; }
+td { padding:3px; text-align:center; border-bottom:1px solid #eee; }
+tr:hover td { background:#f5f7fa; }
+td:first-child { text-align:left; font-weight:500; }
+.num { text-align:right; }
+.total-row td { font-weight:bold; background:#FFF2CC; border-top:2px solid #4472C4; }
+.chart-wrap { position:relative; height:400px; margin-bottom:14px; max-width:1100px; margin-left:auto; margin-right:auto; }
+.summary-bar { display:flex; gap:14px; margin-bottom:14px; max-width:1100px; margin-left:auto; margin-right:auto; }
+.summary-item { flex:1; background:#fff; border-radius:10px; padding:12px 14px; box-shadow:0 2px 6px rgba(0,0,0,0.06); text-align:center; }
+.summary-item .value { font-size:22px; font-weight:bold; color:#70AD47; }
+.summary-item .label { font-size:10px; color:#888; margin-top:1px; }
+.footer { text-align:right; color:#aaa; font-size:10px; margin-top:8px; }
+</style>
+</head>
+<body>
+<div class="header"><h1>银饰订单 - 店铺明细</h1><p id="dateRange"></p></div>
+
+<div class="nav">
+  <a href="index.html">← 返回主仪表盘</a>
+</div>
+
+<div class="summary-bar" id="sm"></div>
+<div class="chart-wrap"><canvas id="silverBar"></canvas></div>
+<div class="card">
+  <h2>全部银饰店铺</h2>
+  <div class="table-wrap" id="tbl"></div>
+</div>
+<div class="footer" id="ft"></div>
+
+<script>
+var silverKw = ['LIEBLICH','ESSIE','Annamate','CHICLOVE','Billie Bijoux','Van Chloe','ANNIS MUNN','ANNIS','AmorAime','BlingGem','NinaMaid','WISHMISS'];
+var colors = ['#4472C4','#ED7D31','#70AD47','#FFC000','#5B9BD5'];
+
+fetch('lingxing_data.json')
+  .then(function(r){ return r.json(); })
+  .then(function(LX){
+    var norm = function(s){ return s.toLowerCase().replace(/\s+/g,''); };
+
+    function matchKw(name, kwList){
+      for(var i=0; i<kwList.length; i++){ if(norm(name).indexOf(norm(kwList[i]))!==-1) return true; }
+      return false;
+    }
+
+    var allStores = Object.entries(LX.orders).sort(function(a,b){return b[1].total-a[1].total;});
+    var silverStores = allStores.filter(function(x){ return matchKw(x[0], silverKw); });
+    var silverTotal = silverStores.reduce(function(s,x){return s+x[1].total;},0);
+
+    document.getElementById('dateRange').textContent = LX.dates[0] + ' — ' + LX.dates[LX.dates.length-1] + ' | ' + silverTotal.toLocaleString() + ' 单 | ' + silverStores.length + ' 店铺';
+    document.getElementById('sm').innerHTML =
+      '<div class="summary-item"><div class="value">'+silverTotal.toLocaleString()+'</div><div class="label">银饰总订单</div></div>'+
+      '<div class="summary-item"><div class="value">'+silverStores.length+'</div><div class="label">店铺数</div></div>';
+
+    // Bar chart: top 15
+    if(typeof Chart!=='undefined'){
+      var top = silverStores.slice(0,15);
+      new Chart(document.getElementById('silverBar'),{type:'bar',
+        data:{labels:top.map(function(x){return x[0].length>18?x[0].slice(0,17)+'...':x[0];}),
+              datasets:[{data:top.map(function(x){return x[1].total;}), backgroundColor:colors[2], borderRadius:3}]},
+        options:{responsive:true, maintainAspectRatio:false, indexAxis:'y', plugins:{legend:{display:false}}, scales:{x:{grid:{display:true}}}}});
+    }
+
+    // Table
+    var h = '<table><thead><tr><th>店铺</th>';
+    LX.dates.forEach(function(d){ h += '<th>'+d+'</th>'; });
+    h += '<th>合计</th></tr></thead><tbody>';
+    silverStores.forEach(function(x){
+      h += '<tr><td>'+x[0]+'</td>';
+      LX.dates.forEach(function(d){ h += '<td class="num">'+(x[1].daily[d]||0)+'</td>'; });
+      h += '<td class="num" style="font-weight:bold">'+x[1].total+'</td></tr>';
+    });
+    h += '<tr class="total-row"><td>合计 ('+silverStores.length+'店铺)</td>';
+    LX.dates.forEach(function(d){
+      var dt = silverStores.reduce(function(s,x){return s+(x[1].daily[d]||0);},0);
+      h += '<td class="num">'+dt+'</td>';
+    });
+    h += '<td class="num">'+silverTotal+'</td></tr></tbody></table>';
+    document.getElementById('tbl').innerHTML = silverStores.length ? h : '<p style="color:#999;text-align:center;padding:20px">暂无数据</p>';
+
+    document.getElementById('ft').textContent = '数据更新: ' + (LX.pull_time || '') + ' | 数据来源: lingxing_data.json';
+  })
+  .catch(function(e){
+    document.getElementById('tbl').innerHTML = '<p style="color:red;text-align:center;padding:20px">数据加载失败: ' + e.message + '</p>';
+  });
+</script>
+</body>
+</html>
