@@ -124,7 +124,8 @@ td:first-child {{ text-align:left; font-weight:500; }}
 <div class="summary-bar" id="smLx"></div>
 
 <div class="grid">
-  <div class="card full-width" style="max-width:500px;margin:0 auto;"><h2>最近7天各品类总订单占比</h2><div class="chart-wrap"><canvas id="lxPie"></canvas></div></div>
+  <div class="card"><h2>每日订单趋势</h2><div class="chart-wrap"><canvas id="lxLine"></canvas></div></div>
+  <div class="card"><h2>最近7天各品类总订单占比</h2><div class="chart-wrap"><canvas id="lxPie"></canvas></div></div>
 </div>
 
 <div class="grid">
@@ -136,7 +137,8 @@ td:first-child {{ text-align:left; font-weight:500; }}
   <div class="card full-width"><h2>手链店铺订单 - 店铺明细</h2><div class="table-wrap" id="tLxCat5"></div></div>
 </div>
 <div class="grid">
-  <div class="card full-width"><h2>FBA库存 - 按店铺 Top 20</h2><div class="table-wrap" id="tLxStockByStore"></div></div>
+  <div class="card"><h2>Top 15 店铺 (按最近7天总订单数)</h2><div class="chart-wrap tall"><canvas id="lxBar"></canvas></div></div>
+  <div class="card"><h2>FBA库存 - 按店铺 Top 20</h2><div class="table-wrap" id="tLxStockByStore"></div></div>
 </div>
 
 <div class="footer">数据更新: {data_time} | 页面生成: {now}</div>
@@ -153,6 +155,20 @@ if (LX) {{
     '<div class="summary-item"><div class="value">$'+LX.total_amount.toLocaleString()+'</div><div class="label">最近7天订单总额</div></div>'+
     '<div class="summary-item"><div class="value">'+LX.stock_summary.available.toLocaleString()+'</div><div class="label">FBA可售库存</div></div>'+
     '<div class="summary-item"><div class="value">'+LX.stock_summary.inbound.toLocaleString()+'</div><div class="label">在途</div></div>';
+
+  // Daily order line chart
+  if(typeof Chart!=='undefined' && LX.dates.length){{
+    var dailyOrders = LX.dates.map(function(d){{
+      var total = 0;
+      Object.values(LX.orders).forEach(function(s){{ total += (s.daily[d]||0); }});
+      return total;
+    }});
+    new Chart(document.getElementById('lxLine'),{{type:'line',
+      data:{{labels:LX.dates, datasets:[{{data:dailyOrders, borderColor:'#4472C4', backgroundColor:'rgba(68,114,196,0.1)', fill:true, tension:0.3, pointRadius:5, pointBackgroundColor:'#4472C4'}}]}},
+      options:{{responsive:true, maintainAspectRatio:false,
+        plugins:{{legend:{{display:false}}, tooltip:{{callbacks:{{label:function(c){{return c.raw+' 单'}}}}}}}},
+        scales:{{y:{{beginAtZero:true, grid:{{display:true}}}}}}}}}});
+  }}
 
   // Category pie: 耳环, 项链吊坠, 手链
   if(typeof Chart!=='undefined'){{
@@ -199,6 +215,15 @@ if (LX) {{
         plugins:{{ legend:{{ position:'right', labels:{{ font:{{ size:10 }}, padding:6 }} }} }}
       }}
     }});
+  }}
+
+  // Top 15 stores by orders
+  if(typeof Chart!=='undefined'){{
+    var topO = Object.entries(LX.orders).sort(function(a,b){{return b[1].total-a[1].total;}}).slice(0,15);
+    new Chart(document.getElementById('lxBar'),{{type:'bar',
+      data:{{labels:topO.map(function(x){{return x[0].length>18?x[0].slice(0,17)+'...':x[0];}}),
+            datasets:[{{data:topO.map(function(x){{return x[1].total;}}), backgroundColor:colors[0], borderRadius:3}}]}},
+      options:{{responsive:true, maintainAspectRatio:false, indexAxis:'y', plugins:{{legend:{{display:false}}}}, scales:{{x:{{grid:{{display:true}}}}}}}}}});
   }}
 
   // FBA stock grouped by store (top 20)
