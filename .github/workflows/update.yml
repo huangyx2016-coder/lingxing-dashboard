@@ -23,3 +23,11 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: 'Deploy ${{ github.event.repository.updated_at }}'
+
+      - name: Trigger silver dashboard
+        run: |
+          curl -s -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.SILVER_DISPATCH_TOKEN }}" \
+            https://api.github.com/repos/huangyx2016-coder/silver-dashboard/actions/workflows/deploy.yml/dispatches \
+            -d '{"ref":"master"}'
