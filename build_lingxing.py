@@ -307,7 +307,7 @@ if (LX) {{
       }}
     }});
   }})();
-}
+}}
 
 function downloadCSV() {{
   var dates = LX.dates;
