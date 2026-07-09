@@ -4,6 +4,7 @@ on:
     paths:
       - 'lingxing_data.json'
       - 'silver_data.json'
+      - 'build_lingxing.py'
   workflow_dispatch:
 
 jobs:
