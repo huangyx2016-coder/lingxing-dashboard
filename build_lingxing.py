@@ -120,7 +120,7 @@ td:first-child {{ text-align:left; font-weight:500; }}
 </style>
 </head>
 <body>
-<div class="header"><h1>每日订单自动可视化</h1><p id="dateRange"></p></div>
+<div class="header"><h1>每日订单自动可视化</h1><p id="dateRange"></p><button onclick="downloadCSV()" style="margin-top:6px;padding:6px 16px;background:#4472C4;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:13px;">下载数据 (CSV)</button></div>
 <div class="summary-bar" id="smLx"></div>
 
 <div class="grid">
@@ -307,7 +307,46 @@ if (LX) {{
       }}
     }});
   }})();
-}}
+}
+
+function downloadCSV() {
+  var dates = LX.dates;
+  var rows = [];
+  var header = ['SKU名称'];
+  dates.forEach(function(d) { header.push(d + '订单量'); });
+  dates.forEach(function(d) { header.push(d + '金额($)'); });
+  header.push('总单量', '总金额($)');
+  rows.push(header);
+
+  var stores = Object.entries(LX.orders).sort(function(a,b) { return b[1].total - a[1].total; });
+  stores.forEach(function(entry) {
+    var name = entry[0], data = entry[1];
+    var row = [name];
+    dates.forEach(function(d) { row.push(data.daily[d] || 0); });
+    dates.forEach(function(d) { row.push(data.amount[d] || 0); });
+    row.push(data.total, data.total_amount);
+    rows.push(row);
+  });
+
+  var csv = '﻿' + rows.map(function(r) {
+    return r.map(function(v) {
+      if (typeof v === 'string' && (v.indexOf(',') !== -1 || v.indexOf('"') !== -1)) {
+        return '"' + v.replace(/"/g, '""') + '"';
+      }
+      return v;
+    }).join(',');
+  }).join('\n');
+
+  var blob = new Blob([csv], {type: 'text/csv;charset=utf-8'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'lingxing_orders.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
 </script>
 </body>
 </html>'''
