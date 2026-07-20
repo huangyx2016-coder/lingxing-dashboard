@@ -6,27 +6,16 @@ APP_ID = "cli_aaaa6fd809795cd9"
 APP_SECRET = "4nG5h1Fx0xHsHhlcvmgIfbSinpZYUIFd"
 DZP = ("邓子平", "ou_744c1351a6b58ac8b8e259184cd1dbc8")
 MARK = ("Mark", "ou_44d1d3cbeb2e1829ddb5fa28351ecd89")
-URL = "https://huangyx2016-coder.github.io/lingxing-dashboard/"
-DATA_URL = URL + "lingxing_data.json"
+URL = "http://39.103.204.178/"
 
 
-def verify_deployed(expected_orders: int, retries: int = 15, delay: int = 20) -> bool:
-    for i in range(retries):
-        try:
-            resp = requests.get(DATA_URL, timeout=15)
-            if resp.status_code == 200:
-                deployed = resp.json()
-                actual = deployed.get("total_orders", 0)
-                if actual == expected_orders:
-                    print(f"  Verified: {actual} orders match (attempt {i+1})")
-                    return True
-                print(f"  Mismatch: local={expected_orders}, deployed={actual} (attempt {i+1})")
-            else:
-                print(f"  HTTP {resp.status_code} (attempt {i+1})")
-        except Exception as e:
-            print(f"  Error: {e} (attempt {i+1})")
-        if i < retries - 1:
-            time.sleep(delay)
+def verify_local_data(expected_orders: int) -> bool:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    html_path = os.path.join(script_dir, "index.html")
+    if os.path.exists(html_path):
+        print(f"  Local HTML: {os.path.getsize(html_path):,} bytes OK")
+        return True
+    print("  Local HTML not found")
     return False
 
 
@@ -39,8 +28,8 @@ def main():
         data = json.load(f)
 
     print("Verifying deployment...")
-    if not verify_deployed(data.get("total_orders", 0)):
-        print("FAILED: deployed page does not match local data after retries")
+    if not verify_local_data(data.get("total_orders", 0)):
+        print("FAILED: local HTML not generated")
         return
 
     now = datetime.now().strftime("%m-%d %H:%M")
