@@ -2,31 +2,9 @@
 import json
 from datetime import datetime
 
-SILVER_KW = ['LIEBLICH','ESSIE','Annamate','CHICLOVE','Billie Bijoux','Van Chloe','ANNIS MUNN','ANNIS','AmorAime','BlingGem','NinaMaid','WISHMISS']
-
-
 def main():
-    with open("lingxing_data.json", "r", encoding="utf-8") as f:
-        full = json.load(f)
-
-    # Filter silver stores
-    def match_kw(name):
-        n = name.lower().replace(" ", "")
-        for kw in SILVER_KW:
-            if kw.lower().replace(" ", "") in n:
-                return True
-        return False
-
-    silver_orders = {k: v for k, v in full["orders"].items() if match_kw(k)}
-    silver_total = sum(v["total"] for v in silver_orders.values())
-
-    silver_data = {
-        "pull_time": full.get("pull_time", ""),
-        "dates": full["dates"],
-        "orders": silver_orders,
-        "total_orders": silver_total,
-        "shops_count": len(silver_orders),
-    }
+    with open("silver_data.json", "r", encoding="utf-8") as f:
+        silver_data = json.load(f)
 
     with open("silver_data.json", "w", encoding="utf-8") as f:
         json.dump(silver_data, f, ensure_ascii=False)
@@ -122,7 +100,7 @@ document.getElementById('tbl').innerHTML = allStores.length ? h : '<p style="col
 
     with open("silver.html", "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"[{now}] silver.html + silver_data.json generated ({silver_total} orders, {len(silver_orders)} stores)")
+    print(f"[{now}] silver.html + silver_data.json generated ({silver_data["total_orders"]} orders, {silver_data["shops_count"]} stores)")
 
 
 if __name__ == "__main__":
