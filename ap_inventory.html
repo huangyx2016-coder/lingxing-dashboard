@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP系列 深圳仓库存清单</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, 'Microsoft YaHei', 'PingFang SC', sans-serif; background: #f5f6fa; color: #2d3436; line-height: 1.6; }
+.header { background: linear-gradient(135deg, #2d3436 0%, #434a54 100%); color: #fff; padding: 32px 40px; }
+.header h1 { font-size: 24px; margin-bottom: 6px; }
+.header .sub { opacity: 0.75; font-size: 14px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 24px; }
+.kpi-card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); text-align: center; }
+.kpi-card .num { font-size: 26px; font-weight: 700; }
+.kpi-card .label { font-size: 13px; color: #636e72; margin-top: 4px; }
+.kpi-card.sz .num { color: #0984e3; }
+.kpi-card.fba .num { color: #00b894; }
+.kpi-card.warn .num { color: #e17055; }
+.section { background: #fff; border-radius: 10px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.section h2 { font-size: 17px; border-left: 4px solid #0984e3; padding-left: 12px; margin-bottom: 16px; }
+.hint { color: #636e72; font-size: 13px; margin-bottom: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { background: #f8f9fa; padding: 10px 12px; text-align: left; font-weight: 600; border-bottom: 2px solid #e9ecef; white-space: nowrap; position: sticky; top: 0; }
+td { padding: 8px 12px; border-bottom: 1px solid #f1f2f6; }
+tr:hover { background: #f8f9ff; }
+.num-col { text-align: right; font-variant-numeric: tabular-nums; }
+.mono { font-family: 'SF Mono', 'Consolas', monospace; font-size: 12px; }
+.sz { color: #0984e3; font-weight: 600; }
+.total { font-weight: 700; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.badge-orange { background: #fef3e2; color: #e17055; }
+.footer { text-align: center; color: #b2bec3; font-size: 12px; padding: 20px; }
+@media (max-width: 720px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>AP 系列 · 深圳仓库存清单</h1>
+  <div class="sub">数据时间: 2026-08-17 15:33:11 &nbsp;|&nbsp; 共 108 个 SKU &nbsp;|&nbsp; 数据来源: 领星 ERP</div>
+</div>
+<div class="container">
+
+<div class="kpi-grid">
+  <div class="kpi-card sz"><div class="num">108</div><div class="label">AP SKU 数</div></div>
+  <div class="kpi-card sz"><div class="num">31,528</div><div class="label">深圳仓总库存</div></div>
+  <div class="kpi-card fba"><div class="num">4,912</div><div class="label">FBA 可售</div></div>
+  <div class="kpi-card fba"><div class="num">660</div><div class="label">FBA 在途</div></div>
+  <div class="kpi-card warn"><div class="num">37,100</div><div class="label">总库存合计</div></div>
+</div>
+
+<div class="section">
+  <h2>AP 系列库存明细</h2>
+  <p class="hint">按深圳仓库存从高到低排序。标「待发FBA」的 SKU 在深圳仓有货但 FBA 无可售/在途，需尽快发货。</p>
+  <table>
+    <thead><tr>
+      <th>公司SKU</th><th>MSKU</th><th>商品名</th><th>ASIN</th>
+      <th class="num-col">深圳仓库存</th><th class="num-col">FBA可售</th><th class="num-col">FBA在途</th><th class="num-col">总库存</th><th>状态</th>
+    </tr></thead>
+    <tbody><tr>
+          <td class="mono">AP525</td>
+          <td class="mono">AD5-25MM; AP5-25MM; JUB011E-25; JUB011E-25.1; MAP001E-25mm; MAS010-25; NV002-25; WAP5-25; YFA5-25mm</td>
+          <td>素圈耳扣-25mm</td>
+          <td class="mono">B0H5PQYXQH; B0H5VKDLZB; B0H5VZXBMD; B0H5WCQZ22; B0H6BT8P56; B0H6DZYMGP; B0H6L4NRTC; B0HB9H8745; B0HBPJ5ZSD</td>
+          <td class="num-col sz">803</td>
+          <td class="num-col">164</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">967</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2614</td>
+          <td class="mono">WAP26-14</td>
+          <td>外半圈镶钻耳环-14mm</td>
+          <td class="mono">B0H3NGXFDN</td>
+          <td class="num-col sz">798</td>
+          <td class="num-col">45</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">843</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2714</td>
+          <td class="mono">FK006-14; HDA007E14; HE2714; SP017G-14</td>
+          <td>内外半圈镶钻耳搭耳环-14mm</td>
+          <td class="mono">B0H5QWTFJL; B0H5V549JB; B0H8251KDD; B0HDBLNVST</td>
+          <td class="num-col sz">797</td>
+          <td class="num-col">37</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">834</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2025</td>
+          <td class="mono">FLAP2025; GF20-25; HB2025; HDA005E25; HF2025; JOZ012-25; KH004-25; MGH20-25MM; SP015G-25</td>
+          <td>光面素圈耳环-25mm</td>
+          <td class="mono">B0H5QL47LV; B0H5S3VH2P; B0H5TW5SVL; B0H5V1KJTD; B0H5VLQT43; B0H69VRX9F; B0H6P3JY3Y; B0H82B3G9M; B0HDB6MVKW</td>
+          <td class="num-col sz">705</td>
+          <td class="num-col">206</td>
+          <td class="num-col">20</td>
+          <td class="num-col total">931</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP520</td>
+          <td class="mono">AD5-20MM; AP5-20MM; JUB011E-20; JUB011E-20.1; MAP001E-20mm; MAS010-20; NV002-20; WAP5-20; YFA5-20mm</td>
+          <td>素圈耳扣-20mm</td>
+          <td class="mono">B0H5PNKWHC; B0H5VFXNGH; B0H5VZ2DDP; B0H5W9RH3K; B0H6C23ZPN; B0H6F9FMJD; B0H6L1JQQF; B0HB9GP3C8; B0HBP57X1R</td>
+          <td class="num-col sz">624</td>
+          <td class="num-col">176</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">800</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2612</td>
+          <td class="mono">WAP26-12</td>
+          <td>外半圈镶钻耳环-12mm</td>
+          <td class="mono">B0H3NHY6PG</td>
+          <td class="num-col sz">611</td>
+          <td class="num-col">16</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">627</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2616</td>
+          <td class="mono">WAP26-16</td>
+          <td>外半圈镶钻耳环-16mm</td>
+          <td class="mono">B0H3NG5BD8</td>
+          <td class="num-col sz">598</td>
+          <td class="num-col">22</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">620</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP530</td>
+          <td class="mono">AD5-30MM; AP5-30MM; JUB011E-30; MAP001E-30mm; MAS010-30; NV002-30; WAP5-30; YFA5-30mm</td>
+          <td>素圈耳扣-30mm</td>
+          <td class="mono">B0H5PLJ29K; B0H5VFY2JM; B0H5W8W81T; B0H6BWSKPH; B0H6DT8DR1; B0H6L6D5Y8; B0HB997YKD; B0HBNYRZSH</td>
+          <td class="num-col sz">596</td>
+          <td class="num-col">160</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">756</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2716</td>
+          <td class="mono">FK006-16; HDA007E16; HE2716; SP017G-16</td>
+          <td>内外半圈镶钻耳搭耳环-16mm</td>
+          <td class="mono">B0H5QSMJFR; B0H5TFPFDF; B0H82JDJH7; B0HDBCJDBM</td>
+          <td class="num-col sz">587</td>
+          <td class="num-col">37</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">624</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2712</td>
+          <td class="mono">FK006-12; HDA007E12; HE2712; SP017G-12</td>
+          <td>内外半圈镶钻耳搭耳环-12mm</td>
+          <td class="mono">B0H5QMKH27; B0H5TWX1GY; B0H8282994; B0HDB5T7MN</td>
+          <td class="num-col sz">582</td>
+          <td class="num-col">26</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">608</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2030</td>
+          <td class="mono">FLAP2030; GF20-30; HB2030; HDA005E30; HF2030; JOZ012-30; KH004-30; MGH20-30MM; SP015G-30</td>
+          <td>光面素圈耳环-30mm</td>
+          <td class="mono">B0H5QY2FH3; B0H5S3VV3J; B0H5TV12DQ; B0H5V89RY9; B0H5VDJFKX; B0H69NNWB2; B0H6NZ7CML; B0H82JC55W; B0HDB2RV49</td>
+          <td class="num-col sz">507</td>
+          <td class="num-col">181</td>
+          <td class="num-col">20</td>
+          <td class="num-col total">708</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2020</td>
+          <td class="mono">FLAP2020; GF20-20; HB2020; HDA005E20; HDA005E20.1; HF2020; JOZ012-20; KH004-20; MGH20-20MM; SP015G-20</td>
+          <td>光面素圈耳环-20mm</td>
+          <td class="mono">B0H5QLQXQL; B0H5S9H44G; B0H5TFJ6SG; B0H5TXC3KS; B0H5V8KRLH; B0H69MHJMH; B0H6P1399Y; B0H829JH3X; B0H82RYWG1; B0HDB7QT97</td>
+          <td class="num-col sz">503</td>
+          <td class="num-col">208</td>
+          <td class="num-col">40</td>
+          <td class="num-col total">751</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1520</td>
+          <td class="mono">AD15-20MM; NV003-20; SP014G-20</td>
+          <td>椭圆耳环-20mm</td>
+          <td class="mono">B0H5QRFQB7; B0H6DGLVG4; B0H6L2S84X</td>
+          <td class="num-col sz">418</td>
+          <td class="num-col">59</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">477</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1525</td>
+          <td class="mono">AD15-25MM; NV003-25; SP014G-25</td>
+          <td>椭圆耳环-25mm</td>
+          <td class="mono">B0H5QJWCTN; B0H6DZLDZJ; B0H6L4VL7L</td>
+          <td class="num-col sz">417</td>
+          <td class="num-col">61</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">478</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2720</td>
+          <td class="mono">FK006-20; HDA007E20; HE2720; SP017G-20</td>
+          <td>内外半圈镶钻耳搭耳环-20mm</td>
+          <td class="mono">B0H5QW3DW2; B0H5V1B6BC; B0H82JLQ18; B0HDBJSYG9</td>
+          <td class="num-col sz">417</td>
+          <td class="num-col">27</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">444</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2414</td>
+          <td class="mono">AD2414; GT24-14; HB2414; HF2414; JOZ015-14; MAS013-14; YFA24-14mm</td>
+          <td>外半圈镶钻耳环-14mm</td>
+          <td class="mono">B0H5T12VNG; B0H5TJ5L65; B0H5VM7BYW; B0H6918QWL; B0H69TG3HC; B0H6BYMNN8; B0H6L1RDM1</td>
+          <td class="num-col sz">406</td>
+          <td class="num-col">114</td>
+          <td class="num-col">20</td>
+          <td class="num-col total">540</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2620</td>
+          <td class="mono">WAP26-20</td>
+          <td>外半圈镶钻耳环-20mm</td>
+          <td class="mono">B0H3ND45S2</td>
+          <td class="num-col sz">405</td>
+          <td class="num-col">35</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">440</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP115</td>
+          <td class="mono">HB115; HDA001E15</td>
+          <td>圆形宽面耳扣-15mm</td>
+          <td class="mono">B0H69PJB64; B0H82D1WFB</td>
+          <td class="num-col sz">404</td>
+          <td class="num-col">22</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">426</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1425</td>
+          <td class="mono">WAP14-25; WAP14-25.1; WAP14-25.2; WAP14-25.3</td>
+          <td>25mm高*4.5mm最宽-U型耳环</td>
+          <td class="mono">B0H3N2DHKF; B0H3N2LZBK; B0H3NHWHN7; B0H3NK5T4Z</td>
+          <td class="num-col sz">404</td>
+          <td class="num-col">22</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">426</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2514</td>
+          <td class="mono">KH006-14; MAP007E-14mm; MGH25-14MM; NV006-14</td>
+          <td>内外半圈镶钻耳环-14mm</td>
+          <td class="mono">B0H5TYQ7K6; B0H6F5XBJR; B0HBPVVC6B; B0HDB9G3HD</td>
+          <td class="num-col sz">403</td>
+          <td class="num-col">44</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">447</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP515</td>
+          <td class="mono">AD5-15MM; AP5-15MM; JUB011E-15; MAP001E-15mm; MAS010-15; NV002-15; WAP5-15; YFA5-15mm</td>
+          <td>素圈耳扣-15mm</td>
+          <td class="mono">B0H5PG325Q; B0H5VC72FR; B0H5W9V63V; B0H6C3MZ6L; B0H6DY1VH3; B0H6LBN5PH; B0HB8YX91W; B0HBNYWFW6</td>
+          <td class="num-col sz">401</td>
+          <td class="num-col">152</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">553</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2610</td>
+          <td class="mono">WAP26-10</td>
+          <td>外半圈镶钻耳环-10mm</td>
+          <td class="mono">B0H3N9JPX6</td>
+          <td class="num-col sz">401</td>
+          <td class="num-col">33</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">434</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1323</td>
+          <td class="mono">KH003; MAP003E.; YFA13</td>
+          <td>19mm宽X23mm高*7mm最宽-水滴形耳环</td>
+          <td class="mono">B0H5V7ZDG5; B0HBVKVX19; B0HDB7LZXG</td>
+          <td class="num-col sz">400</td>
+          <td class="num-col">38</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">438</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP215</td>
+          <td class="mono">KH001-15; MGHA2-15MM</td>
+          <td>环状水滴耳环-15mm</td>
+          <td class="mono">B0H5TJK48V; B0HDB36T1W</td>
+          <td class="num-col sz">399</td>
+          <td class="num-col">10</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">409</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP615</td>
+          <td class="mono">JUB012E-15; KH002-15; WAP6-15</td>
+          <td>宽面素圈耳环-15mm</td>
+          <td class="mono">B0H3NC9PBY; B0H5W26185; B0HDB56X9S</td>
+          <td class="num-col sz">397</td>
+          <td class="num-col">29</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">426</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP182842</td>
+          <td class="mono">FK004; GF18; HB18; MAS012; MGHA18</td>
+          <td>28X42mm水滴耳坠</td>
+          <td class="mono">B0H5VFS3WK; B0H69MH77V; B0H6BZ4DP5; B0H6NXCKVN; B0HDB95R44</td>
+          <td class="num-col sz">395</td>
+          <td class="num-col">103</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">498</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2710</td>
+          <td class="mono">FK006-10; HDA007E10; HE2710; SP017G-10</td>
+          <td>内外半圈镶钻耳搭耳环-10mm</td>
+          <td class="mono">B0H5QL7S2X; B0H5V731BL; B0H82GLHM2; B0HDB748GM</td>
+          <td class="num-col sz">393</td>
+          <td class="num-col">26</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">419</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP315</td>
+          <td class="mono">FK001-15; FLAP315; MAS009-15</td>
+          <td>光面宽面耳环-15mm</td>
+          <td class="mono">B0H5TXBPCG; B0H6BY85P2; B0HDB5KW46</td>
+          <td class="num-col sz">388</td>
+          <td class="num-col">5</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">393</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP540</td>
+          <td class="mono">AD5-40MM; AP5-40MM; JUB011E-40; JUB011E-40.1; MAP001E-40mm; MAS010-40; NV002-40; WAP5-40; YFA5-40mm</td>
+          <td>素圈耳扣-40mm</td>
+          <td class="mono">B0H5V1ZJGB; B0H5V455D4; B0H5W4MMPY; B0H5W8WY65; B0H6BXF4VG; B0H6DFY98N; B0H6L5NW73; B0HB945T3B; B0HBPHT8FK</td>
+          <td class="num-col sz">384</td>
+          <td class="num-col">172</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">556</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP22-5</td>
+          <td class="mono">FK005-5mm; HF22-5; JOZ014-5mm; KH005-5; KH005-8; NV005-5mm; PM22-5mm</td>
+          <td>金球耳钉-5mm</td>
+          <td class="mono">B0H5SS1M6Z; B0H5TLKSH3; B0H6DSH5WM; B0HCT954GZ; B0HDB4C125; B0HDB8MNWL; B0HDBGT76X</td>
+          <td class="num-col sz">364</td>
+          <td class="num-col">26</td>
+          <td class="num-col">90</td>
+          <td class="num-col total">480</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2040</td>
+          <td class="mono">FLAP2040; GF20-40; HB2040; HDA005E40; HDA005E40.1; HF2040; JOZ012-40; KH004-40; MGH20-40MM; SP015G-40</td>
+          <td>光面素圈耳环-40mm</td>
+          <td class="mono">B0H5QTJZYS; B0H5SHPFGM; B0H5V5LPW1; B0H5VFJLMR; B0H5VP3M7Q; B0H69T8D7P; B0H6NW1ZY7; B0H82DZLR8; B0H82HGSWB; B0HDB1H5NQ</td>
+          <td class="num-col sz">363</td>
+          <td class="num-col">196</td>
+          <td class="num-col">60</td>
+          <td class="num-col total">619</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1740</td>
+          <td class="mono">FLAP1740; NV004-40; WAP17-40</td>
+          <td>圆形线圈耳环-40mm</td>
+          <td class="mono">B0H3NHYLLL; B0H5VFYRJH; B0H6DJLZFL</td>
+          <td class="num-col sz">346</td>
+          <td class="num-col">49</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">395</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2125</td>
+          <td class="mono">FLAP2125; HDA006E; JOZ013; SP016G; YFA21</td>
+          <td>25mm宽菱形耳坠</td>
+          <td class="mono">B0H5QS8XPH; B0H5SHNYM5; B0H5TWPNBD; B0H5V7W7VF; B0H82DNCDJ</td>
+          <td class="num-col sz">345</td>
+          <td class="num-col">101</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">446</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1730</td>
+          <td class="mono">FLAP1730; NV004-30; WAP17-30</td>
+          <td>圆形线圈耳环-30mm</td>
+          <td class="mono">B0H3N9ZC8L; B0H5V4GW1C; B0H6DXFF1R</td>
+          <td class="num-col sz">336</td>
+          <td class="num-col">50</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">386</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2015</td>
+          <td class="mono">FLAP2015; GF20-15; HB2015; HDA005E15; HF2015; JOZ012-15; KH004-15; MGH20-15MM; SP015G-15</td>
+          <td>光面素圈耳环-15mm</td>
+          <td class="mono">B0H5PXPWGS; B0H5QBRTDR; B0H5TYPXV4; B0H5VCRHQR; B0H5VGRXKP; B0H69R9B9Q; B0H6NXXPLM; B0H822Y8P6; B0HD9VFBDQ</td>
+          <td class="num-col sz">318</td>
+          <td class="num-col">181</td>
+          <td class="num-col">20</td>
+          <td class="num-col total">519</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP412</td>
+          <td class="mono">GF4-12; NV001-12</td>
+          <td>素面环状耳环-12mm</td>
+          <td class="mono">B0H6DP2BQQ; B0H6P1292D</td>
+          <td class="num-col sz">311</td>
+          <td class="num-col">46</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">357</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP612</td>
+          <td class="mono">JUB012E-12; KH002-12; WAP6-12; WAP6-12.1</td>
+          <td>宽面素圈耳环-12mm</td>
+          <td class="mono">B0H3NM7R7M; B0H3NRX3TG; B0H5W7LX16; B0HDB6ZF13</td>
+          <td class="num-col sz">310</td>
+          <td class="num-col">25</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">335</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1215</td>
+          <td class="mono">HB1215; HDA003E15</td>
+          <td>麻花圈耳环-15mm</td>
+          <td class="mono">B0H69SJVQV; B0H827JGJ3</td>
+          <td class="num-col sz">308</td>
+          <td class="num-col">25</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">333</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP120</td>
+          <td class="mono">HB120; HDA001E20</td>
+          <td>圆形宽面耳扣-20mm</td>
+          <td class="mono">B0H69MMCZ6; B0H82NWM6D</td>
+          <td class="num-col sz">306</td>
+          <td class="num-col">21</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">327</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2412</td>
+          <td class="mono">AD2412; GT24-12; HB2412; HF2412; JOZ015-12; MAS013-12; YFA24-12mm</td>
+          <td>外半圈镶钻耳环-12mm</td>
+          <td class="mono">B0H5SV1N5N; B0H5TJ3G36; B0H5V7RQH4; B0H69BSJ7M; B0H69VD2GR; B0H6BY3K4R; B0H6L66YHL</td>
+          <td class="num-col sz">305</td>
+          <td class="num-col">102</td>
+          <td class="num-col">20</td>
+          <td class="num-col total">427</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2815</td>
+          <td class="mono">FLAP2815; MAS014-15</td>
+          <td>双环镶钻耳扣-15mm</td>
+          <td class="mono">B0H5V2QCDB; B0HCT6G7FX</td>
+          <td class="num-col sz">304</td>
+          <td class="num-col">0</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">304</td>
+          <td><span class="badge badge-orange">待发FBA</span></td>
+        </tr><tr>
+          <td class="mono">AP2416</td>
+          <td class="mono">AD2416; GT24-16; HB2416; HF2416; JOZ015-16; MAS013-16; YFA24-16mm</td>
+          <td>外半圈镶钻耳环-16mm</td>
+          <td class="mono">B0H5TLNCV1; B0H5V7VKFY; B0H68ZR7KK; B0H6B49J3H; B0H6BY1VRV; B0H6LBHXPV; B0HF349MFJ</td>
+          <td class="num-col sz">303</td>
+          <td class="num-col">125</td>
+          <td class="num-col">30</td>
+          <td class="num-col total">458</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP620</td>
+          <td class="mono">JUB012E-20; KH002-20; WAP6-20; WAP6-20.1</td>
+          <td>宽面素圈耳环-20mm</td>
+          <td class="mono">B0H3NNCVQD; B0H3NNJCNJ; B0H5WB3F9Y; B0HDB2GJGV</td>
+          <td class="num-col sz">303</td>
+          <td class="num-col">38</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">341</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP212</td>
+          <td class="mono">KH001-12; MGHA2-12MM</td>
+          <td>环状水滴耳环-12mm</td>
+          <td class="mono">B0H5V1CR3L; B0HD9ZMDX1</td>
+          <td class="num-col sz">303</td>
+          <td class="num-col">16</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">319</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP192535</td>
+          <td class="mono">MAP005E.</td>
+          <td>25X35mm水滴耳环</td>
+          <td class="mono">B0HBV8PGMM</td>
+          <td class="num-col sz">303</td>
+          <td class="num-col">0</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">303</td>
+          <td><span class="badge badge-orange">待发FBA</span></td>
+        </tr><tr>
+          <td class="mono">AP220</td>
+          <td class="mono">KH001-20; MGHA2-20MM</td>
+          <td>环状水滴耳环-20mm</td>
+          <td class="mono">B0H5TSRQWQ; B0HDB5CRFP</td>
+          <td class="num-col sz">302</td>
+          <td class="num-col">16</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">318</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2320</td>
+          <td class="mono">HB2320; MAP006E-20mm; PM23-20mm; WAP23-20</td>
+          <td>简约不规则耳环-20mm</td>
+          <td class="mono">B0H3NLMQ2R; B0H69VLVHN; B0HBPR8VQD; B0HCTCD6W8</td>
+          <td class="num-col sz">300</td>
+          <td class="num-col">27</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">327</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP112</td>
+          <td class="mono">HB112; HDA001E12</td>
+          <td>圆形宽面耳扣-12mm</td>
+          <td class="mono">B0H69SLBT7; B0H82MW31P</td>
+          <td class="num-col sz">300</td>
+          <td class="num-col">20</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">320</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2516</td>
+          <td class="mono">KH006-16; MAP007E-16mm; MGH25-16MM; NV006-16</td>
+          <td>内外半圈镶钻耳环-16mm</td>
+          <td class="mono">B0H5VDLWNW; B0H6F7JCXT; B0HBPVZV5B; B0HDB93PNM</td>
+          <td class="num-col sz">299</td>
+          <td class="num-col">49</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">348</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP312</td>
+          <td class="mono">FK001-12; FLAP312; MAS009-12</td>
+          <td>光面宽面耳环-12mm</td>
+          <td class="mono">B0H5V9YJG5; B0H6BZ5RJ8; B0HDBB12LX</td>
+          <td class="num-col sz">298</td>
+          <td class="num-col">8</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">306</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2325</td>
+          <td class="mono">HB2325; MAP006E-25mm; PM23-25mm; WAP23-25</td>
+          <td>简约不规则耳环-25mm</td>
+          <td class="mono">B0H3NBW42W; B0H69YJ58F; B0HBPRCR1X; B0HCTBRDY5</td>
+          <td class="num-col sz">296</td>
+          <td class="num-col">45</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">341</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2512</td>
+          <td class="mono">KH006-12; MAP007E-12mm; MGH25-12MM; NV006-12</td>
+          <td>内外半圈镶钻耳环-12mm</td>
+          <td class="mono">B0H5V3628R; B0H6F33TKN; B0HBPPN64Y; B0HDB9PYDS</td>
+          <td class="num-col sz">295</td>
+          <td class="num-col">31</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">326</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP415</td>
+          <td class="mono">GF4-15; NV001-15</td>
+          <td>素面环状耳环-15mm</td>
+          <td class="mono">B0H6DBFZ2M; B0H6NST8SP</td>
+          <td class="num-col sz">294</td>
+          <td class="num-col">57</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">351</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP320</td>
+          <td class="mono">FK001-20; FLAP320; MAS009-20</td>
+          <td>光面宽面耳环-20mm</td>
+          <td class="mono">B0H5TXK86Z; B0H6C125HG; B0HD9ZJJD3</td>
+          <td class="num-col sz">288</td>
+          <td class="num-col">22</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">310</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2812</td>
+          <td class="mono">FLAP2812; MAS014-12</td>
+          <td>双环镶钻耳扣-12mm</td>
+          <td class="mono">B0H5V4G2TJ; B0HCSZFCDX</td>
+          <td class="num-col sz">287</td>
+          <td class="num-col">0</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">287</td>
+          <td><span class="badge badge-orange">待发FBA</span></td>
+        </tr><tr>
+          <td class="mono">AP22-4</td>
+          <td class="mono">FK005-4mm; HF22-4; JOZ014-4mm; KH005-4; NV005-4mm; PM22-4mm</td>
+          <td>金球耳钉-4mm</td>
+          <td class="mono">B0H5SKL2PD; B0H5V5PLFF; B0H6DFX883; B0HCSQ9B3L; B0HD9XYXTP; B0HDBB18NY</td>
+          <td class="num-col sz">282</td>
+          <td class="num-col">33</td>
+          <td class="num-col">70</td>
+          <td class="num-col total">385</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1630</td>
+          <td class="mono">HDA004E30; HF1630; MAP004E-30mm</td>
+          <td>圆形线圈耳环-30mm</td>
+          <td class="mono">B0H5TP255Z; B0H82D5R6M; B0HBPHVSRM</td>
+          <td class="num-col sz">282</td>
+          <td class="num-col">27</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">309</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1640</td>
+          <td class="mono">HDA004E40; HF1640; MAP004E-40mm</td>
+          <td>圆形线圈耳环-40mm</td>
+          <td class="mono">B0H5TTWBX7; B0H827BPH3; B0HBPP54ZD</td>
+          <td class="num-col sz">262</td>
+          <td class="num-col">37</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">299</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP22-6</td>
+          <td class="mono">FK005-6mm; HF22-6; JOZ014-6mm; KH005-6; NV005-6mm; PM22-6mm</td>
+          <td>金球耳钉-6mm</td>
+          <td class="mono">B0H5SW3713; B0H5TQ233Y; B0H6F94C64; B0HCSW39HG; B0HDB4T2FV; B0HDBBRZHT</td>
+          <td class="num-col sz">256</td>
+          <td class="num-col">46</td>
+          <td class="num-col">70</td>
+          <td class="num-col total">372</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1750</td>
+          <td class="mono">FLAP1750; NV004-50; WAP17-50</td>
+          <td>圆形线圈耳环-50mm</td>
+          <td class="mono">B0H3N8GHMT; B0H5VJ4J4J; B0H6F5XCHK</td>
+          <td class="num-col sz">239</td>
+          <td class="num-col">28</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">267</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP714</td>
+          <td class="mono">NV009-14</td>
+          <td>素圈耳环-14mm</td>
+          <td class="mono">B0HCLTSCK9</td>
+          <td class="num-col sz">219</td>
+          <td class="num-col">0</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">219</td>
+          <td><span class="badge badge-orange">待发FBA</span></td>
+        </tr><tr>
+          <td class="mono">AP410</td>
+          <td class="mono">GF4-10; NV001-10</td>
+          <td>素面环状耳环-10mm</td>
+          <td class="mono">B0H6F9G94L; B0H6NZVZJJ</td>
+          <td class="num-col sz">217</td>
+          <td class="num-col">40</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">257</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1720</td>
+          <td class="mono">FLAP1720; NV004-20; WAP17-20</td>
+          <td>圆形线圈耳环-20mm</td>
+          <td class="mono">B0H3N3GFKH; B0H5V5JKNX; B0H6DJB6Y8</td>
+          <td class="num-col sz">216</td>
+          <td class="num-col">40</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">256</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP625</td>
+          <td class="mono">JUB012E-25; KH002-25; WAP6-25; WAP6-25.1</td>
+          <td>宽面素圈耳环-25mm</td>
+          <td class="mono">B0H3NK18NG; B0H3NPH71R; B0H5VYV3C8; B0HDBB3WFK</td>
+          <td class="num-col sz">206</td>
+          <td class="num-col">37</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">243</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP914</td>
+          <td class="mono">HDA002E14; HDA002E14.1</td>
+          <td>素圈耳环-14mm</td>
+          <td class="mono">B0H82KRLZ1; B0H82Y1CZF</td>
+          <td class="num-col sz">206</td>
+          <td class="num-col">7</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">213</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1212</td>
+          <td class="mono">HB1212; HDA003E12</td>
+          <td>麻花圈耳环-12mm</td>
+          <td class="mono">B0H68Y17QR; B0H82GW4PZ</td>
+          <td class="num-col sz">205</td>
+          <td class="num-col">21</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">226</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1220</td>
+          <td class="mono">HB1220; HDA003E20</td>
+          <td>麻花圈耳环-20mm</td>
+          <td class="mono">B0H69N9BSX; B0H82F25Y8</td>
+          <td class="num-col sz">204</td>
+          <td class="num-col">22</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">226</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP125</td>
+          <td class="mono">HB125; HDA001E25</td>
+          <td>圆形宽面耳扣-25mm</td>
+          <td class="mono">B0H69S4RJJ; B0H828ZSZZ</td>
+          <td class="num-col sz">202</td>
+          <td class="num-col">22</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">224</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP110</td>
+          <td class="mono">HB110; HDA001E10</td>
+          <td>圆形宽面耳扣-10mm</td>
+          <td class="mono">B0H6943TFP; B0H82BC358</td>
+          <td class="num-col sz">201</td>
+          <td class="num-col">19</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">220</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP610</td>
+          <td class="mono">JUB012E-10; KH002-10; WAP6-10</td>
+          <td>宽面素圈耳环-10mm</td>
+          <td class="mono">B0H3NDKTLG; B0H5W9LM21; B0HDB7X424</td>
+          <td class="num-col sz">200</td>
+          <td class="num-col">18</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">218</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1114</td>
+          <td class="mono">FK003-14; MAS011-14; WAP11-14</td>
+          <td>圆弧素圈耳环-14mm</td>
+          <td class="mono">B0H3N7PVMQ; B0H6C59H11; B0HDB2ZB93</td>
+          <td class="num-col sz">199</td>
+          <td class="num-col">33</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">232</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP310</td>
+          <td class="mono">FK001-10; FLAP310; MAS009-10</td>
+          <td>光面宽面耳环-10mm</td>
+          <td class="mono">B0H5VBG93L; B0H6BZLFYQ; B0HD9QMH3Y</td>
+          <td class="num-col sz">198</td>
+          <td class="num-col">19</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">217</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1014</td>
+          <td class="mono">LAF007Y-14mm; MAP002E-14mm</td>
+          <td>圆圈耳环-14mm</td>
+          <td class="mono">B0H6B12RN4; B0HBPK1KVL</td>
+          <td class="num-col sz">198</td>
+          <td class="num-col">10</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">208</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2420</td>
+          <td class="mono">AD2420; GT24-20; HB2420; HF2420; JOZ015-20; MAS013-20; YFA24-20mm</td>
+          <td>外半圈镶钻耳环-20mm</td>
+          <td class="mono">B0H5SXYBB1; B0H5TS3MHZ; B0H5VG1KYP; B0H6981TNF; B0H69SQZW1; B0H6C47SG2; B0H6L3G916</td>
+          <td class="num-col sz">196</td>
+          <td class="num-col">74</td>
+          <td class="num-col">40</td>
+          <td class="num-col total">310</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2520</td>
+          <td class="mono">KH006-20; MAP007E-20mm; MGH25-20MM; NV006-20</td>
+          <td>内外半圈镶钻耳环-20mm</td>
+          <td class="mono">B0H5V8J3F4; B0H6FLRPC4; B0HBPRFB7Z; B0HDBD8P99</td>
+          <td class="num-col sz">195</td>
+          <td class="num-col">45</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">240</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP420</td>
+          <td class="mono">GF4-20; NV001-20</td>
+          <td>素面环状耳环-20mm</td>
+          <td class="mono">B0H6F1112X; B0H6P5SZGC</td>
+          <td class="num-col sz">193</td>
+          <td class="num-col">54</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">247</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2510</td>
+          <td class="mono">KH006-10; MAP007E-10mm; MGH25-10MM; NV006-10</td>
+          <td>内外半圈镶钻耳环-10mm</td>
+          <td class="mono">B0H5TYSQH9; B0H6F7FST8; B0HBPPKDYB; B0HDBG57N5</td>
+          <td class="num-col sz">193</td>
+          <td class="num-col">38</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">231</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP225</td>
+          <td class="mono">KH001-25; MGHA2-25MM</td>
+          <td>环状水滴耳环-25mm</td>
+          <td class="mono">B0H5TLXJJD; B0HD9R35M5</td>
+          <td class="num-col sz">193</td>
+          <td class="num-col">14</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">207</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP210</td>
+          <td class="mono">KH001-10; MGHA2-10MM</td>
+          <td>环状水滴耳环-10mm</td>
+          <td class="mono">B0H5TTWMZM; B0HD9XJLR7</td>
+          <td class="num-col sz">184</td>
+          <td class="num-col">0</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">184</td>
+          <td><span class="badge badge-orange">待发FBA</span></td>
+        </tr><tr>
+          <td class="mono">AP325</td>
+          <td class="mono">FK001-25; FLAP325; MAS009-25</td>
+          <td>光面宽面耳环-25mm</td>
+          <td class="mono">B0H5TSQNJ9; B0H6BWTZBW; B0HDB549NL</td>
+          <td class="num-col sz">182</td>
+          <td class="num-col">22</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">204</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1625</td>
+          <td class="mono">HDA004E25; HDA004E25.1; HF1625; MAP004E-25mm</td>
+          <td>圆形线圈耳环-25mm</td>
+          <td class="mono">B0H5TTSXZQ; B0H82D7NQW; B0H82GV69G; B0HBPHKWXZ</td>
+          <td class="num-col sz">178</td>
+          <td class="num-col">32</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">210</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1650</td>
+          <td class="mono">HDA004E50; HDA004E50.1; HF1650; MAP004E-50mm</td>
+          <td>圆形线圈耳环-50mm</td>
+          <td class="mono">B0H5TLYZ27; B0H829T7J3; B0H82J6955; B0HBPC3DH7</td>
+          <td class="num-col sz">171</td>
+          <td class="num-col">32</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">203</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP22-8</td>
+          <td class="mono">FK005-8mm; HF22-8; JOZ014-8mm; NV005-8mm; PM22-8mm</td>
+          <td>金球耳钉-8mm</td>
+          <td class="mono">B0H5SXVR5F; B0H5TTXS2Y; B0H6DV3LG5; B0HCT8QQ5N; B0HDB2NB6K</td>
+          <td class="num-col sz">168</td>
+          <td class="num-col">35</td>
+          <td class="num-col">80</td>
+          <td class="num-col total">283</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP22-3</td>
+          <td class="mono">FK005-3mm; HF22-3; JOZ014-3mm; KH005-3; NV005-3mm; PM22-3mm</td>
+          <td>金球耳钉-3mm</td>
+          <td class="mono">B0H5SVR1Z1; B0H5TTT5PN; B0H6DVB8NP; B0HCSVFV88; B0HDBDTPJ9; B0HDBHRJZC</td>
+          <td class="num-col sz">165</td>
+          <td class="num-col">36</td>
+          <td class="num-col">60</td>
+          <td class="num-col total">261</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP2410</td>
+          <td class="mono">AD2410; GT24-10; HB2410; HF2410; JOZ015-10; MAS013-10; YFA24-10mm</td>
+          <td>外半圈镶钻耳环-10mm</td>
+          <td class="mono">B0H5TJNJKM; B0H5TRYMPG; B0H5V6FZYR; B0H6926LNP; B0H69W82F5; B0H6C6WV1B; B0H6HBTCQL</td>
+          <td class="num-col sz">162</td>
+          <td class="num-col">118</td>
+          <td class="num-col">20</td>
+          <td class="num-col total">300</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP814</td>
+          <td class="mono">FK002-14; FLAP814; HF814; MGHA8-14MM</td>
+          <td>素圈耳环-14mm</td>
+          <td class="mono">B0H5TLRW2R; B0H5TYV99D; B0H5VDTXHV; B0HDB2GZTD</td>
+          <td class="num-col sz">162</td>
+          <td class="num-col">53</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">215</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1112</td>
+          <td class="mono">FK003-12; MAS011-12; WAP11-12; WAP11-12.1</td>
+          <td>圆弧素圈耳环-12mm</td>
+          <td class="mono">B0H3N23HTK; B0H3N9RLM3; B0H6C5Y98W; B0HDB3YXS5</td>
+          <td class="num-col sz">154</td>
+          <td class="num-col">24</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">178</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP712</td>
+          <td class="mono">NV009-12</td>
+          <td>素圈耳环-12mm</td>
+          <td class="mono">B0HCLM5D5G</td>
+          <td class="num-col sz">154</td>
+          <td class="num-col">0</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">154</td>
+          <td><span class="badge badge-orange">待发FBA</span></td>
+        </tr><tr>
+          <td class="mono">AP716</td>
+          <td class="mono">NV009-16</td>
+          <td>素圈耳环-16mm</td>
+          <td class="mono">B0HCM4PH9L</td>
+          <td class="num-col sz">153</td>
+          <td class="num-col">0</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">153</td>
+          <td><span class="badge badge-orange">待发FBA</span></td>
+        </tr><tr>
+          <td class="mono">AP1012</td>
+          <td class="mono">LAF007Y-12mm; MAP002E-12mm</td>
+          <td>圆圈耳环-12mm</td>
+          <td class="mono">B0H6B2LH9X; B0HBP5PMX1</td>
+          <td class="num-col sz">151</td>
+          <td class="num-col">10</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">161</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1016</td>
+          <td class="mono">LAF007Y-16mm; MAP002E-16mm</td>
+          <td>圆圈耳环-16mm</td>
+          <td class="mono">B0H6B6W9HV; B0HBNYV748</td>
+          <td class="num-col sz">145</td>
+          <td class="num-col">11</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">156</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP916</td>
+          <td class="mono">HDA002E16</td>
+          <td>素圈耳环-16mm</td>
+          <td class="mono">B0H82N723T</td>
+          <td class="num-col sz">144</td>
+          <td class="num-col">7</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">151</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP912</td>
+          <td class="mono">HDA002E12</td>
+          <td>素圈耳环-12mm</td>
+          <td class="mono">B0H828XFFQ</td>
+          <td class="num-col sz">141</td>
+          <td class="num-col">7</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">148</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1116</td>
+          <td class="mono">FK003-16; MAS011-16; WAP11-16</td>
+          <td>圆弧素圈耳环-16mm</td>
+          <td class="mono">B0H3N8ZWDS; B0H6C4YKP6; B0HDB7DZL7</td>
+          <td class="num-col sz">138</td>
+          <td class="num-col">30</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">168</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP812</td>
+          <td class="mono">FK002-12; FLAP812; HF812; MGHA8-12MM</td>
+          <td>素圈耳环-12mm</td>
+          <td class="mono">B0H5V1DXR9; B0H5VDWXZ2; B0H5VFXDK2; B0HDB1YPXC</td>
+          <td class="num-col sz">137</td>
+          <td class="num-col">37</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">174</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1760</td>
+          <td class="mono">FLAP1760; NV004-60; WAP17-60</td>
+          <td>圆形线圈耳环-60mm</td>
+          <td class="mono">B0H3NGP44Q; B0H5VDTYXF; B0H6DYW5MZ</td>
+          <td class="num-col sz">113</td>
+          <td class="num-col">30</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">143</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP910</td>
+          <td class="mono">HDA002E10</td>
+          <td>素圈耳环-10mm</td>
+          <td class="mono">B0H82HK1K9</td>
+          <td class="num-col sz">104</td>
+          <td class="num-col">7</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">111</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP710</td>
+          <td class="mono">NV009-10</td>
+          <td>素圈耳环-10mm</td>
+          <td class="mono">B0HCLMM9BH</td>
+          <td class="num-col sz">102</td>
+          <td class="num-col">0</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">102</td>
+          <td><span class="badge badge-orange">待发FBA</span></td>
+        </tr><tr>
+          <td class="mono">AP1660</td>
+          <td class="mono">HDA004E60; HF1660; MAP004E-60mm</td>
+          <td>圆形线圈耳环-60mm</td>
+          <td class="mono">B0H5TSRLTP; B0H82NVFZ9; B0HBPCGKM7</td>
+          <td class="num-col sz">100</td>
+          <td class="num-col">7</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">107</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1010</td>
+          <td class="mono">LAF007Y-10mm; MAP002E-10mm</td>
+          <td>圆圈耳环-10mm</td>
+          <td class="mono">B0H6B7253H; B0HBPDF5T1</td>
+          <td class="num-col sz">99</td>
+          <td class="num-col">10</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">109</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP920</td>
+          <td class="mono">HDA002E20; HDA002E20.1</td>
+          <td>素圈耳环-20mm</td>
+          <td class="mono">B0H8253QNL; B0H82P2BSN</td>
+          <td class="num-col sz">99</td>
+          <td class="num-col">7</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">106</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1120</td>
+          <td class="mono">FK003-20; MAS011-20; WAP11-20</td>
+          <td>圆弧素圈耳环-20mm</td>
+          <td class="mono">B0H3N958LW; B0H6C6VK6J; B0HDB2J1KB</td>
+          <td class="num-col sz">98</td>
+          <td class="num-col">35</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">133</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP720</td>
+          <td class="mono">NV009-20</td>
+          <td>素圈耳环-20mm</td>
+          <td class="mono">B0HCLW4VB5</td>
+          <td class="num-col sz">98</td>
+          <td class="num-col">0</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">98</td>
+          <td><span class="badge badge-orange">待发FBA</span></td>
+        </tr><tr>
+          <td class="mono">AP1020</td>
+          <td class="mono">LAF007Y-20mm; MAP002E-20mm</td>
+          <td>圆圈耳环-20mm</td>
+          <td class="mono">B0H6BBLHXR; B0HBPFXR9G</td>
+          <td class="num-col sz">97</td>
+          <td class="num-col">10</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">107</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP816</td>
+          <td class="mono">FK002-16; FLAP816; HF816; MGHA8-16MM</td>
+          <td>素圈耳环-16mm</td>
+          <td class="mono">B0H5TPZJQS; B0H5VG172Y; B0H5VHKZRS; B0HDB2VFBG</td>
+          <td class="num-col sz">96</td>
+          <td class="num-col">60</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">156</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP1110</td>
+          <td class="mono">FK003-10; MAS011-10; WAP11-10; WAP11-10.1</td>
+          <td>圆弧素圈耳环-10mm</td>
+          <td class="mono">B0H3N1SWLH; B0H3NF2YNW; B0H6C69GFJ; B0HD9VL3HZ</td>
+          <td class="num-col sz">95</td>
+          <td class="num-col">16</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">111</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP810</td>
+          <td class="mono">FK002-10; FLAP810; HF810; MGHA8-10MM</td>
+          <td>素圈耳环-10mm</td>
+          <td class="mono">B0H5TLYDNQ; B0H5V5K5N9; B0H5VBGH6N; B0HDB4RDHY</td>
+          <td class="num-col sz">88</td>
+          <td class="num-col">38</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">126</td>
+          <td></td>
+        </tr><tr>
+          <td class="mono">AP820</td>
+          <td class="mono">FK002-20; FLAP820; HF820; MGHA8-20MM</td>
+          <td>素圈耳环-20mm</td>
+          <td class="mono">B0H5TLXHR5; B0H5V49YYG; B0H5V9BF7M; B0HD9ZFBR1</td>
+          <td class="num-col sz">58</td>
+          <td class="num-col">48</td>
+          <td class="num-col">0</td>
+          <td class="num-col total">106</td>
+          <td></td>
+        </tr></tbody>
+  </table>
+</div>
+
+
+<div class="section">
+  <h2>仅深圳仓（待发FBA）</h2>
+  <p class="hint">这 9 个 SKU 在深圳仓有库存但 FBA 无可售/在途，合计 <b>1,804</b> 件，建议安排发往 FBA。</p>
+  <table>
+    <thead><tr><th>SKU</th><th>商品名</th><th class="num-col">深圳仓库存</th></tr></thead>
+    <tbody><tr><td class='mono'>AP2815</td><td>双环镶钻耳扣-15mm</td><td class='num-col sz'>304</td></tr><tr><td class='mono'>AP192535</td><td>25X35mm水滴耳环</td><td class='num-col sz'>303</td></tr><tr><td class='mono'>AP2812</td><td>双环镶钻耳扣-12mm</td><td class='num-col sz'>287</td></tr><tr><td class='mono'>AP714</td><td>素圈耳环-14mm</td><td class='num-col sz'>219</td></tr><tr><td class='mono'>AP210</td><td>环状水滴耳环-10mm</td><td class='num-col sz'>184</td></tr><tr><td class='mono'>AP712</td><td>素圈耳环-12mm</td><td class='num-col sz'>154</td></tr><tr><td class='mono'>AP716</td><td>素圈耳环-16mm</td><td class='num-col sz'>153</td></tr><tr><td class='mono'>AP710</td><td>素圈耳环-10mm</td><td class='num-col sz'>102</td></tr><tr><td class='mono'>AP720</td><td>素圈耳环-20mm</td><td class='num-col sz'>98</td></tr></tbody>
+  </table>
+</div>
+
+<div class="footer">Generated by Claude Code · 2026-08-17 15:34</div>
+</div></body></html>
