@@ -5,7 +5,7 @@ on:
       - 'lingxing_data.json'
       - 'silver_data.json'
       - 'build_lingxing.py'
-      - 'ap_inventory.html'
+      - 'ap_inventory/**'
   workflow_dispatch:
 
 jobs:
