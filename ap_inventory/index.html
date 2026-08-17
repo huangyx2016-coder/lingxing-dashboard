@@ -85,6 +85,8 @@ tbody tr:hover { background: #f0f2fb; }
 td.num { text-align: right; font-variant-numeric: tabular-nums; }
 td .mono, .mono { font-family: 'SF Mono', 'Consolas', 'Menlo', monospace; font-size: 12px; }
 td.sz { color: var(--indigo); font-weight: 600; }
+td.sta { color: #7c3aed; font-weight: 600; }
+td.sta-zero { color: #cbd5e1; }
 td.total { font-weight: 700; color: var(--ink); }
 td.sku { color: #1f2937; font-weight: 600; }
 .pname { color: #374151; }
@@ -152,6 +154,7 @@ td.sku { color: #1f2937; font-weight: 600; }
         <div class="stat"><span class="k">深圳仓有货但 FBA 空</span><span class="v warn">9</span></div>
         <div class="stat"><span class="k">深圳仓零库存</span><span class="v">0</span></div>
         <div class="stat"><span class="k">FBA 库存覆盖（可售+在途）</span><span class="v green">5,572<small>件</small></span></div>
+        <div class="stat"><span class="k">STA 进行中（建仓在途）</span><span class="v">8,071<small>件</small></span></div>
       </div>
     </div>
   </div>
@@ -173,6 +176,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <th data-t="text">商品名</th>
           <th data-t="text">ASIN</th>
           <th data-t="num" class="num">深圳仓<span class="arr"></span></th>
+          <th data-t="num" class="num">STA进行中<span class="arr"></span></th>
           <th data-t="num" class="num">FBA可售<span class="arr"></span></th>
           <th data-t="num" class="num">FBA在途<span class="arr"></span></th>
           <th data-t="num" class="num">总库存<span class="arr"></span></th>
@@ -184,6 +188,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳扣-25mm</td>
           <td class="asin mono">B0H5PQYXQH; B0H5VKDLZB; B0H5VZXBMD; B0H5WCQZ22; B0H6BT8P56; B0H6DZYMGP; B0H6L4NRTC; B0HB9H8745; B0HBPJ5ZSD</td>
           <td class="num sz" data-v="803">803<span class="bar" style="width:100px"></span></td>
+          <td class="num sta" data-v="260">260</td>
           <td class="num" data-v="164">164</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="967">967</td>
@@ -195,6 +200,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">外半圈镶钻耳环-14mm</td>
           <td class="asin mono">B0H3NGXFDN</td>
           <td class="num sz" data-v="798">798<span class="bar" style="width:99px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="45">45</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="843">843</td>
@@ -206,6 +212,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">内外半圈镶钻耳搭耳环-14mm</td>
           <td class="asin mono">B0H5QWTFJL; B0H5V549JB; B0H8251KDD; B0HDBLNVST</td>
           <td class="num sz" data-v="797">797<span class="bar" style="width:99px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="37">37</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="834">834</td>
@@ -217,6 +224,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">光面素圈耳环-25mm</td>
           <td class="asin mono">B0H5QL47LV; B0H5S3VH2P; B0H5TW5SVL; B0H5V1KJTD; B0H5VLQT43; B0H69VRX9F; B0H6P3JY3Y; B0H82B3G9M; B0HDB6MVKW</td>
           <td class="num sz" data-v="705">705<span class="bar" style="width:88px"></span></td>
+          <td class="num sta" data-v="275">275</td>
           <td class="num" data-v="206">206</td>
           <td class="num" data-v="20">20</td>
           <td class="num total" data-v="931">931</td>
@@ -228,6 +236,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳扣-20mm</td>
           <td class="asin mono">B0H5PNKWHC; B0H5VFXNGH; B0H5VZ2DDP; B0H5W9RH3K; B0H6C23ZPN; B0H6F9FMJD; B0H6L1JQQF; B0HB9GP3C8; B0HBP57X1R</td>
           <td class="num sz" data-v="624">624<span class="bar" style="width:78px"></span></td>
+          <td class="num sta" data-v="160">160</td>
           <td class="num" data-v="176">176</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="800">800</td>
@@ -239,6 +248,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">外半圈镶钻耳环-12mm</td>
           <td class="asin mono">B0H3NHY6PG</td>
           <td class="num sz" data-v="611">611<span class="bar" style="width:76px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="16">16</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="627">627</td>
@@ -250,6 +260,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">外半圈镶钻耳环-16mm</td>
           <td class="asin mono">B0H3NG5BD8</td>
           <td class="num sz" data-v="598">598<span class="bar" style="width:74px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="22">22</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="620">620</td>
@@ -261,6 +272,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳扣-30mm</td>
           <td class="asin mono">B0H5PLJ29K; B0H5VFY2JM; B0H5W8W81T; B0H6BWSKPH; B0H6DT8DR1; B0H6L6D5Y8; B0HB997YKD; B0HBNYRZSH</td>
           <td class="num sz" data-v="596">596<span class="bar" style="width:74px"></span></td>
+          <td class="num sta" data-v="155">155</td>
           <td class="num" data-v="160">160</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="756">756</td>
@@ -272,6 +284,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">内外半圈镶钻耳搭耳环-16mm</td>
           <td class="asin mono">B0H5QSMJFR; B0H5TFPFDF; B0H82JDJH7; B0HDBCJDBM</td>
           <td class="num sz" data-v="587">587<span class="bar" style="width:73px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="37">37</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="624">624</td>
@@ -283,6 +296,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">内外半圈镶钻耳搭耳环-12mm</td>
           <td class="asin mono">B0H5QMKH27; B0H5TWX1GY; B0H8282994; B0HDB5T7MN</td>
           <td class="num sz" data-v="582">582<span class="bar" style="width:72px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="26">26</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="608">608</td>
@@ -294,6 +308,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">光面素圈耳环-30mm</td>
           <td class="asin mono">B0H5QY2FH3; B0H5S3VV3J; B0H5TV12DQ; B0H5V89RY9; B0H5VDJFKX; B0H69NNWB2; B0H6NZ7CML; B0H82JC55W; B0HDB2RV49</td>
           <td class="num sz" data-v="507">507<span class="bar" style="width:63px"></span></td>
+          <td class="num sta" data-v="220">220</td>
           <td class="num" data-v="181">181</td>
           <td class="num" data-v="20">20</td>
           <td class="num total" data-v="708">708</td>
@@ -305,6 +320,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">光面素圈耳环-20mm</td>
           <td class="asin mono">B0H5QLQXQL; B0H5S9H44G; B0H5TFJ6SG; B0H5TXC3KS; B0H5V8KRLH; B0H69MHJMH; B0H6P1399Y; B0H829JH3X; B0H82RYWG1; B0HDB7QT97</td>
           <td class="num sz" data-v="503">503<span class="bar" style="width:63px"></span></td>
+          <td class="num sta" data-v="240">240</td>
           <td class="num" data-v="208">208</td>
           <td class="num" data-v="40">40</td>
           <td class="num total" data-v="751">751</td>
@@ -316,6 +332,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">椭圆耳环-20mm</td>
           <td class="asin mono">B0H5QRFQB7; B0H6DGLVG4; B0H6L2S84X</td>
           <td class="num sz" data-v="418">418<span class="bar" style="width:52px"></span></td>
+          <td class="num sta" data-v="30">30</td>
           <td class="num" data-v="59">59</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="477">477</td>
@@ -327,6 +344,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">椭圆耳环-25mm</td>
           <td class="asin mono">B0H5QJWCTN; B0H6DZLDZJ; B0H6L4VL7L</td>
           <td class="num sz" data-v="417">417<span class="bar" style="width:52px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="61">61</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="478">478</td>
@@ -338,6 +356,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">内外半圈镶钻耳搭耳环-20mm</td>
           <td class="asin mono">B0H5QW3DW2; B0H5V1B6BC; B0H82JLQ18; B0HDBJSYG9</td>
           <td class="num sz" data-v="417">417<span class="bar" style="width:52px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="27">27</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="444">444</td>
@@ -349,6 +368,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">外半圈镶钻耳环-14mm</td>
           <td class="asin mono">B0H5T12VNG; B0H5TJ5L65; B0H5VM7BYW; B0H6918QWL; B0H69TG3HC; B0H6BYMNN8; B0H6L1RDM1</td>
           <td class="num sz" data-v="406">406<span class="bar" style="width:51px"></span></td>
+          <td class="num sta" data-v="329">329</td>
           <td class="num" data-v="114">114</td>
           <td class="num" data-v="20">20</td>
           <td class="num total" data-v="540">540</td>
@@ -360,6 +380,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">外半圈镶钻耳环-20mm</td>
           <td class="asin mono">B0H3ND45S2</td>
           <td class="num sz" data-v="405">405<span class="bar" style="width:50px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="35">35</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="440">440</td>
@@ -371,6 +392,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形宽面耳扣-15mm</td>
           <td class="asin mono">B0H69PJB64; B0H82D1WFB</td>
           <td class="num sz" data-v="404">404<span class="bar" style="width:50px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="22">22</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="426">426</td>
@@ -382,6 +404,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">25mm高*4.5mm最宽-U型耳环</td>
           <td class="asin mono">B0H3N2DHKF; B0H3N2LZBK; B0H3NHWHN7; B0H3NK5T4Z</td>
           <td class="num sz" data-v="404">404<span class="bar" style="width:50px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="22">22</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="426">426</td>
@@ -393,6 +416,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳扣-15mm</td>
           <td class="asin mono">B0H5PG325Q; B0H5VC72FR; B0H5W9V63V; B0H6C3MZ6L; B0H6DY1VH3; B0H6LBN5PH; B0HB8YX91W; B0HBNYWFW6</td>
           <td class="num sz" data-v="401">401<span class="bar" style="width:50px"></span></td>
+          <td class="num sta" data-v="120">120</td>
           <td class="num" data-v="152">152</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="553">553</td>
@@ -404,6 +428,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">外半圈镶钻耳环-10mm</td>
           <td class="asin mono">B0H3N9JPX6</td>
           <td class="num sz" data-v="401">401<span class="bar" style="width:50px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="33">33</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="434">434</td>
@@ -415,6 +440,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">19mm宽X23mm高*7mm最宽-水滴形耳环</td>
           <td class="asin mono">B0H5V7ZDG5; B0HBVKVX19; B0HDB7LZXG</td>
           <td class="num sz" data-v="400">400<span class="bar" style="width:50px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="38">38</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="438">438</td>
@@ -426,6 +452,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">宽面素圈耳环-15mm</td>
           <td class="asin mono">B0H3NC9PBY; B0H5W26185; B0HDB56X9S</td>
           <td class="num sz" data-v="397">397<span class="bar" style="width:49px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="29">29</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="426">426</td>
@@ -437,6 +464,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">内外半圈镶钻耳搭耳环-10mm</td>
           <td class="asin mono">B0H5QL7S2X; B0H5V731BL; B0H82GLHM2; B0HDB748GM</td>
           <td class="num sz" data-v="393">393<span class="bar" style="width:49px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="26">26</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="419">419</td>
@@ -448,6 +476,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">光面宽面耳环-15mm</td>
           <td class="asin mono">B0H5TXBPCG; B0H6BY85P2; B0HDB5KW46</td>
           <td class="num sz" data-v="388">388<span class="bar" style="width:48px"></span></td>
+          <td class="num sta" data-v="185">185</td>
           <td class="num" data-v="5">5</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="393">393</td>
@@ -459,6 +488,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳扣-40mm</td>
           <td class="asin mono">B0H5V1ZJGB; B0H5V455D4; B0H5W4MMPY; B0H5W8WY65; B0H6BXF4VG; B0H6DFY98N; B0H6L5NW73; B0HB945T3B; B0HBPHT8FK</td>
           <td class="num sz" data-v="384">384<span class="bar" style="width:48px"></span></td>
+          <td class="num sta" data-v="125">125</td>
           <td class="num" data-v="172">172</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="556">556</td>
@@ -470,6 +500,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">环状水滴耳环-15mm</td>
           <td class="asin mono">B0H5TJK48V; B0HDB36T1W</td>
           <td class="num sz" data-v="379">379<span class="bar" style="width:47px"></span></td>
+          <td class="num sta" data-v="120">120</td>
           <td class="num" data-v="10">10</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="389">389</td>
@@ -481,6 +512,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">金球耳钉-5mm</td>
           <td class="asin mono">B0H5SS1M6Z; B0H5TLKSH3; B0H6DSH5WM; B0HCT954GZ; B0HDB4C125; B0HDB8MNWL; B0HDBGT76X</td>
           <td class="num sz" data-v="364">364<span class="bar" style="width:45px"></span></td>
+          <td class="num sta" data-v="478">478</td>
           <td class="num" data-v="26">26</td>
           <td class="num" data-v="90">90</td>
           <td class="num total" data-v="480">480</td>
@@ -492,6 +524,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">光面素圈耳环-40mm</td>
           <td class="asin mono">B0H5QTJZYS; B0H5SHPFGM; B0H5V5LPW1; B0H5VFJLMR; B0H5VP3M7Q; B0H69T8D7P; B0H6NW1ZY7; B0H82DZLR8; B0H82HGSWB; B0HDB1H5NQ</td>
           <td class="num sz" data-v="363">363<span class="bar" style="width:45px"></span></td>
+          <td class="num sta" data-v="350">350</td>
           <td class="num" data-v="196">196</td>
           <td class="num" data-v="60">60</td>
           <td class="num total" data-v="619">619</td>
@@ -503,6 +536,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">内外半圈镶钻耳环-14mm</td>
           <td class="asin mono">B0H5TYQ7K6; B0H6F5XBJR; B0HBPVVC6B; B0HDB9G3HD</td>
           <td class="num sz" data-v="363">363<span class="bar" style="width:45px"></span></td>
+          <td class="num sta" data-v="125">125</td>
           <td class="num" data-v="44">44</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="407">407</td>
@@ -514,6 +548,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形线圈耳环-40mm</td>
           <td class="asin mono">B0H3NHYLLL; B0H5VFYRJH; B0H6DJLZFL</td>
           <td class="num sz" data-v="346">346<span class="bar" style="width:43px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="49">49</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="395">395</td>
@@ -525,6 +560,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">25mm宽菱形耳坠</td>
           <td class="asin mono">B0H5QS8XPH; B0H5SHNYM5; B0H5TWPNBD; B0H5V7W7VF; B0H82DNCDJ</td>
           <td class="num sz" data-v="345">345<span class="bar" style="width:43px"></span></td>
+          <td class="num sta" data-v="30">30</td>
           <td class="num" data-v="101">101</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="446">446</td>
@@ -536,6 +572,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形线圈耳环-30mm</td>
           <td class="asin mono">B0H3N9ZC8L; B0H5V4GW1C; B0H6DXFF1R</td>
           <td class="num sz" data-v="336">336<span class="bar" style="width:42px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="50">50</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="386">386</td>
@@ -547,6 +584,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">光面素圈耳环-15mm</td>
           <td class="asin mono">B0H5PXPWGS; B0H5QBRTDR; B0H5TYPXV4; B0H5VCRHQR; B0H5VGRXKP; B0H69R9B9Q; B0H6NXXPLM; B0H822Y8P6; B0HD9VFBDQ</td>
           <td class="num sz" data-v="318">318<span class="bar" style="width:40px"></span></td>
+          <td class="num sta" data-v="175">175</td>
           <td class="num" data-v="181">181</td>
           <td class="num" data-v="20">20</td>
           <td class="num total" data-v="519">519</td>
@@ -558,6 +596,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">28X42mm水滴耳坠</td>
           <td class="asin mono">B0H5VFS3WK; B0H69MH77V; B0H6BZ4DP5; B0H6NXCKVN; B0HDB95R44</td>
           <td class="num sz" data-v="315">315<span class="bar" style="width:39px"></span></td>
+          <td class="num sta" data-v="260">260</td>
           <td class="num" data-v="103">103</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="418">418</td>
@@ -569,6 +608,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素面环状耳环-12mm</td>
           <td class="asin mono">B0H6DP2BQQ; B0H6P1292D</td>
           <td class="num sz" data-v="311">311<span class="bar" style="width:39px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="46">46</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="357">357</td>
@@ -580,6 +620,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">宽面素圈耳环-12mm</td>
           <td class="asin mono">B0H3NM7R7M; B0H3NRX3TG; B0H5W7LX16; B0HDB6ZF13</td>
           <td class="num sz" data-v="310">310<span class="bar" style="width:39px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="25">25</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="335">335</td>
@@ -591,6 +632,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">麻花圈耳环-15mm</td>
           <td class="asin mono">B0H69SJVQV; B0H827JGJ3</td>
           <td class="num sz" data-v="308">308<span class="bar" style="width:38px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="25">25</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="333">333</td>
@@ -602,6 +644,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形宽面耳扣-20mm</td>
           <td class="asin mono">B0H69MMCZ6; B0H82NWM6D</td>
           <td class="num sz" data-v="306">306<span class="bar" style="width:38px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="21">21</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="327">327</td>
@@ -613,6 +656,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">外半圈镶钻耳环-12mm</td>
           <td class="asin mono">B0H5SV1N5N; B0H5TJ3G36; B0H5V7RQH4; B0H69BSJ7M; B0H69VD2GR; B0H6BY3K4R; B0H6L66YHL</td>
           <td class="num sz" data-v="305">305<span class="bar" style="width:38px"></span></td>
+          <td class="num sta" data-v="287">287</td>
           <td class="num" data-v="102">102</td>
           <td class="num" data-v="20">20</td>
           <td class="num total" data-v="427">427</td>
@@ -624,6 +668,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">双环镶钻耳扣-15mm</td>
           <td class="asin mono">B0H5V2QCDB; B0HCT6G7FX</td>
           <td class="num sz" data-v="304">304<span class="bar" style="width:38px"></span></td>
+          <td class="num sta" data-v="35">35</td>
           <td class="num" data-v="0">0</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="304">304</td>
@@ -635,6 +680,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">外半圈镶钻耳环-16mm</td>
           <td class="asin mono">B0H5TLNCV1; B0H5V7VKFY; B0H68ZR7KK; B0H6B49J3H; B0H6BY1VRV; B0H6LBHXPV; B0HF349MFJ</td>
           <td class="num sz" data-v="303">303<span class="bar" style="width:38px"></span></td>
+          <td class="num sta" data-v="315">315</td>
           <td class="num" data-v="125">125</td>
           <td class="num" data-v="30">30</td>
           <td class="num total" data-v="458">458</td>
@@ -646,6 +692,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">宽面素圈耳环-20mm</td>
           <td class="asin mono">B0H3NNCVQD; B0H3NNJCNJ; B0H5WB3F9Y; B0HDB2GJGV</td>
           <td class="num sz" data-v="303">303<span class="bar" style="width:38px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="38">38</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="341">341</td>
@@ -657,6 +704,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">环状水滴耳环-12mm</td>
           <td class="asin mono">B0H5V1CR3L; B0HD9ZMDX1</td>
           <td class="num sz" data-v="303">303<span class="bar" style="width:38px"></span></td>
+          <td class="num sta" data-v="50">50</td>
           <td class="num" data-v="16">16</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="319">319</td>
@@ -668,6 +716,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">25X35mm水滴耳环</td>
           <td class="asin mono">B0HBV8PGMM</td>
           <td class="num sz" data-v="303">303<span class="bar" style="width:38px"></span></td>
+          <td class="num sta" data-v="25">25</td>
           <td class="num" data-v="0">0</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="303">303</td>
@@ -679,6 +728,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">环状水滴耳环-20mm</td>
           <td class="asin mono">B0H5TSRQWQ; B0HDB5CRFP</td>
           <td class="num sz" data-v="302">302<span class="bar" style="width:38px"></span></td>
+          <td class="num sta" data-v="50">50</td>
           <td class="num" data-v="16">16</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="318">318</td>
@@ -690,6 +740,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">简约不规则耳环-20mm</td>
           <td class="asin mono">B0H3NLMQ2R; B0H69VLVHN; B0HBPR8VQD; B0HCTCD6W8</td>
           <td class="num sz" data-v="300">300<span class="bar" style="width:37px"></span></td>
+          <td class="num sta" data-v="20">20</td>
           <td class="num" data-v="27">27</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="327">327</td>
@@ -701,6 +752,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形宽面耳扣-12mm</td>
           <td class="asin mono">B0H69SLBT7; B0H82MW31P</td>
           <td class="num sz" data-v="300">300<span class="bar" style="width:37px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="20">20</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="320">320</td>
@@ -712,6 +764,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">光面宽面耳环-12mm</td>
           <td class="asin mono">B0H5V9YJG5; B0H6BZ5RJ8; B0HDBB12LX</td>
           <td class="num sz" data-v="298">298<span class="bar" style="width:37px"></span></td>
+          <td class="num sta" data-v="150">150</td>
           <td class="num" data-v="8">8</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="306">306</td>
@@ -723,6 +776,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">简约不规则耳环-25mm</td>
           <td class="asin mono">B0H3NBW42W; B0H69YJ58F; B0HBPRCR1X; B0HCTBRDY5</td>
           <td class="num sz" data-v="296">296<span class="bar" style="width:37px"></span></td>
+          <td class="num sta" data-v="25">25</td>
           <td class="num" data-v="45">45</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="341">341</td>
@@ -734,6 +788,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素面环状耳环-15mm</td>
           <td class="asin mono">B0H6DBFZ2M; B0H6NST8SP</td>
           <td class="num sz" data-v="294">294<span class="bar" style="width:37px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="57">57</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="351">351</td>
@@ -745,6 +800,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">光面宽面耳环-20mm</td>
           <td class="asin mono">B0H5TXK86Z; B0H6C125HG; B0HD9ZJJD3</td>
           <td class="num sz" data-v="288">288<span class="bar" style="width:36px"></span></td>
+          <td class="num sta" data-v="135">135</td>
           <td class="num" data-v="22">22</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="310">310</td>
@@ -756,6 +812,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">双环镶钻耳扣-12mm</td>
           <td class="asin mono">B0H5V4G2TJ; B0HCSZFCDX</td>
           <td class="num sz" data-v="287">287<span class="bar" style="width:36px"></span></td>
+          <td class="num sta" data-v="35">35</td>
           <td class="num" data-v="0">0</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="287">287</td>
@@ -767,6 +824,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">金球耳钉-4mm</td>
           <td class="asin mono">B0H5SKL2PD; B0H5V5PLFF; B0H6DFX883; B0HCSQ9B3L; B0HD9XYXTP; B0HDBB18NY</td>
           <td class="num sz" data-v="282">282<span class="bar" style="width:35px"></span></td>
+          <td class="num sta" data-v="290">290</td>
           <td class="num" data-v="33">33</td>
           <td class="num" data-v="70">70</td>
           <td class="num total" data-v="385">385</td>
@@ -778,6 +836,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形线圈耳环-30mm</td>
           <td class="asin mono">B0H5TP255Z; B0H82D5R6M; B0HBPHVSRM</td>
           <td class="num sz" data-v="282">282<span class="bar" style="width:35px"></span></td>
+          <td class="num sta" data-v="40">40</td>
           <td class="num" data-v="27">27</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="309">309</td>
@@ -789,6 +848,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形线圈耳环-40mm</td>
           <td class="asin mono">B0H5TTWBX7; B0H827BPH3; B0HBPP54ZD</td>
           <td class="num sz" data-v="262">262<span class="bar" style="width:33px"></span></td>
+          <td class="num sta" data-v="70">70</td>
           <td class="num" data-v="37">37</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="299">299</td>
@@ -800,6 +860,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">内外半圈镶钻耳环-16mm</td>
           <td class="asin mono">B0H5VDLWNW; B0H6F7JCXT; B0HBPVZV5B; B0HDB93PNM</td>
           <td class="num sz" data-v="259">259<span class="bar" style="width:32px"></span></td>
+          <td class="num sta" data-v="125">125</td>
           <td class="num" data-v="49">49</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="308">308</td>
@@ -811,6 +872,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">金球耳钉-6mm</td>
           <td class="asin mono">B0H5SW3713; B0H5TQ233Y; B0H6F94C64; B0HCSW39HG; B0HDB4T2FV; B0HDBBRZHT</td>
           <td class="num sz" data-v="256">256<span class="bar" style="width:32px"></span></td>
+          <td class="num sta" data-v="312">312</td>
           <td class="num" data-v="46">46</td>
           <td class="num" data-v="70">70</td>
           <td class="num total" data-v="372">372</td>
@@ -822,6 +884,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形线圈耳环-50mm</td>
           <td class="asin mono">B0H3N8GHMT; B0H5VJ4J4J; B0H6F5XCHK</td>
           <td class="num sz" data-v="239">239<span class="bar" style="width:30px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="28">28</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="267">267</td>
@@ -833,6 +896,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">内外半圈镶钻耳环-12mm</td>
           <td class="asin mono">B0H5V3628R; B0H6F33TKN; B0HBPPN64Y; B0HDB9PYDS</td>
           <td class="num sz" data-v="225">225<span class="bar" style="width:28px"></span></td>
+          <td class="num sta" data-v="180">180</td>
           <td class="num" data-v="31">31</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="256">256</td>
@@ -844,6 +908,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-14mm</td>
           <td class="asin mono">B0HCLTSCK9</td>
           <td class="num sz" data-v="219">219<span class="bar" style="width:27px"></span></td>
+          <td class="num sta" data-v="30">30</td>
           <td class="num" data-v="0">0</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="219">219</td>
@@ -855,6 +920,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素面环状耳环-10mm</td>
           <td class="asin mono">B0H6F9G94L; B0H6NZVZJJ</td>
           <td class="num sz" data-v="217">217<span class="bar" style="width:27px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="40">40</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="257">257</td>
@@ -866,6 +932,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形线圈耳环-20mm</td>
           <td class="asin mono">B0H3N3GFKH; B0H5V5JKNX; B0H6DJB6Y8</td>
           <td class="num sz" data-v="216">216<span class="bar" style="width:27px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="40">40</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="256">256</td>
@@ -877,6 +944,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">宽面素圈耳环-25mm</td>
           <td class="asin mono">B0H3NK18NG; B0H3NPH71R; B0H5VYV3C8; B0HDBB3WFK</td>
           <td class="num sz" data-v="206">206<span class="bar" style="width:26px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="37">37</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="243">243</td>
@@ -888,6 +956,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-14mm</td>
           <td class="asin mono">B0H82KRLZ1; B0H82Y1CZF</td>
           <td class="num sz" data-v="206">206<span class="bar" style="width:26px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="213">213</td>
@@ -899,6 +968,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">麻花圈耳环-12mm</td>
           <td class="asin mono">B0H68Y17QR; B0H82GW4PZ</td>
           <td class="num sz" data-v="205">205<span class="bar" style="width:26px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="21">21</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="226">226</td>
@@ -910,6 +980,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">麻花圈耳环-20mm</td>
           <td class="asin mono">B0H69N9BSX; B0H82F25Y8</td>
           <td class="num sz" data-v="204">204<span class="bar" style="width:25px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="22">22</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="226">226</td>
@@ -921,6 +992,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形宽面耳扣-25mm</td>
           <td class="asin mono">B0H69S4RJJ; B0H828ZSZZ</td>
           <td class="num sz" data-v="202">202<span class="bar" style="width:25px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="22">22</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="224">224</td>
@@ -932,6 +1004,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形宽面耳扣-10mm</td>
           <td class="asin mono">B0H6943TFP; B0H82BC358</td>
           <td class="num sz" data-v="201">201<span class="bar" style="width:25px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="19">19</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="220">220</td>
@@ -943,6 +1016,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">宽面素圈耳环-10mm</td>
           <td class="asin mono">B0H3NDKTLG; B0H5W9LM21; B0HDB7X424</td>
           <td class="num sz" data-v="200">200<span class="bar" style="width:25px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="18">18</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="218">218</td>
@@ -954,6 +1028,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆弧素圈耳环-14mm</td>
           <td class="asin mono">B0H3N7PVMQ; B0H6C59H11; B0HDB2ZB93</td>
           <td class="num sz" data-v="199">199<span class="bar" style="width:25px"></span></td>
+          <td class="num sta" data-v="168">168</td>
           <td class="num" data-v="33">33</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="232">232</td>
@@ -965,6 +1040,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">光面宽面耳环-10mm</td>
           <td class="asin mono">B0H5VBG93L; B0H6BZLFYQ; B0HD9QMH3Y</td>
           <td class="num sz" data-v="198">198<span class="bar" style="width:25px"></span></td>
+          <td class="num sta" data-v="40">40</td>
           <td class="num" data-v="19">19</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="217">217</td>
@@ -976,6 +1052,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆圈耳环-14mm</td>
           <td class="asin mono">B0H6B12RN4; B0HBPK1KVL</td>
           <td class="num sz" data-v="198">198<span class="bar" style="width:25px"></span></td>
+          <td class="num sta" data-v="10">10</td>
           <td class="num" data-v="10">10</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="208">208</td>
@@ -987,6 +1064,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">外半圈镶钻耳环-20mm</td>
           <td class="asin mono">B0H5SXYBB1; B0H5TS3MHZ; B0H5VG1KYP; B0H6981TNF; B0H69SQZW1; B0H6C47SG2; B0H6L3G916</td>
           <td class="num sz" data-v="196">196<span class="bar" style="width:24px"></span></td>
+          <td class="num sta" data-v="239">239</td>
           <td class="num" data-v="74">74</td>
           <td class="num" data-v="40">40</td>
           <td class="num total" data-v="310">310</td>
@@ -998,6 +1076,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素面环状耳环-20mm</td>
           <td class="asin mono">B0H6F1112X; B0H6P5SZGC</td>
           <td class="num sz" data-v="193">193<span class="bar" style="width:24px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="54">54</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="247">247</td>
@@ -1009,6 +1088,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">环状水滴耳环-25mm</td>
           <td class="asin mono">B0H5TLXJJD; B0HD9R35M5</td>
           <td class="num sz" data-v="193">193<span class="bar" style="width:24px"></span></td>
+          <td class="num sta" data-v="70">70</td>
           <td class="num" data-v="14">14</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="207">207</td>
@@ -1020,6 +1100,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">环状水滴耳环-10mm</td>
           <td class="asin mono">B0H5TTWMZM; B0HD9XJLR7</td>
           <td class="num sz" data-v="184">184<span class="bar" style="width:23px"></span></td>
+          <td class="num sta" data-v="43">43</td>
           <td class="num" data-v="0">0</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="184">184</td>
@@ -1031,6 +1112,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">光面宽面耳环-25mm</td>
           <td class="asin mono">B0H5TSQNJ9; B0H6BWTZBW; B0HDB549NL</td>
           <td class="num sz" data-v="182">182<span class="bar" style="width:23px"></span></td>
+          <td class="num sta" data-v="140">140</td>
           <td class="num" data-v="22">22</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="204">204</td>
@@ -1042,6 +1124,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形线圈耳环-25mm</td>
           <td class="asin mono">B0H5TTSXZQ; B0H82D7NQW; B0H82GV69G; B0HBPHKWXZ</td>
           <td class="num sz" data-v="178">178<span class="bar" style="width:22px"></span></td>
+          <td class="num sta" data-v="50">50</td>
           <td class="num" data-v="32">32</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="210">210</td>
@@ -1053,6 +1136,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">内外半圈镶钻耳环-20mm</td>
           <td class="asin mono">B0H5V8J3F4; B0H6FLRPC4; B0HBPRFB7Z; B0HDBD8P99</td>
           <td class="num sz" data-v="175">175<span class="bar" style="width:22px"></span></td>
+          <td class="num sta" data-v="80">80</td>
           <td class="num" data-v="45">45</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="220">220</td>
@@ -1064,6 +1148,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形线圈耳环-50mm</td>
           <td class="asin mono">B0H5TLYZ27; B0H829T7J3; B0H82J6955; B0HBPC3DH7</td>
           <td class="num sz" data-v="171">171<span class="bar" style="width:21px"></span></td>
+          <td class="num sta" data-v="70">70</td>
           <td class="num" data-v="32">32</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="203">203</td>
@@ -1075,6 +1160,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">金球耳钉-8mm</td>
           <td class="asin mono">B0H5SXVR5F; B0H5TTXS2Y; B0H6DV3LG5; B0HCT8QQ5N; B0HDB2NB6K</td>
           <td class="num sz" data-v="168">168<span class="bar" style="width:21px"></span></td>
+          <td class="num sta" data-v="165">165</td>
           <td class="num" data-v="35">35</td>
           <td class="num" data-v="80">80</td>
           <td class="num total" data-v="283">283</td>
@@ -1086,6 +1172,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">金球耳钉-3mm</td>
           <td class="asin mono">B0H5SVR1Z1; B0H5TTT5PN; B0H6DVB8NP; B0HCSVFV88; B0HDBDTPJ9; B0HDBHRJZC</td>
           <td class="num sz" data-v="165">165<span class="bar" style="width:21px"></span></td>
+          <td class="num sta" data-v="170">170</td>
           <td class="num" data-v="36">36</td>
           <td class="num" data-v="60">60</td>
           <td class="num total" data-v="261">261</td>
@@ -1097,6 +1184,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">内外半圈镶钻耳环-10mm</td>
           <td class="asin mono">B0H5TYSQH9; B0H6F7FST8; B0HBPPKDYB; B0HDBG57N5</td>
           <td class="num sz" data-v="163">163<span class="bar" style="width:20px"></span></td>
+          <td class="num sta" data-v="95">95</td>
           <td class="num" data-v="38">38</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="201">201</td>
@@ -1108,6 +1196,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">外半圈镶钻耳环-10mm</td>
           <td class="asin mono">B0H5TJNJKM; B0H5TRYMPG; B0H5V6FZYR; B0H6926LNP; B0H69W82F5; B0H6C6WV1B; B0H6HBTCQL</td>
           <td class="num sz" data-v="162">162<span class="bar" style="width:20px"></span></td>
+          <td class="num sta" data-v="152">152</td>
           <td class="num" data-v="118">118</td>
           <td class="num" data-v="20">20</td>
           <td class="num total" data-v="300">300</td>
@@ -1119,6 +1208,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-14mm</td>
           <td class="asin mono">B0H5TLRW2R; B0H5TYV99D; B0H5VDTXHV; B0HDB2GZTD</td>
           <td class="num sz" data-v="162">162<span class="bar" style="width:20px"></span></td>
+          <td class="num sta" data-v="65">65</td>
           <td class="num" data-v="53">53</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="215">215</td>
@@ -1130,6 +1220,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆弧素圈耳环-12mm</td>
           <td class="asin mono">B0H3N23HTK; B0H3N9RLM3; B0H6C5Y98W; B0HDB3YXS5</td>
           <td class="num sz" data-v="154">154<span class="bar" style="width:19px"></span></td>
+          <td class="num sta" data-v="115">115</td>
           <td class="num" data-v="24">24</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="178">178</td>
@@ -1141,6 +1232,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-12mm</td>
           <td class="asin mono">B0HCLM5D5G</td>
           <td class="num sz" data-v="154">154<span class="bar" style="width:19px"></span></td>
+          <td class="num sta" data-v="25">25</td>
           <td class="num" data-v="0">0</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="154">154</td>
@@ -1152,6 +1244,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-16mm</td>
           <td class="asin mono">B0HCM4PH9L</td>
           <td class="num sz" data-v="153">153<span class="bar" style="width:19px"></span></td>
+          <td class="num sta" data-v="25">25</td>
           <td class="num" data-v="0">0</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="153">153</td>
@@ -1163,6 +1256,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆圈耳环-12mm</td>
           <td class="asin mono">B0H6B2LH9X; B0HBP5PMX1</td>
           <td class="num sz" data-v="151">151<span class="bar" style="width:19px"></span></td>
+          <td class="num sta" data-v="10">10</td>
           <td class="num" data-v="10">10</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="161">161</td>
@@ -1174,6 +1268,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆圈耳环-16mm</td>
           <td class="asin mono">B0H6B6W9HV; B0HBNYV748</td>
           <td class="num sz" data-v="145">145<span class="bar" style="width:18px"></span></td>
+          <td class="num sta" data-v="10">10</td>
           <td class="num" data-v="11">11</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="156">156</td>
@@ -1185,6 +1280,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-16mm</td>
           <td class="asin mono">B0H82N723T</td>
           <td class="num sz" data-v="144">144<span class="bar" style="width:18px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="151">151</td>
@@ -1196,6 +1292,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-12mm</td>
           <td class="asin mono">B0H828XFFQ</td>
           <td class="num sz" data-v="141">141<span class="bar" style="width:18px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="148">148</td>
@@ -1207,6 +1304,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆弧素圈耳环-16mm</td>
           <td class="asin mono">B0H3N8ZWDS; B0H6C4YKP6; B0HDB7DZL7</td>
           <td class="num sz" data-v="138">138<span class="bar" style="width:17px"></span></td>
+          <td class="num sta" data-v="85">85</td>
           <td class="num" data-v="30">30</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="168">168</td>
@@ -1218,6 +1316,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-12mm</td>
           <td class="asin mono">B0H5V1DXR9; B0H5VDWXZ2; B0H5VFXDK2; B0HDB1YPXC</td>
           <td class="num sz" data-v="137">137<span class="bar" style="width:17px"></span></td>
+          <td class="num sta" data-v="35">35</td>
           <td class="num" data-v="37">37</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="174">174</td>
@@ -1229,6 +1328,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形线圈耳环-60mm</td>
           <td class="asin mono">B0H3NGP44Q; B0H5VDTYXF; B0H6DYW5MZ</td>
           <td class="num sz" data-v="113">113<span class="bar" style="width:14px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="30">30</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="143">143</td>
@@ -1240,6 +1340,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-10mm</td>
           <td class="asin mono">B0H82HK1K9</td>
           <td class="num sz" data-v="104">104<span class="bar" style="width:13px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="111">111</td>
@@ -1251,6 +1352,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-10mm</td>
           <td class="asin mono">B0HCLMM9BH</td>
           <td class="num sz" data-v="102">102<span class="bar" style="width:13px"></span></td>
+          <td class="num sta" data-v="25">25</td>
           <td class="num" data-v="0">0</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="102">102</td>
@@ -1262,6 +1364,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆形线圈耳环-60mm</td>
           <td class="asin mono">B0H5TSRLTP; B0H82NVFZ9; B0HBPCGKM7</td>
           <td class="num sz" data-v="100">100<span class="bar" style="width:12px"></span></td>
+          <td class="num sta" data-v="45">45</td>
           <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="107">107</td>
@@ -1273,6 +1376,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆圈耳环-10mm</td>
           <td class="asin mono">B0H6B7253H; B0HBPDF5T1</td>
           <td class="num sz" data-v="99">99<span class="bar" style="width:12px"></span></td>
+          <td class="num sta" data-v="10">10</td>
           <td class="num" data-v="10">10</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="109">109</td>
@@ -1284,6 +1388,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-20mm</td>
           <td class="asin mono">B0H8253QNL; B0H82P2BSN</td>
           <td class="num sz" data-v="99">99<span class="bar" style="width:12px"></span></td>
+          <td class="num sta-zero" data-v="0">—</td>
           <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="106">106</td>
@@ -1295,6 +1400,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆弧素圈耳环-20mm</td>
           <td class="asin mono">B0H3N958LW; B0H6C6VK6J; B0HDB2J1KB</td>
           <td class="num sz" data-v="98">98<span class="bar" style="width:12px"></span></td>
+          <td class="num sta" data-v="67">67</td>
           <td class="num" data-v="35">35</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="133">133</td>
@@ -1306,6 +1412,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-20mm</td>
           <td class="asin mono">B0HCLW4VB5</td>
           <td class="num sz" data-v="98">98<span class="bar" style="width:12px"></span></td>
+          <td class="num sta" data-v="25">25</td>
           <td class="num" data-v="0">0</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="98">98</td>
@@ -1317,6 +1424,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆圈耳环-20mm</td>
           <td class="asin mono">B0H6BBLHXR; B0HBPFXR9G</td>
           <td class="num sz" data-v="97">97<span class="bar" style="width:12px"></span></td>
+          <td class="num sta" data-v="10">10</td>
           <td class="num" data-v="10">10</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="107">107</td>
@@ -1328,6 +1436,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-16mm</td>
           <td class="asin mono">B0H5TPZJQS; B0H5VG172Y; B0H5VHKZRS; B0HDB2VFBG</td>
           <td class="num sz" data-v="96">96<span class="bar" style="width:12px"></span></td>
+          <td class="num sta" data-v="45">45</td>
           <td class="num" data-v="60">60</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="156">156</td>
@@ -1339,6 +1448,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">圆弧素圈耳环-10mm</td>
           <td class="asin mono">B0H3N1SWLH; B0H3NF2YNW; B0H6C69GFJ; B0HD9VL3HZ</td>
           <td class="num sz" data-v="95">95<span class="bar" style="width:12px"></span></td>
+          <td class="num sta" data-v="96">96</td>
           <td class="num" data-v="16">16</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="111">111</td>
@@ -1350,6 +1460,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-10mm</td>
           <td class="asin mono">B0H5TLYDNQ; B0H5V5K5N9; B0H5VBGH6N; B0HDB4RDHY</td>
           <td class="num sz" data-v="88">88<span class="bar" style="width:11px"></span></td>
+          <td class="num sta" data-v="35">35</td>
           <td class="num" data-v="38">38</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="126">126</td>
@@ -1361,6 +1472,7 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="pname">素圈耳环-20mm</td>
           <td class="asin mono">B0H5TLXHR5; B0H5V49YYG; B0H5V9BF7M; B0HD9ZFBR1</td>
           <td class="num sz" data-v="58">58<span class="bar" style="width:7px"></span></td>
+          <td class="num sta" data-v="40">40</td>
           <td class="num" data-v="48">48</td>
           <td class="num" data-v="0">0</td>
           <td class="num total" data-v="106">106</td>
@@ -1376,7 +1488,7 @@ td.sku { color: #1f2937; font-weight: 600; }
     <div class="chips"><div class="chip"><b>304</b> AP2815<span class="pname">双环镶钻耳扣-15mm</span></div><div class="chip"><b>303</b> AP192535<span class="pname">25X35mm水滴耳环</span></div><div class="chip"><b>287</b> AP2812<span class="pname">双环镶钻耳扣-12mm</span></div><div class="chip"><b>219</b> AP714<span class="pname">素圈耳环-14mm</span></div><div class="chip"><b>184</b> AP210<span class="pname">环状水滴耳环-10mm</span></div><div class="chip"><b>154</b> AP712<span class="pname">素圈耳环-12mm</span></div><div class="chip"><b>153</b> AP716<span class="pname">素圈耳环-16mm</span></div><div class="chip"><b>102</b> AP710<span class="pname">素圈耳环-10mm</span></div><div class="chip"><b>98</b> AP720<span class="pname">素圈耳环-20mm</span></div></div>
   </div>
 
-  <div class="footer">Generated by Claude Code · 2026-08-17 17:08</div>
+  <div class="footer">Generated by Claude Code · 2026-08-17 18:04</div>
 </div>
 
 <script>
