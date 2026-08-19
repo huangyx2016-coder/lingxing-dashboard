@@ -6,6 +6,7 @@ on:
       - 'silver_data.json'
       - 'build_lingxing.py'
       - 'ap_inventory/**'
+      - 'novaric_inventory/**'
   workflow_dispatch:
 
 jobs:
