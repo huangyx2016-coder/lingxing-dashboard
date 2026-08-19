@@ -41,7 +41,7 @@ body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI',
 .card h2::before { content: ''; width: 4px; height: 16px; border-radius: 2px; background: var(--indigo); }
 
 .donut-row { display: flex; align-items: center; gap: 22px; }
-.donut { width: 128px; height: 128px; border-radius: 50%; background: conic-gradient(#4f46e5 0% 85.5%, #0ea5a4 85.5% 98.7%, #f59e0b 98.7% 100%); position: relative; flex-shrink: 0; }
+.donut { width: 128px; height: 128px; border-radius: 50%; background: conic-gradient(#4f46e5 0% 85.2%, #0ea5a4 85.2% 98.3%, #f59e0b 98.3% 100%); position: relative; flex-shrink: 0; }
 .donut .hole { position: absolute; inset: 22px; background: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .donut .hole .n { font-size: 22px; font-weight: 700; color: var(--ink); }
 .donut .hole .t { font-size: 10.5px; color: var(--muted); }
@@ -125,7 +125,7 @@ td.sku { color: #1f2937; font-weight: 600; }
   <div class="wrap" style="padding:0;">
     <span class="tag">Lingxing Inventory</span>
     <h1>AP 系列 · 深圳仓库存清单</h1>
-    <div class="sub">数据时间 2026-08-19 13:50:13 · 数据来源：领星 ERP</div>
+    <div class="sub">数据时间 2026-08-19 15:20:43 · 数据来源：领星 ERP</div>
   </div>
 </div>
 
@@ -134,20 +134,20 @@ td.sku { color: #1f2937; font-weight: 600; }
   <div class="kpis">
     <div class="kpi" style="--c:#4f46e5"><div class="v">108</div><div class="l">AP SKU 数</div></div>
     <div class="kpi" style="--c:#4f46e5"><div class="v">32,220</div><div class="l">深圳仓总库存</div></div>
-    <div class="kpi" style="--c:#0ea5a4"><div class="v">4,953</div><div class="l">FBA 可售</div></div>
-    <div class="kpi" style="--c:#f59e0b"><div class="v">490</div><div class="l">FBA 在途</div></div>
-    <div class="kpi" style="--c:#1e1b2e"><div class="v">37,663</div><div class="l">总库存合计</div></div>
+    <div class="kpi" style="--c:#0ea5a4"><div class="v">4,947</div><div class="l">FBA 可售</div></div>
+    <div class="kpi" style="--c:#f59e0b"><div class="v">650</div><div class="l">FBA 在途</div></div>
+    <div class="kpi" style="--c:#1e1b2e"><div class="v">37,817</div><div class="l">总库存合计</div></div>
   </div>
 
   <div class="overview">
     <div class="card">
       <h2>库存分布</h2>
       <div class="donut-row">
-        <div class="donut"><div class="hole"><div class="n">37,663</div><div class="t">总库存</div></div></div>
+        <div class="donut"><div class="hole"><div class="n">37,817</div><div class="t">总库存</div></div></div>
         <div class="legend">
-          <div class="item"><span class="dot" style="background:#4f46e5"></span><span class="k">深圳仓</span><span class="val">32,220</span><span class="pct">85.5%</span></div>
-          <div class="item"><span class="dot" style="background:#0ea5a4"></span><span class="k">FBA 可售</span><span class="val">4,953</span><span class="pct">13.2%</span></div>
-          <div class="item"><span class="dot" style="background:#f59e0b"></span><span class="k">FBA 在途</span><span class="val">490</span><span class="pct">1.3%</span></div>
+          <div class="item"><span class="dot" style="background:#4f46e5"></span><span class="k">深圳仓</span><span class="val">32,220</span><span class="pct">85.2%</span></div>
+          <div class="item"><span class="dot" style="background:#0ea5a4"></span><span class="k">FBA 可售</span><span class="val">4,947</span><span class="pct">13.1%</span></div>
+          <div class="item"><span class="dot" style="background:#f59e0b"></span><span class="k">FBA 在途</span><span class="val">650</span><span class="pct">1.7%</span></div>
         </div>
       </div>
     </div>
@@ -155,11 +155,11 @@ td.sku { color: #1f2937; font-weight: 600; }
       <h2>概览</h2>
       <div class="stat-list">
         <div class="stat"><span class="k">在售 SKU（有库存）</span><span class="v">108</span></div>
-        <div class="stat"><span class="k">深圳仓有货但 FBA 空</span><span class="v warn">8</span></div>
+        <div class="stat"><span class="k">深圳仓有货但 FBA 空</span><span class="v warn">9</span></div>
         <div class="stat"><span class="k">深圳仓零库存</span><span class="v">0</span></div>
         <div class="stat"><span class="k">深圳仓可用锁定</span><span class="v">10,596<small>件</small></span></div>
         <div class="stat"><span class="k">可用库存（深圳仓−锁定−海外仓在途）</span><span class="v green">20,433<small>件</small></span></div>
-        <div class="stat"><span class="k">FBA 库存覆盖（可售+在途）</span><span class="v green">5,443<small>件</small></span></div>
+        <div class="stat"><span class="k">FBA 库存覆盖（可售+在途）</span><span class="v green">5,597<small>件</small></span></div>
         <div class="stat"><span class="k">海外仓在途（备货转入库）</span><span class="v">1,191<small>件</small></span></div>
       </div>
     </div>
@@ -268,10 +268,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="535">535</td>
           <td class="num lock" data-v="52">52</td>
           <td class="num sz" data-v="587">587<span class="bar" style="width:73px"></span></td>
-          <td class="num" data-v="37">37</td>
+          <td class="num" data-v="36">36</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="624">624</td>
+          <td class="num total" data-v="623">623</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -450,10 +450,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="297">297</td>
           <td class="num lock" data-v="100">100</td>
           <td class="num sz" data-v="397">397<span class="bar" style="width:49px"></span></td>
-          <td class="num" data-v="50">50</td>
+          <td class="num" data-v="51">51</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="447">447</td>
+          <td class="num total" data-v="448">448</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -660,10 +660,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="232">232</td>
           <td class="num lock" data-v="571">571</td>
           <td class="num sz" data-v="803">803<span class="bar" style="width:100px"></span></td>
-          <td class="num" data-v="171">171</td>
-          <td class="num" data-v="60">60</td>
+          <td class="num" data-v="170">170</td>
+          <td class="num" data-v="160">160</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="1034">1,034</td>
+          <td class="num total" data-v="1133">1,133</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -955,9 +955,9 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num lock" data-v="433">433</td>
           <td class="num sz" data-v="596">596<span class="bar" style="width:74px"></span></td>
           <td class="num" data-v="160">160</td>
-          <td class="num" data-v="20">20</td>
+          <td class="num" data-v="80">80</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="776">776</td>
+          <td class="num total" data-v="836">836</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1150,10 +1150,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="123">123</td>
           <td class="num lock" data-v="205">205</td>
           <td class="num sz" data-v="406">406<span class="bar" style="width:51px"></span></td>
-          <td class="num" data-v="95">95</td>
+          <td class="num" data-v="94">94</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="78">78</td>
-          <td class="num total" data-v="501">501</td>
+          <td class="num total" data-v="500">500</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1234,11 +1234,11 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="108">108</td>
           <td class="num lock" data-v="110">110</td>
           <td class="num sz" data-v="388">388<span class="bar" style="width:48px"></span></td>
-          <td class="num" data-v="1">1</td>
+          <td class="num" data-v="0">0</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="170">170</td>
-          <td class="num total" data-v="389">389</td>
-          <td><span class="badge badge-ok">正常</span></td>
+          <td class="num total" data-v="388">388</td>
+          <td><span class="badge badge-warn">待发FBA</span></td>
         </tr>
 <tr>
           <td class="sku mono">AP225</td>
@@ -1276,10 +1276,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="92">92</td>
           <td class="num lock" data-v="35">35</td>
           <td class="num sz" data-v="137">137<span class="bar" style="width:17px"></span></td>
-          <td class="num" data-v="36">36</td>
+          <td class="num" data-v="37">37</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="173">173</td>
+          <td class="num total" data-v="174">174</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1416,10 +1416,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="68">68</td>
           <td class="num lock" data-v="205">205</td>
           <td class="num sz" data-v="305">305<span class="bar" style="width:38px"></span></td>
-          <td class="num" data-v="101">101</td>
+          <td class="num" data-v="100">100</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="32">32</td>
-          <td class="num total" data-v="406">406</td>
+          <td class="num total" data-v="405">405</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1458,10 +1458,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="56">56</td>
           <td class="num lock" data-v="247">247</td>
           <td class="num sz" data-v="303">303<span class="bar" style="width:38px"></span></td>
-          <td class="num" data-v="123">123</td>
+          <td class="num" data-v="122">122</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="426">426</td>
+          <td class="num total" data-v="425">425</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1570,10 +1570,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="25">25</td>
           <td class="num lock" data-v="171">171</td>
           <td class="num sz" data-v="196">196<span class="bar" style="width:24px"></span></td>
-          <td class="num" data-v="72">72</td>
+          <td class="num" data-v="71">71</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="268">268</td>
+          <td class="num total" data-v="267">267</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1626,10 +1626,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="1">1</td>
           <td class="num lock" data-v="80">80</td>
           <td class="num sz" data-v="199">199<span class="bar" style="width:25px"></span></td>
-          <td class="num" data-v="35">35</td>
+          <td class="num" data-v="34">34</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="118">118</td>
-          <td class="num total" data-v="234">234</td>
+          <td class="num total" data-v="233">233</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1707,12 +1707,12 @@ td.sku { color: #1f2937; font-weight: 600; }
   </div>
 
   <div class="callout">
-    <h2>仅深圳仓有货 · 待发 FBA（8 个 SKU）</h2>
-    <div class="desc">这些 SKU 在深圳仓有库存，但 FBA 无可售/在途，合计 <b>1,501</b> 件，建议尽快安排发货。</div>
-    <div class="chips"><div class="chip"><b>304</b> AP2815<span class="pname">双环镶钻耳扣-15mm</span></div><div class="chip"><b>287</b> AP2812<span class="pname">双环镶钻耳扣-12mm</span></div><div class="chip"><b>219</b> AP714<span class="pname">素圈耳环-14mm</span></div><div class="chip"><b>184</b> AP210<span class="pname">环状水滴耳环-10mm</span></div><div class="chip"><b>154</b> AP712<span class="pname">素圈耳环-12mm</span></div><div class="chip"><b>153</b> AP716<span class="pname">素圈耳环-16mm</span></div><div class="chip"><b>102</b> AP710<span class="pname">素圈耳环-10mm</span></div><div class="chip"><b>98</b> AP720<span class="pname">素圈耳环-20mm</span></div></div>
+    <h2>仅深圳仓有货 · 待发 FBA（9 个 SKU）</h2>
+    <div class="desc">这些 SKU 在深圳仓有库存，但 FBA 无可售/在途，合计 <b>1,889</b> 件，建议尽快安排发货。</div>
+    <div class="chips"><div class="chip"><b>388</b> AP315<span class="pname">光面宽面耳环-15mm</span></div><div class="chip"><b>304</b> AP2815<span class="pname">双环镶钻耳扣-15mm</span></div><div class="chip"><b>287</b> AP2812<span class="pname">双环镶钻耳扣-12mm</span></div><div class="chip"><b>219</b> AP714<span class="pname">素圈耳环-14mm</span></div><div class="chip"><b>184</b> AP210<span class="pname">环状水滴耳环-10mm</span></div><div class="chip"><b>154</b> AP712<span class="pname">素圈耳环-12mm</span></div><div class="chip"><b>153</b> AP716<span class="pname">素圈耳环-16mm</span></div><div class="chip"><b>102</b> AP710<span class="pname">素圈耳环-10mm</span></div><div class="chip"><b>98</b> AP720<span class="pname">素圈耳环-20mm</span></div></div>
   </div>
 
-  <div class="footer">Generated by Claude Code · 2026-08-19 13:54</div>
+  <div class="footer">Generated by Claude Code · 2026-08-19 15:24</div>
 </div>
 
 <script>
