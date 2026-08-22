@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP+耳环系列 · 深圳仓库存清单</title>
+<style>
+:root {
+  --indigo: #4f46e5;
+  --teal: #0ea5a4;
+  --amber: #f59e0b;
+  --orange: #ea580c;
+  --ink: #1e1b2e;
+  --muted: #6b7280;
+  --line: #eceef2;
+  --bg: #f4f5f9;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif; background: var(--bg); color: #24292f; line-height: 1.55; }
+
+/* ===== 头部 ===== */
+.hero { position: relative; overflow: hidden; background: radial-gradient(1200px 500px at 20% -10%, #3b2f6e 0%, transparent 60%), linear-gradient(135deg, #14122b 0%, #251d45 55%, #1b2a4a 100%); color: #fff; padding: 40px 48px 46px; }
+.hero::after { content: ''; position: absolute; right: -80px; top: -80px; width: 320px; height: 320px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.08); }
+.hero::before { content: ''; position: absolute; right: 20px; top: 40px; width: 160px; height: 160px; border-radius: 50%; border: 1px solid rgba(224,177,74,0.25); }
+.hero .tag { display: inline-block; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #e0b14a; border: 1px solid rgba(224,177,74,0.5); border-radius: 999px; padding: 3px 12px; margin-bottom: 14px; }
+.hero h1 { font-size: 28px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px; }
+.hero .sub { opacity: 0.72; font-size: 14px; }
+
+.wrap { max-width: 1160px; margin: 0 auto; padding: 24px; position: relative; }
+
+/* ===== KPI 卡片 ===== */
+.kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin: -6px 0 22px; position: relative; z-index: 2; }
+.kpi { background: #fff; border-radius: 14px; padding: 18px 20px; box-shadow: 0 6px 20px rgba(30,27,46,0.07); border-top: 3px solid var(--c, #e5e7eb); }
+.kpi .v { font-size: 27px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--c, #24292f); letter-spacing: -0.5px; }
+.kpi .l { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+
+/* ===== 概览区 ===== */
+.overview { display: grid; grid-template-columns: 340px 1fr; gap: 18px; margin-bottom: 22px; }
+.card { background: #fff; border-radius: 14px; padding: 22px; box-shadow: 0 4px 16px rgba(30,27,46,0.05); }
+.card h2 { font-size: 15px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.card h2::before { content: ''; width: 4px; height: 16px; border-radius: 2px; background: var(--indigo); }
+
+.donut-row { display: flex; align-items: center; gap: 22px; }
+.donut { width: 128px; height: 128px; border-radius: 50%; background: conic-gradient(#4f46e5 0% 84.2%, #0ea5a4 84.2% 98.9%, #f59e0b 98.9% 100%); position: relative; flex-shrink: 0; }
+.donut .hole { position: absolute; inset: 22px; background: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.donut .hole .n { font-size: 22px; font-weight: 700; color: var(--ink); }
+.donut .hole .t { font-size: 10.5px; color: var(--muted); }
+.legend { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.legend .item { display: flex; align-items: center; gap: 9px; font-size: 13px; }
+.legend .dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+.legend .k { color: var(--muted); flex: 1; }
+.legend .val { font-weight: 600; font-variant-numeric: tabular-nums; }
+.legend .pct { color: var(--muted); font-size: 12px; width: 44px; text-align: right; }
+
+.stat-list { display: flex; flex-direction: column; gap: 14px; }
+.stat { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px dashed var(--line); }
+.stat:last-child { border-bottom: none; padding-bottom: 0; }
+.stat .k { font-size: 13.5px; color: var(--muted); }
+.stat .v { font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stat .v small { font-size: 12px; color: var(--muted); font-weight: 400; margin-left: 3px; }
+.stat .v.warn { color: var(--orange); }
+.stat .v.green { color: var(--teal); }
+
+/* ===== 工具栏 ===== */
+.toolbar { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; flex-wrap: wrap; }
+.search { position: relative; flex: 1; min-width: 240px; }
+.search input { width: 100%; padding: 10px 14px 10px 38px; border: 1px solid var(--line); border-radius: 10px; font-size: 13.5px; outline: none; background: #fff; transition: border .15s; }
+.search input:focus { border-color: var(--indigo); box-shadow: 0 0 0 3px rgba(79,70,229,0.12); }
+.search svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); opacity: 0.4; }
+.count { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+
+/* ===== 表格 ===== */
+.table-card { background: #fff; border-radius: 14px; padding: 18px 20px 10px; box-shadow: 0 4px 16px rgba(30,27,46,0.05); margin-bottom: 22px; }
+.table-card h2 { font-size: 15px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.table-card h2::before { content: ''; width: 4px; height: 16px; border-radius: 2px; background: var(--teal); }
+.table-scroll { overflow: auto; max-height: 620px; border: 1px solid var(--line); border-radius: 10px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th { position: sticky; top: 0; z-index: 3; background: #f8f9fc; color: #4b5563; font-weight: 600; padding: 11px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; cursor: pointer; user-select: none; }
+thead th:hover { background: #eef0f7; }
+thead th .arr { color: var(--indigo); font-size: 10px; margin-left: 3px; }
+thead th.num { text-align: right; }
+tbody td { padding: 9px 12px; border-bottom: 1px solid #f2f4f8; }
+tbody tr:nth-child(even) { background: #fafbfe; }
+tbody tr:hover { background: #f0f2fb; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td .mono, .mono { font-family: 'SF Mono', 'Consolas', 'Menlo', monospace; font-size: 12px; }
+td.sz { color: var(--indigo); font-weight: 600; }
+td.lock { color: #0891b2; }
+td.lock-zero { color: #cbd5e1; }
+td.avail { color: #16a34a; font-weight: 600; }
+td.avail-neg { color: #dc2626; font-weight: 600; }
+td.overseas { color: #2563eb; font-weight: 600; }
+td.overseas-zero { color: #cbd5e1; }
+td.total { font-weight: 700; color: var(--ink); }
+td.sku { color: #1f2937; font-weight: 600; }
+.pname { color: #374151; }
+.asin { color: #9ca3af; font-size: 11.5px; }
+.bar { display: inline-block; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #6366f1, #8b5cf6); vertical-align: middle; margin-left: 6px; }
+
+.badge { display: inline-block; padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.badge-warn { background: #fff1e6; color: var(--orange); }
+.badge-ok { background: #e6f7f1; color: var(--teal); }
+.badge-low { background: #fef3e2; color: #b45309; }
+
+/* ===== 待发FBA 区块 ===== */
+.callout { background: linear-gradient(135deg, #fff8f1, #fff); border: 1px solid #ffe4c7; border-left: 4px solid var(--orange); border-radius: 14px; padding: 20px 22px; margin-bottom: 22px; }
+.callout h2 { font-size: 15px; font-weight: 600; color: #9a3412; margin-bottom: 6px; }
+.callout .desc { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 9px; }
+.chip { background: #fff; border: 1px solid #ffe0c2; border-radius: 10px; padding: 8px 13px; font-size: 12.5px; }
+.chip b { font-size: 14px; color: var(--orange); font-variant-numeric: tabular-nums; }
+.chip .pname { display: block; font-size: 11px; color: var(--muted); margin-top: 1px; }
+
+.footer { text-align: center; color: #b6bcc8; font-size: 12px; padding: 26px; }
+@media (max-width: 860px) {
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .overview { grid-template-columns: 1fr; }
+  .hero { padding: 30px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap" style="padding:0;">
+    <span class="tag">Lingxing Inventory</span>
+    <h1>AP+耳环系列 · 深圳仓库存清单</h1>
+    <div class="sub">数据时间 2026-08-21 17:55:01 · 数据来源：领星 ERP</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="kpis">
+    <div class="kpi" style="--c:#4f46e5"><div class="v">117</div><div class="l">AP SKU 数</div></div>
+    <div class="kpi" style="--c:#4f46e5"><div class="v">52,905</div><div class="l">深圳仓总库存</div></div>
+    <div class="kpi" style="--c:#0ea5a4"><div class="v">9,248</div><div class="l">FBA 可售</div></div>
+    <div class="kpi" style="--c:#f59e0b"><div class="v">660</div><div class="l">FBA 在途</div></div>
+    <div class="kpi" style="--c:#1e1b2e"><div class="v">62,813</div><div class="l">总库存合计</div></div>
+  </div>
+
+  <div class="overview">
+    <div class="card">
+      <h2>库存分布</h2>
+      <div class="donut-row">
+        <div class="donut"><div class="hole"><div class="n">62,813</div><div class="t">总库存</div></div></div>
+        <div class="legend">
+          <div class="item"><span class="dot" style="background:#4f46e5"></span><span class="k">深圳仓</span><span class="val">52,905</span><span class="pct">84.2%</span></div>
+          <div class="item"><span class="dot" style="background:#0ea5a4"></span><span class="k">FBA 可售</span><span class="val">9,248</span><span class="pct">14.7%</span></div>
+          <div class="item"><span class="dot" style="background:#f59e0b"></span><span class="k">FBA 在途</span><span class="val">660</span><span class="pct">1.1%</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>概览</h2>
+      <div class="stat-list">
+        <div class="stat"><span class="k">在售 SKU（有库存）</span><span class="v">117</span></div>
+        <div class="stat"><span class="k">深圳仓有货但 FBA 空</span><span class="v warn">5</span></div>
+        <div class="stat"><span class="k">深圳仓零库存</span><span class="v">0</span></div>
+        <div class="stat"><span class="k">深圳仓可用锁定</span><span class="v">12,446<small>件</small></span></div>
+        <div class="stat"><span class="k">可用库存（深圳仓−锁定−海外仓在途）</span><span class="v green">37,438<small>件</small></span></div>
+        <div class="stat"><span class="k">FBA 库存覆盖（可售+在途）</span><span class="v green">9,908<small>件</small></span></div>
+        <div class="stat"><span class="k">海外仓在途（备货转入库）</span><span class="v">3,021<small>件</small></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-card">
+    <h2>AP 系列库存明细</h2>
+    <div class="toolbar">
+      <div class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="q" type="text" placeholder="搜索 SKU / MSKU / 商品名 / ASIN…">
+      </div>
+      <span class="count" id="cnt"></span>
+    </div>
+    <div class="table-scroll">
+      <table id="mainTable">
+        <thead><tr>
+          <th data-t="text">公司SKU</th>
+          <th data-t="text">MSKU</th>
+          <th data-t="text">商品名</th>
+          <th data-t="text">ASIN</th>
+          <th data-t="num" class="num">可用库存<span class="arr"></span></th>
+          <th data-t="num" class="num">可用锁定<span class="arr"></span></th>
+          <th data-t="num" class="num">深圳仓<span class="arr"></span></th>
+          <th data-t="num" class="num">FBA可售<span class="arr"></span></th>
+          <th data-t="num" class="num">FBA在途<span class="arr"></span></th>
+          <th data-t="num" class="num">海外仓在途<span class="arr"></span></th>
+          <th data-t="num" class="num">总库存<span class="arr"></span></th>
+          <th data-t="text">状态</th>
+        </tr></thead>
+        <tbody><tr>
+          <td class="sku mono">CYH016L</td>
+          <td class="mono">BALA01L; CYH016L; FURE016L; MGH016L; VU016L; Zd01L; gl016L</td>
+          <td class="pname">大型半镶钻耳扣黄铜镀14K金</td>
+          <td class="asin mono">B0C614J3H6; B0CMGX1BRB; B0FQJFPT1R; B0FR6JB91K; B0G1B7BLG3; B0G1BCHFHN; B0G1FXZJ7P</td>
+          <td class="num avail" data-v="4579">4,579</td>
+          <td class="num lock" data-v="80">80</td>
+          <td class="num sz" data-v="4729">4,729<span class="bar" style="width:100px"></span></td>
+          <td class="num" data-v="727">727</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="70">70</td>
+          <td class="num total" data-v="5456">5,456</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">CYH016M</td>
+          <td class="mono">BALA01M; CYH016M; FURE016M; MGH016M; VU016M; Zd01M; cyh016m; gl016m</td>
+          <td class="pname">中型半镶钻耳扣黄铜镀14K金</td>
+          <td class="asin mono">B0C6141QCW; B0CMGF6939; B0D2MDHYD7; B0FQJJ1Y26; B0FR7V51ZS; B0G1B8779T; B0G1BQ82LF; B0G1G3MSRZ</td>
+          <td class="num avail" data-v="4079">4,079</td>
+          <td class="num lock" data-v="240">240</td>
+          <td class="num sz" data-v="4389">4,389<span class="bar" style="width:93px"></span></td>
+          <td class="num" data-v="852">852</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="70">70</td>
+          <td class="num total" data-v="5241">5,241</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">CYH016S</td>
+          <td class="mono">BALA01S; CYH016S; FURE016S; MGH016S; VU016S; Zd01S; cyh016s</td>
+          <td class="pname">小型半镶钻耳扣黄铜镀14K金</td>
+          <td class="asin mono">B0C613TZ3Y; B0D2MGNZKF; B0FQJF5NV8; B0FR7T4YM6; B0G1BD8YC4; B0G1BG6QSW</td>
+          <td class="num avail" data-v="2765">2,765</td>
+          <td class="num lock" data-v="220">220</td>
+          <td class="num sz" data-v="3045">3,045<span class="bar" style="width:64px"></span></td>
+          <td class="num" data-v="574">574</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="60">60</td>
+          <td class="num total" data-v="3619">3,619</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">CYH016-20MM</td>
+          <td class="mono">BALA01-20MM; CYH016-20MM; FURE016-20mm; MGH016-20MM; VU016-20mm; Zd01-20MM; gl016-20mm</td>
+          <td class="pname">半镶钻耳扣黄铜镀14K金（外径20mm）</td>
+          <td class="asin mono">B0D6XQVF3T; B0FQJFHC5W; B0FR8YQDHJ; B0G1B7ZNF6; B0G1BJG5MC; B0G1DP5BKF</td>
+          <td class="num avail" data-v="1833">1,833</td>
+          <td class="num lock" data-v="350">350</td>
+          <td class="num sz" data-v="2223">2,223<span class="bar" style="width:47px"></span></td>
+          <td class="num" data-v="515">515</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="40">40</td>
+          <td class="num total" data-v="2738">2,738</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">CYH016-25MM</td>
+          <td class="mono">BALA01-25MM; CYH016-25MM; FURE016-25mm; MGH016-25MM; VU016-25mm; Zd01-25MM; gl016-25mm</td>
+          <td class="pname">半镶钻耳扣黄铜镀14K金（外径25mm）</td>
+          <td class="asin mono">B0D6XRBRZS; B0FQJHB6DJ; B0FR8KR5GJ; B0G1BJ2HJW; B0G1BKL9RX; B0G1GBG1P7</td>
+          <td class="num avail" data-v="1320">1,320</td>
+          <td class="num lock-zero" data-v="0">—</td>
+          <td class="num sz" data-v="1350">1,350<span class="bar" style="width:29px"></span></td>
+          <td class="num" data-v="238">238</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="30">30</td>
+          <td class="num total" data-v="1588">1,588</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">RAE007G-25mm</td>
+          <td class="mono">DA004-25mm; FU004G-25mm; JOZ003-25mm; LS004G-25mm; MAS003-25mm; RAE007G-25mm</td>
+          <td class="pname">镶四钻素圈耳环黄铜镀14K金-25mm(按5.31新扣做货）</td>
+          <td class="asin mono">B0D93YL27H; B0GJJ42DMH; B0GJJDPDP8; B0GSYC5418; B0GVSHCR7L</td>
+          <td class="num avail" data-v="1314">1,314</td>
+          <td class="num lock" data-v="270">270</td>
+          <td class="num sz" data-v="1724">1,724<span class="bar" style="width:36px"></span></td>
+          <td class="num" data-v="342">342</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="140">140</td>
+          <td class="num total" data-v="2066">2,066</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2614</td>
+          <td class="mono">WAP26-14</td>
+          <td class="pname">外半圈镶钻耳环-14mm</td>
+          <td class="asin mono">B0H3NGXFDN</td>
+          <td class="num avail" data-v="751">751</td>
+          <td class="num lock" data-v="47">47</td>
+          <td class="num sz" data-v="798">798<span class="bar" style="width:17px"></span></td>
+          <td class="num" data-v="44">44</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="842">842</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2714</td>
+          <td class="mono">FK006-14; HDA007E14; HE2714; SP017G-14</td>
+          <td class="pname">内外半圈镶钻耳搭耳环-14mm</td>
+          <td class="asin mono">B0H5QWTFJL; B0H5V549JB; B0H8251KDD; B0HDBLNVST</td>
+          <td class="num avail" data-v="745">745</td>
+          <td class="num lock" data-v="52">52</td>
+          <td class="num sz" data-v="797">797<span class="bar" style="width:17px"></span></td>
+          <td class="num" data-v="37">37</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="834">834</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">CYH016-30MM</td>
+          <td class="mono">BALA01-30MM; CYH016-30MM; MGH016-30MM; VU016-30mm; Zd01-30MM; gl016-30mm</td>
+          <td class="pname">半镶钻耳扣黄铜镀14K金（外径30mm）</td>
+          <td class="asin mono">B0D6XNB1PG; B0FR7MYDGK; B0G1B8VJFW; B0G1GT2ZV4; B0GGH9PRWV</td>
+          <td class="num avail" data-v="721">721</td>
+          <td class="num lock" data-v="240">240</td>
+          <td class="num sz" data-v="991">991<span class="bar" style="width:21px"></span></td>
+          <td class="num" data-v="340">340</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="30">30</td>
+          <td class="num total" data-v="1331">1,331</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2612</td>
+          <td class="mono">WAP26-12</td>
+          <td class="pname">外半圈镶钻耳环-12mm</td>
+          <td class="asin mono">B0H3NHY6PG</td>
+          <td class="num avail" data-v="591">591</td>
+          <td class="num lock" data-v="20">20</td>
+          <td class="num sz" data-v="611">611<span class="bar" style="width:13px"></span></td>
+          <td class="num" data-v="18">18</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="629">629</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2616</td>
+          <td class="mono">WAP26-16</td>
+          <td class="pname">外半圈镶钻耳环-16mm</td>
+          <td class="asin mono">B0H3NG5BD8</td>
+          <td class="num avail" data-v="566">566</td>
+          <td class="num lock" data-v="32">32</td>
+          <td class="num sz" data-v="598">598<span class="bar" style="width:13px"></span></td>
+          <td class="num" data-v="24">24</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="622">622</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2712</td>
+          <td class="mono">FK006-12; HDA007E12; HE2712; SP017G-12</td>
+          <td class="pname">内外半圈镶钻耳搭耳环-12mm</td>
+          <td class="asin mono">B0H5QMKH27; B0H5TWX1GY; B0H8282994; B0HDB5T7MN</td>
+          <td class="num avail" data-v="545">545</td>
+          <td class="num lock" data-v="37">37</td>
+          <td class="num sz" data-v="582">582<span class="bar" style="width:12px"></span></td>
+          <td class="num" data-v="26">26</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="608">608</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2716</td>
+          <td class="mono">FK006-16; HDA007E16; HE2716; SP017G-16</td>
+          <td class="pname">内外半圈镶钻耳搭耳环-16mm</td>
+          <td class="asin mono">B0H5QSMJFR; B0H5TFPFDF; B0H82JDJH7; B0HDBCJDBM</td>
+          <td class="num avail" data-v="535">535</td>
+          <td class="num lock" data-v="52">52</td>
+          <td class="num sz" data-v="587">587<span class="bar" style="width:12px"></span></td>
+          <td class="num" data-v="36">36</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="623">623</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">RAE007G</td>
+          <td class="mono">DA004; FU004G; JOZ003; LS004G; MAS003; RAE007G; RAE007G-BY</td>
+          <td class="pname">镶四钻素圈耳环黄铜镀14K金（按5.31新扣做货）</td>
+          <td class="asin mono">B0D93T8SXZ; B0DK2QYW6Q; B0GJJJNC2B; B0GJK8FSH9; B0GSYS5KRG; B0GVS8N33N</td>
+          <td class="num avail" data-v="461">461</td>
+          <td class="num lock" data-v="335">335</td>
+          <td class="num sz" data-v="1086">1,086<span class="bar" style="width:23px"></span></td>
+          <td class="num" data-v="465">465</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="290">290</td>
+          <td class="num total" data-v="1551">1,551</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP22-5</td>
+          <td class="mono">FK005-5mm; HF006-5mm; HF22-5; JOZ014-5mm; KH005-5; KH005-8; NV005-5mm; PM22-5mm</td>
+          <td class="pname">金球耳钉-5mm</td>
+          <td class="asin mono">B0H5SS1M6Z; B0H5TLKSH3; B0H6DSH5WM; B0HCT4G68B; B0HCT954GZ; B0HDB4C125; B0HDB8MNWL; B0HDBGT76X</td>
+          <td class="num avail" data-v="410">410</td>
+          <td class="num lock" data-v="332">332</td>
+          <td class="num sz" data-v="762">762<span class="bar" style="width:16px"></span></td>
+          <td class="num" data-v="26">26</td>
+          <td class="num" data-v="30">30</td>
+          <td class="num overseas" data-v="20">20</td>
+          <td class="num total" data-v="818">818</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP115</td>
+          <td class="mono">HB115; HDA001E15</td>
+          <td class="pname">圆形宽面耳扣-15mm</td>
+          <td class="asin mono">B0H69PJB64; B0H82D1WFB</td>
+          <td class="num avail" data-v="382">382</td>
+          <td class="num lock" data-v="22">22</td>
+          <td class="num sz" data-v="404">404<span class="bar" style="width:9px"></span></td>
+          <td class="num" data-v="22">22</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="426">426</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2720</td>
+          <td class="mono">FK006-20; HDA007E20; HE2720; SP017G-20</td>
+          <td class="pname">内外半圈镶钻耳搭耳环-20mm</td>
+          <td class="asin mono">B0H5QW3DW2; B0H5V1B6BC; B0H82JLQ18; B0HDBJSYG9</td>
+          <td class="num avail" data-v="375">375</td>
+          <td class="num lock" data-v="42">42</td>
+          <td class="num sz" data-v="417">417<span class="bar" style="width:9px"></span></td>
+          <td class="num" data-v="27">27</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="444">444</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2620</td>
+          <td class="mono">WAP26-20</td>
+          <td class="pname">外半圈镶钻耳环-20mm</td>
+          <td class="asin mono">B0H3ND45S2</td>
+          <td class="num avail" data-v="363">363</td>
+          <td class="num lock" data-v="42">42</td>
+          <td class="num sz" data-v="405">405<span class="bar" style="width:9px"></span></td>
+          <td class="num" data-v="37">37</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="442">442</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2610</td>
+          <td class="mono">WAP26-10</td>
+          <td class="pname">外半圈镶钻耳环-10mm</td>
+          <td class="asin mono">B0H3N9JPX6</td>
+          <td class="num avail" data-v="358">358</td>
+          <td class="num lock" data-v="43">43</td>
+          <td class="num sz" data-v="401">401<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="34">34</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="435">435</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2710</td>
+          <td class="mono">FK006-10; HDA007E10; HE2710; SP017G-10</td>
+          <td class="pname">内外半圈镶钻耳搭耳环-10mm</td>
+          <td class="asin mono">B0H5QL7S2X; B0H5V731BL; B0H82GLHM2; B0HDB748GM</td>
+          <td class="num avail" data-v="356">356</td>
+          <td class="num lock" data-v="37">37</td>
+          <td class="num sz" data-v="393">393<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="26">26</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="419">419</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP22-4</td>
+          <td class="mono">FK005-4mm; HF006-4mm; HF22-4; JOZ014-4mm; KH005-4; NV005-4mm; PM22-4mm</td>
+          <td class="pname">金球耳钉-4mm</td>
+          <td class="asin mono">B0H5SKL2PD; B0H5V5PLFF; B0H6DFX883; B0HCSQ9B3L; B0HCSYWCQ1; B0HD9XYXTP; B0HDBB18NY</td>
+          <td class="num avail" data-v="341">341</td>
+          <td class="num lock" data-v="238">238</td>
+          <td class="num sz" data-v="579">579<span class="bar" style="width:12px"></span></td>
+          <td class="num" data-v="29">29</td>
+          <td class="num" data-v="20">20</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="628">628</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1425</td>
+          <td class="mono">HF003; WAP14-25; WAP14-25.1; WAP14-25.2; WAP14-25.3</td>
+          <td class="pname">25mm高*4.5mm最宽-U型耳环</td>
+          <td class="asin mono">B0H3N2DHKF; B0H3N2LZBK; B0H3NHWHN7; B0H3NK5T4Z; B0HCGT44T7</td>
+          <td class="num avail" data-v="329">329</td>
+          <td class="num lock" data-v="75">75</td>
+          <td class="num sz" data-v="404">404<span class="bar" style="width:9px"></span></td>
+          <td class="num" data-v="20">20</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="424">424</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1525</td>
+          <td class="mono">AD15-25MM; NV003-25; SP014G-25</td>
+          <td class="pname">椭圆耳环-25mm</td>
+          <td class="asin mono">B0H5QJWCTN; B0H6DZLDZJ; B0H6L4VL7L</td>
+          <td class="num avail" data-v="327">327</td>
+          <td class="num lock" data-v="90">90</td>
+          <td class="num sz" data-v="417">417<span class="bar" style="width:9px"></span></td>
+          <td class="num" data-v="61">61</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="478">478</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1323</td>
+          <td class="mono">KH003; MAP003E.; YFA13</td>
+          <td class="pname">19mm宽X23mm高*7mm最宽-水滴形耳环</td>
+          <td class="asin mono">B0H5V7ZDG5; B0HBVKVX19; B0HDB7LZXG</td>
+          <td class="num avail" data-v="310">310</td>
+          <td class="num lock" data-v="90">90</td>
+          <td class="num sz" data-v="400">400<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="54">54</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="454">454</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1520</td>
+          <td class="mono">AD15-20MM; NV003-20; SP014G-20</td>
+          <td class="pname">椭圆耳环-20mm</td>
+          <td class="asin mono">B0H5QRFQB7; B0H6DGLVG4; B0H6L2S84X</td>
+          <td class="num avail" data-v="298">298</td>
+          <td class="num lock" data-v="120">120</td>
+          <td class="num sz" data-v="418">418<span class="bar" style="width:9px"></span></td>
+          <td class="num" data-v="59">59</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="477">477</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP615</td>
+          <td class="mono">JUB012E-15; KH002-15; WAP6-15</td>
+          <td class="pname">宽面素圈耳环-15mm</td>
+          <td class="asin mono">B0H3NC9PBY; B0H5W26185; B0HDB56X9S</td>
+          <td class="num avail" data-v="297">297</td>
+          <td class="num lock" data-v="100">100</td>
+          <td class="num sz" data-v="397">397<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="58">58</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="455">455</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP120</td>
+          <td class="mono">HB120; HDA001E20</td>
+          <td class="pname">圆形宽面耳扣-20mm</td>
+          <td class="asin mono">B0H69MMCZ6; B0H82NWM6D</td>
+          <td class="num avail" data-v="284">284</td>
+          <td class="num lock" data-v="22">22</td>
+          <td class="num sz" data-v="306">306<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="21">21</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="327">327</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1215</td>
+          <td class="mono">HB1215; HDA003E15</td>
+          <td class="pname">麻花圈耳环-15mm</td>
+          <td class="asin mono">B0H69SJVQV; B0H827JGJ3</td>
+          <td class="num avail" data-v="281">281</td>
+          <td class="num lock" data-v="27">27</td>
+          <td class="num sz" data-v="308">308<span class="bar" style="width:7px"></span></td>
+          <td class="num" data-v="25">25</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="333">333</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP112</td>
+          <td class="mono">HB112; HDA001E12</td>
+          <td class="pname">圆形宽面耳扣-12mm</td>
+          <td class="asin mono">B0H69SLBT7; B0H82MW31P</td>
+          <td class="num avail" data-v="280">280</td>
+          <td class="num lock" data-v="20">20</td>
+          <td class="num sz" data-v="300">300<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="20">20</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="320">320</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP192535</td>
+          <td class="mono">MAP005E.</td>
+          <td class="pname">25X35mm水滴耳环</td>
+          <td class="asin mono">B0HBV8PGMM</td>
+          <td class="num avail" data-v="278">278</td>
+          <td class="num lock" data-v="25">25</td>
+          <td class="num sz" data-v="303">303<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="25">25</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="328">328</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1740</td>
+          <td class="mono">FLAP1740; NV004-40; WAP17-40</td>
+          <td class="pname">圆形线圈耳环-40mm</td>
+          <td class="asin mono">B0H3NHYLLL; B0H5VFYRJH; B0H6DJLZFL</td>
+          <td class="num avail" data-v="276">276</td>
+          <td class="num lock" data-v="40">40</td>
+          <td class="num sz" data-v="346">346<span class="bar" style="width:7px"></span></td>
+          <td class="num" data-v="52">52</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="30">30</td>
+          <td class="num total" data-v="398">398</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2025</td>
+          <td class="mono">FLAP2025; GF20-25; HB2025; HDA005E25; HF2025; JOZ012-25; KH004-25; MGH20-25MM; SP015G-25</td>
+          <td class="pname">光面素圈耳环-25mm</td>
+          <td class="asin mono">B0H5QL47LV; B0H5S3VH2P; B0H5TW5SVL; B0H5V1KJTD; B0H5VLQT43; B0H69VRX9F; B0H6P3JY3Y; B0H82B3G9M; B0HDB6MVKW</td>
+          <td class="num avail" data-v="275">275</td>
+          <td class="num lock" data-v="280">280</td>
+          <td class="num sz" data-v="705">705<span class="bar" style="width:15px"></span></td>
+          <td class="num" data-v="195">195</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="150">150</td>
+          <td class="num total" data-v="900">900</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1730</td>
+          <td class="mono">FLAP1730; NV004-30; WAP17-30</td>
+          <td class="pname">圆形线圈耳环-30mm</td>
+          <td class="asin mono">B0H3N9ZC8L; B0H5V4GW1C; B0H6DXFF1R</td>
+          <td class="num avail" data-v="271">271</td>
+          <td class="num lock" data-v="45">45</td>
+          <td class="num sz" data-v="336">336<span class="bar" style="width:7px"></span></td>
+          <td class="num" data-v="55">55</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="20">20</td>
+          <td class="num total" data-v="391">391</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP412</td>
+          <td class="mono">GF4-12; NV001-12</td>
+          <td class="pname">素面环状耳环-12mm</td>
+          <td class="asin mono">B0H6DP2BQQ; B0H6P1292D</td>
+          <td class="num avail" data-v="261">261</td>
+          <td class="num lock" data-v="50">50</td>
+          <td class="num sz" data-v="311">311<span class="bar" style="width:7px"></span></td>
+          <td class="num" data-v="45">45</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="356">356</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP215</td>
+          <td class="mono">KH001-15; MGHA2-15MM</td>
+          <td class="pname">环状水滴耳环-15mm</td>
+          <td class="asin mono">B0H5TJK48V; B0HDB36T1W</td>
+          <td class="num avail" data-v="259">259</td>
+          <td class="num lock" data-v="120">120</td>
+          <td class="num sz" data-v="379">379<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="12">12</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="391">391</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2125</td>
+          <td class="mono">FLAP2125; HDA006E; JOZ013; SP016G; YFA21</td>
+          <td class="pname">25mm宽菱形耳坠</td>
+          <td class="asin mono">B0H5QS8XPH; B0H5SHNYM5; B0H5TWPNBD; B0H5V7W7VF; B0H82DNCDJ</td>
+          <td class="num avail" data-v="250">250</td>
+          <td class="num lock" data-v="75">75</td>
+          <td class="num sz" data-v="345">345<span class="bar" style="width:7px"></span></td>
+          <td class="num" data-v="97">97</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="20">20</td>
+          <td class="num total" data-v="442">442</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2320</td>
+          <td class="mono">HB2320; MAP006E-20mm; PM23-20mm; WAP23-20</td>
+          <td class="pname">简约不规则耳环-20mm</td>
+          <td class="asin mono">B0H3NLMQ2R; B0H69VLVHN; B0HBPR8VQD; B0HCTCD6W8</td>
+          <td class="num avail" data-v="250">250</td>
+          <td class="num lock" data-v="50">50</td>
+          <td class="num sz" data-v="300">300<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="26">26</td>
+          <td class="num" data-v="50">50</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="376">376</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1630</td>
+          <td class="mono">HDA004E30; HF004-30mm; HF1630; MAP004E-30mm</td>
+          <td class="pname">圆形线圈耳环-30mm</td>
+          <td class="asin mono">B0H5TP255Z; B0H82D5R6M; B0HBPHVSRM; B0HCTGYXPQ</td>
+          <td class="num avail" data-v="247">247</td>
+          <td class="num lock" data-v="35">35</td>
+          <td class="num sz" data-v="282">282<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="36">36</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="318">318</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP415</td>
+          <td class="mono">GF4-15; NV001-15</td>
+          <td class="pname">素面环状耳环-15mm</td>
+          <td class="asin mono">B0H6DBFZ2M; B0H6NST8SP</td>
+          <td class="num avail" data-v="234">234</td>
+          <td class="num lock" data-v="60">60</td>
+          <td class="num sz" data-v="294">294<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="57">57</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="351">351</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP212</td>
+          <td class="mono">KH001-12; MGHA2-12MM</td>
+          <td class="pname">环状水滴耳环-12mm</td>
+          <td class="asin mono">B0H5V1CR3L; B0HD9ZMDX1</td>
+          <td class="num avail" data-v="233">233</td>
+          <td class="num lock" data-v="70">70</td>
+          <td class="num sz" data-v="303">303<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="17">17</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="320">320</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP525</td>
+          <td class="mono">AD5-25MM; AP5-25MM; HF001-25mm; JUB011E-25; JUB011E-25.1; MAP001E-25mm; MAS010-25; NV002-25; WAP5-25; YFA5-25mm</td>
+          <td class="pname">素圈耳扣-25mm</td>
+          <td class="asin mono">B0H5PQYXQH; B0H5VKDLZB; B0H5VZXBMD; B0H5WCQZ22; B0H6BT8P56; B0H6DZYMGP; B0H6L4NRTC; B0HB9H8745; B0HBPJ5ZSD; B0HCTBFCTK</td>
+          <td class="num avail" data-v="232">232</td>
+          <td class="num lock" data-v="571">571</td>
+          <td class="num sz" data-v="803">803<span class="bar" style="width:17px"></span></td>
+          <td class="num" data-v="199">199</td>
+          <td class="num" data-v="100">100</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="1102">1,102</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP612</td>
+          <td class="mono">JUB012E-12; KH002-12; WAP6-12; WAP6-12.1</td>
+          <td class="pname">宽面素圈耳环-12mm</td>
+          <td class="asin mono">B0H3NM7R7M; B0H3NRX3TG; B0H5W7LX16; B0HDB6ZF13</td>
+          <td class="num avail" data-v="232">232</td>
+          <td class="num lock" data-v="78">78</td>
+          <td class="num sz" data-v="310">310<span class="bar" style="width:7px"></span></td>
+          <td class="num" data-v="38">38</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="348">348</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP220</td>
+          <td class="mono">KH001-20; MGHA2-20MM</td>
+          <td class="pname">环状水滴耳环-20mm</td>
+          <td class="asin mono">B0H5TSRQWQ; B0HDB5CRFP</td>
+          <td class="num avail" data-v="232">232</td>
+          <td class="num lock" data-v="70">70</td>
+          <td class="num sz" data-v="302">302<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="15">15</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="317">317</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2514</td>
+          <td class="mono">KH006-14; MAP007E-14mm; MGH25-14MM; NV006-14</td>
+          <td class="pname">内外半圈镶钻耳环-14mm</td>
+          <td class="asin mono">B0H5TYQ7K6; B0H6F5XBJR; B0HBPVVC6B; B0HDB9G3HD</td>
+          <td class="num avail" data-v="227">227</td>
+          <td class="num lock" data-v="135">135</td>
+          <td class="num sz" data-v="362">362<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="39">39</td>
+          <td class="num" data-v="20">20</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="421">421</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1640</td>
+          <td class="mono">HDA004E40; HF004-40mm; HF1640; MAP004E-40mm</td>
+          <td class="pname">圆形线圈耳环-40mm</td>
+          <td class="asin mono">B0H5TTWBX7; B0H827BPH3; B0HBPP54ZD; B0HCSYHQVV</td>
+          <td class="num avail" data-v="227">227</td>
+          <td class="num lock" data-v="35">35</td>
+          <td class="num sz" data-v="262">262<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="46">46</td>
+          <td class="num" data-v="5">5</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="313">313</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2325</td>
+          <td class="mono">HB2325; MAP006E-25mm; PM23-25mm; WAP23-25</td>
+          <td class="pname">简约不规则耳环-25mm</td>
+          <td class="asin mono">B0H3NBW42W; B0H69YJ58F; B0HBPRCR1X; B0HCTBRDY5</td>
+          <td class="num avail" data-v="221">221</td>
+          <td class="num lock" data-v="75">75</td>
+          <td class="num sz" data-v="296">296<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="43">43</td>
+          <td class="num" data-v="55">55</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="394">394</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP620</td>
+          <td class="mono">JUB012E-20; KH002-20; WAP6-20; WAP6-20.1</td>
+          <td class="pname">宽面素圈耳环-20mm</td>
+          <td class="asin mono">B0H3NNCVQD; B0H3NNJCNJ; B0H5WB3F9Y; B0HDB2GJGV</td>
+          <td class="num avail" data-v="220">220</td>
+          <td class="num lock" data-v="83">83</td>
+          <td class="num sz" data-v="303">303<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="47">47</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="350">350</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP22-3</td>
+          <td class="mono">FK005-3mm; HF006-3mm; HF22-3; JOZ014-3mm; KH005-3; NV005-3mm; PM22-3mm</td>
+          <td class="pname">金球耳钉-3mm</td>
+          <td class="asin mono">B0H5SVR1Z1; B0H5TTT5PN; B0H6DVB8NP; B0HCSVFV88; B0HCT7P3MQ; B0HDBDTPJ9; B0HDBHRJZC</td>
+          <td class="num avail" data-v="212">212</td>
+          <td class="num lock" data-v="153">153</td>
+          <td class="num sz" data-v="365">365<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="35">35</td>
+          <td class="num" data-v="10">10</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="410">410</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2020</td>
+          <td class="mono">FLAP2020; GF20-20; HB2020; HDA005E20; HDA005E20.1; HF2020; JOZ012-20; KH004-20; MGH20-20MM; SP015G-20</td>
+          <td class="pname">光面素圈耳环-20mm</td>
+          <td class="asin mono">B0H5QLQXQL; B0H5S9H44G; B0H5TFJ6SG; B0H5TXC3KS; B0H5V8KRLH; B0H69MHJMH; B0H6P1399Y; B0H829JH3X; B0H82RYWG1; B0HDB7QT97</td>
+          <td class="num avail" data-v="211">211</td>
+          <td class="num lock" data-v="252">252</td>
+          <td class="num sz" data-v="503">503<span class="bar" style="width:11px"></span></td>
+          <td class="num" data-v="203">203</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="40">40</td>
+          <td class="num total" data-v="706">706</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2815</td>
+          <td class="mono">FLAP2815; HF008-15mm; MAS014-15</td>
+          <td class="pname">双环镶钻耳扣-15mm</td>
+          <td class="asin mono">B0H5V2QCDB; B0HCT6DVTR; B0HCT6G7FX</td>
+          <td class="num avail" data-v="204">204</td>
+          <td class="num lock" data-v="100">100</td>
+          <td class="num sz" data-v="304">304<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="14">14</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="318">318</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP914</td>
+          <td class="mono">HDA002E14; HDA002E14.1</td>
+          <td class="pname">素圈耳环-14mm</td>
+          <td class="asin mono">B0H82KRLZ1; B0H82Y1CZF</td>
+          <td class="num avail" data-v="199">199</td>
+          <td class="num lock" data-v="7">7</td>
+          <td class="num sz" data-v="206">206<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="213">213</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP520</td>
+          <td class="mono">AD5-20MM; AP5-20MM; HF001-20mm; JUB011E-20; JUB011E-20.1; MAP001E-20mm; MAS010-20; NV002-20; WAP5-20; YFA5-20mm</td>
+          <td class="pname">素圈耳扣-20mm</td>
+          <td class="asin mono">B0H5PNKWHC; B0H5VFXNGH; B0H5VZ2DDP; B0H5W9RH3K; B0H6C23ZPN; B0H6F9FMJD; B0H6L1JQQF; B0HB9GP3C8; B0HBP57X1R; B0HCSM6JY2</td>
+          <td class="num avail" data-v="198">198</td>
+          <td class="num lock" data-v="426">426</td>
+          <td class="num sz" data-v="624">624<span class="bar" style="width:13px"></span></td>
+          <td class="num" data-v="192">192</td>
+          <td class="num" data-v="70">70</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="886">886</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP22-8</td>
+          <td class="mono">FK005-8mm; HF006-8mm; HF22-8; JOZ014-8mm; NV005-8mm; PM22-8mm</td>
+          <td class="pname">金球耳钉-8mm</td>
+          <td class="asin mono">B0H5SXVR5F; B0H5TTXS2Y; B0H6DV3LG5; B0HCSQ7V4V; B0HCT8QQ5N; B0HDB2NB6K</td>
+          <td class="num avail" data-v="196">196</td>
+          <td class="num lock" data-v="148">148</td>
+          <td class="num sz" data-v="464">464<span class="bar" style="width:10px"></span></td>
+          <td class="num" data-v="35">35</td>
+          <td class="num" data-v="20">20</td>
+          <td class="num overseas" data-v="120">120</td>
+          <td class="num total" data-v="519">519</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1750</td>
+          <td class="mono">FLAP1750; NV004-50; WAP17-50</td>
+          <td class="pname">圆形线圈耳环-50mm</td>
+          <td class="asin mono">B0H3N8GHMT; B0H5VJ4J4J; B0H6F5XCHK</td>
+          <td class="num avail" data-v="189">189</td>
+          <td class="num lock" data-v="30">30</td>
+          <td class="num sz" data-v="239">239<span class="bar" style="width:5px"></span></td>
+          <td class="num" data-v="32">32</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="20">20</td>
+          <td class="num total" data-v="271">271</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP714</td>
+          <td class="mono">NV009-14</td>
+          <td class="pname">素圈耳环-14mm</td>
+          <td class="asin mono">B0HCLTSCK9</td>
+          <td class="num avail" data-v="189">189</td>
+          <td class="num lock" data-v="30">30</td>
+          <td class="num sz" data-v="219">219<span class="bar" style="width:5px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="219">219</td>
+          <td><span class="badge badge-warn">待发FBA</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2812</td>
+          <td class="mono">FLAP2812; HF008-12mm; MAS014-12</td>
+          <td class="pname">双环镶钻耳扣-12mm</td>
+          <td class="asin mono">B0H5V4G2TJ; B0HCSZFCDX; B0HCT358GH</td>
+          <td class="num avail" data-v="187">187</td>
+          <td class="num lock" data-v="100">100</td>
+          <td class="num sz" data-v="287">287<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="11">11</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="298">298</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1212</td>
+          <td class="mono">HB1212; HDA003E12</td>
+          <td class="pname">麻花圈耳环-12mm</td>
+          <td class="asin mono">B0H68Y17QR; B0H82GW4PZ</td>
+          <td class="num avail" data-v="183">183</td>
+          <td class="num lock" data-v="22">22</td>
+          <td class="num sz" data-v="205">205<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="21">21</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="226">226</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1220</td>
+          <td class="mono">HB1220; HDA003E20</td>
+          <td class="pname">麻花圈耳环-20mm</td>
+          <td class="asin mono">B0H69N9BSX; B0H82F25Y8</td>
+          <td class="num avail" data-v="182">182</td>
+          <td class="num lock" data-v="22">22</td>
+          <td class="num sz" data-v="204">204<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="22">22</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="226">226</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP110</td>
+          <td class="mono">HB110; HDA001E10</td>
+          <td class="pname">圆形宽面耳扣-10mm</td>
+          <td class="asin mono">B0H6943TFP; B0H82BC358</td>
+          <td class="num avail" data-v="182">182</td>
+          <td class="num lock" data-v="19">19</td>
+          <td class="num sz" data-v="201">201<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="19">19</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="220">220</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP125</td>
+          <td class="mono">HB125; HDA001E25</td>
+          <td class="pname">圆形宽面耳扣-25mm</td>
+          <td class="asin mono">B0H69S4RJJ; B0H828ZSZZ</td>
+          <td class="num avail" data-v="180">180</td>
+          <td class="num lock" data-v="22">22</td>
+          <td class="num sz" data-v="202">202<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="22">22</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="224">224</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2030</td>
+          <td class="mono">FLAP2030; GF20-30; HB2030; HDA005E30; HF2030; JOZ012-30; KH004-30; MGH20-30MM; SP015G-30</td>
+          <td class="pname">光面素圈耳环-30mm</td>
+          <td class="asin mono">B0H5QY2FH3; B0H5S3VV3J; B0H5TV12DQ; B0H5V89RY9; B0H5VDJFKX; B0H69NNWB2; B0H6NZ7CML; B0H82JC55W; B0HDB2RV49</td>
+          <td class="num avail" data-v="177">177</td>
+          <td class="num lock" data-v="240">240</td>
+          <td class="num sz" data-v="507">507<span class="bar" style="width:11px"></span></td>
+          <td class="num" data-v="175">175</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="90">90</td>
+          <td class="num total" data-v="682">682</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP410</td>
+          <td class="mono">GF4-10; NV001-10</td>
+          <td class="pname">素面环状耳环-10mm</td>
+          <td class="asin mono">B0H6F9G94L; B0H6NZVZJJ</td>
+          <td class="num avail" data-v="177">177</td>
+          <td class="num lock" data-v="40">40</td>
+          <td class="num sz" data-v="217">217<span class="bar" style="width:5px"></span></td>
+          <td class="num" data-v="40">40</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="257">257</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1014</td>
+          <td class="mono">LAF007Y-14mm; MAP002E-14mm</td>
+          <td class="pname">圆圈耳环-14mm</td>
+          <td class="asin mono">B0H6B12RN4; B0HBPK1KVL</td>
+          <td class="num avail" data-v="168">168</td>
+          <td class="num lock" data-v="30">30</td>
+          <td class="num sz" data-v="198">198<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="20">20</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="218">218</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP530</td>
+          <td class="mono">AD5-30MM; AP5-30MM; HF001-30mm; JUB011E-30; MAP001E-30mm; MAS010-30; NV002-30; WAP5-30; YFA5-30mm</td>
+          <td class="pname">素圈耳扣-30mm</td>
+          <td class="asin mono">B0H5PLJ29K; B0H5VFY2JM; B0H5W8W81T; B0H6BWSKPH; B0H6DT8DR1; B0H6L6D5Y8; B0HB997YKD; B0HBNYRZSH; B0HCSVY7RN</td>
+          <td class="num avail" data-v="163">163</td>
+          <td class="num lock" data-v="433">433</td>
+          <td class="num sz" data-v="596">596<span class="bar" style="width:13px"></span></td>
+          <td class="num" data-v="181">181</td>
+          <td class="num" data-v="60">60</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="837">837</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1720</td>
+          <td class="mono">FLAP1720; NV004-20; WAP17-20</td>
+          <td class="pname">圆形线圈耳环-20mm</td>
+          <td class="asin mono">B0H3N3GFKH; B0H5V5JKNX; B0H6DJB6Y8</td>
+          <td class="num avail" data-v="156">156</td>
+          <td class="num lock" data-v="40">40</td>
+          <td class="num sz" data-v="216">216<span class="bar" style="width:5px"></span></td>
+          <td class="num" data-v="48">48</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="20">20</td>
+          <td class="num total" data-v="264">264</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1625</td>
+          <td class="mono">HDA004E25; HDA004E25.1; HF004-25mm; HF1625; MAP004E-25mm</td>
+          <td class="pname">圆形线圈耳环-25mm</td>
+          <td class="asin mono">B0H5TTSXZQ; B0H82D7NQW; B0H82GV69G; B0HBPHKWXZ; B0HCSMJP7H</td>
+          <td class="num avail" data-v="148">148</td>
+          <td class="num lock" data-v="30">30</td>
+          <td class="num sz" data-v="178">178<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="40">40</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="218">218</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP916</td>
+          <td class="mono">HDA002E16</td>
+          <td class="pname">素圈耳环-16mm</td>
+          <td class="asin mono">B0H82N723T</td>
+          <td class="num avail" data-v="137">137</td>
+          <td class="num lock" data-v="7">7</td>
+          <td class="num sz" data-v="144">144<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="151">151</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1650</td>
+          <td class="mono">HDA004E50; HDA004E50.1; HF004-50mm; HF1650; MAP004E-50mm</td>
+          <td class="pname">圆形线圈耳环-50mm</td>
+          <td class="asin mono">B0H5TLYZ27; B0H829T7J3; B0H82J6955; B0HBPC3DH7; B0HCT8WN1N</td>
+          <td class="num avail" data-v="136">136</td>
+          <td class="num lock" data-v="35">35</td>
+          <td class="num sz" data-v="171">171<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="32">32</td>
+          <td class="num" data-v="20">20</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="223">223</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP912</td>
+          <td class="mono">HDA002E12</td>
+          <td class="pname">素圈耳环-12mm</td>
+          <td class="asin mono">B0H828XFFQ</td>
+          <td class="num avail" data-v="134">134</td>
+          <td class="num lock" data-v="7">7</td>
+          <td class="num sz" data-v="141">141<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="148">148</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP420</td>
+          <td class="mono">GF4-20; NV001-20</td>
+          <td class="pname">素面环状耳环-20mm</td>
+          <td class="asin mono">B0H6F1112X; B0H6P5SZGC</td>
+          <td class="num avail" data-v="133">133</td>
+          <td class="num lock" data-v="60">60</td>
+          <td class="num sz" data-v="193">193<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="53">53</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="246">246</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP712</td>
+          <td class="mono">NV009-12</td>
+          <td class="pname">素圈耳环-12mm</td>
+          <td class="asin mono">B0HCLM5D5G</td>
+          <td class="num avail" data-v="129">129</td>
+          <td class="num lock" data-v="25">25</td>
+          <td class="num sz" data-v="154">154<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="154">154</td>
+          <td><span class="badge badge-warn">待发FBA</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP716</td>
+          <td class="mono">NV009-16</td>
+          <td class="pname">素圈耳环-16mm</td>
+          <td class="asin mono">B0HCM4PH9L</td>
+          <td class="num avail" data-v="128">128</td>
+          <td class="num lock" data-v="25">25</td>
+          <td class="num sz" data-v="153">153<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="153">153</td>
+          <td><span class="badge badge-warn">待发FBA</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP210</td>
+          <td class="mono">KH001-10; MGHA2-10MM</td>
+          <td class="pname">环状水滴耳环-10mm</td>
+          <td class="asin mono">B0H5TTWMZM; B0HD9XJLR7</td>
+          <td class="num avail" data-v="126">126</td>
+          <td class="num lock" data-v="58">58</td>
+          <td class="num sz" data-v="184">184<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="2">2</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="186">186</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP610</td>
+          <td class="mono">JUB012E-10; KH002-10; WAP6-10</td>
+          <td class="pname">宽面素圈耳环-10mm</td>
+          <td class="asin mono">B0H3NDKTLG; B0H5W9LM21; B0HDB7X424</td>
+          <td class="num avail" data-v="125">125</td>
+          <td class="num lock" data-v="75">75</td>
+          <td class="num sz" data-v="200">200<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="44">44</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="244">244</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2516</td>
+          <td class="mono">KH006-16; MAP007E-16mm; MGH25-16MM; NV006-16</td>
+          <td class="pname">内外半圈镶钻耳环-16mm</td>
+          <td class="asin mono">B0H5VDLWNW; B0H6F7JCXT; B0HBPVZV5B; B0HDB93PNM</td>
+          <td class="num avail" data-v="124">124</td>
+          <td class="num lock" data-v="135">135</td>
+          <td class="num sz" data-v="259">259<span class="bar" style="width:5px"></span></td>
+          <td class="num" data-v="43">43</td>
+          <td class="num" data-v="20">20</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="322">322</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2414</td>
+          <td class="mono">AD2414; GT24-14; HB2414; HF2414; JOZ015-14; MAS013-14; YFA24-14mm</td>
+          <td class="pname">外半圈镶钻耳环-14mm</td>
+          <td class="asin mono">B0H5T12VNG; B0H5TJ5L65; B0H5VM7BYW; B0H6918QWL; B0H69TG3HC; B0H6BYMNN8; B0HFR5378S</td>
+          <td class="num avail" data-v="123">123</td>
+          <td class="num lock" data-v="205">205</td>
+          <td class="num sz" data-v="406">406<span class="bar" style="width:9px"></span></td>
+          <td class="num" data-v="103">103</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="78">78</td>
+          <td class="num total" data-v="509">509</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1012</td>
+          <td class="mono">LAF007Y-12mm; MAP002E-12mm</td>
+          <td class="pname">圆圈耳环-12mm</td>
+          <td class="asin mono">B0H6B2LH9X; B0HBP5PMX1</td>
+          <td class="num avail" data-v="121">121</td>
+          <td class="num lock" data-v="30">30</td>
+          <td class="num sz" data-v="151">151<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="21">21</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="172">172</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP625</td>
+          <td class="mono">JUB012E-25; KH002-25; WAP6-25; WAP6-25.1</td>
+          <td class="pname">宽面素圈耳环-25mm</td>
+          <td class="asin mono">B0H3NK18NG; B0H3NPH71R; B0H5VYV3C8; B0HDBB3WFK</td>
+          <td class="num avail" data-v="117">117</td>
+          <td class="num lock" data-v="89">89</td>
+          <td class="num sz" data-v="206">206<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="51">51</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="257">257</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1016</td>
+          <td class="mono">LAF007Y-16mm; MAP002E-16mm</td>
+          <td class="pname">圆圈耳环-16mm</td>
+          <td class="asin mono">B0H6B6W9HV; B0HBNYV748</td>
+          <td class="num avail" data-v="115">115</td>
+          <td class="num lock" data-v="30">30</td>
+          <td class="num sz" data-v="145">145<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="21">21</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="166">166</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP310</td>
+          <td class="mono">FK001-10; FLAP310; MAS009-10</td>
+          <td class="pname">光面宽面耳环-10mm</td>
+          <td class="asin mono">B0H5VBG93L; B0H6BZLFYQ; B0HD9QMH3Y</td>
+          <td class="num avail" data-v="113">113</td>
+          <td class="num lock" data-v="55">55</td>
+          <td class="num sz" data-v="198">198<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="16">16</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="30">30</td>
+          <td class="num total" data-v="214">214</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">TE015-2601</td>
+          <td class="mono">FU005G-25mm; JOZ009-25mm; MAS002-25mm</td>
+          <td class="pname">TE015同款耳环</td>
+          <td class="asin mono">B0GJPT7DYN; B0GLXMQ4L5; B0GSYRN882</td>
+          <td class="num avail" data-v="110">110</td>
+          <td class="num lock" data-v="115">115</td>
+          <td class="num sz" data-v="265">265<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="85">85</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="40">40</td>
+          <td class="num total" data-v="350">350</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP315</td>
+          <td class="mono">FK001-15; FLAP315; MAS009-15</td>
+          <td class="pname">光面宽面耳环-15mm</td>
+          <td class="asin mono">B0H5TXBPCG; B0H6BY85P2; B0HDB5KW46</td>
+          <td class="num avail" data-v="108">108</td>
+          <td class="num lock" data-v="110">110</td>
+          <td class="num sz" data-v="388">388<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="11">11</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="170">170</td>
+          <td class="num total" data-v="399">399</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP225</td>
+          <td class="mono">KH001-25; MGHA2-25MM</td>
+          <td class="pname">环状水滴耳环-25mm</td>
+          <td class="asin mono">B0H5TLXJJD; B0HD9R35M5</td>
+          <td class="num avail" data-v="108">108</td>
+          <td class="num lock" data-v="85">85</td>
+          <td class="num sz" data-v="193">193<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="14">14</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="207">207</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP910</td>
+          <td class="mono">HDA002E10</td>
+          <td class="pname">素圈耳环-10mm</td>
+          <td class="asin mono">B0H82HK1K9</td>
+          <td class="num avail" data-v="97">97</td>
+          <td class="num lock" data-v="7">7</td>
+          <td class="num sz" data-v="104">104<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="111">111</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP22-6</td>
+          <td class="mono">FK005-6mm; HF006-6mm; HF22-6; JOZ014-6mm; KH005-6; NV005-6mm; PM22-6mm</td>
+          <td class="pname">金球耳钉-6mm</td>
+          <td class="asin mono">B0H5SW3713; B0H5TQ233Y; B0H6F94C64; B0HCSW39HG; B0HCTHC1VB; B0HDB4T2FV; B0HDBBRZHT</td>
+          <td class="num avail" data-v="92">92</td>
+          <td class="num lock" data-v="234">234</td>
+          <td class="num sz" data-v="356">356<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="39">39</td>
+          <td class="num" data-v="20">20</td>
+          <td class="num overseas" data-v="30">30</td>
+          <td class="num total" data-v="415">415</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP812</td>
+          <td class="mono">FK002-12; FLAP812; HF812; MGHA8-12MM</td>
+          <td class="pname">素圈耳环-12mm</td>
+          <td class="asin mono">B0H5V1DXR9; B0H5VDWXZ2; B0H5VFXDK2; B0HDB1YPXC</td>
+          <td class="num avail" data-v="92">92</td>
+          <td class="num lock" data-v="35">35</td>
+          <td class="num sz" data-v="137">137<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="37">37</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="10">10</td>
+          <td class="num total" data-v="174">174</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP920</td>
+          <td class="mono">HDA002E20; HDA002E20.1</td>
+          <td class="pname">素圈耳环-20mm</td>
+          <td class="asin mono">B0H8253QNL; B0H82P2BSN</td>
+          <td class="num avail" data-v="92">92</td>
+          <td class="num lock" data-v="7">7</td>
+          <td class="num sz" data-v="99">99<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="106">106</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP710</td>
+          <td class="mono">NV009-10</td>
+          <td class="pname">素圈耳环-10mm</td>
+          <td class="asin mono">B0HCLMM9BH</td>
+          <td class="num avail" data-v="77">77</td>
+          <td class="num lock" data-v="25">25</td>
+          <td class="num sz" data-v="102">102<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="102">102</td>
+          <td><span class="badge badge-warn">待发FBA</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1010</td>
+          <td class="mono">LAF007Y-10mm; MAP002E-10mm</td>
+          <td class="pname">圆圈耳环-10mm</td>
+          <td class="asin mono">B0H6B7253H; B0HBPDF5T1</td>
+          <td class="num avail" data-v="74">74</td>
+          <td class="num lock" data-v="25">25</td>
+          <td class="num sz" data-v="99">99<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="19">19</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="118">118</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP312</td>
+          <td class="mono">FK001-12; FLAP312; MAS009-12</td>
+          <td class="pname">光面宽面耳环-12mm</td>
+          <td class="asin mono">B0H5V9YJG5; B0H6BZ5RJ8; B0HDBB12LX</td>
+          <td class="num avail" data-v="73">73</td>
+          <td class="num lock" data-v="95">95</td>
+          <td class="num sz" data-v="298">298<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="8">8</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="130">130</td>
+          <td class="num total" data-v="306">306</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1760</td>
+          <td class="mono">FLAP1760; NV004-60; WAP17-60</td>
+          <td class="pname">圆形线圈耳环-60mm</td>
+          <td class="asin mono">B0H3NGP44Q; B0H5VDTYXF; B0H6DYW5MZ</td>
+          <td class="num avail" data-v="73">73</td>
+          <td class="num lock" data-v="30">30</td>
+          <td class="num sz" data-v="113">113<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="32">32</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="10">10</td>
+          <td class="num total" data-v="145">145</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP720</td>
+          <td class="mono">NV009-20</td>
+          <td class="pname">素圈耳环-20mm</td>
+          <td class="asin mono">B0HCLW4VB5</td>
+          <td class="num avail" data-v="73">73</td>
+          <td class="num lock" data-v="25">25</td>
+          <td class="num sz" data-v="98">98<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="98">98</td>
+          <td><span class="badge badge-warn">待发FBA</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1020</td>
+          <td class="mono">LAF007Y-20mm; MAP002E-20mm</td>
+          <td class="pname">圆圈耳环-20mm</td>
+          <td class="asin mono">B0H6BBLHXR; B0HBPFXR9G</td>
+          <td class="num avail" data-v="72">72</td>
+          <td class="num lock" data-v="25">25</td>
+          <td class="num sz" data-v="97">97<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="18">18</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="115">115</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2512</td>
+          <td class="mono">KH006-12; MAP007E-12mm; MGH25-12MM; NV006-12</td>
+          <td class="pname">内外半圈镶钻耳环-12mm</td>
+          <td class="asin mono">B0H5V3628R; B0H6F33TKN; B0HBPPN64Y; B0HDB9PYDS</td>
+          <td class="num avail" data-v="70">70</td>
+          <td class="num lock" data-v="155">155</td>
+          <td class="num sz" data-v="225">225<span class="bar" style="width:5px"></span></td>
+          <td class="num" data-v="30">30</td>
+          <td class="num" data-v="20">20</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="275">275</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2520</td>
+          <td class="mono">KH006-20; MAP007E-20mm; MGH25-20MM; NV006-20</td>
+          <td class="pname">内外半圈镶钻耳环-20mm</td>
+          <td class="asin mono">B0H5V8J3F4; B0H6FLRPC4; B0HBPRFB7Z; B0HDBD8P99</td>
+          <td class="num avail" data-v="70">70</td>
+          <td class="num lock" data-v="105">105</td>
+          <td class="num sz" data-v="175">175<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="41">41</td>
+          <td class="num" data-v="15">15</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="231">231</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2015</td>
+          <td class="mono">FLAP2015; GF20-15; HB2015; HDA005E15; HF2015; JOZ012-15; KH004-15; MGH20-15MM; SP015G-15</td>
+          <td class="pname">光面素圈耳环-15mm</td>
+          <td class="asin mono">B0H5PXPWGS; B0H5QBRTDR; B0H5TYPXV4; B0H5VCRHQR; B0H5VGRXKP; B0H69R9B9Q; B0H6NXXPLM; B0H822Y8P6; B0HD9VFBDQ</td>
+          <td class="num avail" data-v="68">68</td>
+          <td class="num lock" data-v="170">170</td>
+          <td class="num sz" data-v="318">318<span class="bar" style="width:7px"></span></td>
+          <td class="num" data-v="178">178</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="80">80</td>
+          <td class="num total" data-v="496">496</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2412</td>
+          <td class="mono">AD2412; GT24-12; HB2412; HF2412; JOZ015-12; MAS013-12; YFA24-12mm</td>
+          <td class="pname">外半圈镶钻耳环-12mm</td>
+          <td class="asin mono">B0H5SV1N5N; B0H5TJ3G36; B0H5V7RQH4; B0H69BSJ7M; B0H69VD2GR; B0H6BY3K4R; B0H6L66YHL</td>
+          <td class="num avail" data-v="68">68</td>
+          <td class="num lock" data-v="205">205</td>
+          <td class="num sz" data-v="305">305<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="91">91</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="32">32</td>
+          <td class="num total" data-v="396">396</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP320</td>
+          <td class="mono">FK001-20; FLAP320; MAS009-20</td>
+          <td class="pname">光面宽面耳环-20mm</td>
+          <td class="asin mono">B0H5TXK86Z; B0H6C125HG; B0HD9ZJJD3</td>
+          <td class="num avail" data-v="68">68</td>
+          <td class="num lock" data-v="120">120</td>
+          <td class="num sz" data-v="288">288<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="12">12</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="100">100</td>
+          <td class="num total" data-v="300">300</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2510</td>
+          <td class="mono">KH006-10; MAP007E-10mm; MGH25-10MM; NV006-10</td>
+          <td class="pname">内外半圈镶钻耳环-10mm</td>
+          <td class="asin mono">B0H5TYSQH9; B0H6F7FST8; B0HBPPKDYB; B0HDBG57N5</td>
+          <td class="num avail" data-v="58">58</td>
+          <td class="num lock" data-v="105">105</td>
+          <td class="num sz" data-v="163">163<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="35">35</td>
+          <td class="num" data-v="15">15</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="213">213</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2416</td>
+          <td class="mono">AD2416; GT24-16; HB2416; HF2416; JOZ015-16; MAS013-16; YFA24-16mm</td>
+          <td class="pname">外半圈镶钻耳环-16mm</td>
+          <td class="asin mono">B0H5TLNCV1; B0H5V7VKFY; B0H68ZR7KK; B0H6B49J3H; B0H6BY1VRV; B0H6LBHXPV; B0HF349MFJ</td>
+          <td class="num avail" data-v="56">56</td>
+          <td class="num lock" data-v="247">247</td>
+          <td class="num sz" data-v="303">303<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="118">118</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="421">421</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1660</td>
+          <td class="mono">HDA004E60; HF004-60mm; HF1660; MAP004E-60mm</td>
+          <td class="pname">圆形线圈耳环-60mm</td>
+          <td class="asin mono">B0H5TSRLTP; B0H82NVFZ9; B0HBPCGKM7; B0HCSM5D21</td>
+          <td class="num avail" data-v="55">55</td>
+          <td class="num lock" data-v="45">45</td>
+          <td class="num sz" data-v="100">100<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="15">15</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="122">122</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP814</td>
+          <td class="mono">FK002-14; FLAP814; HF814; MGHA8-14MM</td>
+          <td class="pname">素圈耳环-14mm</td>
+          <td class="asin mono">B0H5TLRW2R; B0H5TYV99D; B0H5VDTXHV; B0HDB2GZTD</td>
+          <td class="num avail" data-v="52">52</td>
+          <td class="num lock" data-v="55">55</td>
+          <td class="num sz" data-v="162">162<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="50">50</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="55">55</td>
+          <td class="num total" data-v="212">212</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP182842</td>
+          <td class="mono">FK004; GF18; HB18; MAS012; MGHA18</td>
+          <td class="pname">28X42mm水滴耳坠</td>
+          <td class="asin mono">B0H5VFS3WK; B0H69MH77V; B0H6BZ4DP5; B0H6NXCKVN; B0HDB95R44</td>
+          <td class="num avail" data-v="45">45</td>
+          <td class="num lock" data-v="270">270</td>
+          <td class="num sz" data-v="315">315<span class="bar" style="width:7px"></span></td>
+          <td class="num" data-v="97">97</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="412">412</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP515</td>
+          <td class="mono">AD5-15MM; AP5-15MM; HF001-15mm; JUB011E-15; MAP001E-15mm; MAS010-15; NV002-15; WAP5-15; YFA5-15mm</td>
+          <td class="pname">素圈耳扣-15mm</td>
+          <td class="asin mono">B0H5PG325Q; B0H5VC72FR; B0H5W9V63V; B0H6C3MZ6L; B0H6DY1VH3; B0H6LBN5PH; B0HB8YX91W; B0HBNYWFW6; B0HCSSZDXC</td>
+          <td class="num avail" data-v="43">43</td>
+          <td class="num lock" data-v="358">358</td>
+          <td class="num sz" data-v="401">401<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="169">169</td>
+          <td class="num" data-v="60">60</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="630">630</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1116</td>
+          <td class="mono">FK003-16; MAS011-16; WAP11-16</td>
+          <td class="pname">圆弧素圈耳环-16mm</td>
+          <td class="asin mono">B0H3N8ZWDS; B0H6C4YKP6; B0HDB7DZL7</td>
+          <td class="num avail" data-v="29">29</td>
+          <td class="num lock" data-v="79">79</td>
+          <td class="num sz" data-v="235">235<span class="bar" style="width:5px"></span></td>
+          <td class="num" data-v="24">24</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="127">127</td>
+          <td class="num total" data-v="259">259</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP540</td>
+          <td class="mono">AD5-40MM; AP5-40MM; HF001-40mm; JUB011E-40; JUB011E-40.1; MAP001E-40mm; MAS010-40; NV002-40; WAP5-40; YFA5-40mm</td>
+          <td class="pname">素圈耳扣-40mm</td>
+          <td class="asin mono">B0H5V1ZJGB; B0H5V455D4; B0H5W4MMPY; B0H5W8WY65; B0H6BXF4VG; B0H6DFY98N; B0H6L5NW73; B0HB945T3B; B0HBPHT8FK; B0HCTCT89Q</td>
+          <td class="num avail" data-v="27">27</td>
+          <td class="num lock" data-v="357">357</td>
+          <td class="num sz" data-v="384">384<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="193">193</td>
+          <td class="num" data-v="10">10</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="587">587</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1110</td>
+          <td class="mono">FK003-10; MAS011-10; WAP11-10; WAP11-10.1</td>
+          <td class="pname">圆弧素圈耳环-10mm</td>
+          <td class="asin mono">B0H3N1SWLH; B0H3NF2YNW; B0H6C69GFJ; B0HD9VL3HZ</td>
+          <td class="num avail" data-v="26">26</td>
+          <td class="num lock" data-v="92">92</td>
+          <td class="num sz" data-v="287">287<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="6">6</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="169">169</td>
+          <td class="num total" data-v="293">293</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2420</td>
+          <td class="mono">AD2420; GT24-20; HB2420; HF2420; JOZ015-20; MAS013-20; YFA24-20mm</td>
+          <td class="pname">外半圈镶钻耳环-20mm</td>
+          <td class="asin mono">B0H5SXYBB1; B0H5TS3MHZ; B0H5VG1KYP; B0H6981TNF; B0H69SQZW1; B0H6C47SG2; B0H6L3G916</td>
+          <td class="num avail" data-v="25">25</td>
+          <td class="num lock" data-v="171">171</td>
+          <td class="num sz" data-v="196">196<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="69">69</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="265">265</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP810</td>
+          <td class="mono">FK002-10; FLAP810; HF810; MGHA8-10MM</td>
+          <td class="pname">素圈耳环-10mm</td>
+          <td class="asin mono">B0H5TLYDNQ; B0H5V5K5N9; B0H5VBGH6N; B0HDB4RDHY</td>
+          <td class="num avail" data-v="23">23</td>
+          <td class="num lock" data-v="35">35</td>
+          <td class="num sz" data-v="88">88<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="38">38</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="30">30</td>
+          <td class="num total" data-v="126">126</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP816</td>
+          <td class="mono">FK002-16; FLAP816; HF816; MGHA8-16MM</td>
+          <td class="pname">素圈耳环-16mm</td>
+          <td class="asin mono">B0H5TPZJQS; B0H5VG172Y; B0H5VHKZRS; B0HDB2VFBG</td>
+          <td class="num avail" data-v="21">21</td>
+          <td class="num lock" data-v="35">35</td>
+          <td class="num sz" data-v="96">96<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="56">56</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="40">40</td>
+          <td class="num total" data-v="152">152</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2410</td>
+          <td class="mono">AD2410; GT24-10; HB2410; HF2410; JOZ015-10; MAS013-10; YFA24-10mm</td>
+          <td class="pname">外半圈镶钻耳环-10mm</td>
+          <td class="asin mono">B0H5TJNJKM; B0H5TRYMPG; B0H5V6FZYR; B0H6926LNP; B0H69W82F5; B0H6C6WV1B; B0H6HBTCQL</td>
+          <td class="num avail" data-v="5">5</td>
+          <td class="num lock" data-v="140">140</td>
+          <td class="num sz" data-v="162">162<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="109">109</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="17">17</td>
+          <td class="num total" data-v="271">271</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1114</td>
+          <td class="mono">FK003-14; MAS011-14; WAP11-14</td>
+          <td class="pname">圆弧素圈耳环-14mm</td>
+          <td class="asin mono">B0H3N7PVMQ; B0H6C59H11; B0HDB2ZB93</td>
+          <td class="num avail" data-v="1">1</td>
+          <td class="num lock" data-v="80">80</td>
+          <td class="num sz" data-v="350">350<span class="bar" style="width:7px"></span></td>
+          <td class="num" data-v="32">32</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="269">269</td>
+          <td class="num total" data-v="382">382</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1112</td>
+          <td class="mono">FK003-12; MAS011-12; WAP11-12; WAP11-12.1</td>
+          <td class="pname">圆弧素圈耳环-12mm</td>
+          <td class="asin mono">B0H3N23HTK; B0H3N9RLM3; B0H6C5Y98W; B0HDB3YXS5</td>
+          <td class="num avail" data-v="1">1</td>
+          <td class="num lock" data-v="113">113</td>
+          <td class="num sz" data-v="299">299<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="35">35</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="185">185</td>
+          <td class="num total" data-v="334">334</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP325</td>
+          <td class="mono">FK001-25; FLAP325; MAS009-25</td>
+          <td class="pname">光面宽面耳环-25mm</td>
+          <td class="asin mono">B0H5TSQNJ9; B0H6BWTZBW; B0HDB549NL</td>
+          <td class="num avail" data-v="1">1</td>
+          <td class="num lock" data-v="115">115</td>
+          <td class="num sz" data-v="182">182<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="17">17</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="66">66</td>
+          <td class="num total" data-v="199">199</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP1120</td>
+          <td class="mono">FK003-20; MAS011-20; WAP11-20</td>
+          <td class="pname">圆弧素圈耳环-20mm</td>
+          <td class="asin mono">B0H3N958LW; B0H6C6VK6J; B0HDB2J1KB</td>
+          <td class="num avail" data-v="1">1</td>
+          <td class="num lock" data-v="96">96</td>
+          <td class="num sz" data-v="98">98<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="35">35</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="1">1</td>
+          <td class="num total" data-v="133">133</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP820</td>
+          <td class="mono">FK002-20; FLAP820; HF820; MGHA8-20MM</td>
+          <td class="pname">素圈耳环-20mm</td>
+          <td class="asin mono">B0H5TLXHR5; B0H5V49YYG; B0H5V9BF7M; B0HD9ZFBR1</td>
+          <td class="num avail" data-v="1">1</td>
+          <td class="num lock" data-v="35">35</td>
+          <td class="num sz" data-v="58">58<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="47">47</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="22">22</td>
+          <td class="num total" data-v="105">105</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2040</td>
+          <td class="mono">FLAP2040; GF20-40; HB2040; HDA005E40; HDA005E40.1; HF2040; JOZ012-40; KH004-40; MGH20-40MM; SP015G-40</td>
+          <td class="pname">光面素圈耳环-40mm</td>
+          <td class="asin mono">B0H5QTJZYS; B0H5SHPFGM; B0H5V5LPW1; B0H5VFJLMR; B0H5VP3M7Q; B0H69T8D7P; B0H6NW1ZY7; B0H82DZLR8; B0H82HGSWB; B0HDB1H5NQ</td>
+          <td class="num avail" data-v="0">0</td>
+          <td class="num lock" data-v="293">293</td>
+          <td class="num sz" data-v="363">363<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="189">189</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="70">70</td>
+          <td class="num total" data-v="552">552</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="callout">
+    <h2>仅深圳仓有货 · 待发 FBA（5 个 SKU）</h2>
+    <div class="desc">这些 SKU 在深圳仓有库存，但 FBA 无可售/在途，合计 <b>726</b> 件，建议尽快安排发货。</div>
+    <div class="chips"><div class="chip"><b>219</b> AP714<span class="pname">素圈耳环-14mm</span></div><div class="chip"><b>154</b> AP712<span class="pname">素圈耳环-12mm</span></div><div class="chip"><b>153</b> AP716<span class="pname">素圈耳环-16mm</span></div><div class="chip"><b>102</b> AP710<span class="pname">素圈耳环-10mm</span></div><div class="chip"><b>98</b> AP720<span class="pname">素圈耳环-20mm</span></div></div>
+  </div>
+
+  <div class="footer">Generated by Claude Code · 2026-08-21 17:58</div>
+</div>
+
+<script>
+(function(){
+  var tb = document.querySelector('#mainTable tbody');
+  var rows = Array.from(tb.querySelectorAll('tr'));
+  var q = document.getElementById('q');
+  var cnt = document.getElementById('cnt');
+  function fmt(n){ return n.toLocaleString('en-US'); }
+  function refresh(){
+    var kw = q.value.trim().toLowerCase();
+    var shown = 0;
+    rows.forEach(function(r){
+      var hit = !kw || r.textContent.toLowerCase().indexOf(kw) !== -1;
+      r.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    });
+    cnt.textContent = shown + ' / ' + rows.length + ' 个 SKU';
+  }
+  cnt.textContent = rows.length + ' 个 SKU';
+  q.addEventListener('input', refresh);
+
+  // 排序
+  var headers = Array.from(document.querySelectorAll('#mainTable thead th'));
+  headers.forEach(function(th, idx){
+    th.addEventListener('click', function(){
+      var type = th.getAttribute('data-t');
+      var tbody = tb;
+      var curDir = th.getAttribute('data-dir');
+      var dir = curDir === 'asc' ? -1 : 1;
+      var rs = Array.from(tbody.querySelectorAll('tr'));
+      rs.sort(function(a, b){
+        var ca = a.children[idx], cb = b.children[idx];
+        var va, vb;
+        if (type === 'num') {
+          va = parseFloat(ca.getAttribute('data-v') || ca.textContent.replace(/,/g,'')) || 0;
+          vb = parseFloat(cb.getAttribute('data-v') || cb.textContent.replace(/,/g,'')) || 0;
+        } else {
+          va = ca.textContent.trim();
+          vb = cb.textContent.trim();
+        }
+        if (va < vb) return -1 * dir;
+        if (va > vb) return 1 * dir;
+        return 0;
+      });
+      rs.forEach(function(r){ tbody.appendChild(r); });
+      headers.forEach(function(h){ h.removeAttribute('data-dir'); h.querySelector('.arr').textContent = ''; });
+      th.setAttribute('data-dir', dir === 1 ? 'asc' : 'desc');
+      th.querySelector('.arr').textContent = dir === 1 ? '▲' : '▼';
+      // 保持 rows 引用同步
+      rows = Array.from(tbody.querySelectorAll('tr'));
+    });
+  });
+})();
+</script>
+</body>
+</html>
