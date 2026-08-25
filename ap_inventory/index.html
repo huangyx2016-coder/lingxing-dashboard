@@ -41,7 +41,7 @@ body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI',
 .card h2::before { content: ''; width: 4px; height: 16px; border-radius: 2px; background: var(--indigo); }
 
 .donut-row { display: flex; align-items: center; gap: 22px; }
-.donut { width: 128px; height: 128px; border-radius: 50%; background: conic-gradient(#4f46e5 0% 83.4%, #0ea5a4 83.4% 99.0%, #f59e0b 99.0% 100%); position: relative; flex-shrink: 0; }
+.donut { width: 128px; height: 128px; border-radius: 50%; background: conic-gradient(#4f46e5 0% 83.2%, #0ea5a4 83.2% 99.0%, #f59e0b 99.0% 100%); position: relative; flex-shrink: 0; }
 .donut .hole { position: absolute; inset: 22px; background: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .donut .hole .n { font-size: 22px; font-weight: 700; color: var(--ink); }
 .donut .hole .t { font-size: 10.5px; color: var(--muted); }
@@ -125,7 +125,7 @@ td.sku { color: #1f2937; font-weight: 600; }
   <div class="wrap" style="padding:0;">
     <span class="tag">Lingxing Inventory</span>
     <h1>AP+耳环系列 · 深圳仓库存清单</h1>
-    <div class="sub">数据时间 2026-08-24 18:05:40 · 数据来源：领星 ERP</div>
+    <div class="sub">数据时间 2026-08-25 08:47:58 · 数据来源：领星 ERP</div>
   </div>
 </div>
 
@@ -134,19 +134,19 @@ td.sku { color: #1f2937; font-weight: 600; }
   <div class="kpis">
     <div class="kpi" style="--c:#4f46e5"><div class="v">123</div><div class="l">AP SKU 数</div></div>
     <div class="kpi" style="--c:#4f46e5"><div class="v">54,620</div><div class="l">深圳仓总库存</div></div>
-    <div class="kpi" style="--c:#0ea5a4"><div class="v">10,218</div><div class="l">FBA 可售</div></div>
+    <div class="kpi" style="--c:#0ea5a4"><div class="v">10,344</div><div class="l">FBA 可售</div></div>
     <div class="kpi" style="--c:#f59e0b"><div class="v">680</div><div class="l">FBA 在途</div></div>
-    <div class="kpi" style="--c:#1e1b2e"><div class="v">65,518</div><div class="l">总库存合计</div></div>
+    <div class="kpi" style="--c:#1e1b2e"><div class="v">65,644</div><div class="l">总库存合计</div></div>
   </div>
 
   <div class="overview">
     <div class="card">
       <h2>库存分布</h2>
       <div class="donut-row">
-        <div class="donut"><div class="hole"><div class="n">65,518</div><div class="t">总库存</div></div></div>
+        <div class="donut"><div class="hole"><div class="n">65,644</div><div class="t">总库存</div></div></div>
         <div class="legend">
-          <div class="item"><span class="dot" style="background:#4f46e5"></span><span class="k">深圳仓</span><span class="val">54,620</span><span class="pct">83.4%</span></div>
-          <div class="item"><span class="dot" style="background:#0ea5a4"></span><span class="k">FBA 可售</span><span class="val">10,218</span><span class="pct">15.6%</span></div>
+          <div class="item"><span class="dot" style="background:#4f46e5"></span><span class="k">深圳仓</span><span class="val">54,620</span><span class="pct">83.2%</span></div>
+          <div class="item"><span class="dot" style="background:#0ea5a4"></span><span class="k">FBA 可售</span><span class="val">10,344</span><span class="pct">15.8%</span></div>
           <div class="item"><span class="dot" style="background:#f59e0b"></span><span class="k">FBA 在途</span><span class="val">680</span><span class="pct">1.0%</span></div>
         </div>
       </div>
@@ -155,12 +155,12 @@ td.sku { color: #1f2937; font-weight: 600; }
       <h2>概览</h2>
       <div class="stat-list">
         <div class="stat"><span class="k">在售 SKU（有库存）</span><span class="v">123</span></div>
-        <div class="stat"><span class="k">深圳仓有货但 FBA 空</span><span class="v warn">1</span></div>
+        <div class="stat"><span class="k">深圳仓有货但 FBA 空</span><span class="v warn">0</span></div>
         <div class="stat"><span class="k">深圳仓零库存</span><span class="v">0</span></div>
         <div class="stat"><span class="k">深圳仓可用锁定</span><span class="v">13,825<small>件</small></span></div>
-        <div class="stat"><span class="k">可用库存（深圳仓−锁定−海外仓在途）</span><span class="v green">37,834<small>件</small></span></div>
-        <div class="stat"><span class="k">FBA 库存覆盖（可售+在途）</span><span class="v green">10,898<small>件</small></span></div>
-        <div class="stat"><span class="k">海外仓在途（备货转入库）</span><span class="v">2,961<small>件</small></span></div>
+        <div class="stat"><span class="k">可用库存（深圳仓−锁定−海外仓在途）</span><span class="v green">38,119<small>件</small></span></div>
+        <div class="stat"><span class="k">FBA 库存覆盖（可售+在途）</span><span class="v green">11,024<small>件</small></span></div>
+        <div class="stat"><span class="k">海外仓在途（备货转入库）</span><span class="v">2,676<small>件</small></span></div>
       </div>
     </div>
   </div>
@@ -198,10 +198,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="4579">4,579</td>
           <td class="num lock" data-v="80">80</td>
           <td class="num sz" data-v="4729">4,729<span class="bar" style="width:100px"></span></td>
-          <td class="num" data-v="717">717</td>
+          <td class="num" data-v="718">718</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="70">70</td>
-          <td class="num total" data-v="5446">5,446</td>
+          <td class="num total" data-v="5447">5,447</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -212,10 +212,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="4079">4,079</td>
           <td class="num lock" data-v="240">240</td>
           <td class="num sz" data-v="4389">4,389<span class="bar" style="width:93px"></span></td>
-          <td class="num" data-v="852">852</td>
+          <td class="num" data-v="851">851</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="70">70</td>
-          <td class="num total" data-v="5241">5,241</td>
+          <td class="num total" data-v="5240">5,240</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -240,10 +240,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="1833">1,833</td>
           <td class="num lock" data-v="350">350</td>
           <td class="num sz" data-v="2223">2,223<span class="bar" style="width:47px"></span></td>
-          <td class="num" data-v="539">539</td>
+          <td class="num" data-v="537">537</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="40">40</td>
-          <td class="num total" data-v="2762">2,762</td>
+          <td class="num total" data-v="2760">2,760</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -254,10 +254,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="1320">1,320</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="1350">1,350<span class="bar" style="width:29px"></span></td>
-          <td class="num" data-v="237">237</td>
+          <td class="num" data-v="236">236</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="30">30</td>
-          <td class="num total" data-v="1587">1,587</td>
+          <td class="num total" data-v="1586">1,586</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -268,10 +268,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="1214">1,214</td>
           <td class="num lock" data-v="370">370</td>
           <td class="num sz" data-v="1724">1,724<span class="bar" style="width:36px"></span></td>
-          <td class="num" data-v="331">331</td>
+          <td class="num" data-v="329">329</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="140">140</td>
-          <td class="num total" data-v="2055">2,055</td>
+          <td class="num total" data-v="2053">2,053</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -282,10 +282,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="922">922</td>
           <td class="num lock" data-v="385">385</td>
           <td class="num sz" data-v="1597">1,597<span class="bar" style="width:34px"></span></td>
-          <td class="num" data-v="470">470</td>
+          <td class="num" data-v="462">462</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="290">290</td>
-          <td class="num total" data-v="2067">2,067</td>
+          <td class="num total" data-v="2059">2,059</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -324,10 +324,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="721">721</td>
           <td class="num lock" data-v="240">240</td>
           <td class="num sz" data-v="991">991<span class="bar" style="width:21px"></span></td>
-          <td class="num" data-v="349">349</td>
+          <td class="num" data-v="348">348</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="30">30</td>
-          <td class="num total" data-v="1340">1,340</td>
+          <td class="num total" data-v="1339">1,339</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -338,10 +338,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="598">598</td>
           <td class="num lock" data-v="168">168</td>
           <td class="num sz" data-v="866">866<span class="bar" style="width:18px"></span></td>
-          <td class="num" data-v="42">42</td>
+          <td class="num" data-v="45">45</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="100">100</td>
-          <td class="num total" data-v="908">908</td>
+          <td class="num total" data-v="911">911</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -394,10 +394,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="535">535</td>
           <td class="num lock" data-v="52">52</td>
           <td class="num sz" data-v="587">587<span class="bar" style="width:12px"></span></td>
-          <td class="num" data-v="35">35</td>
+          <td class="num" data-v="36">36</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="622">622</td>
+          <td class="num total" data-v="623">623</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -405,13 +405,13 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="mono">FK005-5mm; HF006-5mm; HF22-5; JOZ014-5mm; KH005-5; KH005-8; NV005-5mm; PM22-5mm</td>
           <td class="pname">金球耳钉-5mm</td>
           <td class="asin mono">B0H5SS1M6Z; B0H5TLKSH3; B0H6DSH5WM; B0HCT4G68B; B0HCT954GZ; B0HDB4C125; B0HDB8MNWL; B0HDBGT76X</td>
-          <td class="num avail" data-v="400">400</td>
+          <td class="num avail" data-v="410">410</td>
           <td class="num lock" data-v="362">362</td>
           <td class="num sz" data-v="762">762<span class="bar" style="width:16px"></span></td>
-          <td class="num" data-v="39">39</td>
+          <td class="num" data-v="56">56</td>
           <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="801">801</td>
+          <td class="num overseas" data-v="-10">-10</td>
+          <td class="num total" data-v="818">818</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -485,6 +485,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
+          <td class="sku mono">AP22-4</td>
+          <td class="mono">FK005-4mm; HF006-4mm; HF22-4; JOZ014-4mm; KH005-4; NV005-4mm; PM22-4mm</td>
+          <td class="pname">金球耳钉-4mm</td>
+          <td class="asin mono">B0H5SKL2PD; B0H5V5PLFF; B0H6DFX883; B0HCSQ9B3L; B0HCSYWCQ1; B0HD9XYXTP; B0HDBB18NY</td>
+          <td class="num avail" data-v="341">341</td>
+          <td class="num lock" data-v="258">258</td>
+          <td class="num sz" data-v="579">579<span class="bar" style="width:12px"></span></td>
+          <td class="num" data-v="44">44</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="-20">-20</td>
+          <td class="num total" data-v="623">623</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">AP1425</td>
           <td class="mono">HF003; WAP14-25; WAP14-25.1; WAP14-25.2; WAP14-25.3</td>
           <td class="pname">25mm高*4.5mm最宽-U型耳环</td>
@@ -513,20 +527,6 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">AP22-4</td>
-          <td class="mono">FK005-4mm; HF006-4mm; HF22-4; JOZ014-4mm; KH005-4; NV005-4mm; PM22-4mm</td>
-          <td class="pname">金球耳钉-4mm</td>
-          <td class="asin mono">B0H5SKL2PD; B0H5V5PLFF; B0H6DFX883; B0HCSQ9B3L; B0HCSYWCQ1; B0HD9XYXTP; B0HDBB18NY</td>
-          <td class="num avail" data-v="321">321</td>
-          <td class="num lock" data-v="258">258</td>
-          <td class="num sz" data-v="579">579<span class="bar" style="width:12px"></span></td>
-          <td class="num" data-v="33">33</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="612">612</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
           <td class="sku mono">AP1323</td>
           <td class="mono">KH003; MAP003E.; YFA13</td>
           <td class="pname">19mm宽X23mm高*7mm最宽-水滴形耳环</td>
@@ -548,10 +548,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="298">298</td>
           <td class="num lock" data-v="120">120</td>
           <td class="num sz" data-v="418">418<span class="bar" style="width:9px"></span></td>
-          <td class="num" data-v="60">60</td>
+          <td class="num" data-v="62">62</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="478">478</td>
+          <td class="num total" data-v="480">480</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -562,10 +562,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="297">297</td>
           <td class="num lock" data-v="100">100</td>
           <td class="num sz" data-v="397">397<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="63">63</td>
+          <td class="num" data-v="64">64</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="460">460</td>
+          <td class="num total" data-v="461">461</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -618,10 +618,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="275">275</td>
           <td class="num lock" data-v="280">280</td>
           <td class="num sz" data-v="705">705<span class="bar" style="width:15px"></span></td>
-          <td class="num" data-v="186">186</td>
+          <td class="num" data-v="185">185</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="150">150</td>
-          <td class="num total" data-v="891">891</td>
+          <td class="num total" data-v="890">890</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -688,10 +688,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="259">259</td>
           <td class="num lock" data-v="120">120</td>
           <td class="num sz" data-v="379">379<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="27">27</td>
+          <td class="num" data-v="42">42</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="406">406</td>
+          <td class="num total" data-v="421">421</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -702,10 +702,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="250">250</td>
           <td class="num lock" data-v="75">75</td>
           <td class="num sz" data-v="345">345<span class="bar" style="width:7px"></span></td>
-          <td class="num" data-v="92">92</td>
+          <td class="num" data-v="91">91</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="20">20</td>
-          <td class="num total" data-v="437">437</td>
+          <td class="num total" data-v="436">436</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">AP2320</td>
+          <td class="mono">HB2320; MAP006E-20mm; PM23-20mm; WAP23-20</td>
+          <td class="pname">简约不规则耳环-20mm</td>
+          <td class="asin mono">B0H3NLMQ2R; B0H69VLVHN; B0HBPR8VQD; B0HCTCD6W8</td>
+          <td class="num avail" data-v="250">250</td>
+          <td class="num lock" data-v="80">80</td>
+          <td class="num sz" data-v="300">300<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="34">34</td>
+          <td class="num" data-v="20">20</td>
+          <td class="num overseas" data-v="-30">-30</td>
+          <td class="num total" data-v="354">354</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -744,10 +758,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="233">233</td>
           <td class="num lock" data-v="70">70</td>
           <td class="num sz" data-v="303">303<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="27">27</td>
+          <td class="num" data-v="28">28</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="330">330</td>
+          <td class="num total" data-v="331">331</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -758,10 +772,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="232">232</td>
           <td class="num lock" data-v="571">571</td>
           <td class="num sz" data-v="803">803<span class="bar" style="width:17px"></span></td>
-          <td class="num" data-v="229">229</td>
+          <td class="num" data-v="252">252</td>
           <td class="num" data-v="100">100</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="1132">1,132</td>
+          <td class="num total" data-v="1155">1,155</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -786,10 +800,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="232">232</td>
           <td class="num lock" data-v="70">70</td>
           <td class="num sz" data-v="302">302<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="29">29</td>
+          <td class="num" data-v="30">30</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="331">331</td>
+          <td class="num total" data-v="332">332</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -821,6 +835,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
+          <td class="sku mono">AP2325</td>
+          <td class="mono">HB2325; MAP006E-25mm; PM23-25mm; WAP23-25</td>
+          <td class="pname">简约不规则耳环-25mm</td>
+          <td class="asin mono">B0H3NBW42W; B0H69YJ58F; B0HBPRCR1X; B0HCTBRDY5</td>
+          <td class="num avail" data-v="221">221</td>
+          <td class="num lock" data-v="105">105</td>
+          <td class="num sz" data-v="296">296<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="50">50</td>
+          <td class="num" data-v="25">25</td>
+          <td class="num overseas" data-v="-30">-30</td>
+          <td class="num total" data-v="371">371</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">AP620</td>
           <td class="mono">JUB012E-20; KH002-20; WAP6-20; WAP6-20.1</td>
           <td class="pname">宽面素圈耳环-20mm</td>
@@ -835,17 +863,17 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">AP2320</td>
-          <td class="mono">HB2320; MAP006E-20mm; PM23-20mm; WAP23-20</td>
-          <td class="pname">简约不规则耳环-20mm</td>
-          <td class="asin mono">B0H3NLMQ2R; B0H69VLVHN; B0HBPR8VQD; B0HCTCD6W8</td>
-          <td class="num avail" data-v="220">220</td>
-          <td class="num lock" data-v="80">80</td>
-          <td class="num sz" data-v="300">300<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="26">26</td>
-          <td class="num" data-v="20">20</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="346">346</td>
+          <td class="sku mono">AP22-3</td>
+          <td class="mono">FK005-3mm; HF006-3mm; HF22-3; JOZ014-3mm; KH005-3; NV005-3mm; PM22-3mm</td>
+          <td class="pname">金球耳钉-3mm</td>
+          <td class="asin mono">B0H5SVR1Z1; B0H5TTT5PN; B0H6DVB8NP; B0HCSVFV88; B0HCT7P3MQ; B0HDBDTPJ9; B0HDBHRJZC</td>
+          <td class="num avail" data-v="212">212</td>
+          <td class="num lock" data-v="163">163</td>
+          <td class="num sz" data-v="365">365<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="39">39</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="-10">-10</td>
+          <td class="num total" data-v="404">404</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -870,24 +898,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="204">204</td>
           <td class="num lock" data-v="100">100</td>
           <td class="num sz" data-v="304">304<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="38">38</td>
+          <td class="num" data-v="39">39</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="342">342</td>
+          <td class="num total" data-v="343">343</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">AP22-3</td>
-          <td class="mono">FK005-3mm; HF006-3mm; HF22-3; JOZ014-3mm; KH005-3; NV005-3mm; PM22-3mm</td>
-          <td class="pname">金球耳钉-3mm</td>
-          <td class="asin mono">B0H5SVR1Z1; B0H5TTT5PN; B0H6DVB8NP; B0HCSVFV88; B0HCT7P3MQ; B0HDBDTPJ9; B0HDBHRJZC</td>
-          <td class="num avail" data-v="202">202</td>
-          <td class="num lock" data-v="163">163</td>
-          <td class="num sz" data-v="365">365<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="38">38</td>
+          <td class="sku mono">CYH042</td>
+          <td class="mono">CYH042; PM042; SDCYH042</td>
+          <td class="pname">满钻U型耳扣黄铜镀14K金</td>
+          <td class="asin mono">B0DDTLGD91; B0DLB2FSBR; B0HC5RY2TP</td>
+          <td class="num avail" data-v="199">199</td>
+          <td class="num lock" data-v="20">20</td>
+          <td class="num sz" data-v="199">199<span class="bar" style="width:4px"></span></td>
+          <td class="num" data-v="70">70</td>
           <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="403">403</td>
+          <td class="num overseas" data-v="-20">-20</td>
+          <td class="num total" data-v="269">269</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -898,24 +926,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="198">198</td>
           <td class="num lock" data-v="426">426</td>
           <td class="num sz" data-v="624">624<span class="bar" style="width:13px"></span></td>
-          <td class="num" data-v="201">201</td>
+          <td class="num" data-v="200">200</td>
           <td class="num" data-v="70">70</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="895">895</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">AP2325</td>
-          <td class="mono">HB2325; MAP006E-25mm; PM23-25mm; WAP23-25</td>
-          <td class="pname">简约不规则耳环-25mm</td>
-          <td class="asin mono">B0H3NBW42W; B0H69YJ58F; B0HBPRCR1X; B0HCTBRDY5</td>
-          <td class="num avail" data-v="191">191</td>
-          <td class="num lock" data-v="105">105</td>
-          <td class="num sz" data-v="296">296<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="43">43</td>
-          <td class="num" data-v="25">25</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="364">364</td>
+          <td class="num total" data-v="894">894</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -940,10 +954,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="189">189</td>
           <td class="num lock" data-v="30">30</td>
           <td class="num sz" data-v="219">219<span class="bar" style="width:5px"></span></td>
-          <td class="num" data-v="9">9</td>
+          <td class="num" data-v="14">14</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="228">228</td>
+          <td class="num total" data-v="233">233</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -954,10 +968,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="187">187</td>
           <td class="num lock" data-v="100">100</td>
           <td class="num sz" data-v="287">287<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="42">42</td>
+          <td class="num" data-v="43">43</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="329">329</td>
+          <td class="num total" data-v="330">330</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1003,20 +1017,6 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">CYH042</td>
-          <td class="mono">CYH042; PM042; SDCYH042</td>
-          <td class="pname">满钻U型耳扣黄铜镀14K金</td>
-          <td class="asin mono">B0DDTLGD91; B0DLB2FSBR; B0HC5RY2TP</td>
-          <td class="num avail" data-v="179">179</td>
-          <td class="num lock" data-v="20">20</td>
-          <td class="num sz" data-v="199">199<span class="bar" style="width:4px"></span></td>
-          <td class="num" data-v="67">67</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="266">266</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
           <td class="sku mono">AP2030</td>
           <td class="mono">FLAP2030; GF20-30; HB2030; HDA005E30; HF2030; JOZ012-30; KH004-30; MGH20-30MM; SP015G-30</td>
           <td class="pname">光面素圈耳环-30mm</td>
@@ -1024,10 +1024,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="177">177</td>
           <td class="num lock" data-v="240">240</td>
           <td class="num sz" data-v="507">507<span class="bar" style="width:11px"></span></td>
-          <td class="num" data-v="166">166</td>
+          <td class="num" data-v="165">165</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="90">90</td>
-          <td class="num total" data-v="673">673</td>
+          <td class="num total" data-v="672">672</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1038,10 +1038,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="177">177</td>
           <td class="num lock" data-v="40">40</td>
           <td class="num sz" data-v="217">217<span class="bar" style="width:5px"></span></td>
-          <td class="num" data-v="40">40</td>
+          <td class="num" data-v="37">37</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="257">257</td>
+          <td class="num total" data-v="254">254</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1066,10 +1066,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="170">170</td>
           <td class="num lock" data-v="32">32</td>
           <td class="num sz" data-v="202">202<span class="bar" style="width:4px"></span></td>
-          <td class="num" data-v="22">22</td>
+          <td class="num" data-v="21">21</td>
           <td class="num" data-v="10">10</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="234">234</td>
+          <td class="num total" data-v="233">233</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1094,10 +1094,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="163">163</td>
           <td class="num lock" data-v="433">433</td>
           <td class="num sz" data-v="596">596<span class="bar" style="width:13px"></span></td>
-          <td class="num" data-v="204">204</td>
+          <td class="num" data-v="202">202</td>
           <td class="num" data-v="60">60</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="860">860</td>
+          <td class="num total" data-v="858">858</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">CYH010</td>
+          <td class="mono">010CYH; CYH010; PM010</td>
+          <td class="pname">单排方形钻耳环黄铜镀14K金</td>
+          <td class="asin mono">B0CNRGWZZ4; B0DLK68JMH; B0HC5T3MWC</td>
+          <td class="num avail" data-v="158">158</td>
+          <td class="num lock" data-v="40">40</td>
+          <td class="num sz" data-v="158">158<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="184">184</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="-40">-40</td>
+          <td class="num total" data-v="342">342</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1164,10 +1178,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="129">129</td>
           <td class="num lock" data-v="25">25</td>
           <td class="num sz" data-v="154">154<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="5">5</td>
+          <td class="num" data-v="10">10</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="159">159</td>
+          <td class="num total" data-v="164">164</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1178,10 +1192,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="128">128</td>
           <td class="num lock" data-v="25">25</td>
           <td class="num sz" data-v="153">153<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="6">6</td>
+          <td class="num" data-v="9">9</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="159">159</td>
+          <td class="num total" data-v="162">162</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">CYH055</td>
+          <td class="mono">CYH055; PM055</td>
+          <td class="pname">牛角包型耳环</td>
+          <td class="asin mono">B0FB3FP5NX; B0HC62C5TX</td>
+          <td class="num avail" data-v="127">127</td>
+          <td class="num lock" data-v="30">30</td>
+          <td class="num sz" data-v="127">127<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="3">3</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="-30">-30</td>
+          <td class="num total" data-v="130">130</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1192,10 +1220,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="126">126</td>
           <td class="num lock" data-v="58">58</td>
           <td class="num sz" data-v="184">184<span class="bar" style="width:4px"></span></td>
-          <td class="num" data-v="5">5</td>
+          <td class="num" data-v="6">6</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="189">189</td>
+          <td class="num total" data-v="190">190</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1206,10 +1234,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="125">125</td>
           <td class="num lock" data-v="75">75</td>
           <td class="num sz" data-v="200">200<span class="bar" style="width:4px"></span></td>
-          <td class="num" data-v="48">48</td>
+          <td class="num" data-v="49">49</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="248">248</td>
+          <td class="num total" data-v="249">249</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1220,10 +1248,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="124">124</td>
           <td class="num lock" data-v="135">135</td>
           <td class="num sz" data-v="259">259<span class="bar" style="width:5px"></span></td>
-          <td class="num" data-v="36">36</td>
+          <td class="num" data-v="35">35</td>
           <td class="num" data-v="20">20</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="315">315</td>
+          <td class="num total" data-v="314">314</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1266,20 +1294,6 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
           <td class="num total" data-v="178">178</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">CYH010</td>
-          <td class="mono">010CYH; CYH010; PM010</td>
-          <td class="pname">单排方形钻耳环黄铜镀14K金</td>
-          <td class="asin mono">B0CNRGWZZ4; B0DLK68JMH; B0HC5T3MWC</td>
-          <td class="num avail" data-v="118">118</td>
-          <td class="num lock" data-v="40">40</td>
-          <td class="num sz" data-v="158">158<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="183">183</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="341">341</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1332,10 +1346,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="110">110</td>
           <td class="num lock" data-v="115">115</td>
           <td class="num sz" data-v="265">265<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="93">93</td>
+          <td class="num" data-v="95">95</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="40">40</td>
-          <td class="num total" data-v="358">358</td>
+          <td class="num total" data-v="360">360</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1346,10 +1360,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="108">108</td>
           <td class="num lock" data-v="85">85</td>
           <td class="num sz" data-v="193">193<span class="bar" style="width:4px"></span></td>
-          <td class="num" data-v="26">26</td>
+          <td class="num" data-v="32">32</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="219">219</td>
+          <td class="num total" data-v="225">225</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">CYH061</td>
+          <td class="mono">CYH061; PM061</td>
+          <td class="pname">贝壳耳钉(铜镀14K)</td>
+          <td class="asin mono">B0F594H6FV; B0HCTC67ZB</td>
+          <td class="num avail" data-v="103">103</td>
+          <td class="num lock" data-v="30">30</td>
+          <td class="num sz" data-v="103">103<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="128">128</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="-30">-30</td>
+          <td class="num total" data-v="231">231</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1360,25 +1388,11 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="100">100</td>
           <td class="num lock" data-v="357">357</td>
           <td class="num sz" data-v="457">457<span class="bar" style="width:10px"></span></td>
-          <td class="num" data-v="216">216</td>
+          <td class="num" data-v="221">221</td>
           <td class="num" data-v="10">10</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="683">683</td>
+          <td class="num total" data-v="688">688</td>
           <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">CYH055</td>
-          <td class="mono">CYH055; PM055</td>
-          <td class="pname">牛角包型耳环</td>
-          <td class="asin mono">B0FB3FP5NX; B0HC62C5TX</td>
-          <td class="num avail" data-v="97">97</td>
-          <td class="num lock" data-v="30">30</td>
-          <td class="num sz" data-v="127">127<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="0">0</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="127">127</td>
-          <td><span class="badge badge-warn">待发FBA</span></td>
         </tr>
 <tr>
           <td class="sku mono">AP22-6</td>
@@ -1388,10 +1402,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="92">92</td>
           <td class="num lock" data-v="254">254</td>
           <td class="num sz" data-v="356">356<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="40">40</td>
+          <td class="num" data-v="45">45</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="396">396</td>
+          <td class="num total" data-v="401">401</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1444,10 +1458,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="77">77</td>
           <td class="num lock" data-v="25">25</td>
           <td class="num sz" data-v="102">102<span class="bar" style="width:2px"></span></td>
-          <td class="num" data-v="5">5</td>
+          <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="107">107</td>
+          <td class="num total" data-v="109">109</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1479,20 +1493,6 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">CYH061</td>
-          <td class="mono">CYH061; PM061</td>
-          <td class="pname">贝壳耳钉(铜镀14K)</td>
-          <td class="asin mono">B0F594H6FV; B0HCTC67ZB</td>
-          <td class="num avail" data-v="73">73</td>
-          <td class="num lock" data-v="30">30</td>
-          <td class="num sz" data-v="103">103<span class="bar" style="width:2px"></span></td>
-          <td class="num" data-v="125">125</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="228">228</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
           <td class="sku mono">AP720</td>
           <td class="mono">NV009-20</td>
           <td class="pname">素圈耳环-20mm</td>
@@ -1500,10 +1500,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="73">73</td>
           <td class="num lock" data-v="25">25</td>
           <td class="num sz" data-v="98">98<span class="bar" style="width:2px"></span></td>
-          <td class="num" data-v="4">4</td>
+          <td class="num" data-v="9">9</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="102">102</td>
+          <td class="num total" data-v="107">107</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1528,10 +1528,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="70">70</td>
           <td class="num lock" data-v="155">155</td>
           <td class="num sz" data-v="225">225<span class="bar" style="width:5px"></span></td>
-          <td class="num" data-v="27">27</td>
+          <td class="num" data-v="26">26</td>
           <td class="num" data-v="20">20</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="272">272</td>
+          <td class="num total" data-v="271">271</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1542,10 +1542,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="70">70</td>
           <td class="num lock" data-v="105">105</td>
           <td class="num sz" data-v="175">175<span class="bar" style="width:4px"></span></td>
-          <td class="num" data-v="34">34</td>
+          <td class="num" data-v="37">37</td>
           <td class="num" data-v="15">15</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="224">224</td>
+          <td class="num total" data-v="227">227</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1560,6 +1560,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="80">80</td>
           <td class="num total" data-v="494">494</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">CYH053</td>
+          <td class="mono">CYH053; PM053</td>
+          <td class="pname">U型不规则光面耳环5</td>
+          <td class="asin mono">B0FHVZHXL7; B0HC5R521Q</td>
+          <td class="num avail" data-v="61">61</td>
+          <td class="num lock" data-v="40">40</td>
+          <td class="num sz" data-v="61">61<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="224">224</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="-40">-40</td>
+          <td class="num total" data-v="285">285</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1584,10 +1598,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="56">56</td>
           <td class="num lock" data-v="247">247</td>
           <td class="num sz" data-v="303">303<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="136">136</td>
+          <td class="num" data-v="133">133</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="439">439</td>
+          <td class="num total" data-v="436">436</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1619,6 +1633,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
+          <td class="sku mono">CYH054</td>
+          <td class="mono">Kcyh054; PM054</td>
+          <td class="pname">半微钻爱心耳环</td>
+          <td class="asin mono">B0F9XWPR1F; B0HC9RTP39</td>
+          <td class="num avail" data-v="51">51</td>
+          <td class="num lock" data-v="25">25</td>
+          <td class="num sz" data-v="51">51<span class="bar" style="width:2px"></span></td>
+          <td class="num" data-v="8">8</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas" data-v="-25">-25</td>
+          <td class="num total" data-v="59">59</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">AP2414</td>
           <td class="mono">AD2414; GT24-14; HB2414; HF2414; JOZ015-14; MAS013-14; YFA24-14mm</td>
           <td class="pname">外半圈镶钻耳环-14mm</td>
@@ -1626,10 +1654,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="45">45</td>
           <td class="num lock" data-v="283">283</td>
           <td class="num sz" data-v="406">406<span class="bar" style="width:9px"></span></td>
-          <td class="num" data-v="105">105</td>
+          <td class="num" data-v="102">102</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="78">78</td>
-          <td class="num total" data-v="511">511</td>
+          <td class="num total" data-v="508">508</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1640,10 +1668,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="45">45</td>
           <td class="num lock" data-v="270">270</td>
           <td class="num sz" data-v="315">315<span class="bar" style="width:7px"></span></td>
-          <td class="num" data-v="112">112</td>
+          <td class="num" data-v="114">114</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="427">427</td>
+          <td class="num total" data-v="429">429</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1654,10 +1682,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="43">43</td>
           <td class="num lock" data-v="358">358</td>
           <td class="num sz" data-v="401">401<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="179">179</td>
+          <td class="num" data-v="177">177</td>
           <td class="num" data-v="60">60</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="640">640</td>
+          <td class="num total" data-v="638">638</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1668,10 +1696,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="36">36</td>
           <td class="num lock" data-v="237">237</td>
           <td class="num sz" data-v="305">305<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="92">92</td>
+          <td class="num" data-v="90">90</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="32">32</td>
-          <td class="num total" data-v="397">397</td>
+          <td class="num total" data-v="395">395</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1682,24 +1710,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="30">30</td>
           <td class="num lock" data-v="293">293</td>
           <td class="num sz" data-v="393">393<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="185">185</td>
+          <td class="num" data-v="186">186</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="70">70</td>
-          <td class="num total" data-v="578">578</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">CYH054</td>
-          <td class="mono">Kcyh054; PM054</td>
-          <td class="pname">半微钻爱心耳环</td>
-          <td class="asin mono">B0F9XWPR1F; B0HC9RTP39</td>
-          <td class="num avail" data-v="26">26</td>
-          <td class="num lock" data-v="25">25</td>
-          <td class="num sz" data-v="51">51<span class="bar" style="width:2px"></span></td>
-          <td class="num" data-v="7">7</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="58">58</td>
+          <td class="num total" data-v="579">579</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1710,10 +1724,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="25">25</td>
           <td class="num lock" data-v="171">171</td>
           <td class="num sz" data-v="196">196<span class="bar" style="width:4px"></span></td>
-          <td class="num" data-v="72">72</td>
+          <td class="num" data-v="88">88</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="268">268</td>
+          <td class="num total" data-v="284">284</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1724,10 +1738,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="24">24</td>
           <td class="num lock" data-v="94">94</td>
           <td class="num sz" data-v="287">287<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="9">9</td>
+          <td class="num" data-v="8">8</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="169">169</td>
-          <td class="num total" data-v="296">296</td>
+          <td class="num total" data-v="295">295</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1759,20 +1773,6 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">CYH053</td>
-          <td class="mono">CYH053; PM053</td>
-          <td class="pname">U型不规则光面耳环5</td>
-          <td class="asin mono">B0FHVZHXL7; B0HC5R521Q</td>
-          <td class="num avail" data-v="21">21</td>
-          <td class="num lock" data-v="40">40</td>
-          <td class="num sz" data-v="61">61<span class="bar" style="width:2px"></span></td>
-          <td class="num" data-v="221">221</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="282">282</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
           <td class="sku mono">AP820</td>
           <td class="mono">FK002-20; FLAP820; HF820; MGHA8-20MM</td>
           <td class="pname">素圈耳环-20mm</td>
@@ -1794,10 +1794,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="0">0</td>
           <td class="num lock" data-v="97">97</td>
           <td class="num sz" data-v="98">98<span class="bar" style="width:2px"></span></td>
-          <td class="num" data-v="32">32</td>
+          <td class="num" data-v="30">30</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="1">1</td>
-          <td class="num total" data-v="130">130</td>
+          <td class="num total" data-v="128">128</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1808,10 +1808,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail-neg" data-v="-1">-1</td>
           <td class="num lock" data-v="109">109</td>
           <td class="num sz" data-v="235">235<span class="bar" style="width:5px"></span></td>
-          <td class="num" data-v="19">19</td>
+          <td class="num" data-v="18">18</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="127">127</td>
-          <td class="num total" data-v="254">254</td>
+          <td class="num total" data-v="253">253</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1836,10 +1836,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail-neg" data-v="-12">-12</td>
           <td class="num lock" data-v="157">157</td>
           <td class="num sz" data-v="162">162<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="108">108</td>
+          <td class="num" data-v="109">109</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="17">17</td>
-          <td class="num total" data-v="270">270</td>
+          <td class="num total" data-v="271">271</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1850,10 +1850,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail-neg" data-v="-27">-27</td>
           <td class="num lock" data-v="195">195</td>
           <td class="num sz" data-v="298">298<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="13">13</td>
+          <td class="num" data-v="12">12</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="130">130</td>
-          <td class="num total" data-v="311">311</td>
+          <td class="num total" data-v="310">310</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1864,10 +1864,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail-neg" data-v="-32">-32</td>
           <td class="num lock" data-v="250">250</td>
           <td class="num sz" data-v="388">388<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="24">24</td>
+          <td class="num" data-v="25">25</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="170">170</td>
-          <td class="num total" data-v="412">412</td>
+          <td class="num total" data-v="413">413</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1878,10 +1878,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail-neg" data-v="-39">-39</td>
           <td class="num lock" data-v="153">153</td>
           <td class="num sz" data-v="299">299<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="37">37</td>
+          <td class="num" data-v="35">35</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="185">185</td>
-          <td class="num total" data-v="336">336</td>
+          <td class="num total" data-v="334">334</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1906,23 +1906,19 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail-neg" data-v="-117">-117</td>
           <td class="num lock" data-v="198">198</td>
           <td class="num sz" data-v="350">350<span class="bar" style="width:7px"></span></td>
-          <td class="num" data-v="30">30</td>
+          <td class="num" data-v="28">28</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="269">269</td>
-          <td class="num total" data-v="380">380</td>
+          <td class="num total" data-v="378">378</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr></tbody>
       </table>
     </div>
   </div>
 
-  <div class="callout">
-    <h2>仅深圳仓有货 · 待发 FBA（1 个 SKU）</h2>
-    <div class="desc">这些 SKU 在深圳仓有库存，但 FBA 无可售/在途，合计 <b>127</b> 件，建议尽快安排发货。</div>
-    <div class="chips"><div class="chip"><b>127</b> CYH055<span class="pname">牛角包型耳环</span></div></div>
-  </div>
+  
 
-  <div class="footer">Generated by Claude Code · 2026-08-24 18:09</div>
+  <div class="footer">Generated by Claude Code · 2026-08-25 08:51</div>
 </div>
 
 <script>
