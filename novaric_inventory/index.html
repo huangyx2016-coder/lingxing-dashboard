@@ -41,7 +41,7 @@ body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI',
 .card h2::before { content: ''; width: 4px; height: 16px; border-radius: 2px; background: var(--indigo); }
 
 .donut-row { display: flex; align-items: center; gap: 22px; }
-.donut { width: 128px; height: 128px; border-radius: 50%; background: conic-gradient(#4f46e5 0% 82.1%, #0ea5a4 82.1% 99.69999999999999%, #f59e0b 99.69999999999999% 100%); position: relative; flex-shrink: 0; }
+.donut { width: 128px; height: 128px; border-radius: 50%; background: conic-gradient(#4f46e5 0% 80.7%, #0ea5a4 80.7% 98.5%, #f59e0b 98.5% 100%); position: relative; flex-shrink: 0; }
 .donut .hole { position: absolute; inset: 22px; background: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .donut .hole .n { font-size: 22px; font-weight: 700; color: var(--ink); }
 .donut .hole .t { font-size: 10.5px; color: var(--muted); }
@@ -125,7 +125,7 @@ td.sku { color: #1f2937; font-weight: 600; }
   <div class="wrap" style="padding:0;">
     <span class="tag">Lingxing Inventory</span>
     <h1>链子系列 · 深圳仓库存清单</h1>
-    <div class="sub">数据时间 2026-08-25 14:11:13 · 数据来源：领星 ERP</div>
+    <div class="sub">数据时间 2026-08-26 14:17:55 · 数据来源：领星 ERP</div>
   </div>
 </div>
 
@@ -133,21 +133,21 @@ td.sku { color: #1f2937; font-weight: 600; }
 
   <div class="kpis">
     <div class="kpi" style="--c:#4f46e5"><div class="v">323</div><div class="l">链子 SKU 数</div></div>
-    <div class="kpi" style="--c:#4f46e5"><div class="v">33,648</div><div class="l">深圳仓总库存</div></div>
-    <div class="kpi" style="--c:#0ea5a4"><div class="v">7,207</div><div class="l">FBA 可售</div></div>
-    <div class="kpi" style="--c:#f59e0b"><div class="v">139</div><div class="l">FBA 在途</div></div>
-    <div class="kpi" style="--c:#1e1b2e"><div class="v">40,994</div><div class="l">总库存合计</div></div>
+    <div class="kpi" style="--c:#4f46e5"><div class="v">33,963</div><div class="l">深圳仓总库存</div></div>
+    <div class="kpi" style="--c:#0ea5a4"><div class="v">7,496</div><div class="l">FBA 可售</div></div>
+    <div class="kpi" style="--c:#f59e0b"><div class="v">644</div><div class="l">FBA 在途</div></div>
+    <div class="kpi" style="--c:#1e1b2e"><div class="v">42,103</div><div class="l">总库存合计</div></div>
   </div>
 
   <div class="overview">
     <div class="card">
       <h2>库存分布</h2>
       <div class="donut-row">
-        <div class="donut"><div class="hole"><div class="n">40,994</div><div class="t">总库存</div></div></div>
+        <div class="donut"><div class="hole"><div class="n">42,103</div><div class="t">总库存</div></div></div>
         <div class="legend">
-          <div class="item"><span class="dot" style="background:#4f46e5"></span><span class="k">深圳仓</span><span class="val">33,648</span><span class="pct">82.1%</span></div>
-          <div class="item"><span class="dot" style="background:#0ea5a4"></span><span class="k">FBA 可售</span><span class="val">7,207</span><span class="pct">17.6%</span></div>
-          <div class="item"><span class="dot" style="background:#f59e0b"></span><span class="k">FBA 在途</span><span class="val">139</span><span class="pct">0.3%</span></div>
+          <div class="item"><span class="dot" style="background:#4f46e5"></span><span class="k">深圳仓</span><span class="val">33,963</span><span class="pct">80.7%</span></div>
+          <div class="item"><span class="dot" style="background:#0ea5a4"></span><span class="k">FBA 可售</span><span class="val">7,496</span><span class="pct">17.8%</span></div>
+          <div class="item"><span class="dot" style="background:#f59e0b"></span><span class="k">FBA 在途</span><span class="val">644</span><span class="pct">1.5%</span></div>
         </div>
       </div>
     </div>
@@ -155,11 +155,11 @@ td.sku { color: #1f2937; font-weight: 600; }
       <h2>概览</h2>
       <div class="stat-list">
         <div class="stat"><span class="k">在售 SKU（有库存）</span><span class="v">323</span></div>
-        <div class="stat"><span class="k">深圳仓有货但 FBA 空</span><span class="v warn">51</span></div>
+        <div class="stat"><span class="k">深圳仓有货但 FBA 空</span><span class="v warn">41</span></div>
         <div class="stat"><span class="k">深圳仓零库存</span><span class="v">0</span></div>
-        <div class="stat"><span class="k">深圳仓可用锁定</span><span class="v">9,947<small>件</small></span></div>
-        <div class="stat"><span class="k">可用库存（深圳仓−锁定−海外仓在途）</span><span class="v green">22,833<small>件</small></span></div>
-        <div class="stat"><span class="k">FBA 库存覆盖（可售+在途）</span><span class="v green">7,346<small>件</small></span></div>
+        <div class="stat"><span class="k">深圳仓可用锁定</span><span class="v">10,192<small>件</small></span></div>
+        <div class="stat"><span class="k">可用库存（深圳仓−锁定−海外仓在途）</span><span class="v green">22,903<small>件</small></span></div>
+        <div class="stat"><span class="k">FBA 库存覆盖（可售+在途）</span><span class="v green">8,140<small>件</small></span></div>
         <div class="stat"><span class="k">海外仓在途（备货转入库）</span><span class="v">868<small>件</small></span></div>
       </div>
     </div>
@@ -198,10 +198,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="485">485</td>
           <td class="num lock" data-v="108">108</td>
           <td class="num sz" data-v="613">613<span class="bar" style="width:100px"></span></td>
-          <td class="num" data-v="56">56</td>
+          <td class="num" data-v="55">55</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="20">20</td>
-          <td class="num total" data-v="669">669</td>
+          <td class="num total" data-v="668">668</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -212,10 +212,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="484">484</td>
           <td class="num lock" data-v="111">111</td>
           <td class="num sz" data-v="605">605<span class="bar" style="width:99px"></span></td>
-          <td class="num" data-v="116">116</td>
+          <td class="num" data-v="112">112</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="721">721</td>
+          <td class="num total" data-v="717">717</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -223,13 +223,13 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="mono">LLBBOX10-40; NOBO10-40; R06X10-40; ZIBOX10-40</td>
           <td class="pname">B款1.0mm盒子链-40cm</td>
           <td class="asin mono">B0GSYGLR7C; B0GTL27CPL; B0H1V9TGHY; B0H35JGFZ6</td>
-          <td class="num avail" data-v="419">419</td>
-          <td class="num lock" data-v="129">129</td>
+          <td class="num avail" data-v="404">404</td>
+          <td class="num lock" data-v="144">144</td>
           <td class="num sz" data-v="548">548<span class="bar" style="width:89px"></span></td>
-          <td class="num" data-v="48">48</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="43">43</td>
+          <td class="num" data-v="15">15</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="596">596</td>
+          <td class="num total" data-v="606">606</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -240,10 +240,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="383">383</td>
           <td class="num lock" data-v="214">214</td>
           <td class="num sz" data-v="597">597<span class="bar" style="width:97px"></span></td>
-          <td class="num" data-v="64">64</td>
+          <td class="num" data-v="76">76</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="661">661</td>
+          <td class="num total" data-v="673">673</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -254,10 +254,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="333">333</td>
           <td class="num lock" data-v="107">107</td>
           <td class="num sz" data-v="450">450<span class="bar" style="width:73px"></span></td>
-          <td class="num" data-v="89">89</td>
+          <td class="num" data-v="88">88</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="539">539</td>
+          <td class="num total" data-v="538">538</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -289,20 +289,6 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">BBOX11-45</td>
-          <td class="mono">NOBO11-45; R06X11-45; ZIBOX11-45</td>
-          <td class="pname">B款1.1MM盒子链-45cm</td>
-          <td class="asin mono">B0H35TGVCN; B0HDSLDV1Z; B0HFM9928X</td>
-          <td class="num avail" data-v="285">285</td>
-          <td class="num lock" data-v="95">95</td>
-          <td class="num sz" data-v="400">400<span class="bar" style="width:65px"></span></td>
-          <td class="num" data-v="41">41</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas" data-v="20">20</td>
-          <td class="num total" data-v="441">441</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
           <td class="sku mono">SNA20-40</td>
           <td class="mono">DSNA20-40; LLSNA20-40; NOSN20-40; ZISN20-40</td>
           <td class="pname">2.0MM蛇骨链-40cm</td>
@@ -310,10 +296,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="274">274</td>
           <td class="num lock" data-v="55">55</td>
           <td class="num sz" data-v="329">329<span class="bar" style="width:54px"></span></td>
-          <td class="num" data-v="42">42</td>
+          <td class="num" data-v="46">46</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="371">371</td>
+          <td class="num total" data-v="375">375</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">BBOX11-45</td>
+          <td class="mono">NOBO11-45; R06X11-45; ZIBOX11-45</td>
+          <td class="pname">B款1.1MM盒子链-45cm</td>
+          <td class="asin mono">B0H35TGVCN; B0HDSLDV1Z; B0HFM9928X</td>
+          <td class="num avail" data-v="270">270</td>
+          <td class="num lock" data-v="110">110</td>
+          <td class="num sz" data-v="400">400<span class="bar" style="width:65px"></span></td>
+          <td class="num" data-v="41">41</td>
+          <td class="num" data-v="15">15</td>
+          <td class="num overseas" data-v="20">20</td>
+          <td class="num total" data-v="456">456</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -324,38 +324,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="266">266</td>
           <td class="num lock" data-v="111">111</td>
           <td class="num sz" data-v="387">387<span class="bar" style="width:63px"></span></td>
-          <td class="num" data-v="57">57</td>
+          <td class="num" data-v="65">65</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="444">444</td>
+          <td class="num total" data-v="452">452</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
           <td class="sku mono">DRB004G-7in</td>
           <td class="mono">BP002-7</td>
           <td class="pname">4.0 7W 嘻哈风龙骨手链（黄铜镀14K金）-7in</td>
-          <td class="asin mono">B0H1MCJDRG</td>
+          <td class="asin mono">B0HGCS9SGW</td>
           <td class="num avail" data-v="259">259</td>
           <td class="num lock" data-v="110">110</td>
           <td class="num sz" data-v="369">369<span class="bar" style="width:60px"></span></td>
-          <td class="num" data-v="52">52</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="53">53</td>
+          <td class="num" data-v="30">30</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="421">421</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BBOX12-40</td>
-          <td class="mono">LLBBOX12-40; NOBO12-40; R06X12-40; ZIBOX12-40</td>
-          <td class="pname">B款1.2MM盒子链-40cm</td>
-          <td class="asin mono">B0GSYDZ1CM; B0GTL48BYY; B0H35NRV5R; B0HCBW5L3D</td>
-          <td class="num avail" data-v="255">255</td>
-          <td class="num lock" data-v="169">169</td>
-          <td class="num sz" data-v="434">434<span class="bar" style="width:71px"></span></td>
-          <td class="num" data-v="52">52</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="486">486</td>
+          <td class="num total" data-v="452">452</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -366,10 +352,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="249">249</td>
           <td class="num lock" data-v="185">185</td>
           <td class="num sz" data-v="434">434<span class="bar" style="width:71px"></span></td>
-          <td class="num" data-v="132">132</td>
+          <td class="num" data-v="130">130</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="566">566</td>
+          <td class="num total" data-v="564">564</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -380,10 +366,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="249">249</td>
           <td class="num lock" data-v="67">67</td>
           <td class="num sz" data-v="316">316<span class="bar" style="width:52px"></span></td>
-          <td class="num" data-v="57">57</td>
+          <td class="num" data-v="56">56</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="373">373</td>
+          <td class="num total" data-v="372">372</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -394,24 +380,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="245">245</td>
           <td class="num lock" data-v="140">140</td>
           <td class="num sz" data-v="385">385<span class="bar" style="width:63px"></span></td>
-          <td class="num" data-v="97">97</td>
+          <td class="num" data-v="98">98</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="482">482</td>
+          <td class="num total" data-v="483">483</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">BBOX08-50</td>
-          <td class="mono">LLBBOX08-50; ZIBOX08-50</td>
-          <td class="pname">B款0.8mm盒子链-50cm</td>
-          <td class="asin mono">B0GTL58J84; B0HG9SMZL1</td>
-          <td class="num avail" data-v="235">235</td>
-          <td class="num lock" data-v="89">89</td>
-          <td class="num sz" data-v="324">324<span class="bar" style="width:53px"></span></td>
-          <td class="num" data-v="44">44</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="368">368</td>
+          <td class="sku mono">BBOX12-40</td>
+          <td class="mono">LLBBOX12-40; NOBO12-40; R06X12-40; ZIBOX12-40</td>
+          <td class="pname">B款1.2MM盒子链-40cm</td>
+          <td class="asin mono">B0GSYDZ1CM; B0GTL48BYY; B0H35NRV5R; B0HCBW5L3D</td>
+          <td class="num avail" data-v="240">240</td>
+          <td class="num lock" data-v="184">184</td>
+          <td class="num sz" data-v="434">434<span class="bar" style="width:71px"></span></td>
+          <td class="num" data-v="62">62</td>
+          <td class="num" data-v="15">15</td>
+          <td class="num overseas" data-v="10">10</td>
+          <td class="num total" data-v="511">511</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -422,10 +408,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="232">232</td>
           <td class="num lock" data-v="100">100</td>
           <td class="num sz" data-v="332">332<span class="bar" style="width:54px"></span></td>
-          <td class="num" data-v="24">24</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="23">23</td>
+          <td class="num" data-v="30">30</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="356">356</td>
+          <td class="num total" data-v="385">385</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -436,10 +422,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="229">229</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="279">279<span class="bar" style="width:46px"></span></td>
-          <td class="num" data-v="12">12</td>
+          <td class="num" data-v="11">11</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="50">50</td>
-          <td class="num total" data-v="291">291</td>
+          <td class="num total" data-v="290">290</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -450,10 +436,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="225">225</td>
           <td class="num lock" data-v="126">126</td>
           <td class="num sz" data-v="361">361<span class="bar" style="width:59px"></span></td>
-          <td class="num" data-v="103">103</td>
+          <td class="num" data-v="102">102</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="464">464</td>
+          <td class="num total" data-v="463">463</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -464,24 +450,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="223">223</td>
           <td class="num lock" data-v="85">85</td>
           <td class="num sz" data-v="308">308<span class="bar" style="width:50px"></span></td>
-          <td class="num" data-v="60">60</td>
+          <td class="num" data-v="62">62</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="368">368</td>
+          <td class="num total" data-v="370">370</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">BBOX08-45</td>
-          <td class="mono">LLBBOX08-45; ZIBOX08-45</td>
-          <td class="pname">B款0.8mm盒子链-45cm</td>
-          <td class="asin mono">B0GTKBTL5F; B0H1V85BH7</td>
-          <td class="num avail" data-v="219">219</td>
-          <td class="num lock" data-v="131">131</td>
-          <td class="num sz" data-v="350">350<span class="bar" style="width:57px"></span></td>
-          <td class="num" data-v="35">35</td>
-          <td class="num" data-v="0">0</td>
+          <td class="sku mono">BBOX08-50</td>
+          <td class="mono">LLBBOX08-50; ZIBOX08-50</td>
+          <td class="pname">B款0.8mm盒子链-50cm</td>
+          <td class="asin mono">B0GTL58J84; B0HG9SMZL1</td>
+          <td class="num avail" data-v="220">220</td>
+          <td class="num lock" data-v="104">104</td>
+          <td class="num sz" data-v="324">324<span class="bar" style="width:53px"></span></td>
+          <td class="num" data-v="47">47</td>
+          <td class="num" data-v="15">15</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="385">385</td>
+          <td class="num total" data-v="386">386</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -492,10 +478,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="216">216</td>
           <td class="num lock" data-v="180">180</td>
           <td class="num sz" data-v="396">396<span class="bar" style="width:65px"></span></td>
-          <td class="num" data-v="96">96</td>
+          <td class="num" data-v="98">98</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="492">492</td>
+          <td class="num total" data-v="494">494</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -506,10 +492,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="214">214</td>
           <td class="num lock" data-v="65">65</td>
           <td class="num sz" data-v="279">279<span class="bar" style="width:46px"></span></td>
-          <td class="num" data-v="69">69</td>
+          <td class="num" data-v="70">70</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="348">348</td>
+          <td class="num total" data-v="349">349</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -520,10 +506,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="210">210</td>
           <td class="num lock" data-v="65">65</td>
           <td class="num sz" data-v="275">275<span class="bar" style="width:45px"></span></td>
-          <td class="num" data-v="52">52</td>
+          <td class="num" data-v="53">53</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="327">327</td>
+          <td class="num total" data-v="328">328</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -534,10 +520,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="207">207</td>
           <td class="num lock" data-v="220">220</td>
           <td class="num sz" data-v="427">427<span class="bar" style="width:70px"></span></td>
-          <td class="num" data-v="99">99</td>
+          <td class="num" data-v="101">101</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="526">526</td>
+          <td class="num total" data-v="528">528</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -548,24 +534,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="201">201</td>
           <td class="num lock" data-v="96">96</td>
           <td class="num sz" data-v="297">297<span class="bar" style="width:48px"></span></td>
-          <td class="num" data-v="57">57</td>
+          <td class="num" data-v="63">63</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="354">354</td>
+          <td class="num total" data-v="360">360</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">BBOX08-40</td>
-          <td class="mono">LLBBOX08-40; ZIBOX08-40</td>
-          <td class="pname">B款0.8mm盒子链-40cm</td>
-          <td class="asin mono">B0GTL5TTC3; B0H1VCNZVY</td>
-          <td class="num avail" data-v="197">197</td>
-          <td class="num lock" data-v="142">142</td>
-          <td class="num sz" data-v="339">339<span class="bar" style="width:55px"></span></td>
-          <td class="num" data-v="55">55</td>
-          <td class="num" data-v="0">0</td>
+          <td class="sku mono">BBOX08-45</td>
+          <td class="mono">LLBBOX08-45; ZIBOX08-45</td>
+          <td class="pname">B款0.8mm盒子链-45cm</td>
+          <td class="asin mono">B0GTKBTL5F; B0H1V85BH7</td>
+          <td class="num avail" data-v="199">199</td>
+          <td class="num lock" data-v="151">151</td>
+          <td class="num sz" data-v="350">350<span class="bar" style="width:57px"></span></td>
+          <td class="num" data-v="38">38</td>
+          <td class="num" data-v="20">20</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="394">394</td>
+          <td class="num total" data-v="408">408</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -590,10 +576,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="186">186</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="186">186<span class="bar" style="width:30px"></span></td>
-          <td class="num" data-v="75">75</td>
+          <td class="num" data-v="74">74</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="261">261</td>
+          <td class="num total" data-v="260">260</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -604,10 +590,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="185">185</td>
           <td class="num lock" data-v="60">60</td>
           <td class="num sz" data-v="245">245<span class="bar" style="width:40px"></span></td>
-          <td class="num" data-v="58">58</td>
+          <td class="num" data-v="57">57</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="303">303</td>
+          <td class="num total" data-v="302">302</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -632,10 +618,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="184">184</td>
           <td class="num lock" data-v="50">50</td>
           <td class="num sz" data-v="234">234<span class="bar" style="width:38px"></span></td>
-          <td class="num" data-v="59">59</td>
+          <td class="num" data-v="60">60</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="293">293</td>
+          <td class="num total" data-v="294">294</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -646,10 +632,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="179">179</td>
           <td class="num lock" data-v="181">181</td>
           <td class="num sz" data-v="360">360<span class="bar" style="width:59px"></span></td>
-          <td class="num" data-v="44">44</td>
+          <td class="num" data-v="72">72</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="404">404</td>
+          <td class="num total" data-v="432">432</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -688,10 +674,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="174">174</td>
           <td class="num lock" data-v="50">50</td>
           <td class="num sz" data-v="224">224<span class="bar" style="width:37px"></span></td>
-          <td class="num" data-v="42">42</td>
+          <td class="num" data-v="48">48</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="266">266</td>
+          <td class="num total" data-v="272">272</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -702,10 +688,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="168">168</td>
           <td class="num lock" data-v="101">101</td>
           <td class="num sz" data-v="279">279<span class="bar" style="width:46px"></span></td>
-          <td class="num" data-v="93">93</td>
+          <td class="num" data-v="95">95</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="372">372</td>
+          <td class="num total" data-v="374">374</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -716,10 +702,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="168">168</td>
           <td class="num lock" data-v="51">51</td>
           <td class="num sz" data-v="219">219<span class="bar" style="width:36px"></span></td>
-          <td class="num" data-v="36">36</td>
+          <td class="num" data-v="42">42</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="255">255</td>
+          <td class="num total" data-v="261">261</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -730,10 +716,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="165">165</td>
           <td class="num lock" data-v="50">50</td>
           <td class="num sz" data-v="245">245<span class="bar" style="width:40px"></span></td>
-          <td class="num" data-v="29">29</td>
+          <td class="num" data-v="33">33</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="30">30</td>
-          <td class="num total" data-v="274">274</td>
+          <td class="num total" data-v="278">278</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -758,10 +744,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="163">163</td>
           <td class="num lock" data-v="25">25</td>
           <td class="num sz" data-v="188">188<span class="bar" style="width:31px"></span></td>
-          <td class="num" data-v="36">36</td>
+          <td class="num" data-v="35">35</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="224">224</td>
+          <td class="num total" data-v="223">223</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">BBOX08-40</td>
+          <td class="mono">LLBBOX08-40; ZIBOX08-40</td>
+          <td class="pname">B款0.8mm盒子链-40cm</td>
+          <td class="asin mono">B0GTL5TTC3; B0H1VCNZVY</td>
+          <td class="num avail" data-v="162">162</td>
+          <td class="num lock" data-v="177">177</td>
+          <td class="num sz" data-v="339">339<span class="bar" style="width:55px"></span></td>
+          <td class="num" data-v="61">61</td>
+          <td class="num" data-v="35">35</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="435">435</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -800,10 +800,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="150">150</td>
           <td class="num lock" data-v="57">57</td>
           <td class="num sz" data-v="222">222<span class="bar" style="width:36px"></span></td>
-          <td class="num" data-v="47">47</td>
+          <td class="num" data-v="46">46</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="15">15</td>
-          <td class="num total" data-v="269">269</td>
+          <td class="num total" data-v="268">268</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">BROP30-50</td>
+          <td class="mono">LYR30-20; R01P30-50</td>
+          <td class="pname">B款3.0MM麻花链-50cm</td>
+          <td class="asin mono">B0GSZD15PR; B0HDB3TTNK</td>
+          <td class="num avail" data-v="150">150</td>
+          <td class="num lock" data-v="57">57</td>
+          <td class="num sz" data-v="207">207<span class="bar" style="width:34px"></span></td>
+          <td class="num" data-v="51">51</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="258">258</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -814,10 +828,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="145">145</td>
           <td class="num lock" data-v="40">40</td>
           <td class="num sz" data-v="185">185<span class="bar" style="width:30px"></span></td>
-          <td class="num" data-v="38">38</td>
+          <td class="num" data-v="43">43</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="223">223</td>
+          <td class="num total" data-v="228">228</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -828,10 +842,38 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="141">141</td>
           <td class="num lock" data-v="80">80</td>
           <td class="num sz" data-v="221">221<span class="bar" style="width:36px"></span></td>
-          <td class="num" data-v="98">98</td>
+          <td class="num" data-v="99">99</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="319">319</td>
+          <td class="num total" data-v="320">320</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">BBOX08-60</td>
+          <td class="mono">LLBBOX08-60; ZIBOX08-60</td>
+          <td class="pname">B款0.8mm盒子链-60cm</td>
+          <td class="asin mono">B0GTKXDHFW; B0HGF3XR19</td>
+          <td class="num avail" data-v="136">136</td>
+          <td class="num lock" data-v="55">55</td>
+          <td class="num sz" data-v="191">191<span class="bar" style="width:31px"></span></td>
+          <td class="num" data-v="43">43</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="234">234</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">SNA20-45</td>
+          <td class="mono">DSNA20-45; LLSNA20-45; NOSN20-45; ZISN20-45</td>
+          <td class="pname">2.0MM蛇骨链-45cm</td>
+          <td class="asin mono">B0GSVXFQSX; B0GSZ86WMF; B0H6HTWVF4; B0HGL7FBLX</td>
+          <td class="num avail" data-v="128">128</td>
+          <td class="num lock" data-v="65">65</td>
+          <td class="num sz" data-v="193">193<span class="bar" style="width:31px"></span></td>
+          <td class="num" data-v="48">48</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="241">241</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -839,55 +881,13 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="mono">NOBO11-40; R06X11-40; ZIBOX11-40</td>
           <td class="pname">B款1.1MM盒子链-40cm</td>
           <td class="asin mono">B0GSY1WXVF; B0GTL9Y1FX; B0H8MW33V4</td>
-          <td class="num avail" data-v="136">136</td>
-          <td class="num lock" data-v="60">60</td>
+          <td class="num avail" data-v="126">126</td>
+          <td class="num lock" data-v="70">70</td>
           <td class="num sz" data-v="216">216<span class="bar" style="width:35px"></span></td>
           <td class="num" data-v="39">39</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="10">10</td>
           <td class="num overseas" data-v="20">20</td>
-          <td class="num total" data-v="255">255</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BBOX08-60</td>
-          <td class="mono">LLBBOX08-60; ZIBOX08-60</td>
-          <td class="pname">B款0.8mm盒子链-60cm</td>
-          <td class="asin mono">B0GTKXDHFW; B0H1V7N78W</td>
-          <td class="num avail" data-v="136">136</td>
-          <td class="num lock" data-v="55">55</td>
-          <td class="num sz" data-v="191">191<span class="bar" style="width:31px"></span></td>
-          <td class="num" data-v="41">41</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="232">232</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">SNA20-45</td>
-          <td class="mono">DSNA20-45; LLSNA20-45; NOSN20-45; ZISN20-45</td>
-          <td class="pname">2.0MM蛇骨链-45cm</td>
-          <td class="asin mono">B0GSVXFQSX; B0GSZ86WMF; B0GXD3HTLY; B0H6HTWVF4</td>
-          <td class="num avail" data-v="128">128</td>
-          <td class="num lock" data-v="65">65</td>
-          <td class="num sz" data-v="193">193<span class="bar" style="width:31px"></span></td>
-          <td class="num" data-v="45">45</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="238">238</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BROP30-50</td>
-          <td class="mono">LYR30-20; R01P30-50</td>
-          <td class="pname">B款3.0MM麻花链-50cm</td>
-          <td class="asin mono">B0GSZD15PR; B0HDB3TTNK</td>
-          <td class="num avail" data-v="120">120</td>
-          <td class="num lock" data-v="57">57</td>
-          <td class="num sz" data-v="177">177<span class="bar" style="width:29px"></span></td>
-          <td class="num" data-v="51">51</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="228">228</td>
+          <td class="num total" data-v="265">265</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -898,10 +898,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="120">120</td>
           <td class="num lock" data-v="30">30</td>
           <td class="num sz" data-v="150">150<span class="bar" style="width:24px"></span></td>
-          <td class="num" data-v="31">31</td>
+          <td class="num" data-v="34">34</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="181">181</td>
+          <td class="num total" data-v="184">184</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -926,10 +926,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="120">120</td>
           <td class="num lock" data-v="18">18</td>
           <td class="num sz" data-v="148">148<span class="bar" style="width:24px"></span></td>
-          <td class="num" data-v="37">37</td>
+          <td class="num" data-v="36">36</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="185">185</td>
+          <td class="num total" data-v="184">184</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -940,24 +940,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="119">119</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="129">129<span class="bar" style="width:21px"></span></td>
-          <td class="num" data-v="28">28</td>
+          <td class="num" data-v="29">29</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="157">157</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BBOX12-50</td>
-          <td class="mono">LLBBOX12-50; NOBO12-50; R06X12-50; ZIBOX12-50</td>
-          <td class="pname">B款1.2MM盒子链-50cm</td>
-          <td class="asin mono">B0GTL5TX9H; B0H1VBLKYJ; B0H35P4D8W; B0HCH49SZV</td>
-          <td class="num avail" data-v="118">118</td>
-          <td class="num lock" data-v="206">206</td>
-          <td class="num sz" data-v="324">324<span class="bar" style="width:53px"></span></td>
-          <td class="num" data-v="85">85</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="409">409</td>
+          <td class="num total" data-v="158">158</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -968,24 +954,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="116">116</td>
           <td class="num lock" data-v="40">40</td>
           <td class="num sz" data-v="156">156<span class="bar" style="width:25px"></span></td>
-          <td class="num" data-v="44">44</td>
+          <td class="num" data-v="46">46</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="200">200</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BBOX13-60</td>
-          <td class="mono">ZIBOX13-60</td>
-          <td class="pname">B款1.3MM盒子链-60cm</td>
-          <td class="asin mono">B0GTL6TS54</td>
-          <td class="num avail" data-v="116">116</td>
-          <td class="num lock" data-v="10">10</td>
-          <td class="num sz" data-v="126">126<span class="bar" style="width:21px"></span></td>
-          <td class="num" data-v="7">7</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="133">133</td>
+          <td class="num total" data-v="202">202</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1010,10 +982,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="113">113</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="118">118<span class="bar" style="width:19px"></span></td>
-          <td class="num" data-v="14">14</td>
+          <td class="num" data-v="15">15</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="132">132</td>
+          <td class="num total" data-v="133">133</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1038,10 +1010,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="109">109</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="119">119<span class="bar" style="width:19px"></span></td>
-          <td class="num" data-v="67">67</td>
+          <td class="num" data-v="65">65</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="186">186</td>
+          <td class="num total" data-v="184">184</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1087,6 +1059,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-warn">待发FBA</span></td>
         </tr>
 <tr>
+          <td class="sku mono">BBOX13-60</td>
+          <td class="mono">ZIBOX13-60</td>
+          <td class="pname">B款1.3MM盒子链-60cm</td>
+          <td class="asin mono">B0GTL6TS54</td>
+          <td class="num avail" data-v="106">106</td>
+          <td class="num lock" data-v="20">20</td>
+          <td class="num sz" data-v="126">126<span class="bar" style="width:21px"></span></td>
+          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="10">10</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="143">143</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">ECAB11-40</td>
           <td class="mono">NOEC11-40</td>
           <td class="pname">E款1.1MM锚链-40cm</td>
@@ -1094,10 +1080,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="104">104</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="114">114<span class="bar" style="width:19px"></span></td>
-          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="6">6</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="121">121</td>
+          <td class="num total" data-v="120">120</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1129,6 +1115,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
+          <td class="sku mono">BBOX12-50</td>
+          <td class="mono">LLBBOX12-50; NOBO12-50; R06X12-50; ZIBOX12-50</td>
+          <td class="pname">B款1.2MM盒子链-50cm</td>
+          <td class="asin mono">B0GTL5TX9H; B0H1VBLKYJ; B0H35P4D8W; B0HCH49SZV</td>
+          <td class="num avail" data-v="103">103</td>
+          <td class="num lock" data-v="221">221</td>
+          <td class="num sz" data-v="324">324<span class="bar" style="width:53px"></span></td>
+          <td class="num" data-v="89">89</td>
+          <td class="num" data-v="15">15</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="428">428</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">ECAB13-60</td>
           <td class="mono">—</td>
           <td class="pname">—</td>
@@ -1150,10 +1150,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="102">102</td>
           <td class="num lock" data-v="73">73</td>
           <td class="num sz" data-v="175">175<span class="bar" style="width:29px"></span></td>
-          <td class="num" data-v="82">82</td>
+          <td class="num" data-v="87">87</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="257">257</td>
+          <td class="num total" data-v="262">262</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1164,10 +1164,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="99">99</td>
           <td class="num lock" data-v="75">75</td>
           <td class="num sz" data-v="184">184<span class="bar" style="width:30px"></span></td>
-          <td class="num" data-v="98">98</td>
+          <td class="num" data-v="95">95</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="282">282</td>
+          <td class="num total" data-v="279">279</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1178,10 +1178,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="99">99</td>
           <td class="num lock" data-v="20">20</td>
           <td class="num sz" data-v="119">119<span class="bar" style="width:19px"></span></td>
-          <td class="num" data-v="73">73</td>
+          <td class="num" data-v="72">72</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="192">192</td>
+          <td class="num total" data-v="191">191</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1199,20 +1199,6 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-warn">待发FBA</span></td>
         </tr>
 <tr>
-          <td class="sku mono">ACB35-22</td>
-          <td class="mono">AYN135-22</td>
-          <td class="pname">3.5mm古巴链Curb薄疏14K金色-22in</td>
-          <td class="asin mono">B0H5HZKTPK</td>
-          <td class="num avail" data-v="98">98</td>
-          <td class="num lock-zero" data-v="0">—</td>
-          <td class="num sz" data-v="98">98<span class="bar" style="width:16px"></span></td>
-          <td class="num" data-v="0">0</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="98">98</td>
-          <td><span class="badge badge-warn">待发FBA</span></td>
-        </tr>
-<tr>
           <td class="sku mono">DRB004G-8in</td>
           <td class="mono">BP002-8</td>
           <td class="pname">4.0 7W 嘻哈风龙骨手链（黄铜镀14K金）-8in</td>
@@ -1220,10 +1206,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="94">94</td>
           <td class="num lock" data-v="70">70</td>
           <td class="num sz" data-v="164">164<span class="bar" style="width:27px"></span></td>
-          <td class="num" data-v="44">44</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="47">47</td>
+          <td class="num" data-v="20">20</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="208">208</td>
+          <td class="num total" data-v="231">231</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1318,10 +1304,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="91">91</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="101">101<span class="bar" style="width:16px"></span></td>
-          <td class="num" data-v="15">15</td>
+          <td class="num" data-v="13">13</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="116">116</td>
+          <td class="num total" data-v="114">114</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1336,6 +1322,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
           <td class="num total" data-v="136">136</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">ACB35-22</td>
+          <td class="mono">AYN135-22</td>
+          <td class="pname">3.5mm古巴链Curb薄疏14K金色-22in</td>
+          <td class="asin mono">B0H5HZKTPK</td>
+          <td class="num avail" data-v="88">88</td>
+          <td class="num lock" data-v="10">10</td>
+          <td class="num sz" data-v="98">98<span class="bar" style="width:16px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="10">10</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="108">108</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1395,20 +1395,6 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">BBOX13-40</td>
-          <td class="mono">ZIBOX13-40</td>
-          <td class="pname">B款1.3MM盒子链-40cm</td>
-          <td class="asin mono">B0GTL13BDJ</td>
-          <td class="num avail" data-v="86">86</td>
-          <td class="num lock-zero" data-v="0">—</td>
-          <td class="num sz" data-v="86">86<span class="bar" style="width:14px"></span></td>
-          <td class="num" data-v="2">2</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="88">88</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
           <td class="sku mono">BFIG50-20</td>
           <td class="mono">FFBFIG50-20; T02N50-20; YMN550-20</td>
           <td class="pname">5mm定制费加罗链14K金色-20in</td>
@@ -1445,9 +1431,9 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num lock" data-v="30">30</td>
           <td class="num sz" data-v="114">114<span class="bar" style="width:19px"></span></td>
           <td class="num" data-v="8">8</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="30">30</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="122">122</td>
+          <td class="num total" data-v="152">152</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1486,10 +1472,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="82">82</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="87">87<span class="bar" style="width:14px"></span></td>
-          <td class="num" data-v="96">96</td>
+          <td class="num" data-v="97">97</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="183">183</td>
+          <td class="num total" data-v="184">184</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1515,23 +1501,9 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num lock" data-v="30">30</td>
           <td class="num sz" data-v="110">110<span class="bar" style="width:18px"></span></td>
           <td class="num" data-v="4">4</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="30">30</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="114">114</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BBOX13-50</td>
-          <td class="mono">ZIBOX13-50</td>
-          <td class="pname">B款1.3MM盒子链-50cm</td>
-          <td class="asin mono">B0GTL16588</td>
-          <td class="num avail" data-v="80">80</td>
-          <td class="num lock" data-v="15">15</td>
-          <td class="num sz" data-v="95">95<span class="bar" style="width:15px"></span></td>
-          <td class="num" data-v="7">7</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="102">102</td>
+          <td class="num total" data-v="144">144</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1556,10 +1528,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="77">77</td>
           <td class="num lock" data-v="160">160</td>
           <td class="num sz" data-v="237">237<span class="bar" style="width:39px"></span></td>
-          <td class="num" data-v="97">97</td>
+          <td class="num" data-v="96">96</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="334">334</td>
+          <td class="num total" data-v="333">333</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1571,24 +1543,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num lock" data-v="30">30</td>
           <td class="num sz" data-v="107">107<span class="bar" style="width:17px"></span></td>
           <td class="num" data-v="5">5</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="30">30</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="112">112</td>
+          <td class="num total" data-v="142">142</td>
           <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">ACB35-24</td>
-          <td class="mono">AYN135-24</td>
-          <td class="pname">3.5mm古巴链Curb薄疏14K金色-24in</td>
-          <td class="asin mono">B0H5HBWBKY</td>
-          <td class="num avail" data-v="77">77</td>
-          <td class="num lock-zero" data-v="0">—</td>
-          <td class="num sz" data-v="77">77<span class="bar" style="width:13px"></span></td>
-          <td class="num" data-v="0">0</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="77">77</td>
-          <td><span class="badge badge-warn">待发FBA</span></td>
         </tr>
 <tr>
           <td class="sku mono">SNA20-60</td>
@@ -1598,10 +1556,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="74">74</td>
           <td class="num lock" data-v="20">20</td>
           <td class="num sz" data-v="94">94<span class="bar" style="width:15px"></span></td>
-          <td class="num" data-v="45">45</td>
+          <td class="num" data-v="49">49</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="139">139</td>
+          <td class="num total" data-v="143">143</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1612,10 +1570,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="73">73</td>
           <td class="num lock" data-v="93">93</td>
           <td class="num sz" data-v="166">166<span class="bar" style="width:27px"></span></td>
-          <td class="num" data-v="87">87</td>
+          <td class="num" data-v="89">89</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="253">253</td>
+          <td class="num total" data-v="255">255</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1626,10 +1584,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="72">72</td>
           <td class="num lock" data-v="40">40</td>
           <td class="num sz" data-v="122">122<span class="bar" style="width:20px"></span></td>
-          <td class="num" data-v="58">58</td>
+          <td class="num" data-v="56">56</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="180">180</td>
+          <td class="num total" data-v="178">178</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">ACB35-24</td>
+          <td class="mono">AYN135-24</td>
+          <td class="pname">3.5mm古巴链Curb薄疏14K金色-24in</td>
+          <td class="asin mono">B0H5HBWBKY</td>
+          <td class="num avail" data-v="72">72</td>
+          <td class="num lock" data-v="5">5</td>
+          <td class="num sz" data-v="77">77<span class="bar" style="width:13px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="5">5</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="82">82</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1640,8 +1612,22 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="71">71</td>
           <td class="num lock" data-v="25">25</td>
           <td class="num sz" data-v="96">96<span class="bar" style="width:16px"></span></td>
-          <td class="num" data-v="8">8</td>
+          <td class="num" data-v="9">9</td>
           <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="105">105</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">BBOX13-40</td>
+          <td class="mono">ZIBOX13-40</td>
+          <td class="pname">B款1.3MM盒子链-40cm</td>
+          <td class="asin mono">B0GTL13BDJ</td>
+          <td class="num avail" data-v="71">71</td>
+          <td class="num lock" data-v="15">15</td>
+          <td class="num sz" data-v="86">86<span class="bar" style="width:14px"></span></td>
+          <td class="num" data-v="3">3</td>
+          <td class="num" data-v="15">15</td>
           <td class="num overseas-zero" data-v="0">—</td>
           <td class="num total" data-v="104">104</td>
           <td><span class="badge badge-ok">正常</span></td>
@@ -1696,10 +1682,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="70">70</td>
           <td class="num lock" data-v="23">23</td>
           <td class="num sz" data-v="93">93<span class="bar" style="width:15px"></span></td>
-          <td class="num" data-v="32">32</td>
+          <td class="num" data-v="30">30</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="125">125</td>
+          <td class="num total" data-v="123">123</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1724,10 +1710,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="69">69</td>
           <td class="num lock" data-v="35">35</td>
           <td class="num sz" data-v="104">104<span class="bar" style="width:17px"></span></td>
-          <td class="num" data-v="31">31</td>
+          <td class="num" data-v="32">32</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="135">135</td>
+          <td class="num total" data-v="136">136</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1760,9 +1746,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX70-22</td>
-          <td class="mono">—</td>
-          <td class="pname">—</td>
-          <td class="asin mono">—</td>
+          <td class="mono">BJ-FJ7-22</td>
+          <td class="pname">7mm定制费加罗链白金色-22in</td>
+          <td class="asin mono">B0HG4F5DR9</td>
           <td class="num avail" data-v="69">69</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="69">69<span class="bar" style="width:11px"></span></td>
@@ -1781,24 +1767,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num lock" data-v="30">30</td>
           <td class="num sz" data-v="98">98<span class="bar" style="width:16px"></span></td>
           <td class="num" data-v="17">17</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="30">30</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="115">115</td>
+          <td class="num total" data-v="145">145</td>
           <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">ACB35-20</td>
-          <td class="mono">AYN135-20</td>
-          <td class="pname">3.5mm古巴链Curb薄疏14K金色-20in</td>
-          <td class="asin mono">B0H5HT6VJ2</td>
-          <td class="num avail" data-v="68">68</td>
-          <td class="num lock-zero" data-v="0">—</td>
-          <td class="num sz" data-v="68">68<span class="bar" style="width:11px"></span></td>
-          <td class="num" data-v="0">0</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="68">68</td>
-          <td><span class="badge badge-warn">待发FBA</span></td>
         </tr>
 <tr>
           <td class="sku mono">BFIG30-22</td>
@@ -1808,10 +1780,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="67">67</td>
           <td class="num lock" data-v="25">25</td>
           <td class="num sz" data-v="102">102<span class="bar" style="width:17px"></span></td>
-          <td class="num" data-v="4">4</td>
+          <td class="num" data-v="10">10</td>
           <td class="num" data-v="15">15</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="121">121</td>
+          <td class="num total" data-v="127">127</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1822,10 +1794,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="67">67</td>
           <td class="num lock" data-v="30">30</td>
           <td class="num sz" data-v="97">97<span class="bar" style="width:16px"></span></td>
-          <td class="num" data-v="20">20</td>
+          <td class="num" data-v="22">22</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="117">117</td>
+          <td class="num total" data-v="119">119</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1878,10 +1850,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="66">66</td>
           <td class="num lock" data-v="25">25</td>
           <td class="num sz" data-v="91">91<span class="bar" style="width:15px"></span></td>
-          <td class="num" data-v="24">24</td>
+          <td class="num" data-v="26">26</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="115">115</td>
+          <td class="num total" data-v="117">117</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">BROP20-55</td>
+          <td class="mono">FLBROP20-55; KROP20-55; NOBR20-55; R01P20-55</td>
+          <td class="pname">B款2.0MM麻花链-55cm</td>
+          <td class="asin mono">B0GSZ11678; B0H352KKYS; B0H4Q1BPSP; B0H5JBBT5B</td>
+          <td class="num avail" data-v="65">65</td>
+          <td class="num lock" data-v="44">44</td>
+          <td class="num sz" data-v="109">109<span class="bar" style="width:18px"></span></td>
+          <td class="num" data-v="33">33</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="142">142</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1934,10 +1920,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="62">62</td>
           <td class="num lock" data-v="78">78</td>
           <td class="num sz" data-v="140">140<span class="bar" style="width:23px"></span></td>
-          <td class="num" data-v="79">79</td>
+          <td class="num" data-v="82">82</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="219">219</td>
+          <td class="num total" data-v="222">222</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1948,10 +1934,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="62">62</td>
           <td class="num lock" data-v="45">45</td>
           <td class="num sz" data-v="107">107<span class="bar" style="width:17px"></span></td>
-          <td class="num" data-v="20">20</td>
+          <td class="num" data-v="18">18</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="127">127</td>
+          <td class="num total" data-v="125">125</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1966,6 +1952,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
           <td class="num total" data-v="130">130</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">BBOX13-50</td>
+          <td class="mono">ZIBOX13-50</td>
+          <td class="pname">B款1.3MM盒子链-50cm</td>
+          <td class="asin mono">B0GTL16588</td>
+          <td class="num avail" data-v="60">60</td>
+          <td class="num lock" data-v="35">35</td>
+          <td class="num sz" data-v="95">95<span class="bar" style="width:15px"></span></td>
+          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="20">20</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="122">122</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -1984,9 +1984,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX70-20</td>
-          <td class="mono">—</td>
-          <td class="pname">—</td>
-          <td class="asin mono">—</td>
+          <td class="mono">BJ-FJ7-20</td>
+          <td class="pname">7mm定制费加罗链白金色-20in</td>
+          <td class="asin mono">B0HG4FW1JV</td>
           <td class="num avail" data-v="60">60</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="60">60<span class="bar" style="width:10px"></span></td>
@@ -2039,6 +2039,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
+          <td class="sku mono">ACB35-20</td>
+          <td class="mono">AYN135-20</td>
+          <td class="pname">3.5mm古巴链Curb薄疏14K金色-20in</td>
+          <td class="asin mono">B0H5HT6VJ2</td>
+          <td class="num avail" data-v="58">58</td>
+          <td class="num lock" data-v="10">10</td>
+          <td class="num sz" data-v="68">68<span class="bar" style="width:11px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="10">10</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="78">78</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">ACB80-20</td>
           <td class="mono">FFACB80-20</td>
           <td class="pname">8mm古巴链Curb薄疏14K金色-20in</td>
@@ -2068,9 +2082,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX50-22</td>
-          <td class="mono">FJD5-22</td>
+          <td class="mono">BJ-FJ5-22; FJD5-22</td>
           <td class="pname">5mm定制费加罗链白金色-22in</td>
-          <td class="asin mono">B0HC9KR732</td>
+          <td class="asin mono">B0HC9KR732; B0HGDF71X6</td>
           <td class="num avail" data-v="58">58</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="68">68<span class="bar" style="width:11px"></span></td>
@@ -2102,10 +2116,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="56">56</td>
           <td class="num lock" data-v="40">40</td>
           <td class="num sz" data-v="96">96<span class="bar" style="width:16px"></span></td>
-          <td class="num" data-v="23">23</td>
+          <td class="num" data-v="26">26</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="119">119</td>
+          <td class="num total" data-v="122">122</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2130,10 +2144,38 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="56">56</td>
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="71">71<span class="bar" style="width:12px"></span></td>
-          <td class="num" data-v="10">10</td>
+          <td class="num" data-v="12">12</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="81">81</td>
+          <td class="num total" data-v="83">83</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">ECAB12-45</td>
+          <td class="mono">LYC12-18; NOEC12-45</td>
+          <td class="pname">E款1.2MM锚链-45cm</td>
+          <td class="asin mono">B0H6HQCQ1R; B0H6X5YNC2</td>
+          <td class="num avail" data-v="55">55</td>
+          <td class="num lock" data-v="100">100</td>
+          <td class="num sz" data-v="155">155<span class="bar" style="width:25px"></span></td>
+          <td class="num" data-v="36">36</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="191">191</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">ECAB12-40</td>
+          <td class="mono">LYC12-16; NOEC12-40</td>
+          <td class="pname">E款1.2MM锚链-40cm</td>
+          <td class="asin mono">B0H6HW2MLY; B0H6WWH13Z</td>
+          <td class="num avail" data-v="55">55</td>
+          <td class="num lock" data-v="98">98</td>
+          <td class="num sz" data-v="153">153<span class="bar" style="width:25px"></span></td>
+          <td class="num" data-v="39">39</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="192">192</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2144,10 +2186,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="55">55</td>
           <td class="num lock" data-v="22">22</td>
           <td class="num sz" data-v="82">82<span class="bar" style="width:13px"></span></td>
-          <td class="num" data-v="1">1</td>
+          <td class="num" data-v="6">6</td>
           <td class="num" data-v="12">12</td>
           <td class="num overseas" data-v="5">5</td>
-          <td class="num total" data-v="95">95</td>
+          <td class="num total" data-v="100">100</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2186,10 +2228,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="54">54</td>
           <td class="num lock" data-v="20">20</td>
           <td class="num sz" data-v="79">79<span class="bar" style="width:13px"></span></td>
-          <td class="num" data-v="12">12</td>
+          <td class="num" data-v="16">16</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="5">5</td>
-          <td class="num total" data-v="91">91</td>
+          <td class="num total" data-v="95">95</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2214,17 +2256,17 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="53">53</td>
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="68">68<span class="bar" style="width:11px"></span></td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="12">12</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="68">68</td>
-          <td><span class="badge badge-warn">待发FBA</span></td>
+          <td class="num total" data-v="80">80</td>
+          <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
           <td class="sku mono">ACBX60-20</td>
-          <td class="mono">ODI001-20</td>
+          <td class="mono">BJ-GBC6-20; ODI001-20</td>
           <td class="pname">6mm古巴链Curb薄疏白金色-20in</td>
-          <td class="asin mono">B0HB425ZKZ</td>
+          <td class="asin mono">B0HB425ZKZ; B0HG4T557W</td>
           <td class="num avail" data-v="53">53</td>
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="68">68<span class="bar" style="width:11px"></span></td>
@@ -2236,9 +2278,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX60-22</td>
-          <td class="mono">ODI001-22</td>
+          <td class="mono">BJ-GBC6-22; ODI001-22</td>
           <td class="pname">6mm古巴链Curb薄疏白金色-22in</td>
-          <td class="asin mono">B0HB4CH8CN</td>
+          <td class="asin mono">B0HB4CH8CN; B0HG4R4JQN</td>
           <td class="num avail" data-v="51">51</td>
           <td class="num lock" data-v="17">17</td>
           <td class="num sz" data-v="68">68<span class="bar" style="width:11px"></span></td>
@@ -2270,10 +2312,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="50">50</td>
           <td class="num lock" data-v="20">20</td>
           <td class="num sz" data-v="80">80<span class="bar" style="width:13px"></span></td>
-          <td class="num" data-v="9">9</td>
+          <td class="num" data-v="8">8</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="89">89</td>
+          <td class="num total" data-v="88">88</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2298,17 +2340,17 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="50">50</td>
           <td class="num lock" data-v="25">25</td>
           <td class="num sz" data-v="75">75<span class="bar" style="width:12px"></span></td>
-          <td class="num" data-v="96">96</td>
+          <td class="num" data-v="97">97</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="171">171</td>
+          <td class="num total" data-v="172">172</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
           <td class="sku mono">ACBX80-22</td>
-          <td class="mono">ODI002-22</td>
+          <td class="mono">BJ-GBC8-22; ODI002-22</td>
           <td class="pname">8mm古巴链Curb薄疏白金色-22in</td>
-          <td class="asin mono">B0HB8XZVLQ</td>
+          <td class="asin mono">B0HB8XZVLQ; B0HG4FRHQK</td>
           <td class="num avail" data-v="50">50</td>
           <td class="num lock" data-v="17">17</td>
           <td class="num sz" data-v="67">67<span class="bar" style="width:11px"></span></td>
@@ -2382,10 +2424,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="49">49</td>
           <td class="num lock" data-v="55">55</td>
           <td class="num sz" data-v="104">104<span class="bar" style="width:17px"></span></td>
-          <td class="num" data-v="15">15</td>
+          <td class="num" data-v="18">18</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="119">119</td>
+          <td class="num total" data-v="122">122</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2446,9 +2488,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX50-20</td>
-          <td class="mono">FJD5-20</td>
+          <td class="mono">BJ-FJ5-20; FJD5-20</td>
           <td class="pname">5mm定制费加罗链白金色-20in</td>
-          <td class="asin mono">B0HC9RFJLH</td>
+          <td class="asin mono">B0HC9RFJLH; B0HGDF6SDZ</td>
           <td class="num avail" data-v="48">48</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="58">58<span class="bar" style="width:9px"></span></td>
@@ -2459,24 +2501,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">ACB35-18</td>
-          <td class="mono">AYN135-18</td>
-          <td class="pname">3.5mm古巴链Curb薄疏14K金色-18in</td>
-          <td class="asin mono">B0H5HZL7W8</td>
-          <td class="num avail" data-v="48">48</td>
-          <td class="num lock-zero" data-v="0">—</td>
-          <td class="num sz" data-v="48">48<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="0">0</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="48">48</td>
-          <td><span class="badge badge-warn">待发FBA</span></td>
-        </tr>
-<tr>
           <td class="sku mono">BFIGX70-24</td>
-          <td class="mono">—</td>
-          <td class="pname">—</td>
-          <td class="asin mono">—</td>
+          <td class="mono">BJ-FJ7-24</td>
+          <td class="pname">7mm定制费加罗链白金色-24in</td>
+          <td class="asin mono">B0HG4RKZXH</td>
           <td class="num avail" data-v="48">48</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="48">48<span class="bar" style="width:8px"></span></td>
@@ -2494,10 +2522,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="47">47</td>
           <td class="num lock" data-v="70">70</td>
           <td class="num sz" data-v="117">117<span class="bar" style="width:19px"></span></td>
-          <td class="num" data-v="42">42</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="57">57</td>
+          <td class="num" data-v="20">20</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="159">159</td>
+          <td class="num total" data-v="194">194</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2530,9 +2558,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX80-20</td>
-          <td class="mono">ODI002-20</td>
+          <td class="mono">BJ-GBC8-20; ODI002-20</td>
           <td class="pname">8mm古巴链Curb薄疏白金色-20in</td>
-          <td class="asin mono">B0HB8HW78H</td>
+          <td class="asin mono">B0HB8HW78H; B0HG4N5TXZ</td>
           <td class="num avail" data-v="45">45</td>
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="60">60<span class="bar" style="width:10px"></span></td>
@@ -2592,10 +2620,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="43">43</td>
           <td class="num lock" data-v="60">60</td>
           <td class="num sz" data-v="103">103<span class="bar" style="width:17px"></span></td>
-          <td class="num" data-v="18">18</td>
+          <td class="num" data-v="23">23</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="121">121</td>
+          <td class="num total" data-v="126">126</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2620,10 +2648,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="43">43</td>
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="58">58<span class="bar" style="width:9px"></span></td>
-          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="9">9</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="65">65</td>
+          <td class="num total" data-v="67">67</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2662,10 +2690,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="42">42</td>
           <td class="num lock" data-v="60">60</td>
           <td class="num sz" data-v="102">102<span class="bar" style="width:17px"></span></td>
-          <td class="num" data-v="18">18</td>
+          <td class="num" data-v="22">22</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="120">120</td>
+          <td class="num total" data-v="124">124</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2690,10 +2718,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="40">40</td>
           <td class="num lock" data-v="30">30</td>
           <td class="num sz" data-v="70">70<span class="bar" style="width:11px"></span></td>
-          <td class="num" data-v="23">23</td>
+          <td class="num" data-v="25">25</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="93">93</td>
+          <td class="num total" data-v="95">95</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2704,10 +2732,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="40">40</td>
           <td class="num lock" data-v="20">20</td>
           <td class="num sz" data-v="60">60<span class="bar" style="width:10px"></span></td>
-          <td class="num" data-v="10">10</td>
+          <td class="num" data-v="12">12</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="70">70</td>
+          <td class="num total" data-v="72">72</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2726,9 +2754,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX70-18</td>
-          <td class="mono">—</td>
-          <td class="pname">—</td>
-          <td class="asin mono">—</td>
+          <td class="mono">BJ-FJ7-18</td>
+          <td class="pname">7mm定制费加罗链白金色-18in</td>
+          <td class="asin mono">B0HG4TK43M</td>
           <td class="num avail" data-v="40">40</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="40">40<span class="bar" style="width:7px"></span></td>
@@ -2746,10 +2774,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="39">39</td>
           <td class="num lock" data-v="22">22</td>
           <td class="num sz" data-v="71">71<span class="bar" style="width:12px"></span></td>
-          <td class="num" data-v="1">1</td>
+          <td class="num" data-v="7">7</td>
           <td class="num" data-v="12">12</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="84">84</td>
+          <td class="num total" data-v="90">90</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2760,25 +2788,11 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="39">39</td>
           <td class="num lock" data-v="20">20</td>
           <td class="num sz" data-v="69">69<span class="bar" style="width:11px"></span></td>
-          <td class="num" data-v="15">15</td>
+          <td class="num" data-v="18">18</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="84">84</td>
+          <td class="num total" data-v="87">87</td>
           <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">ACB35-26</td>
-          <td class="mono">AYN135-26</td>
-          <td class="pname">3.5mm古巴链Curb薄疏14K金色-26in</td>
-          <td class="asin mono">B0H5HRNJZP</td>
-          <td class="num avail" data-v="39">39</td>
-          <td class="num lock-zero" data-v="0">—</td>
-          <td class="num sz" data-v="39">39<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="0">0</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="39">39</td>
-          <td><span class="badge badge-warn">待发FBA</span></td>
         </tr>
 <tr>
           <td class="sku mono">AFIGX70-26</td>
@@ -2809,6 +2823,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
+          <td class="sku mono">ACB35-18</td>
+          <td class="mono">AYN135-18</td>
+          <td class="pname">3.5mm古巴链Curb薄疏14K金色-18in</td>
+          <td class="asin mono">B0H5HZL7W8</td>
+          <td class="num avail" data-v="38">38</td>
+          <td class="num lock" data-v="10">10</td>
+          <td class="num sz" data-v="48">48<span class="bar" style="width:8px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="10">10</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="58">58</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">ACB80-18</td>
           <td class="mono">FFACB80-18</td>
           <td class="pname">8mm古巴链Curb薄疏14K金色-18in</td>
@@ -2824,9 +2852,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX50-24</td>
-          <td class="mono">FJD5-24</td>
+          <td class="mono">BJ-FJ5-24; FJD5-24</td>
           <td class="pname">5mm定制费加罗链白金色-24in</td>
-          <td class="asin mono">B0HC5SNDV8</td>
+          <td class="asin mono">B0HC5SNDV8; B0HGDDHBHR</td>
           <td class="num avail" data-v="38">38</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="48">48<span class="bar" style="width:8px"></span></td>
@@ -2852,9 +2880,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX60-18</td>
-          <td class="mono">—</td>
-          <td class="pname">—</td>
-          <td class="asin mono">—</td>
+          <td class="mono">BJ-GBC6-18</td>
+          <td class="pname">6mm古巴链Curb薄疏白金色-18in</td>
+          <td class="asin mono">B0HG4P46D6</td>
           <td class="num avail" data-v="38">38</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="38">38<span class="bar" style="width:6px"></span></td>
@@ -2886,10 +2914,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="37">37</td>
           <td class="num lock" data-v="25">25</td>
           <td class="num sz" data-v="62">62<span class="bar" style="width:10px"></span></td>
-          <td class="num" data-v="22">22</td>
+          <td class="num" data-v="21">21</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="84">84</td>
+          <td class="num total" data-v="83">83</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2904,6 +2932,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
           <td class="num total" data-v="57">57</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">BROP30-55</td>
+          <td class="mono">LYR30-22; R01P30-55</td>
+          <td class="pname">B款3.0MM麻花链-55cm</td>
+          <td class="asin mono">B0GSYQVD2H; B0HDBN4QQK</td>
+          <td class="num avail" data-v="36">36</td>
+          <td class="num lock" data-v="35">35</td>
+          <td class="num sz" data-v="71">71<span class="bar" style="width:12px"></span></td>
+          <td class="num" data-v="16">16</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="87">87</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -2922,9 +2964,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX60-24</td>
-          <td class="mono">ODI001-24</td>
+          <td class="mono">BJ-GBC6-24; ODI001-24</td>
           <td class="pname">6mm古巴链Curb薄疏白金色-24in</td>
-          <td class="asin mono">B0HB4BX26N</td>
+          <td class="asin mono">B0HB4BX26N; B0HG4N1TZP</td>
           <td class="num avail" data-v="36">36</td>
           <td class="num lock" data-v="12">12</td>
           <td class="num sz" data-v="48">48<span class="bar" style="width:8px"></span></td>
@@ -2936,9 +2978,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX50-18</td>
-          <td class="mono">FJD5-18</td>
+          <td class="mono">BJ-FJ5-18; FJD5-18</td>
           <td class="pname">5mm定制费加罗链白金色-18in</td>
-          <td class="asin mono">B0HC9YJQM1</td>
+          <td class="asin mono">B0HC9YJQM1; B0HGF42J2Z</td>
           <td class="num avail" data-v="35">35</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="40">40<span class="bar" style="width:7px"></span></td>
@@ -2970,10 +3012,24 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="34">34</td>
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="49">49<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="10">10</td>
+          <td class="num" data-v="12">12</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="59">59</td>
+          <td class="num total" data-v="61">61</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">ACB35-26</td>
+          <td class="mono">AYN135-26</td>
+          <td class="pname">3.5mm古巴链Curb薄疏14K金色-26in</td>
+          <td class="asin mono">B0H5HRNJZP</td>
+          <td class="num avail" data-v="34">34</td>
+          <td class="num lock" data-v="5">5</td>
+          <td class="num sz" data-v="39">39<span class="bar" style="width:6px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="5">5</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="44">44</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3012,10 +3068,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="33">33</td>
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="48">48<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="10">10</td>
+          <td class="num" data-v="12">12</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="58">58</td>
+          <td class="num total" data-v="60">60</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3068,10 +3124,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="31">31</td>
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="46">46<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="28">28</td>
+          <td class="num" data-v="30">30</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="74">74</td>
+          <td class="num total" data-v="76">76</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3086,6 +3142,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="5">5</td>
           <td class="num total" data-v="46">46</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">BROP30-45</td>
+          <td class="mono">LYR30-18; R01P30-45</td>
+          <td class="pname">B款3.0MM麻花链-45cm</td>
+          <td class="asin mono">B0GSZ26DKP; B0HDB52S9D</td>
+          <td class="num avail" data-v="30">30</td>
+          <td class="num lock" data-v="33">33</td>
+          <td class="num sz" data-v="63">63<span class="bar" style="width:10px"></span></td>
+          <td class="num" data-v="34">34</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="97">97</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3124,10 +3194,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="29">29</td>
           <td class="num lock" data-v="85">85</td>
           <td class="num sz" data-v="124">124<span class="bar" style="width:20px"></span></td>
-          <td class="num" data-v="83">83</td>
+          <td class="num" data-v="81">81</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="207">207</td>
+          <td class="num total" data-v="205">205</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3152,10 +3222,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="28">28</td>
           <td class="num lock" data-v="60">60</td>
           <td class="num sz" data-v="88">88<span class="bar" style="width:14px"></span></td>
-          <td class="num" data-v="23">23</td>
+          <td class="num" data-v="21">21</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="111">111</td>
+          <td class="num total" data-v="109">109</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3167,9 +3237,9 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num lock" data-v="25">25</td>
           <td class="num sz" data-v="53">53<span class="bar" style="width:9px"></span></td>
           <td class="num" data-v="24">24</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="25">25</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="77">77</td>
+          <td class="num total" data-v="102">102</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3208,10 +3278,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="27">27</td>
           <td class="num lock" data-v="30">30</td>
           <td class="num sz" data-v="57">57<span class="bar" style="width:9px"></span></td>
-          <td class="num" data-v="44">44</td>
+          <td class="num" data-v="49">49</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="101">101</td>
+          <td class="num total" data-v="106">106</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3222,17 +3292,17 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="26">26</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="56">56<span class="bar" style="width:9px"></span></td>
-          <td class="num" data-v="6">6</td>
+          <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="20">20</td>
-          <td class="num total" data-v="62">62</td>
+          <td class="num total" data-v="63">63</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
           <td class="sku mono">ACBX80-24</td>
-          <td class="mono">ODI002-24</td>
+          <td class="mono">BJ-GBC8-24; ODI002-24</td>
           <td class="pname">8mm古巴链Curb薄疏白金色-24in</td>
-          <td class="asin mono">B0HB928MKK</td>
+          <td class="asin mono">B0HB928MKK; B0HG4HCXR5</td>
           <td class="num avail" data-v="26">26</td>
           <td class="num lock" data-v="12">12</td>
           <td class="num sz" data-v="38">38<span class="bar" style="width:6px"></span></td>
@@ -3243,6 +3313,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
+          <td class="sku mono">BROP20-50</td>
+          <td class="mono">FLBROP20-50; KROP20-50; NOBR20-50; R01P20-50</td>
+          <td class="pname">B款2.0MM麻花链-50cm</td>
+          <td class="asin mono">B0GSZ2MTMV; B0H4Q2JYSR; B0H5HL4W6N; B0HC56V3QM</td>
+          <td class="num avail" data-v="25">25</td>
+          <td class="num lock" data-v="39">39</td>
+          <td class="num sz" data-v="64">64<span class="bar" style="width:10px"></span></td>
+          <td class="num" data-v="18">18</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="82">82</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">ACBX35-18</td>
           <td class="mono">GBC35-18; NB1-35-18</td>
           <td class="pname">3.5mm古巴链Curb薄疏白金色-18in</td>
@@ -3250,10 +3334,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="25">25</td>
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="40">40<span class="bar" style="width:7px"></span></td>
-          <td class="num" data-v="10">10</td>
+          <td class="num" data-v="12">12</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="50">50</td>
+          <td class="num total" data-v="52">52</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3264,10 +3348,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="25">25</td>
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="40">40<span class="bar" style="width:7px"></span></td>
-          <td class="num" data-v="10">10</td>
+          <td class="num" data-v="12">12</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="50">50</td>
+          <td class="num total" data-v="52">52</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3278,10 +3362,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="25">25</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="40">40<span class="bar" style="width:7px"></span></td>
-          <td class="num" data-v="1">1</td>
+          <td class="num" data-v="3">3</td>
           <td class="num" data-v="5">5</td>
           <td class="num overseas" data-v="5">5</td>
-          <td class="num total" data-v="46">46</td>
+          <td class="num total" data-v="48">48</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3292,10 +3376,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="24">24</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="39">39<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="6">6</td>
+          <td class="num" data-v="8">8</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="5">5</td>
-          <td class="num total" data-v="45">45</td>
+          <td class="num total" data-v="47">47</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3306,10 +3390,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="23">23</td>
           <td class="num lock" data-v="140">140</td>
           <td class="num sz" data-v="163">163<span class="bar" style="width:27px"></span></td>
-          <td class="num" data-v="16">16</td>
+          <td class="num" data-v="15">15</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="179">179</td>
+          <td class="num total" data-v="178">178</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3334,10 +3418,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="21">21</td>
           <td class="num lock" data-v="20">20</td>
           <td class="num sz" data-v="51">51<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="1">1</td>
+          <td class="num" data-v="10">10</td>
           <td class="num" data-v="10">10</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="62">62</td>
+          <td class="num total" data-v="71">71</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3362,10 +3446,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="20">20</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="50">50<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="9">9</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="20">20</td>
-          <td class="num total" data-v="57">57</td>
+          <td class="num total" data-v="59">59</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3432,10 +3516,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="19">19</td>
           <td class="num lock" data-v="100">100</td>
           <td class="num sz" data-v="119">119<span class="bar" style="width:19px"></span></td>
-          <td class="num" data-v="13">13</td>
+          <td class="num" data-v="12">12</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="132">132</td>
+          <td class="num total" data-v="131">131</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3467,20 +3551,6 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">ACB35-30</td>
-          <td class="mono">AYN135-30</td>
-          <td class="pname">3.5mm古巴链Curb薄疏14K金色-30in</td>
-          <td class="asin mono">B0H5HBMRMS</td>
-          <td class="num avail" data-v="19">19</td>
-          <td class="num lock-zero" data-v="0">—</td>
-          <td class="num sz" data-v="19">19<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="0">0</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="19">19</td>
-          <td><span class="badge badge-warn">待发FBA</span></td>
-        </tr>
-<tr>
           <td class="sku mono">AFIGX50-16</td>
           <td class="mono">—</td>
           <td class="pname">—</td>
@@ -3510,9 +3580,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX70-26</td>
-          <td class="mono">—</td>
-          <td class="pname">—</td>
-          <td class="asin mono">—</td>
+          <td class="mono">BJ-FJ7-26</td>
+          <td class="pname">7mm定制费加罗链白金色-26in</td>
+          <td class="asin mono">B0HG4LQ6L5</td>
           <td class="num avail" data-v="19">19</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="19">19<span class="bar" style="width:3px"></span></td>
@@ -3524,9 +3594,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX70-30</td>
-          <td class="mono">—</td>
-          <td class="pname">—</td>
-          <td class="asin mono">—</td>
+          <td class="mono">BJ-FJ7-30</td>
+          <td class="pname">7mm定制费加罗链白金色-30in</td>
+          <td class="asin mono">B0HG4JFKJL</td>
           <td class="num avail" data-v="19">19</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="19">19<span class="bar" style="width:3px"></span></td>
@@ -3551,34 +3621,6 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">ACB35-16</td>
-          <td class="mono">AYN135-16</td>
-          <td class="pname">3.5mm古巴链Curb薄疏14K金色-16in</td>
-          <td class="asin mono">B0H5HRH5V4</td>
-          <td class="num avail" data-v="18">18</td>
-          <td class="num lock-zero" data-v="0">—</td>
-          <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="0">0</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="18">18</td>
-          <td><span class="badge badge-warn">待发FBA</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">ACB35-28</td>
-          <td class="mono">AYN135-28</td>
-          <td class="pname">3.5mm古巴链Curb薄疏14K金色-28in</td>
-          <td class="asin mono">B0H5HN9GBG</td>
-          <td class="num avail" data-v="18">18</td>
-          <td class="num lock-zero" data-v="0">—</td>
-          <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="0">0</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="18">18</td>
-          <td><span class="badge badge-warn">待发FBA</span></td>
-        </tr>
-<tr>
           <td class="sku mono">AFIGX70-30</td>
           <td class="mono">—</td>
           <td class="pname">—</td>
@@ -3594,9 +3636,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX70-28</td>
-          <td class="mono">—</td>
-          <td class="pname">—</td>
-          <td class="asin mono">—</td>
+          <td class="mono">BJ-FJ7-28</td>
+          <td class="pname">7mm定制费加罗链白金色-28in</td>
+          <td class="asin mono">B0HG4CXPJT</td>
           <td class="num avail" data-v="18">18</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
@@ -3614,10 +3656,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="17">17</td>
           <td class="num lock" data-v="40">40</td>
           <td class="num sz" data-v="57">57<span class="bar" style="width:9px"></span></td>
-          <td class="num" data-v="32">32</td>
+          <td class="num" data-v="35">35</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="89">89</td>
+          <td class="num total" data-v="92">92</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -3677,6 +3719,34 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
+          <td class="sku mono">BROP20-60</td>
+          <td class="mono">FLBROP20-60; KROP20-60; NOBR20-60; R01P20-60</td>
+          <td class="pname">B款2.0MM麻花链-60cm</td>
+          <td class="asin mono">B0GSZ227P4; B0H35GWV5C; B0H4Q16QZH; B0H5J5XW5M</td>
+          <td class="num avail" data-v="15">15</td>
+          <td class="num lock" data-v="40">40</td>
+          <td class="num sz" data-v="55">55<span class="bar" style="width:9px"></span></td>
+          <td class="num" data-v="32">32</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="87">87</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
+          <td class="sku mono">BROP20-40</td>
+          <td class="mono">FLBROP20-40; KROP20-40; NOBR20-40; R01P20-40</td>
+          <td class="pname">B款2.0MM麻花链-40cm</td>
+          <td class="asin mono">B0GSZ5CSVD; B0H35JMBJN; B0H4Q9K881; B0H5HZZGRV</td>
+          <td class="num avail" data-v="15">15</td>
+          <td class="num lock" data-v="29">29</td>
+          <td class="num sz" data-v="44">44<span class="bar" style="width:7px"></span></td>
+          <td class="num" data-v="20">20</td>
+          <td class="num" data-v="0">0</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="64">64</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">BFIGX30-28</td>
           <td class="mono">FJD3-28</td>
           <td class="pname">3mm定制费加罗链白金色-28in</td>
@@ -3692,9 +3762,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX50-16</td>
-          <td class="mono">FJD5-16</td>
+          <td class="mono">BJ-FJ5-16; FJD5-16</td>
           <td class="pname">5mm定制费加罗链白金色-16in</td>
-          <td class="asin mono">B0HC9QRDKJ</td>
+          <td class="asin mono">B0HC9QRDKJ; B0HGDZBWYH</td>
           <td class="num avail" data-v="15">15</td>
           <td class="num lock" data-v="4">4</td>
           <td class="num sz" data-v="19">19<span class="bar" style="width:3px"></span></td>
@@ -3719,6 +3789,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
+          <td class="sku mono">ACB35-30</td>
+          <td class="mono">AYN135-30</td>
+          <td class="pname">3.5mm古巴链Curb薄疏14K金色-30in</td>
+          <td class="asin mono">B0H5HBMRMS</td>
+          <td class="num avail" data-v="14">14</td>
+          <td class="num lock" data-v="5">5</td>
+          <td class="num sz" data-v="19">19<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="5">5</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="24">24</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">BFIGX30-30</td>
           <td class="mono">FJD3-30</td>
           <td class="pname">3mm定制费加罗链白金色-30in</td>
@@ -3734,9 +3818,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX50-26</td>
-          <td class="mono">FJD5-26</td>
+          <td class="mono">BJ-FJ5-26; FJD5-26</td>
           <td class="pname">5mm定制费加罗链白金色-26in</td>
-          <td class="asin mono">B0HC9SPLCF</td>
+          <td class="asin mono">B0HC9SPLCF; B0HGCQ4CGC</td>
           <td class="num avail" data-v="14">14</td>
           <td class="num lock" data-v="4">4</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
@@ -3748,9 +3832,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX50-28</td>
-          <td class="mono">FJD5-28</td>
+          <td class="mono">BJ-FJ5-28; FJD5-28</td>
           <td class="pname">5mm定制费加罗链白金色-28in</td>
-          <td class="asin mono">B0HC5QNWG2</td>
+          <td class="asin mono">B0HC5QNWG2; B0HG9HMLHM</td>
           <td class="num avail" data-v="14">14</td>
           <td class="num lock" data-v="4">4</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
@@ -3762,9 +3846,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX50-30</td>
-          <td class="mono">FJD5-30</td>
+          <td class="mono">BJ-FJ5-30; FJD5-30</td>
           <td class="pname">5mm定制费加罗链白金色-30in</td>
-          <td class="asin mono">B0HCBC9RR3</td>
+          <td class="asin mono">B0HCBC9RR3; B0HG8S7P92</td>
           <td class="num avail" data-v="14">14</td>
           <td class="num lock" data-v="4">4</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
@@ -3831,6 +3915,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
+          <td class="sku mono">ACB35-28</td>
+          <td class="mono">AYN135-28</td>
+          <td class="pname">3.5mm古巴链Curb薄疏14K金色-28in</td>
+          <td class="asin mono">B0H5HN9GBG</td>
+          <td class="num avail" data-v="13">13</td>
+          <td class="num lock" data-v="5">5</td>
+          <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="5">5</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="23">23</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">ACB80-16</td>
           <td class="mono">FFACB80-16</td>
           <td class="pname">8mm古巴链Curb薄疏14K金色-18in</td>
@@ -3874,9 +3972,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX60-26</td>
-          <td class="mono">ODI001-26</td>
+          <td class="mono">BJ-GBC6-26; ODI001-26</td>
           <td class="pname">6mm古巴链Curb薄疏白金色-26in</td>
-          <td class="asin mono">B0HB4CWP7Z</td>
+          <td class="asin mono">B0HB4CWP7Z; B0HG4V9P4M</td>
           <td class="num avail" data-v="13">13</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
@@ -3888,9 +3986,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX60-28</td>
-          <td class="mono">ODI001-28</td>
+          <td class="mono">BJ-GBC6-28; ODI001-28</td>
           <td class="pname">6mm古巴链Curb薄疏白金色-28in</td>
-          <td class="asin mono">B0HB4369YH</td>
+          <td class="asin mono">B0HB4369YH; B0HG4F6P14</td>
           <td class="num avail" data-v="13">13</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
@@ -3902,9 +4000,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX60-30</td>
-          <td class="mono">ODI001-30</td>
+          <td class="mono">BJ-GBC6-30; ODI001-30</td>
           <td class="pname">6mm古巴链Curb薄疏白金色-30in</td>
-          <td class="asin mono">B0HB49M9CL</td>
+          <td class="asin mono">B0HB49M9CL; B0HG4PR628</td>
           <td class="num avail" data-v="13">13</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
@@ -3916,9 +4014,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX80-16</td>
-          <td class="mono">ODI002-16</td>
+          <td class="mono">BJ-GBC8-16; ODI002-16</td>
           <td class="pname">8mm古巴链Curb薄疏白金色-18in</td>
-          <td class="asin mono">B0HB8YC5Y1</td>
+          <td class="asin mono">B0HB8YC5Y1; B0HG4N2BM3</td>
           <td class="num avail" data-v="13">13</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
@@ -3930,9 +4028,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX80-30</td>
-          <td class="mono">ODI002-30</td>
+          <td class="mono">BJ-GBC8-30; ODI002-30</td>
           <td class="pname">8mm古巴链Curb薄疏白金色-30in</td>
-          <td class="asin mono">B0HB92YJ7L</td>
+          <td class="asin mono">B0HB92YJ7L; B0HG4K1WR6</td>
           <td class="num avail" data-v="13">13</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
@@ -3944,9 +4042,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">BFIGX70-16</td>
-          <td class="mono">—</td>
-          <td class="pname">—</td>
-          <td class="asin mono">—</td>
+          <td class="mono">BJ-FJ7-16</td>
+          <td class="pname">7mm定制费加罗链白金色-16in</td>
+          <td class="asin mono">B0HG4J82VH</td>
           <td class="num avail" data-v="13">13</td>
           <td class="num lock-zero" data-v="0">—</td>
           <td class="num sz" data-v="13">13<span class="bar" style="width:2px"></span></td>
@@ -3958,9 +4056,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX80-26</td>
-          <td class="mono">ODI002-26</td>
+          <td class="mono">BJ-GBC8-26; ODI002-26</td>
           <td class="pname">8mm古巴链Curb薄疏白金色-28in</td>
-          <td class="asin mono">B0HB8W42NF</td>
+          <td class="asin mono">B0HB8W42NF; B0HG4KGWQK</td>
           <td class="num avail" data-v="12">12</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="17">17<span class="bar" style="width:3px"></span></td>
@@ -4006,10 +4104,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="10">10</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="20">20<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="5">5</td>
+          <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="25">25</td>
+          <td class="num total" data-v="27">27</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4020,10 +4118,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="10">10</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="20">20<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="5">5</td>
+          <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="25">25</td>
+          <td class="num total" data-v="27">27</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4056,9 +4154,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX80-18</td>
-          <td class="mono">ODI002-18</td>
+          <td class="mono">BJ-GBC8-18; ODI002-18</td>
           <td class="pname">8mm古巴链Curb薄疏白金色-18in</td>
-          <td class="asin mono">B0HB8W3NLQ</td>
+          <td class="asin mono">B0HB8W3NLQ; B0HG4H2Y2Y</td>
           <td class="num avail" data-v="10">10</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="20">20<span class="bar" style="width:3px"></span></td>
@@ -4111,6 +4209,20 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
+          <td class="sku mono">ACB35-16</td>
+          <td class="mono">AYN135-16</td>
+          <td class="pname">3.5mm古巴链Curb薄疏14K金色-16in</td>
+          <td class="asin mono">B0H5HRH5V4</td>
+          <td class="num avail" data-v="8">8</td>
+          <td class="num lock" data-v="10">10</td>
+          <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
+          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="10">10</td>
+          <td class="num overseas-zero" data-v="0">—</td>
+          <td class="num total" data-v="28">28</td>
+          <td><span class="badge badge-ok">正常</span></td>
+        </tr>
+<tr>
           <td class="sku mono">ACB60-16</td>
           <td class="mono">FFACB60-16; YMN160-16</td>
           <td class="pname">6mm古巴链Curb薄疏14K金色-16in</td>
@@ -4160,11 +4272,11 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="8">8</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="18">18</td>
-          <td><span class="badge badge-warn">待发FBA</span></td>
+          <td class="num total" data-v="25">25</td>
+          <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
           <td class="sku mono">ACBX35-26</td>
@@ -4174,10 +4286,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="8">8</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="5">5</td>
+          <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="23">23</td>
+          <td class="num total" data-v="25">25</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4188,10 +4300,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="8">8</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="5">5</td>
+          <td class="num" data-v="6">6</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="23">23</td>
+          <td class="num total" data-v="24">24</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4202,10 +4314,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="8">8</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="5">5</td>
+          <td class="num" data-v="7">7</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="23">23</td>
+          <td class="num total" data-v="25">25</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4216,10 +4328,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="7">7</td>
           <td class="num lock" data-v="100">100</td>
           <td class="num sz" data-v="107">107<span class="bar" style="width:17px"></span></td>
-          <td class="num" data-v="9">9</td>
+          <td class="num" data-v="10">10</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="116">116</td>
+          <td class="num total" data-v="117">117</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4230,24 +4342,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="7">7</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="22">22<span class="bar" style="width:4px"></span></td>
-          <td class="num" data-v="3">3</td>
+          <td class="num" data-v="4">4</td>
           <td class="num" data-v="5">5</td>
           <td class="num overseas" data-v="5">5</td>
-          <td class="num total" data-v="30">30</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BROP30-45</td>
-          <td class="mono">LYR30-18; R01P30-45</td>
-          <td class="pname">B款3.0MM麻花链-45cm</td>
-          <td class="asin mono">B0GSZ26DKP; B0HDB52S9D</td>
-          <td class="num avail" data-v="6">6</td>
-          <td class="num lock" data-v="33">33</td>
-          <td class="num sz" data-v="39">39<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="34">34</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="73">73</td>
+          <td class="num total" data-v="31">31</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4258,24 +4356,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="6">6</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="21">21<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="2">2</td>
+          <td class="num" data-v="4">4</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="10">10</td>
-          <td class="num total" data-v="23">23</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BROP30-55</td>
-          <td class="mono">LYR30-22; R01P30-55</td>
-          <td class="pname">B款3.0MM麻花链-55cm</td>
-          <td class="asin mono">B0GSYQVD2H; B0HDBN4QQK</td>
-          <td class="num avail" data-v="5">5</td>
-          <td class="num lock" data-v="35">35</td>
-          <td class="num sz" data-v="40">40<span class="bar" style="width:7px"></span></td>
-          <td class="num" data-v="16">16</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="56">56</td>
+          <td class="num total" data-v="25">25</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4300,10 +4384,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="5">5</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="20">20<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="3">3</td>
           <td class="num" data-v="5">5</td>
           <td class="num overseas" data-v="5">5</td>
-          <td class="num total" data-v="25">25</td>
+          <td class="num total" data-v="28">28</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4314,10 +4398,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="5">5</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="20">20<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="2">2</td>
           <td class="num" data-v="5">5</td>
           <td class="num overseas" data-v="5">5</td>
-          <td class="num total" data-v="25">25</td>
+          <td class="num total" data-v="27">27</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4342,10 +4426,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="4">4</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="19">19<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="6">6</td>
+          <td class="num" data-v="8">8</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="5">5</td>
-          <td class="num total" data-v="25">25</td>
+          <td class="num total" data-v="27">27</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4356,17 +4440,17 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="4">4</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="19">19<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="7">7</td>
+          <td class="num" data-v="10">10</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="5">5</td>
-          <td class="num total" data-v="26">26</td>
+          <td class="num total" data-v="29">29</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
           <td class="sku mono">ACBX80-28</td>
-          <td class="mono">ODI002-28</td>
+          <td class="mono">BJ-GBC8-28; ODI002-28</td>
           <td class="pname">8mm古巴链Curb薄疏白金色-28in</td>
-          <td class="asin mono">B0HB9GZTYZ</td>
+          <td class="asin mono">B0HB9GZTYZ; B0HG4ML7K1</td>
           <td class="num avail" data-v="4">4</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="9">9<span class="bar" style="width:2px"></span></td>
@@ -4378,9 +4462,9 @@ td.sku { color: #1f2937; font-weight: 600; }
         </tr>
 <tr>
           <td class="sku mono">ACBX60-16</td>
-          <td class="mono">ODI001-16; ODI001-18</td>
+          <td class="mono">BJ-GBC6-16; ODI001-16; ODI001-18</td>
           <td class="pname">6mm古巴链Curb薄疏白金色-16in</td>
-          <td class="asin mono">B0HB3XL9DP; B0HB45D6TJ</td>
+          <td class="asin mono">B0HB3XL9DP; B0HB45D6TJ; B0HG4L65DY</td>
           <td class="num avail" data-v="3">3</td>
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
@@ -4398,10 +4482,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="3">3</td>
           <td class="num lock" data-v="10">10</td>
           <td class="num sz" data-v="18">18<span class="bar" style="width:3px"></span></td>
-          <td class="num" data-v="8">8</td>
+          <td class="num" data-v="10">10</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="5">5</td>
-          <td class="num total" data-v="26">26</td>
+          <td class="num total" data-v="28">28</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4433,34 +4517,6 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
-          <td class="sku mono">ECAB12-45</td>
-          <td class="mono">LYC12-18; NOEC12-45</td>
-          <td class="pname">E款1.2MM锚链-45cm</td>
-          <td class="asin mono">B0H6HQCQ1R; B0H6X5YNC2</td>
-          <td class="num avail" data-v="0">0</td>
-          <td class="num lock" data-v="100">100</td>
-          <td class="num sz" data-v="100">100<span class="bar" style="width:16px"></span></td>
-          <td class="num" data-v="23">23</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="123">123</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">ECAB12-40</td>
-          <td class="mono">LYC12-16; NOEC12-40</td>
-          <td class="pname">E款1.2MM锚链-40cm</td>
-          <td class="asin mono">B0H6HW2MLY; B0H6WWH13Z</td>
-          <td class="num avail" data-v="0">0</td>
-          <td class="num lock" data-v="98">98</td>
-          <td class="num sz" data-v="98">98<span class="bar" style="width:16px"></span></td>
-          <td class="num" data-v="25">25</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="123">123</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
           <td class="sku mono">ECAB10-40</td>
           <td class="mono">LYC10-16; NOEC10-40</td>
           <td class="pname">E款1.0MM锚链-40cm</td>
@@ -4482,10 +4538,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="0">0</td>
           <td class="num lock" data-v="53">53</td>
           <td class="num sz" data-v="53">53<span class="bar" style="width:9px"></span></td>
-          <td class="num" data-v="17">17</td>
+          <td class="num" data-v="19">19</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="70">70</td>
+          <td class="num total" data-v="72">72</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4510,24 +4566,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="0">0</td>
           <td class="num lock" data-v="47">47</td>
           <td class="num sz" data-v="47">47<span class="bar" style="width:8px"></span></td>
-          <td class="num" data-v="21">21</td>
+          <td class="num" data-v="25">25</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="68">68</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BROP20-55</td>
-          <td class="mono">FLBROP20-55; KROP20-55; NOBR20-55; R01P20-55</td>
-          <td class="pname">B款2.0MM麻花链-55cm</td>
-          <td class="asin mono">B0GSZ11678; B0H352KKYS; B0H4Q1BPSP; B0H5JBBT5B</td>
-          <td class="num avail" data-v="0">0</td>
-          <td class="num lock" data-v="44">44</td>
-          <td class="num sz" data-v="44">44<span class="bar" style="width:7px"></span></td>
-          <td class="num" data-v="33">33</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="77">77</td>
+          <td class="num total" data-v="72">72</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4538,38 +4580,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="0">0</td>
           <td class="num lock" data-v="43">43</td>
           <td class="num sz" data-v="43">43<span class="bar" style="width:7px"></span></td>
-          <td class="num" data-v="9">9</td>
+          <td class="num" data-v="8">8</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="52">52</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BROP20-60</td>
-          <td class="mono">FLBROP20-60; KROP20-60; NOBR20-60; R01P20-60</td>
-          <td class="pname">B款2.0MM麻花链-60cm</td>
-          <td class="asin mono">B0GSZ227P4; B0H35GWV5C; B0H4Q16QZH; B0H5J5XW5M</td>
-          <td class="num avail" data-v="0">0</td>
-          <td class="num lock" data-v="40">40</td>
-          <td class="num sz" data-v="40">40<span class="bar" style="width:7px"></span></td>
-          <td class="num" data-v="32">32</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="72">72</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BROP20-50</td>
-          <td class="mono">FLBROP20-50; KROP20-50; NOBR20-50; R01P20-50</td>
-          <td class="pname">B款2.0MM麻花链-50cm</td>
-          <td class="asin mono">B0GSZ2MTMV; B0H4Q2JYSR; B0H5HL4W6N; B0HC56V3QM</td>
-          <td class="num avail" data-v="0">0</td>
-          <td class="num lock" data-v="39">39</td>
-          <td class="num sz" data-v="39">39<span class="bar" style="width:6px"></span></td>
-          <td class="num" data-v="18">18</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="57">57</td>
+          <td class="num total" data-v="51">51</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4608,24 +4622,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="0">0</td>
           <td class="num lock" data-v="30">30</td>
           <td class="num sz" data-v="30">30<span class="bar" style="width:5px"></span></td>
-          <td class="num" data-v="8">8</td>
+          <td class="num" data-v="12">12</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="38">38</td>
-          <td><span class="badge badge-ok">正常</span></td>
-        </tr>
-<tr>
-          <td class="sku mono">BROP20-40</td>
-          <td class="mono">FLBROP20-40; KROP20-40; NOBR20-40; R01P20-40</td>
-          <td class="pname">B款2.0MM麻花链-40cm</td>
-          <td class="asin mono">B0GSZ5CSVD; B0H35JMBJN; B0H4Q9K881; B0H5HZZGRV</td>
-          <td class="num avail" data-v="0">0</td>
-          <td class="num lock" data-v="29">29</td>
-          <td class="num sz" data-v="29">29<span class="bar" style="width:5px"></span></td>
-          <td class="num" data-v="19">19</td>
-          <td class="num" data-v="0">0</td>
-          <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="48">48</td>
+          <td class="num total" data-v="42">42</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4679,9 +4679,9 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num lock" data-v="15">15</td>
           <td class="num sz" data-v="15">15<span class="bar" style="width:2px"></span></td>
           <td class="num" data-v="38">38</td>
-          <td class="num" data-v="0">0</td>
+          <td class="num" data-v="15">15</td>
           <td class="num overseas-zero" data-v="0">—</td>
-          <td class="num total" data-v="53">53</td>
+          <td class="num total" data-v="68">68</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4692,10 +4692,10 @@ td.sku { color: #1f2937; font-weight: 600; }
           <td class="num avail" data-v="0">0</td>
           <td class="num lock" data-v="5">5</td>
           <td class="num sz" data-v="8">8<span class="bar" style="width:2px"></span></td>
-          <td class="num" data-v="4">4</td>
+          <td class="num" data-v="5">5</td>
           <td class="num" data-v="0">0</td>
           <td class="num overseas" data-v="3">3</td>
-          <td class="num total" data-v="12">12</td>
+          <td class="num total" data-v="13">13</td>
           <td><span class="badge badge-ok">正常</span></td>
         </tr>
 <tr>
@@ -4717,12 +4717,12 @@ td.sku { color: #1f2937; font-weight: 600; }
   </div>
 
   <div class="callout">
-    <h2>仅深圳仓有货 · 待发 FBA（51 个 SKU）</h2>
-    <div class="desc">这些 SKU 在深圳仓有库存，但 FBA 无可售/在途，合计 <b>2,510</b> 件，建议尽快安排发货。</div>
-    <div class="chips"><div class="chip"><b>109</b> ECAB13-45<span class="pname"></span></div><div class="chip"><b>107</b> ECAB13-55<span class="pname"></span></div><div class="chip"><b>104</b> ECAB13-40<span class="pname"></span></div><div class="chip"><b>103</b> ECAB13-60<span class="pname"></span></div><div class="chip"><b>99</b> ECAB13-50<span class="pname"></span></div><div class="chip"><b>98</b> ACB35-22<span class="pname">3.5mm古巴链Curb薄疏14K金色-22in</span></div><div class="chip"><b>92</b> AFIGX70-20<span class="pname"></span></div><div class="chip"><b>87</b> YB007-19cm<span class="pname">15*10素十字架手链-19cm</span></div><div class="chip"><b>77</b> ACB35-24<span class="pname">3.5mm古巴链Curb薄疏14K金色-24in</span></div><div class="chip"><b>71</b> AFIGX50-22<span class="pname"></span></div><div class="chip"><b>71</b> AFIGX70-22<span class="pname"></span></div><div class="chip"><b>69</b> BFIGX70-22<span class="pname"></span></div><div class="chip"><b>68</b> ACB35-20<span class="pname">3.5mm古巴链Curb薄疏14K金色-20in</span></div><div class="chip"><b>68</b> ACBX35-22<span class="pname">3.5mm古巴链Curb薄疏白金色-22in</span></div><div class="chip"><b>67</b> AFIGX70-24<span class="pname"></span></div><div class="chip"><b>64</b> AFIGX30-22<span class="pname"></span></div><div class="chip"><b>60</b> AFIGX50-20<span class="pname"></span></div><div class="chip"><b>60</b> BFIGX70-20<span class="pname"></span></div><div class="chip"><b>59</b> AFIGX30-20<span class="pname"></span></div><div class="chip"><b>55</b> ECAB13-65<span class="pname"></span></div><div class="chip"><b>50</b> AFIGX30-24<span class="pname"></span></div><div class="chip"><b>48</b> ACB35-18<span class="pname">3.5mm古巴链Curb薄疏14K金色-18in</span></div><div class="chip"><b>48</b> BFIGX70-24<span class="pname"></span></div><div class="chip"><b>47</b> AFIGX50-24<span class="pname"></span></div><div class="chip"><b>44</b> AFIGX50-30<span class="pname"></span></div><div class="chip"><b>43</b> ECAB13-35<span class="pname"></span></div><div class="chip"><b>42</b> AFIGX30-18<span class="pname"></span></div><div class="chip"><b>40</b> AFIGX70-18<span class="pname"></span></div><div class="chip"><b>40</b> BFIGX70-18<span class="pname"></span></div><div class="chip"><b>39</b> ACB35-26<span class="pname">3.5mm古巴链Curb薄疏14K金色-26in</span></div><div class="chip"><b>39</b> AFIGX70-26<span class="pname"></span></div><div class="chip"><b>38</b> ACBX60-18<span class="pname"></span></div><div class="chip"><b>38</b> AFIGX50-18<span class="pname"></span></div><div class="chip"><b>34</b> AFIGX50-28<span class="pname"></span></div><div class="chip"><b>33</b> AFIGX70-28<span class="pname"></span></div><div class="chip"><b>21</b> AFIGX30-28<span class="pname"></span></div><div class="chip"><b>20</b> AFIGX30-16<span class="pname"></span></div><div class="chip"><b>20</b> AFIGX30-26<span class="pname"></span></div><div class="chip"><b>20</b> AFIGX30-30<span class="pname"></span></div><div class="chip"><b>20</b> AFIGX70-16<span class="pname"></span></div><div class="chip"><b>19</b> ACB35-30<span class="pname">3.5mm古巴链Curb薄疏14K金色-30in</span></div><div class="chip"><b>19</b> AFIGX50-16<span class="pname"></span></div><div class="chip"><b>19</b> AFIGX50-26<span class="pname"></span></div><div class="chip"><b>19</b> BFIGX70-26<span class="pname"></span></div><div class="chip"><b>19</b> BFIGX70-30<span class="pname"></span></div><div class="chip"><b>18</b> ACB35-16<span class="pname">3.5mm古巴链Curb薄疏14K金色-16in</span></div><div class="chip"><b>18</b> ACB35-28<span class="pname">3.5mm古巴链Curb薄疏14K金色-28in</span></div><div class="chip"><b>18</b> ACBX35-16<span class="pname">3.5mm古巴链Curb薄疏白金色-16in</span></div><div class="chip"><b>18</b> AFIGX70-30<span class="pname"></span></div><div class="chip"><b>18</b> BFIGX70-28<span class="pname"></span></div><div class="chip"><b>13</b> BFIGX70-16<span class="pname"></span></div></div>
+    <h2>仅深圳仓有货 · 待发 FBA（41 个 SKU）</h2>
+    <div class="desc">这些 SKU 在深圳仓有库存，但 FBA 无可售/在途，合计 <b>2,039</b> 件，建议尽快安排发货。</div>
+    <div class="chips"><div class="chip"><b>109</b> ECAB13-45<span class="pname"></span></div><div class="chip"><b>107</b> ECAB13-55<span class="pname"></span></div><div class="chip"><b>104</b> ECAB13-40<span class="pname"></span></div><div class="chip"><b>103</b> ECAB13-60<span class="pname"></span></div><div class="chip"><b>99</b> ECAB13-50<span class="pname"></span></div><div class="chip"><b>92</b> AFIGX70-20<span class="pname"></span></div><div class="chip"><b>87</b> YB007-19cm<span class="pname">15*10素十字架手链-19cm</span></div><div class="chip"><b>71</b> AFIGX50-22<span class="pname"></span></div><div class="chip"><b>71</b> AFIGX70-22<span class="pname"></span></div><div class="chip"><b>69</b> BFIGX70-22<span class="pname">7mm定制费加罗链白金色-22in</span></div><div class="chip"><b>67</b> AFIGX70-24<span class="pname"></span></div><div class="chip"><b>64</b> AFIGX30-22<span class="pname"></span></div><div class="chip"><b>60</b> AFIGX50-20<span class="pname"></span></div><div class="chip"><b>60</b> BFIGX70-20<span class="pname">7mm定制费加罗链白金色-20in</span></div><div class="chip"><b>59</b> AFIGX30-20<span class="pname"></span></div><div class="chip"><b>55</b> ECAB13-65<span class="pname"></span></div><div class="chip"><b>50</b> AFIGX30-24<span class="pname"></span></div><div class="chip"><b>48</b> BFIGX70-24<span class="pname">7mm定制费加罗链白金色-24in</span></div><div class="chip"><b>47</b> AFIGX50-24<span class="pname"></span></div><div class="chip"><b>44</b> AFIGX50-30<span class="pname"></span></div><div class="chip"><b>43</b> ECAB13-35<span class="pname"></span></div><div class="chip"><b>42</b> AFIGX30-18<span class="pname"></span></div><div class="chip"><b>40</b> AFIGX70-18<span class="pname"></span></div><div class="chip"><b>40</b> BFIGX70-18<span class="pname">7mm定制费加罗链白金色-18in</span></div><div class="chip"><b>39</b> AFIGX70-26<span class="pname"></span></div><div class="chip"><b>38</b> ACBX60-18<span class="pname">6mm古巴链Curb薄疏白金色-18in</span></div><div class="chip"><b>38</b> AFIGX50-18<span class="pname"></span></div><div class="chip"><b>34</b> AFIGX50-28<span class="pname"></span></div><div class="chip"><b>33</b> AFIGX70-28<span class="pname"></span></div><div class="chip"><b>21</b> AFIGX30-28<span class="pname"></span></div><div class="chip"><b>20</b> AFIGX30-16<span class="pname"></span></div><div class="chip"><b>20</b> AFIGX30-26<span class="pname"></span></div><div class="chip"><b>20</b> AFIGX30-30<span class="pname"></span></div><div class="chip"><b>20</b> AFIGX70-16<span class="pname"></span></div><div class="chip"><b>19</b> AFIGX50-16<span class="pname"></span></div><div class="chip"><b>19</b> AFIGX50-26<span class="pname"></span></div><div class="chip"><b>19</b> BFIGX70-26<span class="pname">7mm定制费加罗链白金色-26in</span></div><div class="chip"><b>19</b> BFIGX70-30<span class="pname">7mm定制费加罗链白金色-30in</span></div><div class="chip"><b>18</b> AFIGX70-30<span class="pname"></span></div><div class="chip"><b>18</b> BFIGX70-28<span class="pname">7mm定制费加罗链白金色-28in</span></div><div class="chip"><b>13</b> BFIGX70-16<span class="pname">7mm定制费加罗链白金色-16in</span></div></div>
   </div>
 
-  <div class="footer">Generated by Claude Code · 2026-08-25 14:13</div>
+  <div class="footer">Generated by Claude Code · 2026-08-26 14:17</div>
 </div>
 
 <script>
